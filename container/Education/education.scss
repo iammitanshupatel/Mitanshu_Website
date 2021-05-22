@@ -1,0 +1,23 @@
+.eduRow {
+  @apply flex flex-wrap mx-[-15px];
+  & .eduLeft {
+    @apply w-full md:w-1/2 px-[15px];
+    & .eduText {
+      @apply px-2 md:p-0 mb-[30px] md:mb-0 md:pr-[40px] lg:pr-[80px];
+      & p {
+        color: rgb(185, 185, 185);
+        @apply mt-0 text-[18px] md:text-[20px] leading-8 mb-4;
+      }
+      & a {
+        color: #2f89fc;
+        @apply text-[20px] leading-8 mb-4;
+      }
+    }
+  }
+  & .eduRight {
+    @apply w-full md:w-1/2 px-[15px] mt-4;
+    & .eduWrap {
+      @apply w-full;
+    }
+  }
+}

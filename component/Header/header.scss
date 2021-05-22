@@ -1,0 +1,56 @@
+// Nav bar
+
+header {
+  @apply z-[1000] absolute w-full block;
+}
+.headerContainer {
+  @apply p-[30px] lg:p-[75px] md:p-[60px] relative z-10;
+}
+header .logo {
+  font-family: 'Montserrat', sans-serif;
+  @apply font-black text-xl lg:text-3xl md:text-2xl uppercase text-white;
+}
+header .hamburger {
+  @apply block lg:hidden float-right w-[26px] h-[26px] relative cursor-pointer mt-[9px];
+  &:hover {
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    @apply w-[20px] opacity-100;
+  }
+}
+
+header .hamburger span {
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  @apply bg-white w-full h-[2.4px] absolute left-0;
+}
+header .hamburger:hover span {
+  transform: matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 0);
+  @apply w-full bg-white;
+}
+header .hamburger:hover span + span {
+  transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, 0, -6);
+}
+header .hamburger span + span {
+  @apply top-[6px] w-[70%];
+}
+.menu {
+  @apply hidden float-right lg:block;
+}
+nav ul {
+  @apply list-none;
+}
+nav ul li {
+  @apply float-left ml-[45px];
+}
+header .menu ul li a {
+  @apply relative text-white text-[18px] pb-[10px] inline-block font-medium;
+  &::after {
+    content: '';
+    transition: ease all 0.2s;
+    @apply absolute z-10 w-0 left-0 right-0 bottom-0 m-auto h-[1px] bg-white;
+  }
+  &:hover::after {
+    @apply w-full;
+  }
+}

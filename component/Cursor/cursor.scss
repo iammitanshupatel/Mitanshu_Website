@@ -1,0 +1,114 @@
+#cursor {
+  position: fixed;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  z-index: 1203;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+}
+
+#cursor .cursor__bg {
+  -webkit-transition: transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: block;
+  left: 0;
+  top: 0;
+  mix-blend-mode: exclusion;
+  background: #000;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background: #fff;
+  -webkit-transform: scale(0.15);
+  transform: scale(0.15);
+  -moz-transform: scale(0.15);
+  -ms-transform: scale(0.15);
+  -o-transform: scale(0.15);
+}
+
+#cursor .cursor__label {
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+#cursor .cursor__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
+}
+
+#cursor .cursor__pause,
+#cursor .cursor__play {
+  mix-blend-mode: exclusion;
+  display: none;
+}
+
+#cursor .cursor__play {
+  left: calc(50% + 2px);
+}
+
+#cursor.is-medium .cursor__bg {
+  -webkit-transform: scale(0.475);
+  transform: scale(0.475);
+}
+
+#cursor.is-big .cursor__bg {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+#cursor.is-pause .cursor__pause,
+#cursor.is-play .cursor__play {
+  display: block;
+}
+
+[data-cursor-type],
+[data-cursor-type]:hover {
+  cursor: none !important;
+}
+
+html.msie #cursor {
+  display: none !important;
+}
+
+html.msie [data-cursor-type],
+html.msie [data-cursor-type]:hover {
+  cursor: auto !important;
+}
+
+html.msie [data-cursor-type] * {
+  pointer-events: all;
+}
+
+html.msie a,
+html.msie a:hover {
+  cursor: pointer !important;
+}
+
+.scroll-content {
+  cursor: default !important;
+}
+
+.scale-up .scroll-content {
+  cursor: grabbing !important;
+}

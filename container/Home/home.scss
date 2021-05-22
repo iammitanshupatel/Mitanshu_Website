@@ -1,0 +1,104 @@
+.imgCover {
+  background-image: url(/image/1764222.jpg);
+  background-position: center center;
+  @apply relative bg-cover w-full h-[100vh] bg-fixed;
+}
+.imgCover::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  @apply h-full w-full absolute z-10 left-0 top-0;
+}
+.homeContainer {
+  @apply h-[100vh] relative z-10 w-full px-[15px] mx-auto;
+}
+.homeWrap {
+  @apply flex flex-wrap mx-[-15px] items-center h-[100vh] justify-center;
+}
+.homeTxt {
+  @apply text-center ml-auto w-full px-[15px];
+}
+.homeTxt h1 {
+  @apply text-white text-[2.5rem] md:text-[5rem] opacity-100 font-black m-0 mb-2;
+}
+.homeTxt h2 {
+  @apply text-white text-[24px] md:text-[33px];
+}
+.mouse-wrap {
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  @apply relative  inline-block left-[50%] bottom-[50px] z-20;
+}
+
+.mouse-wrap:active,
+.mouse-wrap:active > .mouse-label,
+.mouse-wrap:focus,
+.mouse-wrap:focus > .mouse-label {
+  @apply outline-none;
+}
+
+.mouse-wrap .mouse-label {
+  @apply top-0 text-white uppercase tracking-wider font-bold text-[10px];
+}
+
+.mouse-wrap .mouse {
+  border: 2px solid #fff;
+  -webkit-animation: intro 2s;
+  animation: intro 2s;
+  @apply absolute w-[22px] h-[42px] bottom-[30px] block left-[50%] ml-[-12px] rounded-[15px];
+}
+
+.mouse-wrap .mouse .scroll {
+  -webkit-animation: finger 2s infinite;
+  animation: finger 2s infinite;
+  @apply block w-[3px] h-[3px] my-[6px] mx-auto bg-[#fff] rounded;
+}
+
+@-webkit-keyframes intro {
+  0% {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    @apply opacity-0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    @apply opacity-100;
+  }
+}
+
+@keyframes intro {
+  0% {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    @apply opacity-0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    @apply opacity-100;
+  }
+}
+
+@-webkit-keyframes finger {
+  0% {
+    @apply opacity-100;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    @apply opacity-0;
+  }
+}
+
+@keyframes finger {
+  0% {
+    @apply opacity-100;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    @apply opacity-0;
+  }
+}

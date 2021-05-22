@@ -1,0 +1,105 @@
+// main section
+
+.dataScroll {
+  @apply inline-block w-full;
+}
+.pageHeader {
+  @apply text-center mt-[20vh] lg:mt-[25vh];
+}
+// .boxAnimate {
+//   transform: translateY(120px);
+//   -webkit-transform: translateY(120px);
+//   transition: all ease 0.8s;
+//   -webkit-transition: all ease 0.8s;
+//   @apply opacity-0;
+// }
+// .boxAnimate .animated {
+//   transform: translateY(0px);
+//   -webkit-transform: translateY(0px);
+//   @apply opacity-100;
+// }
+.pageHeader .little {
+  @apply opacity-40 text-[18px] text-white;
+}
+.pageHeader .title {
+  @apply text-white text-[60px] lg:text-[70px] xl:text-[100px] font-bold my-2;
+}
+.containerCtc {
+  @apply w-4/5 ml-[10%];
+}
+.top60 {
+  @apply mt-[30px] lg:mt-[60px];
+}
+.txc {
+  @apply text-center;
+}
+.txc h2 {
+  @apply text-white text-[20px] md:text-[25px] lg:text-[27px] xl:text-[34px] leading-[35px] md:leading-[41px] xl:leading-[45px] opacity-70 mb-2 font-semibold px-[15px] md:px-0;
+}
+@media only screen and (max-width: 768px) {
+  .txc h2 br {
+    display: none;
+  }
+}
+
+.top45 {
+  @apply mt-[45px];
+}
+.errorMsg {
+  @apply text-center text-sm mb-[30px] text-red-600 font-bold;
+}
+.rowInput {
+  @apply flex flex-col lg:flex-row w-full lg:gap-8;
+}
+.inputWidth {
+  @apply flex w-full lg:w-[50%];
+}
+
+.inp {
+  border-bottom: rgb(112, 112, 112);
+}
+.inp:focus {
+  border-bottom: #fff;
+  color: #fff;
+}
+#contactForm .inp {
+  background: transparent;
+  font-family: sofia-pro, sans-serif;
+  @apply p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+}
+.formMsg {
+  @apply flex w-full;
+}
+.btn {
+  @apply h-[53px] w-[113.16px] text-black bg-white pt-[10px] pb-[13px] px-[28px] text-[18px] font-semibold leading-[30px] border-0 rounded-[4px];
+}
+.top120 {
+  @apply mt-[120px];
+}
+.contactInfos {
+  @apply flex w-full flex-wrap lg:flex-nowrap;
+}
+.responsiveInfo {
+  @apply flex flex-wrap w-full md:w-1/2 lg:w-full justify-center mb-[60px] lg:mb-0;
+}
+.wFull {
+  @apply w-full;
+}
+.iconWidth {
+  @apply flex flex-col items-center;
+}
+.iconWidth svg {
+  @apply text-white w-[40px] mb-[30px];
+}
+.contactInfos a {
+  @apply text-white font-semibold opacity-90 leading-6;
+}
+.contactInfos span {
+  @apply text-white opacity-50 mt-2;
+}
+.map {
+  @apply mt-[90px] h-[50vh] w-full z-10 relative;
+}
+.map iframe {
+  @apply h-full w-full;
+}
