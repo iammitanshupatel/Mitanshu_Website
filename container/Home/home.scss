@@ -2,11 +2,11 @@
   background-image: url(/image/1764222.jpg);
   background-position: center center;
   @apply relative bg-cover w-full h-[100vh] bg-fixed;
-}
-.imgCover::before {
-  content: '';
-  background: rgba(0, 0, 0, 0.5);
-  @apply h-full w-full absolute z-10 left-0 top-0;
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    @apply h-full w-full absolute z-10 left-0 top-0;
+  }
 }
 .homeContainer {
   @apply h-[100vh] relative z-10 w-full px-[15px] mx-auto;
@@ -16,18 +16,21 @@
 }
 .homeTxt {
   @apply text-center ml-auto w-full px-[15px];
-}
-.homeTxt h1 {
-  @apply text-white text-[2.5rem] md:text-[5rem] opacity-100 font-black m-0 mb-2;
-}
-.homeTxt h2 {
-  @apply text-white text-[24px] md:text-[33px];
+  & h1 {
+    @apply text-white text-[2.5rem] md:text-[5rem] opacity-100 font-black m-0 mb-2;
+  }
+  & h2 {
+    @apply text-white text-[24px] md:text-[33px] leading-8 md:leading-9;
+  }
+  & br {
+    @apply hidden md:block;
+  }
 }
 .mouse-wrap {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  @apply relative  inline-block left-[50%] bottom-[50px] z-20;
+  @apply relative flex justify-center left-[50%] bottom-[50px] z-20 cursor-pointer;
 }
 
 .mouse-wrap:active,
@@ -100,5 +103,20 @@
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
     @apply opacity-0;
+  }
+}
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

@@ -11,7 +11,6 @@ const About = () => (
               <h1>About</h1>
               <div className="p3">
                 <h2>Hi! I'm Mitanshu Patel</h2>
-
                 <p>
                   <strong>Mitanshu Patel </strong>
                   is a web designer from India. He works in his little studio-home for galleries
@@ -19,7 +18,7 @@ const About = () => (
                   the five continents
                 </p>
                 <p>
-                  <a href="#">Contact me</a>
+                  <a href="/ContactPage">Contact me</a>
                 </p>
               </div>
             </div>

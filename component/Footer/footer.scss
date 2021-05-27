@@ -1,23 +1,26 @@
 footer {
-  @apply pb-[90px];
+  @apply py-[90px];
 }
 .wrap {
   @apply flex flex-wrap flex-col xl:flex-row;
 }
 .footerInfo {
   @apply font-medium text-xl leading-[35px] xl:max-w-[50%] px-[15px];
-}
-.footerInfo p {
-  color: rgb(185, 185, 185);
-}
-.footerInfo a {
-  @apply text-white;
+  & p {
+    color: rgb(185 185 185);
+  }
+  & a {
+    @apply text-white;
+    &:hover {
+      color: rgb(185 185 185);
+    }
+  }
 }
 .footerInfo .copyright {
   @apply opacity-60 mt-6 font-normal;
-}
-.copyright p {
-  @apply text-[17px];
+  & p {
+    @apply text-[17px];
+  }
 }
 .rightText {
   text-align: right !important;
@@ -28,7 +31,7 @@ footer {
   &:hover {
     @apply opacity-100;
   }
-}
-.uptotop svg {
-  @apply h-[38px] w-[16px] ml-[15px] animate-bounce;
+  & svg {
+    @apply h-[38px] w-[16px] ml-[15px] animate-bounce;
+  }
 }

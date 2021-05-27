@@ -3,9 +3,8 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Card from '../../component/Card';
-import Button from '../../component/Button';
 
-const Projects = () => {
+const WorkPage = () => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -15,17 +14,29 @@ const Projects = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <>
-      <section id="Projects">
+      <div className="fullImage hero me">
+        <div className="fullText">
+          <div className="outer">
+            <div className="inner">
+              <h1>Projects I Have Done</h1>
+            </div>
+            <a href="#scrollHere" className="mouse-wrap justifyCenter">
+              <span className="mouse">
+                <span className="scroll" />
+              </span>
+              <span className="mouse-label">Scroll</span>
+            </a>
+          </div>
+        </div>
+        <div className="workImgOverlay" />
+      </div>
+      <div id="scrollHere" />
+      <div className="top120">
         <div className="srvContainer">
           <div className="srvCol">
-            <div className="secDesc">
-              <h1>Projects</h1>
-              <div className="p2">
-                <h2>What I Did</h2>
-              </div>
-            </div>
             <div className="cardRow">
               <Card variant="projectCard">
                 <figure>
@@ -51,25 +62,10 @@ const Projects = () => {
                   <div className="shine" />
                 </figure>
               </Card>
-              <Card variant="projectCard">
-                <figure>
-                  <img src="/image/Project/img-4.jpg" alt="" />
-                  <figcaption>
-                    <button type="button" onClick={handleOpen}>
-                      <h3>Personal Portfolio</h3>
-                      <p>Website</p>
-                    </button>
-                  </figcaption>
-                  <div className="shine" />
-                </figure>
-              </Card>
             </div>
-            <Button btnText="Load More" />
-            {/* <div className="loadMoreBtn"> */}
-            {/* </div> */}
           </div>
         </div>
-      </section>
+      </div>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -91,9 +87,8 @@ const Projects = () => {
           </div>
         </Fade>
       </Modal>
-      <div className="separated" />
     </>
   );
 };
 
-export default Projects;
+export default WorkPage;

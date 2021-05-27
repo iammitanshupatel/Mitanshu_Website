@@ -22,7 +22,7 @@
 .fullImage .imgOverlay {
   background-image: url(/image/cover_bg_2.jpg);
   background-position: center center;
-  @apply h-[100vh] w-full bg-cover;
+  @apply h-[100vh] w-full bg-cover  bg-fixed;
 }
 .fullImage .imgOverlay::before {
   content: '';
@@ -45,6 +45,9 @@
 .bottom50 {
   @apply mb-[50px];
 }
+.top50 {
+    @apply mt-[50px];
+  }
 .flexCol {
   @apply flex flex-col  xl:flex-row xl:w-10/12;
 }
@@ -86,3 +89,4 @@
   content: '';
   @apply bg-gray-600 absolute top-[31px] right-0 w-[10px] h-[10px] rounded-[50%];
 }
+

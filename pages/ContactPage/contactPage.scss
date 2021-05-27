@@ -58,12 +58,20 @@
 .inp {
   border-bottom: rgb(112, 112, 112);
 }
+.borderBottom {
+  border-bottom: rgb(220, 38, 38);
+  background: transparent;
+  color: #fff;
+  font-family: sofia-pro, sans-serif;
+  @apply p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+}
 .inp:focus {
   border-bottom: #fff;
   color: #fff;
 }
 #contactForm .inp {
   background: transparent;
+  color: #fff;
   font-family: sofia-pro, sans-serif;
   @apply p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
 }

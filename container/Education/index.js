@@ -19,7 +19,7 @@ const Education = () => (
                 community.
               </p>
               <p>
-                <a href="#">Checkout my resume</a>
+                <a href="/AboutPage">Checkout my resume</a>
               </p>
             </div>
           </div>

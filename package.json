@@ -11,6 +11,7 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/line-clamp": "^0.2.0",
     "@zeit/next-sass": "^1.0.1",
@@ -47,6 +48,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^8.2.8",
     "prettier": "^2.2.1",
+    "react-cursor-position": "^3.0.3",
+    "react-rotating-text": "^1.4.1",
     "tailwindcss": "^2.0.4"
   }
 }

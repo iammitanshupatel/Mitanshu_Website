@@ -1,10 +1,17 @@
 // Nav bar
 
 header {
-  @apply z-[1000] absolute w-full block;
+  @apply z-[1000] fixed w-full block;
+}
+.fixed-header {
+  box-shadow: 0px 1px 27px -3px rgb(0 0 0 / 100%);
+  @apply bg-[#000];
+  & .headerContainer {
+    @apply px-[30px] md:px-[60px] xl:px-[75px] py-[35px] z-10;
+  }
 }
 .headerContainer {
-  @apply p-[30px] lg:p-[75px] md:p-[60px] relative z-10;
+  @apply p-[30px] lg:p-[75px] md:p-[60px] relative z-20;
 }
 header .logo {
   font-family: 'Montserrat', sans-serif;
@@ -37,10 +44,10 @@ header .hamburger span + span {
 .menu {
   @apply hidden float-right lg:block;
 }
-nav ul {
-  @apply list-none;
+ul {
+  @apply list-none my-[6px];
 }
-nav ul li {
+ul li {
   @apply float-left ml-[45px];
 }
 header .menu ul li a {

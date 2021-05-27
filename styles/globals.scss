@@ -1,15 +1,23 @@
-@import './../container/ContactPage/contactPage.scss';
-@import './../container/AboutPage/aboutPage.scss';
+@import '../pages/ContactPage/contactPage.scss';
+@import '../pages/AboutPage/aboutPage.scss';
+@import '../pages/WorkPage/workPage.scss';
 @import './../container/Home/home.scss';
 @import './../container/About/about.scss';
 @import './../container/Services/services.scss';
 @import './../container/Education/education.scss';
 @import './../container/Projects/projects.scss';
+@import './../container/Blogs/blogs.scss';
+@import './../container/Testimonial/testimonial.scss';
 @import '/component/Cursor/cursor.scss';
 @import '/component/PreLoader/preLoader.scss';
 @import '/component/Header/header.scss';
 @import '/component/Footer/footer.scss';
+@import '/component/Button/button.scss';
+@import '/component/Card/card.scss';
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: black;
   font-family: sofia-pro, sans-serif;

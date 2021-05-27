@@ -1,3 +1,4 @@
+import Card from '../../component/Card';
 import Web from '../../public/icon/desktop-outline.svg';
 
 const Services = () => (
@@ -25,7 +26,7 @@ const Services = () => (
                 </div>
               </div>
             </div>
-            <div className="srvCard">
+            <Card variant="srvCard">
               <div className="featureBox">
                 <Web />
                 <div className="featureContent">
@@ -37,8 +38,8 @@ const Services = () => (
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="srvCard">
+            </Card>
+            <Card variant="srvCard">
               <div className="featureBox">
                 <Web />
                 <div className="featureContent">
@@ -50,8 +51,8 @@ const Services = () => (
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="srvCard">
+            </Card>
+            <Card variant="srvCard">
               <div className="featureBox">
                 <Web />
                 <div className="featureContent">
@@ -63,8 +64,8 @@ const Services = () => (
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="srvCard">
+            </Card>
+            <Card variant="srvCard">
               <div className="featureBox">
                 <Web />
                 <div className="featureContent">
@@ -76,8 +77,8 @@ const Services = () => (
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="srvCard">
+            </Card>
+            <Card variant="srvCard">
               <div className="featureBox">
                 <Web />
                 <div className="featureContent">
@@ -89,7 +90,7 @@ const Services = () => (
                   </p>
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </div>

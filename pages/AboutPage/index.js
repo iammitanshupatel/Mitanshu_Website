@@ -2,7 +2,6 @@
 
 const AboutPage = () => (
   <>
-    {/* <Header /> */}
     <div className="fullImage hero me">
       <div className="fullText">
         <div className="outer">
@@ -10,10 +9,17 @@ const AboutPage = () => (
             <span>Full-Stack Developer</span>
             <h1>Mitanshu Patel</h1>
           </div>
+          <a href="#scrollHere" className="mouse-wrap justifyCenter">
+            <span className="mouse">
+              <span className="scroll" />
+            </span>
+            <span className="mouse-label">Scroll</span>
+          </a>
         </div>
       </div>
       <div className="imgOverlay" />
     </div>
+    <div id="scrollHere" />
     <div className="boxAnimate animated containerCtc top120 textWidget">
       <div className="abtWrap">
         <h3>Bio.</h3>
@@ -56,7 +62,7 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
-    <div className="boxAnimate animated containerCtc textWidget">
+    <div className="boxAnimate animated containerCtc textWidget top50">
       <div className="abtWrap">
         <h3>Technologies known.</h3>
         <div className="flexRow">

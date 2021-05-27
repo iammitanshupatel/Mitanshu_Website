@@ -1,0 +1,49 @@
+.testimonial {
+  background-image: url(/image/testimonial/testimonials-bg.jpg);
+  @apply relative bg-fixed flex flex-col bg-cover py-24 items-center;
+}
+
+.testimonial::after {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 bg-black opacity-60;
+}
+
+.slickDotsUp {
+  @apply h-[10px] rounded-[5px] bg-[#e5e7e9] relative;
+}
+.slickDots {
+  @apply h-[10px] rounded-[5px] bg-gray-500;
+}
+.testimonialContainer {
+  @apply z-10 w-[80%];
+  & .slick-track {
+    @apply flex flex-row;
+  }
+}
+
+.containerTest {
+  @apply z-20 px-8 leading-7 text-center;
+  & h1 {
+    @apply text-white text-[24px] font-semibold m-0;
+  }
+  & h5 {
+    @apply text-white text-[14px] font-semibold mt-2;
+  }
+  & .description {
+    @apply text-[16px] font-sans text-white line-clamp-5 leading-6 font-thin;
+  }
+}
+
+.authorImg {
+  @apply flex justify-center;
+}
+.authorImg img {
+  @apply w-28 h-28 rounded-[50%] mb-4;
+}
+.dot {
+  display: flex !important;
+  @apply mt-2 p-0 flex-row bottom-0 justify-center;
+}
+.dot button {
+  @apply cursor-pointer h-3 w-5 mx-2 my-1 bg-gray-300 rounded-[30px];
+}

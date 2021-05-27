@@ -1,0 +1,37 @@
+.items {
+  @apply flex flex-wrap h-full w-full justify-center;
+}
+
+
+.items img {
+  @apply w-full duration-500 ease-in-out overflow-auto;
+  &:hover {
+    @apply transform scale-110 duration-500 ease-in-out;
+  }
+}
+.imgStyle {
+  @apply h-[44%];
+}
+.custom {
+  @apply overflow-hidden flex;
+}
+.blogPageContent {
+  @apply px-[15px] py-[20px] bg-white h-auto;
+}
+.blogPageContent h3 {
+  line-height: 1.2;
+  @apply text-textColor-skin-base text-[20px] mt-0 text-[#222] font-semibold mb-[15px] font-Raleway;
+}
+.blogPageContent p {
+  line-height: 1.65;
+  @apply text-textColor-skin-dull h-[5rem] md:h-[7rem] text-[16px] pb-4 md:pb-9 mb-0 border-b border-0 border-gray-100 border-solid line-clamp-3 md:line-clamp-4 font-sans font-thin;
+}
+.blogPageMeta {
+  @apply h-auto flex justify-between pt-[15px] md:pt-[20px] lg:pt-[15px];
+}
+.more {
+  @apply text-black border-b border-0 border-solid border-[#aaa] font-semibold text-[13px];
+}
+.date {
+  @apply float-right text-[13px] text-[#748182];
+}

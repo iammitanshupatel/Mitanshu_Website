@@ -2,13 +2,11 @@ import React from 'react';
 import UpArrow from '../../public/icon/chevron-up-outline.svg';
 
 const Footer = () => {
-  function scrollToTop() {
-    // Scroll to top logic
+  const scrollToTop = () => {
     document.documentElement.scrollTo({
       top: 0,
-      behavior: 'smooth',
     });
-  }
+  };
   return (
     <footer>
       <div className="containerCtc wrap">
