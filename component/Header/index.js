@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 
 const Header = () => {
   const navbarRef = useRef(null);
-  const collapseRef = useRef(null);
   const burgerRef = useRef(null);
   const menuRef = useRef(null);
   useEffect(() => {
