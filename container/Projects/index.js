@@ -64,7 +64,7 @@ const Projects = () => {
                 </figure>
               </Card>
             </div>
-            <Button btnText="Load More" />
+            <Button btnText="Load More" locationPage="/WorkPage" />
             {/* <div className="loadMoreBtn"> */}
             {/* </div> */}
           </div>

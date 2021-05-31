@@ -68,10 +68,9 @@
       @apply w-full block h-auto border-0;
     }
     & figcaption {
-      @apply absolute flex flex-col justify-center inset-0 z-10 pl-5 items-baseline;
+      @apply absolute inset-0 z-10 pl-5 items-baseline;
       & button {
-        border: 0;
-        @apply bg-transparent;
+        @apply flex flex-col justify-center gap-2 h-full w-full;
       }
       & h3 {
         -webkit-transform: translateY(-40px);
@@ -79,7 +78,7 @@
         -webkit-box-sizing: border-box;
         -webkit-transition: all 0.35s ease;
         transition: all 0.35s ease;
-        @apply text-left leading-[1.1em] text-[22px] opacity-0 w-full p-0 text-white box-border mt-0 mb-2;
+        @apply text-left leading-[1.1em] text-[22px] opacity-0 w-full p-0 text-white box-border m-0;
       }
       & p {
         -webkit-transform: translateY(40px);
@@ -87,7 +86,7 @@
         -webkit-box-sizing: border-box;
         -webkit-transition: all 0.35s ease;
         transition: all 0.35s ease;
-        @apply text-left  text-[11px] font-light tracking-[1px] opacity-0 top-1/2 text-[#ffffffbd] box-border mt-0;
+        @apply text-left  text-[11px] font-light tracking-[1px] opacity-0 top-1/2 text-[#ffffffbd] box-border m-0;
       }
     }
     & .shine {

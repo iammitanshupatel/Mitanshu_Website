@@ -1,11 +1,11 @@
 .testimonial {
-  background-image: url(/image/testimonial/testimonials-bg.jpg);
+  background-image: url(/image/testimonial/dubai-bg.jpg);
   @apply relative bg-fixed flex flex-col bg-cover py-24 items-center;
 }
 
 .testimonial::after {
   content: '';
-  @apply absolute top-0 left-0 right-0 bottom-0 bg-black opacity-60;
+  @apply absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50;
 }
 
 .slickDotsUp {

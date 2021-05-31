@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-const Button = ({ btnText }) => {
+const Button = ({ btnText, locationPage }) => {
   const btnRef = useRef(null);
   const spanRef = useRef(null);
   const mouseEvent = useCallback(e => {
+      e.preventDefault();
     const parentOffset = btnRef.current.getBoundingClientRect();
     const relX = e.pageX - parentOffset.left;
     const relY = e.pageY - parentOffset.top;
@@ -23,7 +24,7 @@ const Button = ({ btnText }) => {
   }, [mouseEvent]);
 
   return (
-    <a className="btn-posnawr" ref={btnRef} href="#">
+    <a className="btn-posnawr" ref={btnRef} href={locationPage}>
       {btnText}
       <span ref={spanRef} />
     </a>

@@ -2,12 +2,17 @@ import { useEffect, useRef } from 'react';
 
 const Header = () => {
   const navbarRef = useRef(null);
+  const collapseRef = useRef(null);
+  const burgerRef = useRef(null);
+  const menuRef = useRef(null);
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY >= 60) {
         navbarRef.current.classList.add('fixed-header');
+        menuRef.current.classList.add('nav-black');
       } else {
         navbarRef.current.classList.remove('fixed-header');
+        menuRef.current.classList.remove('nav-black');
       }
     };
     window.addEventListener('scroll', onScroll, false);
@@ -15,6 +20,11 @@ const Header = () => {
       window.removeEventListener('scroll', onScroll, false);
     };
   }, []);
+
+  const burgerClicked = () => {
+    burgerRef.current.classList.toggle('open');
+    menuRef.current.classList.toggle('nav');
+  };
   return (
     <header>
       <nav ref={navbarRef}>
@@ -22,11 +32,11 @@ const Header = () => {
           <a href="http://localhost:3000" className="logo">
             Mitanshu
           </a>
-          <div className="hamburger ">
-            <span></span>
-            <span></span>
-          </div>
-          <div className="menu">
+          <button ref={burgerRef} className="hamburger" type="button" onClick={burgerClicked}>
+            <span id="span1" />
+            <span id="span2" />
+          </button>
+          <div className="menu" ref={menuRef}>
             <ul>
               <li>
                 <a href="/">Home</a>

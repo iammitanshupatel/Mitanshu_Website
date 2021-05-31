@@ -1,5 +1,5 @@
 .btn-posnawr {
-  color: #00abec;
+  color: #ea0026;
   position: relative;
   display: block;
   overflow: hidden;
@@ -11,7 +11,7 @@
   font: normal 18px/60px 'proxima-nova', sans-serif;
   text-align: center;
   text-decoration: none;
-  border: 2px solid #00abec;
+  border: 2px solid #ea0026;
 }
 .btn-posnawr span {
   position: absolute;
@@ -20,7 +20,7 @@
   height: 0;
 
   border-radius: 50%;
-  background-color: #00abec;
+  background-color: #ea0026;
   -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   -webkit-transform: translate(-50%, -50%);
@@ -28,12 +28,12 @@
   z-index: -1;
 }
 .btn-posnawr:hover {
-  color: #eee;
+  color: #fff;
 }
 .btn-posnawr:hover span {
-  width: 225%;
+  width: 250%;
   height: 21000%;
 }
 .btn-posnawr:active {
-  background-color: #00c4ad;
+  background-color: #ea0026;
 }

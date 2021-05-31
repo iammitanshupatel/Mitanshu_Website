@@ -21,7 +21,7 @@ const WorkPage = () => {
         <div className="fullText">
           <div className="outer">
             <div className="inner">
-              <h1>Projects I Have Done</h1>
+              <h1>Projects I Have Worked On</h1>
             </div>
             <a href="#scrollHere" className="mouse-wrap justifyCenter">
               <span className="mouse">
