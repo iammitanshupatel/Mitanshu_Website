@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 const Header = () => {
+  const headerRef = useRef(null);
   const navbarRef = useRef(null);
   const burgerRef = useRef(null);
   const menuRef = useRef(null);
@@ -8,10 +9,12 @@ const Header = () => {
     const onScroll = () => {
       if (window.scrollY >= 60) {
         navbarRef.current.classList.add('fixed-header');
-        menuRef.current.classList.add('nav-black');
+        menuRef.current.classList.add('nav-transparent');
+        headerRef.current.classList.add('bgBlack');
       } else {
         navbarRef.current.classList.remove('fixed-header');
-        menuRef.current.classList.remove('nav-black');
+        menuRef.current.classList.remove('nav-transparent');
+        headerRef.current.classList.remove('bgBlack');
       }
     };
     window.addEventListener('scroll', onScroll, false);
@@ -25,7 +28,7 @@ const Header = () => {
     menuRef.current.classList.toggle('nav');
   };
   return (
-    <header>
+    <header ref={headerRef}>
       <nav ref={navbarRef}>
         <div className="headerContainer">
           <a href="http://localhost:3000" className="logo">
