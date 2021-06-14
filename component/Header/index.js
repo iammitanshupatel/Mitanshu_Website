@@ -34,7 +34,12 @@ const Header = () => {
           <a href="http://localhost:3000" className="logo">
             Mitanshu
           </a>
-          <button ref={burgerRef} className="hamburger" type="button" onClick={burgerClicked}>
+          <button
+            closeAfterTransition
+            ref={burgerRef}
+            className="hamburger"
+            type="button"
+            onClick={burgerClicked}>
             <span id="span1" />
             <span id="span2" />
           </button>

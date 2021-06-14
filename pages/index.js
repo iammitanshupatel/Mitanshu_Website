@@ -9,7 +9,6 @@ import Testimonial from '../container/Testimonial';
 
 const Main = () => (
   <>
-    {/* <Cursor /> */}
     <Home />
     <About />
     <Services />

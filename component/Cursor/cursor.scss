@@ -3,7 +3,7 @@
   text-align: center;
   width: 80px;
   height: 80px;
-  z-index: 1203;
+  z-index: 1000000;
   -webkit-transform-origin: center center;
   transform-origin: center center;
   pointer-events: none;
@@ -15,7 +15,7 @@
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out -webkit-transform 0.3s ease-in-out;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   display: block;

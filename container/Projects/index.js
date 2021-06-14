@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
@@ -7,7 +7,20 @@ import Button from '../../component/Button';
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const modal = document.getElementById('myModal');
+    const btn = document.getElementById('myBtn');
+    btn.onclick = function btnClick() {
+      modal.style.display = 'flex';
+      document.documentElement.scroll();
+    };
 
+    window.onclick = function windowClick(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  }, []);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -31,7 +44,7 @@ const Projects = () => {
                 <figure>
                   <img src="/image/Project/img-2.jpg" alt="" />
                   <figcaption>
-                    <button type="button" onClick={handleOpen}>
+                    <button type="button" id="myBtn">
                       <h3>Personal Portfolio</h3>
                       <p>Website</p>
                     </button>
@@ -65,12 +78,20 @@ const Projects = () => {
               </Card>
             </div>
             <Button btnText="Load More" locationPage="/WorkPage" />
-            {/* <div className="loadMoreBtn"> */}
-            {/* </div> */}
           </div>
         </div>
       </section>
-      <Modal
+      <div id="myModal" className="modal">
+        {/* <!-- Modal content --> */}
+        <div className="paper">
+          <h2>Personal Portfolio</h2>
+          <p>
+            This is a personal portfolio developed for my self. This is a Dynamic website developed
+            using Strapi, Next.js & Tailwind CSS.
+          </p>
+        </div>
+      </div>
+      {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className="modal"
@@ -90,7 +111,7 @@ const Projects = () => {
             </p>
           </div>
         </Fade>
-      </Modal>
+      </Modal> */}
       <div className="separated" />
     </>
   );

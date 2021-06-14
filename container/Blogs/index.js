@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Slider from 'react-slick';
 import Button from '../../component/Button';
 import Card from '../../component/Card';
@@ -10,6 +9,7 @@ const settings = {
   pauseOnHover: true,
   arrows: false,
   initialSlide: 0,
+  infinite: false,
   mobileFirst: true,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -40,7 +40,7 @@ const settings = {
 
 const Blogs = () => (
   <>
-    <section id="Blogs" className="blogSpacing">
+    <section id="Blogs">
       <div className="srvContainer">
         <div className="srvCol">
           <div className="secDesc">
@@ -51,30 +51,152 @@ const Blogs = () => (
           </div>
         </div>
         <div className="items">
-          <Card variant="cardBlog">
-            <a href="#">
-              <div className="custom">
-                <img src="/image/Blogs/img-1.jpg" alt="" />
-              </div>
-              <div className="blogPageContent">
-                <h3>The best of web design and web design inspiration</h3>
-                <p>
-                  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-                  necessary, making this the first
-                </p>
-                <div className="blogPageMeta">
-                  <span className="more">
-                    <a href="#">Read More</a>
-                  </span>
-                  <span className="date">16/April/2021</span>
+          <Slider id="sliderModal" className="sliderShow" {...settings}>
+            <Card variant="cardBlog">
+              <a href="#">
+                <div className="custom">
+                  <img src="/image/Blogs/img-1.jpg" alt="" />
                 </div>
-              </div>
-            </a>
-          </Card>
+                <div className="blogPageContent">
+                  <h3>The best of web design and web design inspiration</h3>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                    as necessary, making this the first
+                  </p>
+                  <div className="blogPageMeta">
+                    <span className="more">
+                      <a href="#">Read More</a>
+                    </span>
+                    <span className="date">16/April/2021</span>
+                  </div>
+                </div>
+              </a>
+            </Card>
+            <Card variant="cardBlog">
+              <a href="#">
+                <div className="custom">
+                  <img src="/image/Blogs/img-1.jpg" alt="" />
+                </div>
+                <div className="blogPageContent">
+                  <h3>The best of web design and web design inspiration</h3>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                    as necessary, making this the first
+                  </p>
+                  <div className="blogPageMeta">
+                    <span className="more">
+                      <a href="#">Read More</a>
+                    </span>
+                    <span className="date">16/April/2021</span>
+                  </div>
+                </div>
+              </a>
+            </Card>
+            <Card variant="cardBlog">
+              <a href="#">
+                <div className="custom">
+                  <img src="/image/Blogs/img-1.jpg" alt="" />
+                </div>
+                <div className="blogPageContent">
+                  <h3>The best of web design and web design inspiration</h3>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                    as necessary, making this the first
+                  </p>
+                  <div className="blogPageMeta">
+                    <span className="more">
+                      <a href="#">Read More</a>
+                    </span>
+                    <span className="date">16/April/2021</span>
+                  </div>
+                </div>
+              </a>
+            </Card>
+            <Card variant="cardBlog">
+              <a href="#">
+                <div className="custom">
+                  <img src="/image/Blogs/img-1.jpg" alt="" />
+                </div>
+                <div className="blogPageContent">
+                  <h3>The best of web design and web design inspiration</h3>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                    as necessary, making this the first
+                  </p>
+                  <div className="blogPageMeta">
+                    <span className="more">
+                      <a href="#">Read More</a>
+                    </span>
+                    <span className="date">16/April/2021</span>
+                  </div>
+                </div>
+              </a>
+            </Card>
+            <Card variant="cardBlog">
+              <a href="#">
+                <div className="custom">
+                  <img src="/image/Blogs/img-1.jpg" alt="" />
+                </div>
+                <div className="blogPageContent">
+                  <h3>The best of web design and web design inspiration</h3>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                    as necessary, making this the first
+                  </p>
+                  <div className="blogPageMeta">
+                    <span className="more">
+                      <a href="#">Read More</a>
+                    </span>
+                    <span className="date">16/April/2021</span>
+                  </div>
+                </div>
+              </a>
+            </Card>
+            <Card variant="cardBlog">
+              <a href="#">
+                <div className="custom">
+                  <img src="/image/Blogs/img-1.jpg" alt="" />
+                </div>
+                <div className="blogPageContent">
+                  <h3>The best of web design and web design inspiration</h3>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                    as necessary, making this the first
+                  </p>
+                  <div className="blogPageMeta">
+                    <span className="more">
+                      <a href="#">Read More</a>
+                    </span>
+                    <span className="date">16/April/2021</span>
+                  </div>
+                </div>
+              </a>
+            </Card>
+            <Card variant="cardBlog">
+              <a href="#">
+                <div className="custom">
+                  <img src="/image/Blogs/img-1.jpg" alt="" />
+                </div>
+                <div className="blogPageContent">
+                  <h3>The best of web design and web design inspiration</h3>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                    as necessary, making this the first
+                  </p>
+                  <div className="blogPageMeta">
+                    <span className="more">
+                      <a href="#">Read More</a>
+                    </span>
+                    <span className="date">16/April/2021</span>
+                  </div>
+                </div>
+              </a>
+            </Card>
+          </Slider>
+          <Button btnText="Load More" locationPage="/BlogPage" />
         </div>
       </div>
     </section>
-    <div className="separated" />
   </>
 );
 

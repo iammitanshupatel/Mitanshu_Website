@@ -1,8 +1,23 @@
+#Blogs{
+    @apply overflow-hidden pb-10 md:pb-[60px] lg:pb-[80px]
+}
 .items {
   @apply flex flex-wrap h-full w-full justify-center;
 }
 
-
+.sliderShow {
+  @apply w-full;
+  & .slick-slide {
+    padding: 10px 0px;
+    @apply lg:px-5 md:px-4 sm:px-1 xs:px-1;
+  }
+  & .slick-list {
+    margin: 0 -5px;
+    & .slick-track {
+      @apply flex;
+    }
+  }
+}
 .items img {
   @apply w-full duration-500 ease-in-out overflow-auto;
   &:hover {
@@ -20,11 +35,11 @@
 }
 .blogPageContent h3 {
   line-height: 1.2;
-  @apply text-textColor-skin-base text-[20px] mt-0 text-[#222] font-semibold mb-[15px] font-Raleway;
+  @apply text-[#222222] text-[20px] mt-0 text-[#222] font-semibold mb-[15px];
 }
 .blogPageContent p {
   line-height: 1.65;
-  @apply text-textColor-skin-dull h-[5rem] md:h-[7rem] text-[16px] pb-4 md:pb-9 mb-0 border-b border-0 border-gray-100 border-solid line-clamp-3 md:line-clamp-4 font-sans font-thin;
+  @apply text-[#484848] h-[5rem] md:h-[7rem] text-[16px] pb-4 md:pb-9 mb-0 border-b border-0 border-gray-100 border-solid line-clamp-3 md:line-clamp-4 font-thin;
 }
 .blogPageMeta {
   @apply h-auto flex justify-between pt-[15px] md:pt-[20px] lg:pt-[15px];

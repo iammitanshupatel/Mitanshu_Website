@@ -1,22 +1,18 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const Cursor = () => {
   const mouseRef = useRef(null);
-//   const mouseMovement = useCallback(e => {
-//     const parentOffset = mouseRef.current.getBoundingClientRect();
-//     const relX = e.pageX - parentOffset.left;
-//     const relY = e.pageY - parentOffset.top;
-//     mouseRef.current.style.top = `${relX}px`;
-//     mouseRef.current.style.left = `${relY}px`;
-//   }, []);
-//   useEffect(() => {
-//     mouseRef.current.addEventListener('mousemove', mouseMovement);
-//     return () => {
-//       mouseRef.current.removeEventListener('mousemove', mouseMovement);
-//     };
-//   }, [mouseMovement]);
+  const [cursorX, setCursorX] = useState();
+  const [cursorY, setCursorY] = useState();
+  useEffect(() => {
+    window.addEventListener('mousemove', e => {
+      setCursorX(e.pageX);
+      setCursorY(e.pageY);
+    });
+  }, []);
+
   return (
-    <div id="cursor" ref={mouseRef}>
+    <div id="cursor" ref={mouseRef} style={{ left: `${cursorX}px`, top: `${cursorY}px` }}>
       <div className="cursor__label" />
       <div className="cursor__bg" />
     </div>

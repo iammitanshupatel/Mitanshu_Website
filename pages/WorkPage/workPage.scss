@@ -8,16 +8,4 @@
     @apply h-full w-full absolute z-10 left-0 top-0;
   }
 }
-.modal {
-  @apply flex items-center justify-center;
-}
-.paper {
-  border: '2px solid #000';
-  @apply bg-[#151515] p-7 max-w-[auto] sm:max-w-[500px] lg:max-w-[700px];
-  & h2 {
-    @apply text-white text-[27px] text-center;
-  }
-  & p {
-    @apply text-white text-[23px] opacity-80 leading-8 lg:text-justify;
-  }
-}
+
