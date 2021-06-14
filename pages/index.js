@@ -16,8 +16,6 @@ const Main = () => (
     <Education />
     <Blogs />
     <Testimonial />
-    {/* <ContactPage /> */}
-    {/* <AboutPage /> */}
   </>
 );
 

@@ -39,15 +39,15 @@
   color: rgb(185, 185, 185);
   @apply text-[20px] leading-8 xl:w-10/12 px-[15px] mt-0;
 }
-.top100 {
-  @apply mt-[100px];
-}
-.bottom50 {
-  @apply mb-[50px];
-}
-.top50 {
-    @apply mt-[50px];
-  }
+// .top100 {
+//   @apply mt-[100px];
+// }
+// .bottom50 {
+//   @apply mb-[50px];
+// }
+// .top50 {
+//     @apply mt-[50px];
+//   }
 .flexCol {
   @apply flex flex-col  xl:flex-row xl:w-10/12;
 }

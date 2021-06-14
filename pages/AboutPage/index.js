@@ -1,5 +1,3 @@
-// import Header from '../../component/Header';
-
 const AboutPage = () => (
   <>
     <div className="fullImage hero me">
@@ -20,7 +18,7 @@ const AboutPage = () => (
       <div className="imgOverlay" />
     </div>
     <div id="scrollHere" />
-    <div className="boxAnimate animated containerCtc top120 textWidget">
+    <div className="boxAnimate animated containerCtc textWidget">
       <div className="abtWrap">
         <h3>Bio.</h3>
         <p>
@@ -31,7 +29,8 @@ const AboutPage = () => (
         </p>
       </div>
     </div>
-    <div className="boxAnimate animated containerCtc textWidget top100 bottom50">
+    <div className="separated" />
+    <div className="boxAnimate animated containerCtc textWidget">
       <div className="abtWrap">
         <h3>Education.</h3>
         <div className="flexCol">
@@ -44,6 +43,7 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
+    <div className="separated" />
     <div className="boxAnimate animated containerCtc textWidget">
       <div className="abtWrap">
         <h3>Experience.</h3>
@@ -62,7 +62,8 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
-    <div className="boxAnimate animated containerCtc textWidget top50">
+    <div className="separated" />
+    <div className="boxAnimate animated containerCtc textWidget">
       <div className="abtWrap">
         <h3>Technologies known.</h3>
         <div className="flexRow">

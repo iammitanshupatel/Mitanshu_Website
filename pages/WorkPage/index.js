@@ -1,19 +1,20 @@
-import { useState } from 'react';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
-import Card from '../../component/Card';
+import { useEffect } from 'react';
 
 const WorkPage = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
+  const btnClick = () => {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  useEffect(() => {
+    const modal = document.getElementById('myModal');
+    window.onclick = function windowClick(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'visible';
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -42,7 +43,7 @@ const WorkPage = () => {
                 <figure>
                   <img src="/image/Project/img-2.jpg" alt="" />
                   <figcaption>
-                    <button type="button" onClick={handleOpen}>
+                    <button type="button" onClick={btnClick}>
                       <h3>Personal Portfolio</h3>
                       <p>Website</p>
                     </button>
@@ -54,7 +55,7 @@ const WorkPage = () => {
                 <figure>
                   <img src="/image/Project/img-3.jpg" alt="" />
                   <figcaption>
-                    <button type="button" onClick={handleOpen}>
+                    <button type="button" onClick={btnClick}>
                       <h3>Personal Portfolio</h3>
                       <p>Website</p>
                     </button>
@@ -66,27 +67,15 @@ const WorkPage = () => {
           </div>
         </div>
       </div>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className="modal"
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}>
-        <Fade in={open}>
-          <div className="paper">
-            <h2 id="transition-modal-title">Personal Portfolio</h2>
-            <p id="transition-modal-description">
-              This is a personal portfolio developed for my self. This is a Dynamic website
-              developed using Strapi, Next.js & Tailwind CSS.
-            </p>
-          </div>
-        </Fade>
-      </Modal>
+      <div id="myModal" className="modal">
+        <div className="paper">
+          <h2>Personal Portfolio</h2>
+          <p>
+            This is a personal portfolio developed for my self. This is a Dynamic website developed
+            using Strapi, Next.js & Tailwind CSS.
+          </p>
+        </div>
+      </div>
     </>
   );
 };

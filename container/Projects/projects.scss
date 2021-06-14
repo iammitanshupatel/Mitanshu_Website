@@ -4,7 +4,7 @@
 
 .paper {
     border: 2px solid #000;
-    @apply bg-[#151515] p-7 max-w-[auto] sm:max-w-[500px] lg:max-w-[700px];
+    @apply bg-[#151515] p-7 max-w-[400px] sm:max-w-[500px] lg:max-w-[700px];
     & h2 {
       @apply text-white text-[27px] text-center;
     }
