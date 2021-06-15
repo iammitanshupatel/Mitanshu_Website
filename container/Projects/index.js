@@ -10,7 +10,7 @@ const Projects = () => {
   };
   useEffect(() => {
     window.onclick = function windowClick(event) {
-      if (event.target === modalRef) {
+      if (event.target === modalRef.current) {
         modalRef.current.style.display = 'none';
         document.body.style.overflow = 'visible';
       }

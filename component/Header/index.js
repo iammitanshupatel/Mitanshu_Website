@@ -35,36 +35,6 @@ const Header = () => {
           <a href="http://localhost:3000" className="logo">
             Mitanshu
           </a>
-
-          <div className="menu" ref={menuRef}>
-            <ul>
-              <li>
-                <a ref={liRef} href="/">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a ref={liRef} href="/AboutPage">
-                  About
-                </a>
-              </li>
-              <li>
-                <a ref={liRef} href="/WorkPage">
-                  Work
-                </a>
-              </li>
-              <li>
-                <a ref={liRef} href="#">
-                  Blogs
-                </a>
-              </li>
-              <li>
-                <a ref={liRef} href="/ContactPage">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
           <button
             closeAfterTransition
             ref={burgerRef}
@@ -74,6 +44,62 @@ const Header = () => {
             <span id="span1" />
             <span id="span2" />
           </button>
+          {/* <div className="menu">
+            <div className="title">MENU</div>
+            <ul className="nav">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Work</a>
+              </li>
+              <li>
+                <a href="#">Resources</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div> */}
+
+          <aside className="menu" id="sidenav-open" ref={menuRef}>
+            <a
+              id="sidenav-close"
+              title="Close Menu"
+              aria-label="Close Menu"
+              onClick={burgerClicked}
+            />
+            <ul>
+              <li>
+                <a ref={liRef} href="/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} className="activeLi" href="/AboutPage">
+                  About
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} href="/WorkPage">
+                  Work
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} href="/BlogPage">
+                  Blogs
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} href="/ContactPage">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </aside>
         </div>
       </nav>
     </header>

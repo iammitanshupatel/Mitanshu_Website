@@ -1,12 +1,22 @@
 // Nav bar
-
+.activeLi {
+  @apply text-blue-500;
+}
 header {
   transition: all ease 0.3s;
   -webkit-transition: all ease 0.3s;
   @apply z-[1000] fixed w-full block;
 }
+// .bgBlack {
+//   @apply bg-black;p
+// }
 .bgBlack {
-  @apply bg-black;
+  & .fixed-header {
+    background: black;
+  }
+  & ul {
+    background: black !important;
+  }
 }
 .fixed-header {
   box-shadow: 0px 1px 27px -3px rgb(0 0 0 / 100%);
@@ -22,7 +32,7 @@ header .logo {
   @apply font-black text-xl lg:text-3xl md:text-2xl uppercase text-white;
 }
 header .hamburger {
-  @apply block lg:hidden float-right w-[26px] h-[26px] relative cursor-pointer;
+  @apply block md:hidden float-right w-[26px] h-[26px] relative cursor-pointer;
 }
 
 header .hamburger span {
@@ -42,19 +52,115 @@ header .hamburger #span1 {
   @apply bottom-[6px] w-[70%];
 }
 .menu {
-  @apply float-right w-full hidden lg:block lg:w-auto;
+  @apply float-right w-full hidden md:block md:w-auto;
 }
-@media (max-width: 1023px) {
-  .nav-transparent ul {
-    background: transparent !important;
+@media (max-width: 786px) {
+  @mixin vertical-align($position) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  @mixin all-transition($time) {
+    transition: all $time;
+    -webkit-transition: all $time;
+  }
+  body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+  }
+  .menu {
+    font-weight: 100;
+    background: #efefef;
+    width: 150px;
+    height: 100%;
+    padding-left: 50px;
+    position: fixed;
+    z-index: 100;
+    -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    right: -130px;
+    @include all-transition(0.3s);
+    color: #222;
+  
+    &:hover,
+    &:focus {
+      transform: translate3d(-130px, 0, 0);
+      animation-timing-function: 1s ease-in;
+    }
+    .title {
+      top: 50%;
+      @include vertical-align(absolute);
+      transform: rotate(270deg);
+      left: 10px;
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .nav {
+      @include vertical-align(absolute);
+      font-weight: 100;
+        li {
+          padding-bottom: 30px;
+          list-style-type: none;
+  
+          a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            @include all-transition(0.3s);
+  
+            &:hover {
+              color: #aaa;
+          }
+        }
+      }
+    }
+  }
+  .intro {
+    position: absolute;
+    top: 30%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    font-size: 45px;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  #sidenav-open {
+    --easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration: 0.6s;
+    @apply mr-[-30px] md:mr-[-60px];
+  }
+  #sidenav-open:target {
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform var(--duration) var(--easeOutExpo);
   }
   .nav {
-    display: block !important;
+    display: grid;
+    height: 95vh;
+    @apply grid-cols-6;
+    & a {
+      @apply col-span-2 md:col-span-3;
+    }
     & ul {
+      height: 100%;
+      position: sticky;
+      top: 0;
       background-color: rgba(34, 34, 34, 0.9);
-      @apply flex flex-col z-[70] mt-8 mb-4 px-0 py-3 items-center;
+      transition: left 0.1s;
+      max-height: 100vh;
+      overflow: hidden auto;
+      overscroll-behavior: auto;
+      @apply flex flex-col z-[70] mt-8 px-0 py-3 items-center justify-center col-span-4 md:col-span-3;
       & li {
-        margin: 8px 0;
+        margin: 16px 0;
+        & a {
+          font-size: 45px !important;
+        }
       }
     }
   }
@@ -72,7 +178,9 @@ ul li {
     transition: ease all 0.2s;
     @apply absolute z-10 w-0 left-0 right-0 bottom-0 m-auto h-[1px] bg-white;
   }
-  &:hover::after,:active {
+  &:hover::after,
+  :active {
     @apply w-full;
   }
 }
+

@@ -1,0 +1,24 @@
+.blogImgOverlay {
+    background-image: url(/image/blogs-banner.jpeg);
+    background-position: center center;
+    @apply h-[100vh] w-full bg-cover bg-fixed;
+    &::before {
+      content: '';
+      background: rgba(0, 0, 0, 0.5);
+      @apply h-full w-full absolute z-10 left-0 top-0;
+    }
+  }
+  
+  
+
+.cardRow{
+    & img{
+        @apply w-full duration-500 ease-in-out overflow-auto;
+        &:hover {
+          @apply transform scale-110 duration-500 ease-in-out;
+        }
+    }
+}
+.gap1rem{
+    @apply gap-4;
+}

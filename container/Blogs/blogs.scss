@@ -1,23 +1,20 @@
-#Blogs{
-    @apply overflow-hidden pb-10 md:pb-[60px] lg:pb-[80px]
+#Blogs {
+  @apply overflow-hidden pb-10 md:pb-[60px] lg:pb-[80px];
 }
 .items {
   @apply flex flex-wrap h-full w-full justify-center;
 }
-
 .sliderShow {
-  @apply w-full;
-  & .slick-slide {
-    padding: 10px 0px;
-    @apply lg:px-5 md:px-4 sm:px-1 xs:px-1;
-  }
-  & .slick-list {
-    margin: 0 -5px;
-    & .slick-track {
-      @apply flex;
-    }
-  }
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  inline-size: auto;
+  @apply w-[90%] md:w-[85%] sm:w-[80%] gap-[2%] grid overflow-x-scroll grid-flow-col pb-8;
 }
+
+.sliderShow::-webkit-scrollbar {
+  display: none;
+}
+
 .items img {
   @apply w-full duration-500 ease-in-out overflow-auto;
   &:hover {
@@ -50,3 +47,4 @@
 .date {
   @apply float-right text-[13px] text-[#748182];
 }
+

@@ -1,17 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Card from '../../component/Card';
 
 const WorkPage = () => {
+  const modalRef = useRef();
   const btnClick = () => {
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'flex';
+    modalRef.current.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   };
   useEffect(() => {
-    const modal = document.getElementById('myModal');
     window.onclick = function windowClick(event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
+      if (event.target === modalRef.current) {
+        modalRef.current.style.display = 'none';
         document.body.style.overflow = 'visible';
       }
     };
@@ -68,7 +67,7 @@ const WorkPage = () => {
           </div>
         </div>
       </div>
-      <div id="myModal" className="modal">
+      <div id="myModal" className="modal" ref={modalRef}>
         <div className="paper">
           <h2>Personal Portfolio</h2>
           <p>

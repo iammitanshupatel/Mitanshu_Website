@@ -1,42 +1,5 @@
-import Slider from 'react-slick';
 import Button from '../../component/Button';
 import Card from '../../component/Card';
-
-const settings = {
-  dots: false,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  pauseOnHover: true,
-  arrows: false,
-  initialSlide: 0,
-  infinite: false,
-  mobileFirst: true,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
 
 const Blogs = () => (
   <>
@@ -51,7 +14,7 @@ const Blogs = () => (
           </div>
         </div>
         <div className="items">
-          <Slider id="sliderModal" className="sliderShow" {...settings}>
+          <div id="sliderModal" className="sliderShow">
             <Card variant="cardBlog">
               <a href="#">
                 <div className="custom">
@@ -192,7 +155,7 @@ const Blogs = () => (
                 </div>
               </a>
             </Card>
-          </Slider>
+          </div>
           <Button btnText="Load More" locationPage="/BlogPage" />
         </div>
       </div>
