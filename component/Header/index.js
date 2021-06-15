@@ -35,6 +35,36 @@ const Header = () => {
           <a href="http://localhost:3000" className="logo">
             Mitanshu
           </a>
+
+          <div className="menu" ref={menuRef}>
+            <ul>
+              <li>
+                <a ref={liRef} href="/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} href="/AboutPage">
+                  About
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} href="/WorkPage">
+                  Work
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} href="#">
+                  Blogs
+                </a>
+              </li>
+              <li>
+                <a ref={liRef} href="/ContactPage">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
           <button
             closeAfterTransition
             ref={burgerRef}
@@ -44,25 +74,6 @@ const Header = () => {
             <span id="span1" />
             <span id="span2" />
           </button>
-          <div className="menu" ref={menuRef}>
-            <ul>
-              <li >
-                <a ref={liRef} href="/">Home</a>
-              </li>
-              <li >
-                <a ref={liRef} href="/AboutPage">About</a>
-              </li>
-              <li >
-                <a ref={liRef} href="/WorkPage">Work</a>
-              </li>
-              <li >
-                <a ref={liRef} href="#">Blogs</a>
-              </li>
-              <li >
-                <a ref={liRef} href="/ContactPage">Contact</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
     </header>
