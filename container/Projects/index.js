@@ -1,18 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Card from '../../component/Card';
 import Button from '../../component/Button';
 
 const Projects = () => {
+  const modalRef = useRef();
   const btnClick = () => {
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'flex';
+    modalRef.current.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   };
   useEffect(() => {
-    const modal = document.getElementById('myModal');
     window.onclick = function windowClick(event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
+      if (event.target === modalRef) {
+        modalRef.current.style.display = 'none';
         document.body.style.overflow = 'visible';
       }
     };
@@ -70,7 +69,7 @@ const Projects = () => {
           </div>
         </div>
       </section>
-      <div id="myModal" className="modal">
+      <div id="myModal" ref={modalRef} className="modal">
         <div className="paper">
           <h2>Personal Portfolio</h2>
           <p>

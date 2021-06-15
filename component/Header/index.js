@@ -5,6 +5,7 @@ const Header = () => {
   const navbarRef = useRef(null);
   const burgerRef = useRef(null);
   const menuRef = useRef(null);
+  const liRef = useRef(null);
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY >= 60) {
@@ -45,20 +46,20 @@ const Header = () => {
           </button>
           <div className="menu" ref={menuRef}>
             <ul>
-              <li>
-                <a href="/">Home</a>
+              <li >
+                <a ref={liRef} href="/">Home</a>
               </li>
-              <li>
-                <a href="/AboutPage">About</a>
+              <li >
+                <a ref={liRef} href="/AboutPage">About</a>
               </li>
-              <li>
-                <a href="/WorkPage">Work</a>
+              <li >
+                <a ref={liRef} href="/WorkPage">Work</a>
               </li>
-              <li>
-                <a href="#">Blogs</a>
+              <li >
+                <a ref={liRef} href="#">Blogs</a>
               </li>
-              <li>
-                <a href="/ContactPage">Contact</a>
+              <li >
+                <a ref={liRef} href="/ContactPage">Contact</a>
               </li>
             </ul>
           </div>

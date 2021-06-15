@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Card from '../../component/Card';
 
 const WorkPage = () => {
   const btnClick = () => {
@@ -35,7 +36,7 @@ const WorkPage = () => {
         <div className="workImgOverlay" />
       </div>
       <div id="scrollHere" />
-      <div className="top120">
+      <div className="speratedWithoutImg">
         <div className="srvContainer">
           <div className="srvCol">
             <div className="cardRow">
