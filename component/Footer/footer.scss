@@ -11,7 +11,8 @@ footer {
   }
   & a {
     @apply text-white;
-    &:hover {
+    &:hover,
+    &:focus {
       color: rgb(185 185 185);
     }
   }
@@ -28,7 +29,8 @@ footer {
 }
 .uptotop {
   @apply cursor-pointer text-white opacity-50 mt-[35px] flex flex-row items-center font-black xl:justify-end;
-  &:hover {
+  &:hover,
+  &:focus {
     @apply opacity-100;
   }
   & svg {

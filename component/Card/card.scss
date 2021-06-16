@@ -22,10 +22,12 @@
       content: '';
       @apply absolute opacity-60 top-[-72px] left-[-40px] w-[200px] h-[200px] rounded-[50%] z-[-2] bg-[#b9b9b9];
     }
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       @apply top-[-72px] left-[-40px] rounded-[50%];
     }
-    &:hover::after {
+    &:hover::after,
+    &:focus::after {
       content: '';
       -webkit-transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
       transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
@@ -47,7 +49,8 @@
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg);
     @apply m-0 float-left overflow-hidden w-full relative text-left text-[16px] rounded-lg;
-    &:hover {
+    &:hover,
+    &:focus {
       transform: rotateY(7.15deg) rotateX(-5.2deg);
       background: #ea0026 !important;
       & img {

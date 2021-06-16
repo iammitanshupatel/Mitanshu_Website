@@ -68,10 +68,6 @@ header .hamburger #span1 {
     transition: all $time;
     -webkit-transition: all $time;
   }
-  body {
-    margin: 0;
-    font-family: 'Muli', sans-serif;
-  }
   .menu {
     display: flex;
     font-weight: 100;
@@ -84,43 +80,32 @@ header .hamburger #span1 {
     animation-timing-function: 1s ease-in;
     -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    right: 0;
+    right: -130px;
     @include all-transition(0.3s);
     color: #222;
     & a {
       width: 60%;
+      background: transparent;
+      color: transparent;
     }
     & ul {
-      background: #efefef;
-    }
-    .title {
-      top: 50%;
-      @include vertical-align(absolute);
-      transform: rotate(270deg);
-      left: 10px;
-      font-weight: 800;
-      font-size: 15px;
-    }
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-    height: 95vh;
-    & ul {
-      height: 100%;
-      position: sticky;
-      top: 0;
-      transition: left 0.1s;
-      max-height: 100vh;
-      overflow: hidden auto;
-      overscroll-behavior: auto;
-      @apply flex flex-col z-[70] m-0 px-0 py-3 items-center justify-center col-span-4 md:col-span-3;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40%;
+      margin-top: 0;
+      &:hover,
+      :focus {
+        background: #222;
+      }
       & li {
-        margin: 16px 0;
         & a {
-          font-size: 45px !important;
+          @apply text-[30px] text-white my-4;
         }
+      }
+      & li:first-child {
+        margin-top: 1rem;
       }
     }
   }
@@ -132,14 +117,19 @@ ul li {
   @apply float-left ml-[45px];
 }
 .menu ul li a {
-  @apply relative text-white text-[18px] pb-[10px] inline-block font-medium;
+  @apply relative inline-block font-medium w-full;
   &::after {
     content: '';
     transition: ease all 0.2s;
     @apply absolute z-10 w-0 left-0 right-0 bottom-0 m-auto h-[1px] bg-white;
   }
   &:hover::after,
-  :active {
+  &:focus::after {
     @apply w-full;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu ul li a {
+    @apply text-white text-[18px] pb-[10px];
   }
 }

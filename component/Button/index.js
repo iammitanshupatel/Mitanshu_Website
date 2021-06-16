@@ -4,12 +4,11 @@ const Button = ({ btnText, locationPage }) => {
   const btnRef = useRef(null);
   const spanRef = useRef(null);
   const mouseEvent = useCallback(e => {
-    const parentOffset = btnRef.current.getBoundingClientRect();
+    // const parentOffset = btnRef.current.getBoundingClientRect();
     // const relX = e.pageX - parentOffset.left;
     // const relY = e.pageY - parentOffset.top;
     // spanRef.current.style.top = `${relY}px`;
     // spanRef.current.style.left = `${relX}px`;
-
     // spanRef.current.style.setProperty('left', `${relX}px`);
     // spanRef.current.style.setProperty('top', `${relY}px`);
   }, []);

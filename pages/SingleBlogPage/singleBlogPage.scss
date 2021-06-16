@@ -1,0 +1,56 @@
+.singleBlog {
+  @apply pt-[18vh];
+  & .blogInfo {
+    @apply text-left px-[15px] md:px-[30px] pt-[30px] pb-0;
+    & .datenauthor {
+      & p {
+        @apply text-white opacity-70 font-normal inline-block float-left;
+      }
+      & span {
+        @apply ml-[17px] text-white relative top-4;
+        &::before {
+          content: '-';
+          @apply w-1 h-5 absolute opacity-70 top-[1px] -left-3;
+        }
+        & a {
+          @apply font-medium;
+        }
+      }
+    }
+    & .blogTitle {
+      @apply text-white text-[22px] sm:text-[26px] md:text-[44px] leading-[29px] sm:leading-[37px] md:leading-[58px] font-semibold mt-[11px] m-0 inline-block;
+    }
+  }
+  & .blogImg{
+      @apply relative block z-[100] cursor-pointer object-center object-cover max-w-full mx-auto my-8;
+    }
+}
+
+.singleBlogTxt{
+    @apply p-[30px] block ;
+    & p{
+        font-family: 'Poppins', sans-serif !important;
+        @apply text-[#B9B9B9] text-[17px] m-0 mb-4 leading-normal font-normal;
+    }
+}
+.nextContent{
+    @apply mt-[45px] inline-block px-[15px];
+    & .link-subtitle{
+        @apply text-[16px] font-semibold inline-block text-white m-0;
+    }
+    & .link-title{
+        transition: all ease 0.3s;
+        -webkit-transition: all ease 0.3s;
+        @apply text-[20px] md:text-[36px] text-white opacity-60 font-semibold line-clamp-1 m-0 mt-3;
+    }
+}
+
+.blog-article{
+    @apply py-[30px] pl-[15px] pr-[30px];
+    & .articleCmt{
+        @apply m-0 mb-[90px];
+        & .comment-reply-title{
+            @apply text-[26px] sm:text-[30px] leading-10 font-semibold mb-[5vh] mt-[60px] ;
+        }
+    }
+}

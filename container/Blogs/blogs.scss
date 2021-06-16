@@ -17,7 +17,8 @@
 
 .items img {
   @apply w-full duration-500 ease-in-out overflow-auto;
-  &:hover {
+  &:hover,
+  &:focus {
     @apply transform scale-110 duration-500 ease-in-out;
   }
 }
@@ -47,4 +48,3 @@
 .date {
   @apply float-right text-[13px] text-[#748182];
 }
-
