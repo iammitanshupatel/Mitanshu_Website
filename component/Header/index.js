@@ -26,7 +26,7 @@ const Header = () => {
 
   const burgerClicked = () => {
     burgerRef.current.classList.toggle('open');
-    menuRef.current.classList.toggle('nav');
+    menuRef.current.classList.toggle('right0');
   };
   return (
     <header ref={headerRef}>
@@ -44,34 +44,8 @@ const Header = () => {
             <span id="span1" />
             <span id="span2" />
           </button>
-          {/* <div className="menu">
-            <div className="title">MENU</div>
-            <ul className="nav">
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Work</a>
-              </li>
-              <li>
-                <a href="#">Resources</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </div> */}
-
           <aside className="menu" id="sidenav-open" ref={menuRef}>
-            <a
-              id="sidenav-close"
-              title="Close Menu"
-              aria-label="Close Menu"
-              onClick={burgerClicked}
-            />
+            <a href="#!" onClick={burgerClicked} />
             <ul>
               <li>
                 <a ref={liRef} href="/">

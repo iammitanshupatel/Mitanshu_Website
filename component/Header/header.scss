@@ -14,9 +14,6 @@ header {
   & .fixed-header {
     background: black;
   }
-  & ul {
-    background: black !important;
-  }
 }
 .fixed-header {
   box-shadow: 0px 1px 27px -3px rgb(0 0 0 / 100%);
@@ -32,7 +29,7 @@ header .logo {
   @apply font-black text-xl lg:text-3xl md:text-2xl uppercase text-white;
 }
 header .hamburger {
-  @apply block md:hidden float-right w-[26px] h-[26px] relative cursor-pointer;
+  @apply block lg:hidden float-right w-[26px] h-[26px] relative cursor-pointer;
 }
 
 header .hamburger span {
@@ -54,7 +51,11 @@ header .hamburger #span1 {
 .menu {
   @apply float-right w-full hidden md:block md:w-auto;
 }
-@media (max-width: 786px) {
+
+@media (max-width: 1023px) {
+  .right0 {
+    width: 100% !important;
+  }
   @mixin vertical-align($position) {
     position: $position;
     top: 50%;
@@ -62,7 +63,7 @@ header .hamburger #span1 {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  
+
   @mixin all-transition($time) {
     transition: all $time;
     -webkit-transition: all $time;
@@ -72,23 +73,25 @@ header .hamburger #span1 {
     font-family: 'Muli', sans-serif;
   }
   .menu {
+    display: flex;
     font-weight: 100;
-    background: #efefef;
-    width: 150px;
+    width: 0;
+    margin-top: 1rem;
     height: 100%;
-    padding-left: 50px;
     position: fixed;
     z-index: 100;
+    transform: translate3d(-130px, 0, 0);
+    animation-timing-function: 1s ease-in;
     -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    right: -130px;
+    right: 0;
     @include all-transition(0.3s);
     color: #222;
-  
-    &:hover,
-    &:focus {
-      transform: translate3d(-130px, 0, 0);
-      animation-timing-function: 1s ease-in;
+    & a {
+      width: 60%;
+    }
+    & ul {
+      background: #efefef;
     }
     .title {
       top: 50%;
@@ -98,64 +101,21 @@ header .hamburger #span1 {
       font-weight: 800;
       font-size: 15px;
     }
-    .nav {
-      @include vertical-align(absolute);
-      font-weight: 100;
-        li {
-          padding-bottom: 30px;
-          list-style-type: none;
-  
-          a {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            @include all-transition(0.3s);
-  
-            &:hover {
-              color: #aaa;
-          }
-        }
-      }
-    }
   }
-  .intro {
-    position: absolute;
-    top: 30%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    font-size: 45px;
-    text-align: center;
-    font-style: italic;
-  }
-  
-  #sidenav-open {
-    --easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
-    --duration: 0.6s;
-    @apply mr-[-30px] md:mr-[-60px];
-  }
-  #sidenav-open:target {
-    visibility: visible;
-    transform: translateX(0);
-    transition: transform var(--duration) var(--easeOutExpo);
-  }
+
   .nav {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 95vh;
-    @apply grid-cols-6;
-    & a {
-      @apply col-span-2 md:col-span-3;
-    }
     & ul {
       height: 100%;
       position: sticky;
       top: 0;
-      background-color: rgba(34, 34, 34, 0.9);
       transition: left 0.1s;
       max-height: 100vh;
       overflow: hidden auto;
       overscroll-behavior: auto;
-      @apply flex flex-col z-[70] mt-8 px-0 py-3 items-center justify-center col-span-4 md:col-span-3;
+      @apply flex flex-col z-[70] m-0 px-0 py-3 items-center justify-center col-span-4 md:col-span-3;
       & li {
         margin: 16px 0;
         & a {
@@ -183,4 +143,3 @@ ul li {
     @apply w-full;
   }
 }
-
