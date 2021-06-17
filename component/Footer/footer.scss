@@ -28,7 +28,7 @@ footer {
   @apply px-[15px] xl:w-[50%];
 }
 .uptotop {
-  @apply cursor-pointer text-white opacity-50 mt-[35px] flex flex-row items-center font-black xl:justify-end;
+  @apply cursor-pointer opacity-50 mt-[35px] flex flex-row items-center font-black xl:justify-end;
   &:hover,
   &:focus {
     @apply opacity-100;

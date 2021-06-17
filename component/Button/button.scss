@@ -1,40 +1,22 @@
 .btn-posnawr {
-  color: #ea0026;
-  position: relative;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  max-width: 250px;
-  border-radius: 8px;
-  margin: 1rem auto;
   font: normal 18px/60px 'proxima-nova', sans-serif;
-  text-align: center;
-  text-decoration: none;
   border: 2px solid #ea0026;
+  @apply text-[#ea0026] relative block overflow-hidden w-full h-auto max-w-[250px] rounded-lg my-4 mx-auto text-center;
 }
 .btn-posnawr span {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-
-  border-radius: 50%;
-  background-color: #ea0026;
   -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  z-index: -1;
+  @apply absolute block w-0 h-0 rounded-[50%] bg-[#ea0026] z-[-1];
 }
 .btn-posnawr:hover,
 .btn-posnawr:focus {
-  color: #fff;
+  @apply text-[#fff];
   & span {
-    width: 370%;
-    height: 21000%;
+    @apply w-[370%] h-[21000%];
   }
 }
 .btn-posnawr:active {
-  background-color: #ea0026;
+  @apply bg-[#ea0026];
 }

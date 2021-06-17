@@ -12,10 +12,10 @@
     & .featureContent {
       @apply pt-[25px];
       & h5 {
-        @apply text-[1.4rem] text-[#fff] mb-[30px] mt-[20px] font-bold leading-[1.4rem];
+        @apply text-[1.4rem] mb-[30px] mt-[20px] font-bold leading-[1.4rem];
       }
       & p {
-        @apply line-clamp-5 text-[15px] text-white leading-7 font-light m-0;
+        @apply line-clamp-5 text-[15px] leading-7 font-light m-0;
       }
     }
     &::after {
@@ -35,7 +35,7 @@
     }
   }
   & svg {
-    @apply w-10 h-[60px] text-[#fff];
+    @apply w-10 h-[60px];
   }
 }
 

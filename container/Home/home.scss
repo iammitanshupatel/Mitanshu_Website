@@ -17,10 +17,10 @@
 .homeTxt {
   @apply text-center ml-auto w-full px-[15px];
   & h1 {
-    @apply text-white text-[2.5rem] md:text-[5rem] opacity-100 font-black m-0 mb-2;
+    @apply text-[2.5rem] md:text-[5rem] opacity-100 font-black m-0 mb-2;
   }
   & h2 {
-    @apply text-white text-[24px] md:text-[33px] leading-8 md:leading-9;
+    @apply text-[24px] md:text-[33px] leading-8 md:leading-9;
   }
   & br {
     @apply hidden md:block;
@@ -111,12 +111,12 @@
 
 @keyframes blinking-cursor {
   0% {
-    opacity: 0;
+    @apply opacity-0;
   }
   50% {
-    opacity: 1;
+    @apply opacity-100;
   }
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
 }

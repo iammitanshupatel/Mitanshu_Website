@@ -7,9 +7,6 @@ header {
   -webkit-transition: all ease 0.3s;
   @apply z-[1000] fixed w-full block;
 }
-// .bgBlack {
-//   @apply bg-black;p
-// }
 .bgBlack {
   & .fixed-header {
     background: black;
@@ -26,7 +23,7 @@ header {
 }
 header .logo {
   font-family: 'Montserrat', sans-serif;
-  @apply font-black text-xl lg:text-3xl md:text-2xl uppercase text-white;
+  @apply font-black text-xl lg:text-3xl md:text-2xl uppercase;
 }
 header .hamburger {
   @apply block lg:hidden float-right w-[26px] h-[26px] relative cursor-pointer;
@@ -56,56 +53,35 @@ header .hamburger #span1 {
   .right0 {
     width: 100% !important;
   }
-  @mixin vertical-align($position) {
-    position: $position;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
 
   @mixin all-transition($time) {
     transition: all $time;
     -webkit-transition: all $time;
   }
   .menu {
-    display: flex;
-    font-weight: 100;
-    width: 0;
-    margin-top: 1rem;
-    height: 100%;
-    position: fixed;
-    z-index: 100;
     transform: translate3d(-130px, 0, 0);
     animation-timing-function: 1s ease-in;
     -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    right: -130px;
     @include all-transition(0.3s);
-    color: #222;
+    @apply flex font-thin w-0 mt-4 h-full fixed z-[100] right-[-130px];
     & a {
-      width: 60%;
-      background: transparent;
-      color: transparent;
+      @apply w-[55%] sm:w-3/5 bg-transparent text-transparent;
     }
     & ul {
-      background: #000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 40%;
-      margin-top: 0;
+      @apply bg-[#000] flex flex-col items-center w-full sm:w-2/5 mt-0;
       &:hover,
       :focus {
-        background: #222;
+        @apply bg-[#222];
       }
       & li {
+        @apply ml-[30px];
         & a {
           @apply text-[30px] text-white my-4;
         }
       }
       & li:first-child {
-        margin-top: 1rem;
+        @apply mt-4;
       }
     }
   }

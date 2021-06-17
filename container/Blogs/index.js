@@ -1,16 +1,24 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import Button from '../../component/Button';
 import Card from '../../component/Card';
 
 const Blogs = () => {
   const sliderRef = useRef();
-
+  //   const mouseEvent = useCallback(() => {}, []);
   useEffect(() => {
-    const slider = document.getElementById('sliderModal');
-    // const changeScroll = () => (
-    //   (slider.scrollLeft += 300), console.log((slider.scrollLeft += 300))
-    // );
+    const changeScroll = () => {
+      if (sliderRef.current.scrollLeft < 1500) {
+        sliderRef.current.scrollLeft += 300;
+        console.log(sliderRef.current.scrollLeft);
+      }
+    };
     // const int = setInterval(changeScroll, 2000);
+    // sliderRef.current.addEventListener('mouseover', () => {
+    //   clearInterval(int);
+    // });
+    // sliderRef.current.removeEventListener('mouseover', () => {
+    //   setInterval(changeScroll, 2000);
+    // });
   }, []);
 
   return (
@@ -28,7 +36,7 @@ const Blogs = () => {
           <div className="items">
             <div id="sliderModal" ref={sliderRef} className="sliderShow">
               <Card variant="cardBlog">
-                <a href="#">
+                <a href="/SingleBlogPage">
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
@@ -40,7 +48,7 @@ const Blogs = () => {
                     </p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="#">Read More</a>
+                        <a href="/SingleBlogPage">Read More</a>
                       </span>
                       <span className="date">16/April/2021</span>
                     </div>
@@ -48,7 +56,7 @@ const Blogs = () => {
                 </a>
               </Card>
               <Card variant="cardBlog">
-                <a href="#">
+                <a href="/SingleBlogPage">
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
@@ -60,7 +68,7 @@ const Blogs = () => {
                     </p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="#">Read More</a>
+                        <a href="/SingleBlogPage">Read More</a>
                       </span>
                       <span className="date">16/April/2021</span>
                     </div>
@@ -68,7 +76,7 @@ const Blogs = () => {
                 </a>
               </Card>
               <Card variant="cardBlog">
-                <a href="#">
+                <a href="/SingleBlogPage">
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
@@ -80,7 +88,7 @@ const Blogs = () => {
                     </p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="#">Read More</a>
+                        <a href="/SingleBlogPage">Read More</a>
                       </span>
                       <span className="date">16/April/2021</span>
                     </div>
@@ -88,7 +96,7 @@ const Blogs = () => {
                 </a>
               </Card>
               <Card variant="cardBlog">
-                <a href="#">
+                <a href="/SingleBlogPage">
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
@@ -100,7 +108,7 @@ const Blogs = () => {
                     </p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="#">Read More</a>
+                        <a href="/SingleBlogPage">Read More</a>
                       </span>
                       <span className="date">16/April/2021</span>
                     </div>
@@ -108,7 +116,7 @@ const Blogs = () => {
                 </a>
               </Card>
               <Card variant="cardBlog">
-                <a href="#">
+                <a href="/SingleBlogPage">
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
@@ -120,7 +128,7 @@ const Blogs = () => {
                     </p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="#">Read More</a>
+                        <a href="/SingleBlogPage">Read More</a>
                       </span>
                       <span className="date">16/April/2021</span>
                     </div>
@@ -128,7 +136,7 @@ const Blogs = () => {
                 </a>
               </Card>
               <Card variant="cardBlog">
-                <a href="#">
+                <a href="/SingleBlogPage">
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
@@ -140,7 +148,7 @@ const Blogs = () => {
                     </p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="#">Read More</a>
+                        <a href="/SingleBlogPage">Read More</a>
                       </span>
                       <span className="date">16/April/2021</span>
                     </div>
@@ -148,7 +156,7 @@ const Blogs = () => {
                 </a>
               </Card>
               <Card variant="cardBlog">
-                <a href="#">
+                <a href="/SingleBlogPage">
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
@@ -160,7 +168,7 @@ const Blogs = () => {
                     </p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="#">Read More</a>
+                        <a href="/SingleBlogPage">Read More</a>
                       </span>
                       <span className="date">16/April/2021</span>
                     </div>

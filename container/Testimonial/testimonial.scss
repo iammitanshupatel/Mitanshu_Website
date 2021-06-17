@@ -1,6 +1,6 @@
 .testimonial {
   background-image: url(/image/testimonial/dubai-bg.jpg);
-  @apply relative bg-fixed flex flex-col bg-cover py-24 items-center ;
+  @apply relative bg-fixed flex flex-col bg-cover py-24 items-center;
 }
 
 .testimonial::after {
@@ -24,13 +24,13 @@
 .containerTest {
   @apply z-20 px-8 leading-7 text-center;
   & h1 {
-    @apply text-white text-[24px] font-semibold m-0;
+    @apply text-[24px] font-semibold m-0;
   }
   & h5 {
-    @apply text-white text-[14px] font-semibold mt-2;
+    @apply text-[14px] font-semibold mt-2;
   }
   & .description {
-    @apply text-[16px] font-sans text-white line-clamp-5 leading-6 font-thin;
+    @apply text-[16px] font-sans line-clamp-5 leading-6 font-thin;
   }
 }
 

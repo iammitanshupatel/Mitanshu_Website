@@ -5,7 +5,7 @@
   @apply text-center font-bold h-[100vh];
 }
 .fullText {
-  @apply absolute h-full w-full text-center text-white z-[1000] top-0 left-0;
+  @apply absolute h-full w-full text-center z-[1000] top-0 left-0;
 }
 .fullText .outer {
   @apply h-full w-full table;
@@ -17,7 +17,7 @@
   @apply opacity-60 text-lg font-medium;
 }
 .inner h1 {
-  @apply text-white md:my-[10px] lg:my-[30px] md:text-[43px] lg:text-[75px] font-semibold md:leading-[58px] lg:leading-[34px];
+  @apply md:my-[10px] lg:my-[30px] md:text-[43px] lg:text-[75px] font-semibold md:leading-[58px] lg:leading-[34px];
 }
 .fullImage .imgOverlay {
   background-image: url(/image/cover_bg_2.jpg);
@@ -36,18 +36,8 @@
   @apply text-white text-lg font-semibold lg:font-normal opacity-90 lg:opacity-50 leading-[30px] pt-2 mb-2 xl:w-1/6 px-[15px];
 }
 .textWidget p {
-  color: rgb(185, 185, 185);
-  @apply text-[20px] leading-8 xl:w-10/12 px-[15px] mt-0;
+  @apply text-[20px] leading-8 text-[#b9b9b9] xl:w-10/12 px-[15px] mt-0;
 }
-// .top100 {
-//   @apply mt-[100px];
-// }
-// .bottom50 {
-//   @apply mb-[50px];
-// }
-// .top50 {
-//     @apply mt-[50px];
-//   }
 .flexCol {
   @apply flex flex-col  xl:flex-row xl:w-10/12;
 }
@@ -64,8 +54,7 @@
   @apply text-white text-[20px] font-semibold leading-[28px] mb-[10px] opacity-70 italic;
 }
 .flexCol p {
-  color: rgb(185, 185, 185);
-  @apply text-[17px] leading-6 opacity-60 my-4 p-0;
+  @apply text-[17px] text-[#b9b9b9] leading-6 opacity-60 my-4 p-0;
 }
 .flexRow {
   @apply flex flex-col md:flex-row flex-wrap w-full px-[15px] xl:w-10/12 xl:mt-[26px];

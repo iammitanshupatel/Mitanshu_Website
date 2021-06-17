@@ -2,7 +2,7 @@
   @apply pt-[5em];
 }
 .abtContainer {
-  @apply w-full px-[15px] ;
+  @apply w-full px-[15px];
 }
 .abtRow {
   @apply flex flex-wrap flex-col md:flex-row mx-[-15px] h-full;
@@ -17,26 +17,23 @@
   @apply flex w-full md:w-2/3 h-full px-5;
 }
 .abtDesc {
-    @apply md:relative md:ml-20;
-    & h1 {
-      color: rgba(255, 255, 255, 0.08);
-      @apply text-[8em] lg:text-[10em] hidden md:block md:absolute top-[-65px] left-[-50px] right-0 bottom-0 font-bold uppercase leading-6;
-    }
+  @apply md:relative md:ml-20;
+  & h1 {
+    color: rgba(255, 255, 255, 0.08);
+    @apply text-[8em] lg:text-[10em] hidden md:block md:absolute top-[-65px] left-[-50px] right-0 bottom-0 font-bold uppercase leading-6;
   }
-  
+}
+
 .p3 {
   @apply p-6 lg:p-12;
   & h2 {
     letter-spacing: 1px;
-    @apply text-[2rem] font-light md:mb-12 text-white;
+    @apply text-[2rem] font-light md:mb-12;
   }
   & p {
-    color: rgb(185, 185, 185);
-    @apply text-[18px] md:text-[20px] leading-8 mb-4;
+    @apply text-[18px] md:text-[20px] text-[#b9b9b9] leading-8 mb-4;
   }
   & a {
-    color: #2f89fc;
-    @apply text-[20px] leading-8 mb-4;
+    @apply text-[20px] text-[#2f89fc] leading-8 mb-4;
   }
 }
-

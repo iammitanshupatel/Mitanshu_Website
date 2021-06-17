@@ -19,10 +19,10 @@
 //   @apply opacity-100;
 // }
 .pageHeader .little {
-  @apply opacity-40 text-[18px] text-white;
+  @apply opacity-40 text-[18px];
 }
 .pageHeader .title {
-  @apply text-white text-[60px] lg:text-[70px] xl:text-[100px] font-bold my-2;
+  @apply text-[60px] lg:text-[70px] xl:text-[100px] font-bold my-2;
 }
 .containerCtc {
   @apply w-4/5 ml-[10%];
@@ -34,7 +34,7 @@
   @apply text-center;
 }
 .txc h2 {
-  @apply text-white text-[20px] md:text-[25px] lg:text-[27px] xl:text-[34px] leading-[35px] md:leading-[41px] xl:leading-[45px] opacity-70 mb-2 font-semibold px-[15px] md:px-0;
+  @apply text-[20px] md:text-[25px] lg:text-[27px] xl:text-[34px] leading-[35px] md:leading-[41px] xl:leading-[45px] opacity-70 mb-2 font-semibold px-[15px] md:px-0;
 }
 @media only screen and (max-width: 768px) {
   .txc h2 br {
@@ -60,20 +60,15 @@
 }
 .borderBottom {
   border-bottom: rgb(220, 38, 38);
-  background: transparent;
-  color: #fff;
   font-family: sofia-pro, sans-serif;
-  @apply p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+  @apply bg-transparent p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
 }
 .inp:focus {
   border-bottom: #fff;
-  color: #fff;
 }
 #contactForm .inp {
-  background: transparent;
-  color: #fff;
   font-family: sofia-pro, sans-serif;
-  @apply p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+  @apply bg-transparent text-white p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
 }
 .formMsg {
   @apply flex w-full;
@@ -97,13 +92,13 @@
   @apply flex flex-col items-center;
 }
 .iconWidth svg {
-  @apply text-white w-[40px] mb-[30px];
+  @apply w-[40px] mb-[30px];
 }
 .contactInfos a {
-  @apply text-white font-semibold opacity-90 leading-6;
+  @apply font-semibold opacity-90 leading-6;
 }
 .contactInfos span {
-  @apply text-white opacity-50 mt-2;
+  @apply opacity-50 mt-2;
 }
 .map {
   @apply mt-[90px] h-[50vh] w-full z-10 relative;
