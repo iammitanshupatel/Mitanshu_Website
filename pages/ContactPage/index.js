@@ -3,7 +3,7 @@ import Mail from '../../public/icon/mail-outline.svg';
 import Call from '../../public/icon/call-outline.svg';
 import Location from '../../public/icon/location-outline.svg';
 import Cursor from '../../component/Cursor';
-// import PreLoader from '../../component/PreLoader';
+import Button from '../../component/Button';
 
 const validate = values => {
   const errors = {};
@@ -89,12 +89,7 @@ const ContactPage = () => {
                 />
               </div>
               <div className="top45 txc">
-                <input
-                  type="submit"
-                  className="btn"
-                  value="Send it"
-                  onSubmit={formik.handleSubmit}
-                />
+                <Button btnText="Send It" onClick={formik.handleSubmit} />
               </div>
             </form>
           </div>

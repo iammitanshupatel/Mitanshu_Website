@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import Button from '../../component/Button';
 
 const validate = values => {
   const errors = {};
@@ -119,13 +120,7 @@ const SingleBlogPage = () => {
               />
             </div>
             <div className="top45 txc">
-              <input
-                style={{ width: 'auto' }}
-                type="submit"
-                className="btn"
-                value="Post Comment"
-                onSubmit={formik.handleSubmit}
-              />
+              <Button btnText="Send It" onClick={formik.handleSubmit} />
             </div>
           </form>
         </div>
