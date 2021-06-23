@@ -78,4 +78,6 @@
   content: '';
   @apply bg-gray-600 absolute top-[31px] right-0 w-[10px] h-[10px] rounded-[50%];
 }
-
+.separatedBottom{
+  @apply pb-10 md:pb-[60px];
+}

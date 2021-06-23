@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .testimonial {
   background-image: url(/image/testimonial/dubai-bg.jpg);
   @apply relative bg-fixed flex flex-col bg-cover py-24 items-center;
@@ -7,21 +11,23 @@
   content: '';
   @apply absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50;
 }
-
-.slickDotsUp {
-  @apply h-[10px] rounded-[5px] bg-[#e5e7e9] relative;
-}
 .slickDots {
   @apply h-[10px] rounded-[5px] bg-gray-500;
 }
 .testimonialContainer {
-  @apply z-10 w-[80%] overflow-hidden;
-  & .slick-track {
-    @apply flex flex-row;
+  @apply z-10 w-[80%] overflow-hidden flex justify-center;
+}
+.slider{
+  scroll-behavior: smooth;
+  display: -webkit-inline-box;
+  scroll-snap-type: inline mandatory;
+  @apply overflow-hidden m-0 overflow-x-scroll;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
-
 .containerTest {
+  scroll-snap-align: center;
   @apply z-20 px-8 leading-7 text-center;
   & h1 {
     @apply text-[24px] font-semibold m-0;

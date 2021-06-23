@@ -7,7 +7,7 @@
         @apply opacity-70 font-normal inline-block float-left;
       }
       & span {
-        @apply ml-[17px] relative top-4;
+        @apply ml-[17px] relative;
         &::before {
           content: '-';
           @apply w-1 h-5 absolute opacity-70 top-[1px] -left-3;

@@ -1,23 +1,23 @@
-import Slider from 'react-slick';
+// // import Slider from 'react-slick';
 
 const Testimonial = ({ items }) => {
-  const settings = {
-    dots: true,
-    speed: 2000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    pauseOnHover: true,
-    infinite: false,
-    autoplay: true,
-    arrows: false,
-    appendDots: dots => <ul> {dots} </ul>,
-    customPaging: i => <div className="slickDotsUp" />,
-  };
+  //   const settings = {
+  //     dots: true,
+  //     speed: 2000,
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     pauseOnHover: true,
+  //     infinite: false,
+  //     autoplay: true,
+  //     arrows: false,
+  //     appendDots: dots => <ul> {dots} </ul>,
+  //     customPaging: i => <div className="slickDotsUp" />,
+  //   };
 
   return (
     <section className="testimonial">
       <div className="testimonialContainer">
-        <Slider {...settings}>
+        <figure className="slider">
           <div className="containerTest">
             <div className="authorImg">
               <img src="/image/testimonial/img-1.jpg" alt="" />
@@ -46,7 +46,7 @@ const Testimonial = ({ items }) => {
               temporibus quas!
             </p>
           </div>
-        </Slider>
+        </figure>
       </div>
     </section>
   );

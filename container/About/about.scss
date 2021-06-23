@@ -20,7 +20,7 @@
   @apply md:relative md:ml-20;
   & h1 {
     color: rgba(255, 255, 255, 0.08);
-    @apply text-[8em] lg:text-[10em] hidden md:block md:absolute top-[-65px] left-[-50px] right-0 bottom-0 font-bold uppercase leading-6;
+    @apply text-[8em] lg:text-[10em] hidden md:block md:absolute top-[35px] lg:top-[55px] left-[-50px] right-0 bottom-0 font-bold uppercase leading-6;
   }
 }
 

@@ -63,7 +63,7 @@ const AboutPage = () => (
       </div>
     </div>
     <div className="separated" />
-    <div className="boxAnimate animated containerCtc textWidget">
+    <div className="boxAnimate animated containerCtc textWidget separatedBottom">
       <div className="abtWrap">
         <h3>Technologies known.</h3>
         <div className="flexRow">
