@@ -18,7 +18,7 @@ const AboutPage = () => (
       <div className="imgOverlay" />
     </div>
     <div id="scrollHere" />
-    <div className="boxAnimate animated containerCtc textWidget">
+    <div className="boxAnimate animated containerCtc textWidget separatedTop">
       <div className="abtWrap">
         <h3>Bio.</h3>
         <p>
