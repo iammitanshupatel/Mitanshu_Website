@@ -1,11 +1,18 @@
+import { SWRConfig } from 'swr';
 import Layout from '../container/Layout';
 import '../styles/globals.scss';
+import fetcher from '../lib/fetch';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <SWRConfig
+      value={{
+        fetcher,
+      }}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </SWRConfig>
   );
 }
 
