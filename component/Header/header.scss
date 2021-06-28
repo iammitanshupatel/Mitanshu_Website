@@ -109,3 +109,9 @@ ul li {
     @apply text-white text-[18px] pb-[10px];
   }
 }
+.progress-container {
+  @apply w-full h-2 contents;
+  & .progress-bar {
+    @apply h-2 bg-[#696969] w-0;
+  }
+}

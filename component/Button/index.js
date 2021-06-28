@@ -12,14 +12,14 @@ const Button = ({ btnText, locationPage }) => {
     // spanRef.current.style.setProperty('left', `${relX}px`);
     // spanRef.current.style.setProperty('top', `${relY}px`);
   }, []);
-  useEffect(() => {
-    btnRef.current.addEventListener('mouseenter', mouseEvent());
-    btnRef.current.addEventListener('mouseout', mouseEvent());
-    return () => {
-      btnRef.current.removeEventListener('mouseenter', mouseEvent());
-      btnRef.current.removeEventListener('mouseout', mouseEvent());
-    };
-  }, [mouseEvent]);
+  //   useEffect(() => {
+  //     btnRef.current.addEventListener('mouseenter', mouseEvent());
+  //     btnRef.current.addEventListener('mouseout', mouseEvent());
+  //     return () => {
+  //       btnRef.current.removeEventListener('mouseenter', mouseEvent());
+  //       btnRef.current.removeEventListener('mouseout', mouseEvent());
+  //     };
+  //   }, [mouseEvent]);
 
   return (
     <a className="btn-posnawr" ref={btnRef} href={locationPage}>

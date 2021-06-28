@@ -5,8 +5,8 @@
     @apply h-full bg-[#0b0b13] p-10 rounded-[10px] overflow-hidden relative z-[1];
     &::before {
       content: '';
-      -webkit-transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
       transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
+      -webkit-transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
       @apply absolute top-[-220px] left-[-220px] w-[200px] h-[200px] rounded-none z-[-1] bg-[#0b0b13];
     }
     & .featureContent {
@@ -29,8 +29,8 @@
     &:hover::after,
     &:focus::after {
       content: '';
-      -webkit-transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
       transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
+      -webkit-transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
       @apply w-[120%] h-[120%] left-[-10%] top-[-10%] rounded-none;
     }
   }

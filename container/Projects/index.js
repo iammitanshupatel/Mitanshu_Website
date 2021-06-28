@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import Card from '../../component/Card';
 import Button from '../../component/Button';
 
-const Projects = () => {
+const Projects = ({ data }) => {
   const modalRef = useRef();
   const btnClick = () => {
     modalRef.current.style.display = 'flex';
@@ -22,62 +22,41 @@ const Projects = () => {
         <div className="srvContainer">
           <div className="srvCol">
             <div className="secDesc">
-              <h1>Projects</h1>
+              <h1>{data.header.title}</h1>
               <div className="p2">
-                <h2>What I Did</h2>
+                <h2>{data.header.caption}</h2>
               </div>
             </div>
             <div className="cardRow">
-              <Card variant="projectCard">
-                <figure>
-                  <img src="/image/Project/img-2.jpg" alt="" />
-                  <figcaption>
-                    <button type="button" onClick={btnClick}>
-                      <h3>Personal Portfolio</h3>
-                      <p>Website</p>
-                    </button>
-                  </figcaption>
-                  <div className="shine" />
-                </figure>
-              </Card>
-              <Card variant="projectCard">
-                <figure>
-                  <img src="/image/Project/img-3.jpg" alt="" />
-                  <figcaption>
-                    <button type="button" onClick={btnClick}>
-                      <h3>Personal Portfolio</h3>
-                      <p>Website</p>
-                    </button>
-                  </figcaption>
-                  <div className="shine" />
-                </figure>
-              </Card>
-              <Card variant="projectCard">
-                <figure>
-                  <img src="/image/Project/img-4.jpg" alt="" />
-                  <figcaption>
-                    <button type="button" onClick={btnClick}>
-                      <h3>Personal Portfolio</h3>
-                      <p>Website</p>
-                    </button>
-                  </figcaption>
-                  <div className="shine" />
-                </figure>
-              </Card>
+              {data.projects.map(x => (
+                <>
+                  <Card variant="projectCard" key={x.id}>
+                    <figure>
+                      <img src="/image/Project/img-2.jpg" alt="" />
+                      <figcaption>
+                        <button type="button" onClick={btnClick}>
+                          <h3>{x.title}</h3>
+                          <p>{x.typeOfPortfolio}</p>
+                        </button>
+                      </figcaption>
+                      <div className="shine" />
+                    </figure>
+                  </Card>
+                </>
+              ))}
             </div>
             <Button btnText="Load More" locationPage="/WorkPage" />
           </div>
         </div>
       </section>
-      <div id="myModal" ref={modalRef} className="modal">
-        <div className="paper">
-          <h2>Personal Portfolio</h2>
-          <p>
-            This is a personal portfolio developed for my self. This is a Dynamic website developed
-            using Strapi, Next.js & Tailwind CSS.
-          </p>
+      {data.projects.map(x => (
+        <div ref={modalRef} className="modal" key={x.id}>
+          <div className="paper">
+            <h2>{x.title}</h2>
+            <p>{x.description}</p>
+          </div>
         </div>
-      </div>
+      ))}
       <div className="separated" />
     </>
   );

@@ -1,16 +1,21 @@
 import ReactRotatingText from 'react-rotating-text';
 
-const Home = () => (
+const Home = ({ data }) => (
   <>
     <section className="imgCover">
       <div className="homeContainer">
         <div className="homeWrap">
           <div className="homeTxt">
-            <h1>Mitanshu Patel</h1>
+            <h1>{`${data.firstName} ${data.lastName}`}</h1>
             <h2>
-              Creative Full-Stack Developer Located In India <br />
-              Specialized In{''}
-              <ReactRotatingText items={[' first', ' second', ' third']} />
+              {data.description}
+              <ReactRotatingText
+                items={[
+                  `${data.banner_spans.find(x => x.id === 5).name}`,
+                  `${data.banner_spans.find(x => x.id === 6).name}`,
+                  `${data.banner_spans.find(x => x.id === 7).name}`,
+                ]}
+              />
               {/* <span>fantastic</span>
               <span>interesting</span>
               <span>awesome</span>

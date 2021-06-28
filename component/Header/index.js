@@ -6,7 +6,17 @@ const Header = () => {
   const burgerRef = useRef(null);
   const menuRef = useRef(null);
   const liRef = useRef(null);
+  const myBarRef = useRef(null);
   useEffect(() => {
+    const myFunction = () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      myBarRef.current.style.width = `${scrolled}%`;
+    };
+    window.onscroll = function () {
+      myFunction();
+    };
     const onScroll = () => {
       if (window.scrollY >= 60) {
         navbarRef.current.classList.add('fixed-header');
@@ -76,6 +86,9 @@ const Header = () => {
           </aside>
         </div>
       </nav>
+      <div className="progress-container">
+        <div className="progress-bar" ref={myBarRef} />
+      </div>
     </header>
   );
 };
