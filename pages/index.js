@@ -11,6 +11,8 @@ import useAbout from '../hooks/useAbout';
 import useServices from '../hooks/useServices';
 import usePortfolio from '../hooks/usePortfolio';
 import useEducationSkills from '../hooks/useEducationSkills';
+import useBlog from '../hooks/useBlog';
+import useTestimonial from '../hooks/useTestimonial';
 
 const Main = () => {
   const { data: bannerData } = useBanner();
@@ -18,6 +20,8 @@ const Main = () => {
   const { data: serviceData } = useServices();
   const { data: portfolioData } = usePortfolio();
   const { data: educationSkillsData } = useEducationSkills();
+  const { data: blogData } = useBlog();
+  const { data: testimonialData } = useTestimonial();
   return (
     <>
       {bannerData && <Home data={bannerData} />}
@@ -25,8 +29,8 @@ const Main = () => {
       {serviceData && <Services data={serviceData} />}
       {portfolioData && <Projects data={portfolioData} />}
       {educationSkillsData && <Education data={educationSkillsData} />}
-      <Blogs />
-      <Testimonial />
+      {blogData && <Blogs data={blogData} />}
+      {testimonialData && <Testimonial data={testimonialData} />}
     </>
   );
 };

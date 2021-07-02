@@ -8,16 +8,3 @@
     @apply h-full w-full absolute z-10 left-0 top-0;
   }
 }
-
-.cardRow {
-  & img {
-    @apply w-full duration-500 ease-in-out overflow-auto;
-    &:hover,
-    &:focus {
-      @apply transform scale-110 duration-500 ease-in-out;
-    }
-  }
-}
-.gap1rem {
-  @apply gap-4;
-}

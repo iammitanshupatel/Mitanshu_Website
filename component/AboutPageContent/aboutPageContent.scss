@@ -1,0 +1,63 @@
+.textWidget {
+  & h3 {
+    @apply text-white text-lg font-semibold lg:font-normal opacity-90 lg:opacity-50 leading-[30px] pt-2 mb-2 xl:w-1/6 px-[15px];
+  }
+  & p {
+    @apply text-[20px] leading-8 text-[#b9b9b9] xl:w-10/12 px-[15px] mt-0;
+  }
+}
+.flexCol {
+  @apply flex flex-col xl:flex-row xl:w-10/12;
+  & .date {
+    @apply text-white text-[15px] font-normal opacity-40 leading-[30px] xl:w-[16%] px-[15px] xl:mt-[8px];
+  }
+  & .expInfo {
+    @apply mb-[30px] xl:w-10/12 px-[15px] xl:mt-[8px];
+  }
+  & h2 {
+    @apply text-white text-[24px] font-semibold leading-[28px] mb-[10px];
+  }
+  & a {
+    @apply text-white text-[20px] font-semibold leading-[28px] mb-[10px] opacity-70 italic;
+    &:hover,
+    :focus {
+      text-decoration: underline !important;
+    }
+  }
+  & p {
+    @apply text-[17px] text-[#b9b9b9] leading-6 opacity-60 my-4 p-0;
+  }
+}
+
+.flexRow {
+  @apply flex flex-col md:flex-row flex-wrap w-full px-[15px] xl:w-10/12 xl:mt-2;
+}
+.progressWrap {
+  @apply mb-[30px] w-full md:w-1/2;
+  & h4 {
+    @apply text-white opacity-90 text-[20px] mb-[10px] mt-1 leading-6 font-semibold;
+    & a:hover,
+    :focus {
+      text-decoration: underline !important;
+    }
+  }
+  & .progress {
+    @apply h-1 md:w-11/12 mt-4 bg-[#1f1f1f] overflow-visible border-0 flex text-xs;
+    & .progressBar {
+      @apply bg-gray-600 leading-5 relative flex flex-col justify-center;
+      & span {
+        @apply absolute top-[-34px] right-0 text-[#6c757d];
+        &::after {
+          content: '';
+          @apply bg-gray-600 absolute top-[31px] right-0 w-[10px] h-[10px] rounded-[50%];
+        }
+      }
+    }
+  }
+}
+.separatedBottom {
+  @apply pb-10 md:pb-[60px];
+}
+.separatedTop {
+  @apply pt-10 md:pt-[60px];
+}

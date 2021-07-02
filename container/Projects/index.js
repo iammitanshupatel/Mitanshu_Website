@@ -27,7 +27,7 @@ const Projects = ({ data }) => {
                 <h2>{data.header.caption}</h2>
               </div>
             </div>
-            <div className="cardRow">
+            <div className="cardRow paddingB1">
               {data.projects.map(x => (
                 <>
                   <Card variant="projectCard" key={x.id}>

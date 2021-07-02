@@ -1,35 +1,17 @@
-const Testimonial = () => (
+const Testimonial = ({ data }) => (
   <section className="testimonial">
     <div className="testimonialContainer">
       <figure className="slider">
-        <div className="containerTest">
-          <div className="authorImg">
-            <img src="/image/testimonial/img-1.jpg" alt="" />
+        {data.testimonials.map(x => (
+          <div className="containerTest">
+            <div className="authorImg">
+              <img src="/image/testimonial/img-1.jpg" alt="" />
+            </div>
+            <h1>{x.personName}</h1>
+            <h5>{x.jobTitle}</h5>
+            <p className="description">{x.description}</p>
           </div>
-          <h1>Mr XYZ Patel</h1>
-          <h5>Manager</h5>
-          <p className="description">
-            Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe
-            asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum
-            autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In
-            similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus
-            quas!
-          </p>
-        </div>
-        <div className="containerTest">
-          <div className="authorImg">
-            <img src="/image/testimonial/img-1.jpg" alt="" />
-          </div>
-          <h1>Mr Mitanshu Patel</h1>
-          <h5>Managing Director</h5>
-          <p variant="portTestimonialPText" className="description">
-            Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe
-            asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum
-            autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In
-            similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus
-            quas!
-          </p>
-        </div>
+        ))}
       </figure>
     </div>
   </section>

@@ -61,7 +61,7 @@
 .borderBottom {
   border-bottom: rgb(220, 38, 38);
   font-family: sofia-pro, sans-serif;
-  @apply bg-transparent p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+  @apply text-[#dc2626] bg-transparent p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
 }
 .inp:focus {
   border-bottom: #fff;

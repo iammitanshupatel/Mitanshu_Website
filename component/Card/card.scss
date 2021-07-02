@@ -52,7 +52,7 @@
     &:hover,
     &:focus {
       transform: rotateY(7.15deg) rotateX(-5.2deg);
-      background: #ea0026 !important;
+      @apply bg-[#ea0026];
       & img {
         @apply opacity-40;
       }

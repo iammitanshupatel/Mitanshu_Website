@@ -15,7 +15,7 @@
     }
   }
   & .eduRight {
-    @apply w-full md:w-1/2 px-[15px];
+    @apply w-full md:w-1/2 px-[15px] h-[285px] overflow-hidden;
     & .eduWrap {
       @apply w-full;
     }

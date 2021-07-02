@@ -16,12 +16,20 @@
 }
 
 .items img {
-  @apply w-full duration-500 ease-in-out overflow-auto;
-  &:hover,
-  &:focus {
-    @apply transform scale-110 duration-500 ease-in-out;
+  @apply w-full duration-300 transition-all ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    @apply duration-300;
   }
 }
+
+// .items img {
+//   @apply duration-500 ease-in-out w-full overflow-auto;
+//   &:hover,
+//   &:focus {
+//     @apply transform scale-110 duration-500 ease-in-out;
+//   }
+// }
 .imgStyle {
   @apply h-[44%];
 }
@@ -33,11 +41,11 @@
 }
 .blogPageContent h3 {
   line-height: 1.2;
-  @apply text-[#222222] text-[20px] mt-0 text-[#222] font-semibold mb-[15px];
+  @apply h-12 line-clamp-2 text-[#222222] text-[20px] mt-0 text-[#222] font-semibold mb-[15px];
 }
 .blogPageContent p {
   line-height: 1.65;
-  @apply text-[#484848] h-[5rem] md:h-[7rem] text-[16px] pb-4 md:pb-9 mb-0 border-b border-0 border-gray-100 border-solid line-clamp-3 md:line-clamp-4 font-thin;
+  @apply text-[#484848] h-[5rem] md:h-[6.9rem] text-[16px] pb-4 md:pb-9 mb-0 border-b border-0 border-gray-100 border-solid line-clamp-3 md:line-clamp-4 font-thin;
 }
 .blogPageMeta {
   @apply h-auto flex justify-between pt-[15px] md:pt-[20px] lg:pt-[15px];

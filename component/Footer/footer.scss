@@ -24,8 +24,7 @@ footer {
   }
 }
 .rightText {
-  text-align: right !important;
-  @apply px-[15px] xl:w-[50%];
+  @apply px-[15px] xl:w-[50%] text-right;
 }
 .uptotop {
   @apply cursor-pointer opacity-50 mt-[35px] flex flex-row items-center font-black xl:justify-end;

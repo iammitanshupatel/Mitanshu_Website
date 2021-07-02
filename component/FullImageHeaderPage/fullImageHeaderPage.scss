@@ -1,0 +1,34 @@
+.fullImage {
+  @apply w-full relative z-0;
+  & .imgOverlay {
+    background-image: url(/image/cover_bg_2.jpg);
+    background-position: center center;
+    @apply h-[100vh] w-full bg-cover  bg-fixed;
+    &::before {
+      content: '';
+      background: rgba(0, 0, 0, 0.5);
+      @apply h-full w-full absolute z-10 left-0 top-0;
+    }
+  }
+}
+.hero {
+  @apply text-center font-bold h-[100vh];
+}
+.fullText {
+  @apply absolute h-full w-full text-center z-[1000] top-0 left-0;
+  & .outer {
+    @apply h-full w-full table;
+    & .inner {
+      @apply h-full w-full flex flex-col justify-center;
+      & span {
+        @apply opacity-60 text-lg font-medium;
+      }
+      & h1 {
+        @apply md:my-[10px] lg:my-[30px] md:text-[43px] lg:text-[75px] font-semibold md:leading-[58px] lg:leading-[34px];
+      }
+    }
+  }
+}
+.abtWrap {
+  @apply flex flex-wrap flex-col xl:flex-row mx-[-15px];
+}

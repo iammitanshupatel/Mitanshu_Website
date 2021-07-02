@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-const Button = ({ btnText, locationPage }) => {
+const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick }) => {
   const btnRef = useRef(null);
   const spanRef = useRef(null);
   const mouseEvent = useCallback(e => {
@@ -23,8 +23,10 @@ const Button = ({ btnText, locationPage }) => {
 
   return (
     <a className="btn-posnawr" ref={btnRef} href={locationPage}>
-      {btnText}
-      <span ref={spanRef} />
+      <button type="button" onClick={isDisabled || isLoading ? () => {} : onClick}>
+        {btnText}
+        <span ref={spanRef} />
+      </button>
     </a>
   );
 };

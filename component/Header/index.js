@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 
 const Header = () => {
@@ -7,6 +8,8 @@ const Header = () => {
   const menuRef = useRef(null);
   const liRef = useRef(null);
   const myBarRef = useRef(null);
+  const { pathname } = useRouter();
+
   useEffect(() => {
     const myFunction = () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -39,7 +42,7 @@ const Header = () => {
     menuRef.current.classList.toggle('right0');
   };
   return (
-    <header ref={headerRef}>
+    <header id="header" ref={headerRef}>
       <nav ref={navbarRef}>
         <div className="headerContainer">
           <a href="http://localhost:3000" className="logo">
@@ -58,27 +61,27 @@ const Header = () => {
             <a href="#!" onClick={burgerClicked} />
             <ul>
               <li>
-                <a ref={liRef} href="/">
+                <a ref={liRef} className={pathname === '/' && 'active'} href="/">
                   Home
                 </a>
               </li>
               <li>
-                <a ref={liRef} className="activeLi" href="/AboutPage">
+                <a ref={liRef} className={pathname === '/about' && 'active'} href="/about">
                   About
                 </a>
               </li>
               <li>
-                <a ref={liRef} href="/WorkPage">
+                <a ref={liRef} className={pathname === '/work' && 'active'} href="/work">
                   Work
                 </a>
               </li>
               <li>
-                <a ref={liRef} href="/BlogPage">
+                <a ref={liRef} className={pathname === '/blog' && 'active'} href="/blog">
                   Blogs
                 </a>
               </li>
               <li>
-                <a ref={liRef} href="/ContactPage">
+                <a ref={liRef} className={pathname === '/contact' && 'active'} href="/contact">
                   Contact
                 </a>
               </li>
