@@ -1,7 +1,8 @@
+import { useRouter } from 'next/router';
 import { useFormik } from 'formik';
 import Button from '../../component/Button';
 import SingleBlogPageContent from '../../component/SingleBlogPageContent';
-import useBlog from '../../hooks/useBlog';
+import useBlogs from '../../hooks/useBlogs';
 
 const validate = values => {
   const errors = {};
@@ -20,7 +21,11 @@ const validate = values => {
 };
 
 const SingleBlogPage = () => {
-  const { data: blogData } = useBlog();
+  const router = useRouter();
+  const { id } = router.query;
+  console.log('id', id);
+  const { data: blogData } = useBlogs(id);
+  console.log('blogData', blogData);
   const formik = useFormik({
     initialValues: {
       name: '',

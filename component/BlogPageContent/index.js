@@ -1,16 +1,16 @@
 import { data } from 'remark';
 import Card from '../Card';
 
-const BlogPageContent = ({ data }) => (
+const BlogPageContent = ({ blogs }) => (
   <>
     <div id="scrollHere" />
     <div className="speratedWithoutImg">
       <div className="srvContainer">
         <div className="srvCol">
           <div className="cardRow gap1rem">
-            {data.blogs.map(x => (
+            {blogs.map(x => (
               <Card variant="cardBlog">
-                <a href="/SingleBlogPage">
+                <a href={`blog/${x.id}`}>
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
