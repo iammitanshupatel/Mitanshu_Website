@@ -16,11 +16,18 @@ const SingleBlogPageContent = ({ data }) => (
     </section>
     <article className="singleBlogTxt">
       <p>{data.description}</p>
+      <div>
+        {data.tags.map(tag => (
+          <a key={tag.id} href={tag.url} target="_blank" rel="noreferrer">
+            {tag.title}
+          </a>
+        ))}
+      </div>
     </article>
     <section className="nextContent">
       <p className="link-subtitle">Next Content</p>
       <p className="link-title">
-        Court nay merit few nor party learn. Why our year her eyes know even how
+        <a href={`${data.id + 1}`}> {data.title}</a>
       </p>
     </section>
   </>

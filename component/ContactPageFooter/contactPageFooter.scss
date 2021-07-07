@@ -1,0 +1,33 @@
+.containerCtc {
+  @apply w-4/5 ml-[10%];
+}
+.top120 {
+  @apply mt-[120px];
+}
+.contactInfos {
+  @apply flex w-full flex-wrap lg:flex-nowrap;
+}
+.responsiveInfo {
+  @apply flex flex-wrap w-full md:w-1/2 lg:w-full justify-center mb-[60px] lg:mb-0;
+}
+.iconWidth {
+  @apply flex flex-col items-center;
+  & svg {
+    @apply w-[40px] mb-[30px];
+  }
+}
+.map {
+  @apply mt-[90px] h-[50vh] w-full z-10 relative;
+  & img {
+    @apply h-full w-full;
+  }
+}
+.wFull {
+  @apply w-full;
+}
+.contactInfos a {
+  @apply font-semibold opacity-90 leading-6;
+}
+.contactInfos span {
+  @apply opacity-50 mt-2;
+}

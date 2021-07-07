@@ -23,9 +23,7 @@ const validate = values => {
 const SingleBlogPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  console.log('id', id);
   const { data: blogData } = useBlogs(id);
-  console.log('blogData', blogData);
   const formik = useFormik({
     initialValues: {
       name: '',

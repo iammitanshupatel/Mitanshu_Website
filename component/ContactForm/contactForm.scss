@@ -1,0 +1,35 @@
+.top45 {
+  @apply mt-[45px];
+}
+.errorMsg {
+  @apply text-center text-sm mb-[30px] text-red-600 font-bold;
+}
+.rowInput {
+  @apply flex flex-col lg:flex-row w-full lg:gap-8;
+}
+.inputWidth {
+  @apply flex w-full lg:w-[50%];
+}
+
+.inp {
+  border-bottom: rgb(112, 112, 112);
+}
+.borderBottom {
+  border-bottom: rgb(220, 38, 38);
+  font-family: sofia-pro, sans-serif;
+  @apply text-[#dc2626] bg-transparent p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+}
+.inp:focus {
+  border-bottom: #fff;
+}
+#contactForm .inp {
+  font-family: sofia-pro, sans-serif;
+  @apply bg-transparent text-white p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+}
+.formMsg {
+  @apply flex w-full;
+}
+.btn {
+  @apply h-[53px] w-[113.16px] text-black bg-white pt-[10px] pb-[13px] px-[28px] text-[18px] font-semibold leading-[30px] border-0 rounded-[4px];
+}
+

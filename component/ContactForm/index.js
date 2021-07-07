@@ -42,7 +42,7 @@ const ContactForm = () => {
     },
   });
   return (
-    <div className="containerCtc boxAnimate animated top45">
+    <div className="containerCtc top45">
       <div id="message" className={formik.errors ? 'errorMsg' : null}>
         <p>{formik.errors.name || formik.errors.email || formik.errors.msg}</p>
       </div>

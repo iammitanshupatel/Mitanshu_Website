@@ -1,5 +1,3 @@
-@import './contactPage.scss';
-@import './singleBlogPage.scss';
 @import './../container/Home/home.scss';
 @import './../container/About/about.scss';
 @import './../container/Services/services.scss';
@@ -18,6 +16,10 @@
 @import '/component/ProjectPageContent/projectPageContent.scss';
 @import '/component/BlogPageHeader/blogPageHeader.scss';
 @import '/component/BlogPageContent/blogPageContent.scss';
+@import '/component/ContactPageHeader/contactPageHeader.scss';
+@import '/component/ContactPageFooter/contactPageFooter.scss';
+@import '/component/ContactForm/contactForm.scss';
+@import '/component/SingleBlogPageContent/singleBlogPageContent.scss';
 
 html {
   scroll-behavior: smooth;

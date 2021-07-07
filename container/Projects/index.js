@@ -47,7 +47,7 @@ const Projects = ({ data }) => {
                 </>
               ))}
             </div>
-            <Button btnText="Load More" locationPage="/WorkPage" />
+            <Button btnText="Load More" locationPage="/work" />
           </div>
         </div>
       </section>

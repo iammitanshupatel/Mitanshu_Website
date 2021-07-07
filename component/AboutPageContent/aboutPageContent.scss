@@ -44,12 +44,12 @@
   & .progress {
     @apply h-1 md:w-11/12 mt-4 bg-[#1f1f1f] overflow-visible border-0 flex text-xs;
     & .progressBar {
-      @apply bg-gray-600 leading-5 relative flex flex-col justify-center;
+      @apply bg-[#696969] leading-5 relative flex flex-col justify-center;
       & span {
-        @apply absolute top-[-34px] right-0 text-[#6c757d];
+        @apply absolute top-[-34px] right-0 text-[#696969];
         &::after {
           content: '';
-          @apply bg-gray-600 absolute top-[31px] right-0 w-[10px] h-[10px] rounded-[50%];
+          @apply bg-[#696969] absolute top-[31px] right-0 w-[10px] h-[10px] rounded-[50%];
         }
       }
     }

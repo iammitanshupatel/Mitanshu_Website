@@ -37,7 +37,7 @@ const Blogs = ({ data }) => {
             <div id="sliderModal" ref={sliderRef} className="sliderShow">
               {data.blogs.map(x => (
                 <Card key={x.id} variant="cardBlog">
-                  <a href="/SingleBlogPage">
+                  <a href={`blog/${x.id}`}>
                     <div className="custom">
                       <img src="/image/Blogs/img-1.jpg" alt="" />
                     </div>
@@ -46,7 +46,7 @@ const Blogs = ({ data }) => {
                       <p>{x.description}</p>
                       <div className="blogPageMeta">
                         <span className="more">
-                          <a href="/SingleBlogPage">Read More</a>
+                          <a href={`blog/${x.id}`}>Read More</a>
                         </span>
                         <span className="date">{x.date}</span>
                       </div>
@@ -55,7 +55,7 @@ const Blogs = ({ data }) => {
                 </Card>
               ))}
             </div>
-            <Button btnText="Load More" locationPage="/BlogPage" />
+            <Button btnText="Load More" locationPage="/blog" />
           </div>
         </div>
       </section>

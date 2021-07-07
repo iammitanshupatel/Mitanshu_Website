@@ -91,7 +91,7 @@ ul li {
 }
 .menu ul li a {
   @apply relative inline-block font-medium w-full;
-  
+
   &::after {
     content: '';
     transition: ease all 0.2s;
@@ -99,14 +99,13 @@ ul li {
   }
 
   &.active::after {
-      @apply w-full;
+    @apply w-full;
   }
-  
+
   &:hover::after,
   &:focus::after {
     @apply w-full;
   }
-  
 }
 @media screen and (min-width: 1024px) {
   .menu ul li a {

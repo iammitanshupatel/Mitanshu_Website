@@ -21,7 +21,7 @@ const Footer = () => {
             <a href="mailto:mitanshu.u.patel@gmail.com">Mail</a>
           </p>
           <div className="copyright">
-            <p>Mitanshu © 2021. All Right Reserved, Designed By Mitanshu Patel. </p>
+            <p>Mitanshu &copy; 2021. All Right Reserved, Designed By Mitanshu Patel. </p>
           </div>
         </div>
         <div className="rightText">

@@ -1,7 +1,29 @@
 const AboutPageContent = ({ data }) => (
   <>
     <div className="separated" />
-    <div className="boxAnimate animated containerCtc textWidget">
+    <div className="containerCtc textWidget separatedBottom">
+      <div className="abtWrap">
+        <h3>Technologies known.</h3>
+        <div className="flexRow">
+          {data.skills.map(x => (
+            <div className="progressWrap" key={x.id}>
+              <h4>
+                <a href={x.link} target="_blank" rel="noreferrer">
+                  {x.title}
+                </a>
+              </h4>
+              <div className="progress">
+                <div className="progressBar" style={{ width: `${x.rating}%` }}>
+                  <span>{`${x.rating}%`}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div className="separated" />
+    <div className="containerCtc textWidget">
       <div className="abtWrap">
         <h3>Education.</h3>
         <div className="flexCol">
@@ -21,7 +43,7 @@ const AboutPageContent = ({ data }) => (
       </div>
     </div>
     <div className="separated" />
-    <div className="boxAnimate animated containerCtc textWidget">
+    <div className="containerCtc textWidget">
       <div className="abtWrap">
         <h3>Experience.</h3>
         <div className="flexCol">
@@ -34,28 +56,6 @@ const AboutPageContent = ({ data }) => (
                 <p>{x.description}</p>
               </div>
             </>
-          ))}
-        </div>
-      </div>
-    </div>
-    <div className="separated" />
-    <div className="boxAnimate animated containerCtc textWidget separatedBottom">
-      <div className="abtWrap">
-        <h3>Technologies known.</h3>
-        <div className="flexRow">
-          {data.skills.map(x => (
-            <div className="progressWrap">
-              <h4>
-                <a href={x.link} target="_blank" rel="noreferrer">
-                  {x.title}
-                </a>
-              </h4>
-              <div className="progress">
-                <div className="progressBar" style={{ width: `${x.rating}%` }}>
-                  <span>{`${x.rating}%`}</span>
-                </div>
-              </div>
-            </div>
           ))}
         </div>
       </div>

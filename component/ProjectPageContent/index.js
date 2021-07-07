@@ -1,11 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Card from '../Card';
 
 const ProjectPageContent = ({ data }) => {
   const modalRef = useRef();
-  const btnClick = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const btnClick = id => {
     modalRef.current.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    setSelectedProject(id);
   };
   useEffect(() => {
     window.onclick = function windowClick(event) {
@@ -43,7 +45,7 @@ const ProjectPageContent = ({ data }) => {
                   <figure>
                     <img src="/image/Project/img-2.jpg" alt="" />
                     <figcaption>
-                      <button type="button" onClick={btnClick}>
+                      <button type="button" onClick={() => btnClick(x.id)}>
                         <h3>{x.title}</h3>
                         <p>{x.typeOfPortfolio}</p>
                       </button>
@@ -56,14 +58,19 @@ const ProjectPageContent = ({ data }) => {
           </div>
         </div>
       </div>
-      {data.projects.map(x => (
-        <div id="myModal" className="modal" ref={modalRef}>
-          <div className="paper">
-            <h2>{x.title}</h2>
-            <p>{x.description}</p>
-          </div>
-        </div>
-      ))}
+      <div ref={modalRef} className="modal">
+        {data.projects.map(x => {
+          if (x.id === selectedProject) {
+            return (
+              <div className="paper">
+                <h2>{x.title}</h2>
+                <p>{x.description}</p>
+              </div>
+            );
+          }
+          return null;
+        })}
+      </div>
     </>
   );
 };

@@ -19,7 +19,7 @@ const BlogPageContent = ({ blogs }) => (
                     <p>{x.description}</p>
                     <div className="blogPageMeta">
                       <span className="more">
-                        <a href="/SingleBlogPage">Read More</a>
+                        <a href={`blog/${x.id}`}>Read More</a>
                       </span>
                       <span className="date">{x.date}</span>
                     </div>
