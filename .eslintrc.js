@@ -1,23 +1,19 @@
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
-  parser: '@babel/eslint-parser',
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended', 'airbnb'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+{
+    "extends": ["next", "next/core-web-vitals", "plugin:jsx-a11y/recommended"],
+    "plugins": ["jsx-a11y", "react-hooks"],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
-  plugins: ['react', 'prettier'],
-  rules: {
-    'prettier/prettier': ['error', { singleQuote: true, parser: 'flow' }],
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-  },
-};
+    "settings": {
+      "import/resolver": {
+        "babel-module": {
+          "extensions": [".js", ".jsx"]
+        },
+        "node": {
+          "extensions": [".js", ".jsx"],
+          "paths": ["~"]
+        }
+      }
+    }
+  }
