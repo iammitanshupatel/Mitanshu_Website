@@ -66,7 +66,7 @@ header .hamburger #span1 {
       @apply w-[55%] sm:w-3/5 bg-transparent text-transparent;
     }
     & ul {
-      @apply bg-[#000] flex flex-col items-center w-full sm:w-2/5 mt-0 ml-9;
+      @apply bg-[#000] flex flex-col items-center w-full sm:w-2/5 mt-0 pl-9;
       &:hover,
       :focus {
         @apply bg-[#222];

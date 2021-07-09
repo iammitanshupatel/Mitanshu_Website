@@ -49,7 +49,7 @@ const Header = () => {
             Mitanshu
           </a>
           <button
-            closeAfterTransition
+            closeaftertransition="true"
             ref={burgerRef}
             className="hamburger"
             type="button"
@@ -61,27 +61,33 @@ const Header = () => {
             <a href="#!" onClick={burgerClicked} />
             <ul>
               <li>
-                <a ref={liRef} className={pathname === '/' && 'active'} href="/">
+                <a ref={liRef} className={pathname === '/' ? 'active' : undefined} href="/">
                   Home
                 </a>
               </li>
               <li>
-                <a ref={liRef} className={pathname === '/about' && 'active'} href="/about">
+                <a
+                  ref={liRef}
+                  className={pathname === '/about' ? 'active' : undefined}
+                  href="/about">
                   About
                 </a>
               </li>
               <li>
-                <a ref={liRef} className={pathname === '/work' && 'active'} href="/work">
+                <a ref={liRef} className={pathname === '/work' ? 'active' : undefined} href="/work">
                   Work
                 </a>
               </li>
               <li>
-                <a ref={liRef} className={pathname === '/blog' && 'active'} href="/blog">
+                <a ref={liRef} className={pathname === '/blog' ? 'active' : undefined} href="/blog">
                   Blogs
                 </a>
               </li>
               <li>
-                <a ref={liRef} className={pathname === '/contact' && 'active'} href="/contact">
+                <a
+                  ref={liRef}
+                  className={pathname === '/contact' ? 'active' : undefined}
+                  href="/contact">
                   Contact
                 </a>
               </li>

@@ -1,17 +1,15 @@
-
 import ContactPageHeader from '../component/ContactPageHeader';
 import ContactForm from '../component/ContactForm';
 import ContactPageFooter from '../component/ContactPageFooter';
-import useContactPage from '../hooks/useContactPage';
+import useContact from '../hooks/useContact';
 
 const ContactPage = () => {
-  const { data } = useContactPage;
-  console.log(data);
+  const { data } = useContact();
   return (
     <>
-      {data || <ContactPageHeader data={data} />}
+      {data && <ContactPageHeader data={data} />}
       <ContactForm />
-      <ContactPageFooter />
+      {data && <ContactPageFooter data={data} />}
     </>
   );
 };

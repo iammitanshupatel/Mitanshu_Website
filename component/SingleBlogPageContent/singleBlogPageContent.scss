@@ -1,7 +1,7 @@
 .singleBlog {
   @apply pt-[18vh];
   & .blogInfo {
-    @apply text-left px-[15px] md:px-[30px] pt-[30px] pb-0;
+    @apply px-[15px] md:px-[30px] pt-[30px] pb-0;
     & .datenauthor {
       & p {
         @apply opacity-70 font-normal inline-block float-left;
@@ -30,7 +30,7 @@
   @apply p-[30px] block;
   & p {
     font-family: 'Poppins', sans-serif !important;
-    @apply text-[#B9B9B9] text-[17px] m-0 mb-4 leading-normal font-normal;
+    @apply text-[#B9B9B9] text-[18px] m-0 mb-4 leading-normal font-normal;
   }
   & a {
     @apply text-[18px] text-[#2f89fc] leading-8 mr-4 cursor-pointer;

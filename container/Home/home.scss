@@ -60,7 +60,7 @@
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
 }
- 
+
 @keyframes blinking-cursor {
   0% {
     opacity: 0;
@@ -119,66 +119,3 @@
     @apply opacity-0;
   }
 }
-// .homeTxt span {
-//   animation: 12s steps(1,end) infinite text-rotate;
-//   @apply ml-[6px] absolute font-bold opacity-0;
-//   @for $i from 2 through 6 {
-
-//     &:nth-child(#{$i}) {
-//       animation-delay: 2s * ( $i - 1 );
-//     }
-//   }
-// }
-
-@keyframes text-rotate {
-  0% {
-    @apply opacity-100
-  }
-  15.5% {
-    @apply opacity-100
-  }
-  16.5% {
-   @apply opacity-0
-  }
-  100% {
-   @apply opacity-0
-  }
-}
-// .words{
-//   overflow: hidden;
-//   position: absolute;
-//   right: 207px;
-//   top: 37px;
-// }
-// .words span{
-//   display: block;
-//   height: 100%;
-//   text-align: left;
-//   animation: spin_words 6s infinite;
-// }
-// @keyframes spin_words{
-//   10%{
-//       transform: translateY(-112%);
-//   }
-//   25%{
-//       transform: translateY(-100%);
-//   }
-//   35%{
-//       transform: translateY(-212%);
-//   }
-//   50%{
-//       transform: translateY(-200%);
-//   }
-//   60%{
-//       transform: translateY(-312%);
-//   }
-//   75%{
-//       transform: translateY(-300%);
-//   }
-//   85%{
-//       transform: translateY(-412%);
-//   }
-//   100%{
-//       transform: translateY(-400%);
-//   }
-// }

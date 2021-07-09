@@ -3,7 +3,7 @@ const Testimonial = ({ data }) => (
     <div className="testimonialContainer">
       <figure className="slider">
         {data.testimonials.map(x => (
-          <div className="containerTest">
+          <div key={x.id} className="containerTest">
             <div className="authorImg">
               <img src="/image/testimonial/img-1.jpg" alt="" />
             </div>

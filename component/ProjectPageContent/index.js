@@ -41,7 +41,7 @@ const ProjectPageContent = ({ data }) => {
           <div className="srvCol">
             <div className="cardRow">
               {data.projects.map(x => (
-                <Card variant="projectCard">
+                <Card key={x.id} variant="projectCard">
                   <figure>
                     <img src="/image/Project/img-2.jpg" alt="" />
                     <figcaption>

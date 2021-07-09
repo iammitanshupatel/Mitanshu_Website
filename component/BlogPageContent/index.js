@@ -9,7 +9,7 @@ const BlogPageContent = ({ blogs }) => (
         <div className="srvCol">
           <div className="cardRow gap1rem">
             {blogs.map(x => (
-              <Card variant="cardBlog">
+              <Card key={x.id} variant="cardBlog">
                 <a href={`blog/${x.id}`}>
                   <div className="custom">
                     <img src="/image/Blogs/img-1.jpg" alt="" />

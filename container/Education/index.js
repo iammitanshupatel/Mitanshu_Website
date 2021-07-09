@@ -19,7 +19,7 @@ const Education = ({ data }) => (
           </div>
           <div className="eduRight">
             {data.skills.map(x => (
-              <div className="progressWrap eduWrap">
+              <div key={x.id} className="progressWrap eduWrap">
                 <h4>
                   <a href={x.link} target="_blank" rel="noreferrer">
                     {x.title}

@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 const AboutPageContent = ({ data }) => (
   <>
     <div className="separated" />
@@ -28,7 +30,7 @@ const AboutPageContent = ({ data }) => (
         <h3>Education.</h3>
         <div className="flexCol">
           {data.educations.map(x => (
-            <>
+            <Fragment key={x.id}>
               <span className="date">{`${x.startDate} - ${x.endDate}`}</span>
               <div className="expInfo">
                 <h2>{x.degree}</h2>
@@ -37,7 +39,7 @@ const AboutPageContent = ({ data }) => (
                 </a>
                 <p>{x.description}</p>
               </div>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
@@ -48,14 +50,14 @@ const AboutPageContent = ({ data }) => (
         <h3>Experience.</h3>
         <div className="flexCol">
           {data.experiences.map(x => (
-            <>
+            <Fragment key={x.id}>
               <span className="date">{`${x.startDate} - ${x.endDate}`}</span>
               <div className="expInfo">
                 <h2>{x.role}</h2>
                 <a href={x.companyLink}>{x.companyName}</a>
                 <p>{x.description}</p>
               </div>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>

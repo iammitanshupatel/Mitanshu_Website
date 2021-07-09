@@ -2,31 +2,19 @@ import Mail from '../../public/icon/mail-outline.svg';
 import Call from '../../public/icon/call-outline.svg';
 import Location from '../../public/icon/location-outline.svg';
 
-const ContactPageFooter = () => (
+const ContactPageFooter = ({ data }) => (
   <>
     <div className="containerCtc top120">
       <div className="contactInfos txc">
-        <div className="responsiveInfo">
-          <div className="iconWidth">
-            <Mail />
-            <a href="mailto:mitanshu.u.patel@gmail.com">mitanshu.u.patel@gmail.com</a>
-            <span>email</span>
+        {data?.socialMedia?.map(x => (
+          <div key={x.id} className="responsiveInfo">
+            <div className="iconWidth">
+              <Mail />
+              <a href={x.url}>{x.displayName}</a>
+              <span>{x.name}</span>
+            </div>
           </div>
-        </div>
-        <div className="responsiveInfo">
-          <div className="iconWidth">
-            <Location />
-            <a href="#!">V-10 Radhesh Appts, Thaltej, Gujarat, 380054, India</a>
-            <span>address</span>
-          </div>
-        </div>
-        <div className="responsiveInfo wFull">
-          <div className="iconWidth">
-            <Call />
-            <a href="tel:9104552342">+91 91045 52342</a>
-            <span>phone</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
     <div className="map">

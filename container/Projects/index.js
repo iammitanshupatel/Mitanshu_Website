@@ -31,20 +31,18 @@ const Projects = ({ data }) => {
             </div>
             <div className="cardRow paddingB1">
               {data.projects.map(x => (
-                <>
-                  <Card variant="projectCard" key={x.id}>
-                    <figure>
-                      <img src="/image/Project/img-2.jpg" alt="" />
-                      <figcaption>
-                        <button type="button" onClick={() => btnClick(x.id)}>
-                          <h3>{x.title}</h3>
-                          <p>{x.typeOfPortfolio}</p>
-                        </button>
-                      </figcaption>
-                      <div className="shine" />
-                    </figure>
-                  </Card>
-                </>
+                <Card variant="projectCard" key={x.id}>
+                  <figure>
+                    <img src="/image/Project/img-2.jpg" alt="" />
+                    <figcaption>
+                      <button type="button" onClick={() => btnClick(x.id)}>
+                        <h3>{x.title}</h3>
+                        <p>{x.typeOfPortfolio}</p>
+                      </button>
+                    </figcaption>
+                    <div className="shine" />
+                  </figure>
+                </Card>
               ))}
             </div>
             <Button btnText="Load More" locationPage="/work" />
@@ -55,7 +53,7 @@ const Projects = ({ data }) => {
         {data.projects.map(x => {
           if (x.id === selectedProject) {
             return (
-              <div className="paper">
+              <div key={x.id} className="paper">
                 <h2>{x.title}</h2>
                 <p>{x.description}</p>
               </div>

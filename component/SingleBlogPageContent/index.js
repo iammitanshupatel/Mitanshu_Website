@@ -17,7 +17,7 @@ const SingleBlogPageContent = ({ data }) => (
     <article className="singleBlogTxt">
       <p>{data.description}</p>
       <div>
-        {data.tags.map(tag => (
+        {data?.tags?.map(tag => (
           <a key={tag.id} href={tag.url} target="_blank" rel="noreferrer">
             {tag.title}
           </a>
