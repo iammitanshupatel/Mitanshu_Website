@@ -1,0 +1,77 @@
+.separated {
+  background-image: url(/image/border.png);
+  background-size: auto 6px;
+  @apply bg-repeat-x bg-center py-10 md:py-[60px] lg:py-[80px] w-11/12 m-auto;
+}
+.seperatedWithoutImg {
+  @apply py-10 md:py-[60px] lg:py-[80px];
+}
+.srvContainer {
+  @apply w-full sm:w-9/12 md:w-11/12 mx-auto px-[15px];
+}
+.secDesc {
+  @apply md:relative flex justify-center md:mb-12;
+  & h1 {
+    color: rgba(255, 255, 255, 0.08);
+    @apply text-[8em] lg:text-[10em] hidden md:block md:absolute bottom-[55%] font-bold uppercase leading-6;
+  }
+}
+.srvCol {
+  @apply flex flex-wrap flex-col  mx-[-15px] h-full;
+}
+.cardRow {
+  @apply flex flex-row flex-wrap justify-center;
+}
+.p2 {
+  @apply md:p-8 flex justify-center;
+  & h2 {
+    letter-spacing: 1px;
+    @apply text-[2rem] font-light mb-8 md:mb-12;
+  }
+  & p {
+    @apply text-[18px] md:text-[20px] text-gray leading-8 mb-4;
+  }
+}
+.progressWrap {
+  @apply mb-[30px] w-full md:w-1/2;
+  & h4 {
+    @apply text-white opacity-90 text-xl mb-[10px] mt-1 leading-6 font-semibold;
+    & a:hover,
+    :focus {
+      text-decoration: underline !important;
+    }
+  }
+  & .progress {
+    @apply h-1 md:w-11/12 mt-4 bg-veryDarkGray overflow-visible border-0 flex text-xs;
+    & .progressBar {
+      @apply bg-darkGray leading-5 relative flex flex-col justify-center;
+      & span {
+        @apply absolute top-[-34px] right-0 text-darkGray;
+        &::after {
+          content: '';
+          @apply bg-darkGray absolute top-[31px] right-0 w-[10px] h-[10px] rounded-[50%];
+        }
+      }
+    }
+  }
+}
+.blogPageContent {
+  @apply px-[15px] py-[20px] bg-white h-auto;
+  & h3 {
+    line-height: 1.2;
+    @apply h-12 line-clamp-2 text-[20px] mt-0 text-veryDarkGray font-semibold mb-[15px];
+  }
+  & p {
+    line-height: 1.65;
+    @apply text-darkerGray h-[5rem] md:h-[6.9rem] text-[16px] pb-4 md:pb-9 mb-0 border-b border-0 border-gray border-solid line-clamp-3 md:line-clamp-4 font-thin;
+  }
+  & .blogPageMeta {
+    @apply h-auto flex justify-between pt-[15px] md:pt-[20px] lg:pt-[15px];
+  }
+}
+.more {
+  @apply text-black border-b border-0 border-solid border-veryDarkGray font-semibold text-[13px];
+}
+.date {
+  @apply float-right text-[13px] text-darkGrayishCyan;
+}

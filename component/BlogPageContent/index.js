@@ -4,7 +4,7 @@ import Card from '../Card';
 const BlogPageContent = ({ blogs }) => (
   <>
     <div id="scrollHere" />
-    <div className="speratedWithoutImg">
+    <div className="seperatedWithoutImg">
       <div className="srvContainer">
         <div className="srvCol">
           <div className="cardRow gap1rem">

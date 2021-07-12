@@ -1,23 +1,25 @@
 import Card from '../../component/Card';
 import Web from '../../public/icon/desktop-outline.svg';
+import common from '../../common-styles/common.module.scss';
+import card from '../../component/Card/card.module.scss';
 
 const Services = ({ data }) => (
   <>
     <section id="Services">
-      <div className="srvContainer">
-        <div className="srvCol">
-          <div className="secDesc">
+      <div className={common.srvContainer}>
+        <div className={common.srvCol}>
+          <div className={common.secDesc}>
             <h1>{data.header.title}</h1>
-            <div className="p2">
+            <div className={common.p2}>
               <h2>{data.header.caption}</h2>
             </div>
           </div>
-          <div className="cardRow">
+          <div className={common.cardRow}>
             {data.services.map(x => (
               <Card key={x.id} variant="srvCard">
-                <div className="featureBox">
+                <div className={card.featureBox}>
                   <Web />
-                  <div className="featureContent">
+                  <div className={card.featureContent}>
                     <h5>{x.title}</h5>
                     <p>{x.description}</p>
                   </div>
@@ -28,7 +30,7 @@ const Services = ({ data }) => (
         </div>
       </div>
     </section>
-    <div className="separated" />
+    <div className={common.separated} />
   </>
 );
 export default Services;

@@ -2,12 +2,12 @@
 .srvCard {
   @apply mt-[15px] pb-[15px] px-[15px] w-full md:w-1/2 lg:w-1/3;
   & .featureBox {
-    @apply h-full bg-[#0b0b13] p-10 rounded-[10px] overflow-hidden relative z-[1];
+    @apply h-full bg-veryDarkBlue p-10 rounded-[10px] overflow-hidden relative z-[1];
     &::before {
       content: '';
       transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
       -webkit-transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
-      @apply absolute top-[-220px] left-[-220px] w-[200px] h-[200px] rounded-none z-[-1] bg-[#0b0b13];
+      @apply absolute top-[-220px] left-[-220px] w-[200px] h-[200px] rounded-none z-[-1] bg-veryDarkBlue;
     }
     & .featureContent {
       @apply pt-[25px];
@@ -20,7 +20,7 @@
     }
     &::after {
       content: '';
-      @apply absolute opacity-60 top-[-72px] left-[-40px] w-[200px] h-[200px] rounded-[50%] z-[-2] bg-[#b9b9b9];
+      @apply absolute opacity-60 top-[-72px] left-[-40px] w-[200px] h-[200px] rounded-[50%] z-[-2] bg-gray;
     }
     &:hover::before,
     &:focus::before {
@@ -52,16 +52,16 @@
     &:hover,
     &:focus {
       transform: rotateY(7.15deg) rotateX(-5.2deg);
-      @apply bg-[#696969];
+      @apply bg-darkGray;
       & img {
         @apply opacity-40;
       }
-      & figcaption h3 {
+      & figcaption a h3 {
         -webkit-transform: translate(0px, 0px);
         transform: translate(0px, 0px);
         @apply opacity-100;
       }
-      & figcaption p {
+      & figcaption a p {
         -webkit-transform: translate(0px, 0px);
         transform: translate(0px, 0px);
         @apply opacity-100;
@@ -72,7 +72,7 @@
     }
     & figcaption {
       @apply absolute inset-0 z-10 pl-5 items-baseline;
-      & button {
+      & a {
         @apply flex flex-col justify-center gap-2 h-full w-full;
       }
       & h3 {
@@ -89,7 +89,7 @@
         -webkit-box-sizing: border-box;
         -webkit-transition: all 0.35s ease;
         transition: all 0.35s ease;
-        @apply text-left  text-[11px] font-light tracking-[1px] opacity-0 top-1/2 text-[#ffffffbd] box-border m-0;
+        @apply text-left  text-[11px] font-light tracking-[1px] opacity-0 top-1/2 text-darkWhite box-border m-0;
       }
     }
     & .shine {

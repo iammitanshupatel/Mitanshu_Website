@@ -22,32 +22,16 @@ module.exports = {
         opensans: ['Open Sans'],
       },
       colors: {
-        backgroundColor: {
-          skin: {
-            fill: 'var(--color-fill)',
-            'button-accent': 'var(--color-button-accent)',
-            'button-accent-hover': 'var(--color-button-accent-hover)',
-            'button-service': 'var(--color-button-service)',
-            'button-disable': ({ opacityValue }) => {
-              if (opacityValue == undefined) {
-                return `rgba(var(--color-button-disable), ${opacityValue})`;
-              }
-              return `rgba(var(--color-button-disable))`;
-            },
-            // 'color-bg-fill': 'var(--bg-color-bg-fill)',
-          },
-        },
-        textColor: {
-          skin: {
-            base: 'var(--color-text-base)',
-            dull: 'var(--color-text-dull)',
-            inverted: 'var(--color-text-inverted)',
-            'inverted-dull': 'var(--color-text-inverted-dull)',
-            copyright: 'var(--color-text-copyright)',
-            date: 'var(--color-text-date)',
-            navbar: 'var(--color-text-navbar)',
-          },
-        },
+        gray: '#b9b9b9',
+        darkGray: '#696969',
+        darkerGray: '#484848',
+        veryDarkGray: '#1f1f1f',
+        white: '#fff',
+        darkWhite: '#ffffffbd',
+        brightBlue: '#2f89fc',
+        veryDarkBlue: '#0b0b13',
+        lightBlack: '#101010',
+        darkGrayishCyan:'#748182'
       },
     },
   },

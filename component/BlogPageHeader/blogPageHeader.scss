@@ -1,7 +1,7 @@
 .blogImgOverlay {
   background-image: url(/image/blogs-banner.jpeg);
   background-position: center center;
-  @apply h-[100vh] w-full bg-cover bg-fixed;
+  @apply h-screen w-full bg-cover bg-fixed;
   &::before {
     content: '';
     background: rgba(0, 0, 0, 0.5);

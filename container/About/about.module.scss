@@ -31,9 +31,9 @@
     @apply text-[2rem] font-light md:mb-12;
   }
   & p {
-    @apply text-[18px] md:text-[20px] text-[#b9b9b9] leading-8 mb-4;
+    @apply text-[18px] md:text-[20px] text-gray leading-8 mb-4;
   }
   & a {
-    @apply text-[20px] text-[#2f89fc] leading-8 mb-4;
+    @apply text-[20px] text-brightBlue leading-8 mb-4;
   }
 }

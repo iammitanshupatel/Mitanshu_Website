@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useRef } from 'react';
 import Button from '../../component/Button';
 import Card from '../../component/Card';
+import styles from './blogs.module.scss';
+import common from '../../common-styles/common.module.scss';
 
 const Blogs = ({ data }) => {
   const sliderRef = useRef();
@@ -23,32 +25,32 @@ const Blogs = ({ data }) => {
 
   return (
     <>
-      <section id="Blogs">
-        <div className="srvContainer">
-          <div className="srvCol">
-            <div className="secDesc">
+      <section id="Blogs" className={styles.blogsSection}>
+        <div className={common.srvContainer}>
+          <div className={common.srvCol}>
+            <div className={common.secDesc}>
               <h1>{data.Header.title}</h1>
-              <div className="p2">
+              <div className={common.p2}>
                 <h2>{data.Header.caption}</h2>
               </div>
             </div>
           </div>
-          <div className="items">
-            <div id="sliderModal" ref={sliderRef} className="sliderShow">
+          <div className={styles.items}>
+            <div id="sliderModal" ref={sliderRef} className={styles.sliderShow}>
               {data.blogs.map(x => (
                 <Card key={x.id} variant="cardBlog">
                   <a href={`blog/${x.id}`}>
-                    <div className="custom">
+                    <div className={styles.custom}>
                       <img src="/image/Blogs/img-1.jpg" alt="" />
                     </div>
-                    <div className="blogPageContent">
+                    <div className={common.blogPageContent}>
                       <h3>{x.title}</h3>
                       <p>{x.description}</p>
-                      <div className="blogPageMeta">
-                        <span className="more">
+                      <div className={common.blogPageMeta}>
+                        <span className={common.more}>
                           <a href={`blog/${x.id}`}>Read More</a>
                         </span>
-                        <span className="date">{x.date}</span>
+                        <span className={common.date}>{x.date}</span>
                       </div>
                     </div>
                   </a>

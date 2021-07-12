@@ -1,16 +1,8 @@
-@import './../container/Home/home.scss';
-@import './../container/About/about.scss';
-@import './../container/Services/services.scss';
-@import './../container/Education/education.scss';
-@import './../container/Projects/projects.scss';
-@import './../container/Blogs/blogs.scss';
-@import './../container/Testimonial/testimonial.scss';
 @import '/component/Cursor/cursor.scss';
 @import '/component/PreLoader/preLoader.scss';
 @import '/component/Header/header.scss';
 @import '/component/Footer/footer.scss';
 @import '/component/Button/button.scss';
-@import '/component/Card/card.scss';
 @import '/component/FullImageHeaderPage/fullImageHeaderPage.scss';
 @import '/component/AboutPageContent/aboutPageContent.scss';
 @import '/component/ProjectPageContent/projectPageContent.scss';
@@ -47,12 +39,4 @@ button {
   text-decoration: none !important;
   list-style: none !important;
   outline: none !important;
-}
-.separated {
-  background-image: url(/image/border.png);
-  background-size: auto 6px;
-  @apply bg-repeat-x bg-center py-10 md:py-[60px] lg:py-[80px] w-11/12 m-auto;
-}
-.speratedWithoutImg {
-  @apply py-10 md:py-[60px] lg:py-[80px];
 }

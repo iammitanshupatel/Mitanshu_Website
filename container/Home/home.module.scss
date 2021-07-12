@@ -26,35 +26,35 @@
     @apply hidden md:block;
   }
 }
-.mouse-wrap {
+.mouseWrap {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   @apply relative flex justify-center left-[50%] bottom-[50px] z-20 cursor-pointer;
 }
 
-.mouse-wrap:active,
-.mouse-wrap:active > .mouse-label,
-.mouse-wrap:focus,
-.mouse-wrap:focus > .mouse-label {
+.mouseWrap:active,
+.mouseWrap:active > .mouseLabel,
+.mouseWrap:focus,
+.mouseWrap:focus > .mouseLabel {
   @apply outline-none;
 }
 
-.mouse-wrap .mouse-label {
+.mouseWrap .mouseLabel {
   @apply top-0 text-white uppercase tracking-wider font-bold text-[10px];
 }
 
-.mouse-wrap .mouse {
+.mouseWrap .mouse {
   border: 2px solid #fff;
   -webkit-animation: intro 2s;
   animation: intro 2s;
   @apply absolute w-[22px] h-[42px] bottom-[30px] block left-[50%] ml-[-12px] rounded-[15px];
 }
 
-.mouse-wrap .mouse .scroll {
+.mouseWrap .mouse .scroll {
   -webkit-animation: finger 2s infinite;
   animation: finger 2s infinite;
-  @apply block w-[3px] h-[3px] my-[6px] mx-auto bg-[#fff] rounded;
+  @apply block w-[3px] h-[3px] my-[6px] mx-auto bg-white rounded;
 }
 
 .react-rotating-text-cursor {

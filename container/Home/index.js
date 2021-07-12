@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-
+import styles from './home.module.scss';
 import ReactDOM from 'react-dom';
 import ReactRotatingText from 'react-rotating-text';
 import useMarkdown from '../../hooks/useMarkdown';
@@ -15,24 +15,24 @@ const Home = ({ data }) => {
 
   return (
     <>
-      <section className="imgCover">
-        <div className="homeContainer">
-          <div className="homeWrap">
+      <section className={styles.imgCover}>
+        <div className={styles.homeContainer}>
+          <div className={styles.homeWrap}>
             {/* <div className="homeTxt" ref={homeTextRef}  /> */}
             {/* <div className="homeTxt" dangerouslySetInnerHTML={{ __html: HTML }} /> */}
             {/* {homeTextRef.current && <RenderHtml html={HTML} node={homeTextRef.current} />} */}
-            <div className="homeTxt">
+            <div className={styles.homeTxt}>
               {/* <h1>{`${data.firstName} ${data.lastName}`}</h1> */}
               <span dangerouslySetInnerHTML={{ __html: HTML }} />
               <ReactRotatingText items={['x', 'y', 'z']} />
             </div>
           </div>
         </div>
-        <a href="#About" className="mouse-wrap">
-          <span className="mouse">
-            <span className="scroll" />
+        <a href="#About" className={styles.mouseWrap}>
+          <span className={styles.mouse}>
+            <span className={styles.scroll} />
           </span>
-          <span className="mouse-label">Scroll</span>
+          <span className={styles.mouseLabel}>Scroll</span>
         </a>
       </section>
     </>

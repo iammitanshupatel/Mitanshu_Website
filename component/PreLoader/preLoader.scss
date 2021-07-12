@@ -5,7 +5,7 @@
   -webkit-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
   transition-delay: 0.5s;
-  @apply fixed bg-[#fff] z-[2000] h-full w-full;
+  @apply fixed bg-white z-[2000] h-full w-full;
 }
 .preloader.loaded {
   visibility: hidden;
@@ -17,7 +17,7 @@
   -webkit-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   transition: 0.5s all ease;
-  @apply absolute h-1/2 w-full bg-[#222];
+  @apply absolute h-1/2 w-full bg-veryDarkGray;
 }
 .preloader:before {
   @apply top-0 left-0;
@@ -39,7 +39,7 @@
   transition: 0.2s all ease;
   -webkit-animation: 1s infinite ease-in-out;
   animation: 1s infinite ease-in-out;
-  @apply w-[50px] h-[50px] rounded-[50%] fixed top-1/2 left-1/2 z-10 bg-[#fff];
+  @apply w-[50px] h-[50px] rounded-[50%] fixed top-1/2 left-1/2 z-10 bg-white;
 }
 .preloader .loader:before,
 .preloader .loader:after {
@@ -53,7 +53,7 @@
   box-sizing: content-box;
   -webkit-animation-name: anim-loader;
   animation-name: anim-loader;
-  @apply border-[10px] border-solid border-[#222] top-[-10px] left-[-10px];
+  @apply border-[10px] border-solid border-veryDarkGray top-[-10px] left-[-10px];
 }
 
 .preloader.loaded .loader {
