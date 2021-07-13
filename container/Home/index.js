@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import styles from './home.module.scss';
+import common from '../../common-styles/common.module.scss';
 import ReactDOM from 'react-dom';
 import ReactRotatingText from 'react-rotating-text';
 import useMarkdown from '../../hooks/useMarkdown';
@@ -28,11 +29,11 @@ const Home = ({ data }) => {
             </div>
           </div>
         </div>
-        <a href="#About" className={styles.mouseWrap}>
-          <span className={styles.mouse}>
-            <span className={styles.scroll} />
+        <a href="#About" className={common.mouseWrap}>
+          <span className={common.mouse}>
+            <span className={common.scroll} />
           </span>
-          <span className={styles.mouseLabel}>Scroll</span>
+          <span className={common.mouseLabel}>Scroll</span>
         </a>
       </section>
     </>

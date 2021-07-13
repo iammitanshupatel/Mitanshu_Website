@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import styles from './cursor.module.scss';
 
 const Cursor = () => {
   const mouseRef = useRef(null);
@@ -13,8 +14,8 @@ const Cursor = () => {
 
   return (
     <div id="cursor" ref={mouseRef} style={{ left: `${cursorX}px`, top: `${cursorY}px` }}>
-      <div className="cursor__label" />
-      <div className="cursor__bg" />
+      <div className={styles.cursor__label} />
+      <div className={styles.cursor__bg} />
     </div>
   );
 };

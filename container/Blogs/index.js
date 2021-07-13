@@ -40,7 +40,7 @@ const Blogs = ({ data }) => {
               {data.blogs.map(x => (
                 <Card key={x.id} variant="cardBlog">
                   <a href={`blog/${x.id}`}>
-                    <div className={styles.custom}>
+                    <div className={common.custom}>
                       <img src="/image/Blogs/img-1.jpg" alt="" />
                     </div>
                     <div className={common.blogPageContent}>

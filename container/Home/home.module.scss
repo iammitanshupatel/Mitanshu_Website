@@ -26,36 +26,7 @@
     @apply hidden md:block;
   }
 }
-.mouseWrap {
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  @apply relative flex justify-center left-[50%] bottom-[50px] z-20 cursor-pointer;
-}
 
-.mouseWrap:active,
-.mouseWrap:active > .mouseLabel,
-.mouseWrap:focus,
-.mouseWrap:focus > .mouseLabel {
-  @apply outline-none;
-}
-
-.mouseWrap .mouseLabel {
-  @apply top-0 text-white uppercase tracking-wider font-bold text-[10px];
-}
-
-.mouseWrap .mouse {
-  border: 2px solid #fff;
-  -webkit-animation: intro 2s;
-  animation: intro 2s;
-  @apply absolute w-[22px] h-[42px] bottom-[30px] block left-[50%] ml-[-12px] rounded-[15px];
-}
-
-.mouseWrap .mouse .scroll {
-  -webkit-animation: finger 2s infinite;
-  animation: finger 2s infinite;
-  @apply block w-[3px] h-[3px] my-[6px] mx-auto bg-white rounded;
-}
 
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
@@ -98,24 +69,3 @@
   }
 }
 
-@-webkit-keyframes finger {
-  0% {
-    @apply opacity-100;
-  }
-  100% {
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-    @apply opacity-0;
-  }
-}
-
-@keyframes finger {
-  0% {
-    @apply opacity-100;
-  }
-  100% {
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-    @apply opacity-0;
-  }
-}

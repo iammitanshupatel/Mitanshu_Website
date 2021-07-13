@@ -92,15 +92,6 @@
         @apply text-left  text-[11px] font-light tracking-[1px] opacity-0 top-1/2 text-darkWhite box-border m-0;
       }
     }
-    & .shine {
-      transform: translateZ(1px);
-      background: linear-gradient(
-        122.845deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0) 80%
-      );
-      @apply absolute inset-0 z-[9] opacity-30;
-    }
     &::after {
       content: '';
       -webkit-transition: all 0.35s ease;
@@ -112,8 +103,6 @@
 
 // Blog card
 .cardBlog {
-  // animation: scrollAuto 40s linear infinite;
-  // width: calc(250px * 14);
   scroll-snap-align: center;
   box-shadow: 0px 0px 30px -4px rgb(0 0 0 / 20%);
   @apply w-[210px] md:w-[290px] lg:w-[320px];

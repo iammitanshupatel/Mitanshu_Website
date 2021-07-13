@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useFormik } from 'formik';
 import Button from '../Button';
+import styles from './contactForm.module.scss';
+import common from '../../common-styles/common.module.scss';
 
 const validate = values => {
   const errors = {};
@@ -42,13 +44,13 @@ const ContactForm = () => {
     },
   });
   return (
-    <div className="containerCtc top45">
-      <div id="message" className={formik.errors ? 'errorMsg' : null}>
+    <>
+      <div id="message" className={formik.errors ? styles.errorMsg : null}>
         <p>{formik.errors.name || formik.errors.email || formik.errors.msg}</p>
       </div>
-      <form id="contactForm">
-        <div className="rowInput">
-          <div className="inputWidth">
+      <form id="contactForm" className={styles.contactForm}>
+        <div className={styles.rowInput}>
+          <div className={styles.inputWidth}>
             <input
               name="name"
               type="text"
@@ -57,10 +59,10 @@ const ContactForm = () => {
               value={formik.values.name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className={formik.errors.name ? 'borderBottom' : 'inp'}
+              className={formik.errors.name ? styles.borderBottom : styles.inp}
             />
           </div>
-          <div className="inputWidth">
+          <div className={styles.inputWidth}>
             <input
               name="email"
               type="text"
@@ -69,25 +71,25 @@ const ContactForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
-              className={formik.errors.email ? 'borderBottom' : 'inp'}
+              className={formik.errors.email ? styles.borderBottom : styles.inp}
             />
           </div>
         </div>
-        <div className="formMsg">
+        <div className={styles.formMsg}>
           <textarea
             name="message"
             rows="4"
-            className="inp"
+            className={styles.inp}
             placeholder="Message"
             onChange={formik.handleChange}
             value={formik.values.message}
           />
         </div>
-        <div className="top45 txc">
+        <div className={`${styles.top45} ${common.txc}`}>
           <Button btnText="Send It" onClick={formik.handleSubmit} />
         </div>
       </form>
-    </div>
+    </>
   );
 };
 

@@ -1,15 +1,7 @@
-.textWidget {
-  & h3 {
-    @apply text-white text-lg font-semibold lg:font-normal opacity-90 lg:opacity-50 leading-[30px] pt-2 mb-2 xl:w-1/6 px-[15px];
-  }
-  & p {
-    @apply text-xl leading-8 text-gray xl:w-10/12 px-[15px] mt-0;
-  }
-}
 .flexCol {
   @apply flex flex-col xl:flex-row xl:w-10/12;
   & .date {
-    @apply text-white text-base font-normal opacity-40 leading-[30px] xl:w-1/6 px-[15px] xl:mt-2;
+    @apply text-white text-base font-normal opacity-40 leading-[30px] xl:w-1/6 px-[15px] xl:mt-6;
   }
   & .expInfo {
     @apply mb-[30px] xl:w-10/12 px-[15px] xl:mt-2;
@@ -35,7 +27,4 @@
 
 .separatedBottom {
   @apply pb-10 md:pb-[60px];
-}
-.separatedTop {
-  @apply pt-10 md:pt-[60px];
 }

@@ -1,5 +1,4 @@
 import styles from './testimonial.module.scss';
-import common from '../../common-styles/common.module.scss';
 
 const Testimonial = ({ data }) => (
   <section className={styles.testimonial}>

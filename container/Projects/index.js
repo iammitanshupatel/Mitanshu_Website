@@ -27,7 +27,6 @@ const Projects = ({ data }) => (
                       <p>{x.typeOfPortfolio}</p>
                     </a>
                   </figcaption>
-                  <div className="shine" />
                 </figure>
               </Card>
             ))}

@@ -21,7 +21,7 @@
 .inp:focus {
   border-bottom: #fff;
 }
-#contactForm .inp {
+.contactForm .inp {
   font-family: sofia-pro, sans-serif;
   @apply bg-transparent text-white p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
 }

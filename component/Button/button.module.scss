@@ -1,4 +1,4 @@
-.btn-posnawr {
+.btnHover {
   border: 2px solid;
   @apply border-darkGray relative block overflow-hidden w-full h-auto max-w-[250px] rounded-lg my-4 mx-auto text-center;
   & button {
@@ -6,20 +6,20 @@
     @apply text-darkGray w-full;
   }
 }
-.btn-posnawr button span {
+.btnHover button span {
   -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   @apply absolute block w-0 h-0 rounded-[50%] bg-darkGray z-[-1];
 }
-.btn-posnawr:hover button,
-.btn-posnawr:focus button {
+.btnHover:hover button,
+.btnHover:focus button {
   @apply text-white;
   & span {
     @apply w-[370%] h-[21000%];
   }
 }
-.btn-posnawr:active {
+.btnHover:active {
   @apply bg-darkGray;
 }

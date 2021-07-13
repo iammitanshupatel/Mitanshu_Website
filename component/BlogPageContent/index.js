@@ -1,27 +1,29 @@
 import { data } from 'remark';
 import Card from '../Card';
+import styles from './blogPageContent.module.scss';
+import common from '../../common-styles/common.module.scss';
 
 const BlogPageContent = ({ blogs }) => (
   <>
     <div id="scrollHere" />
-    <div className="seperatedWithoutImg">
-      <div className="srvContainer">
-        <div className="srvCol">
-          <div className="cardRow gap1rem">
+    <div className={common.seperatedWithoutImg}>
+      <div className={common.srvContainer}>
+        <div className={common.srvCol}>
+          <div className={`${common.cardRow} ${styles.gap1rem}`}>
             {blogs.map(x => (
               <Card key={x.id} variant="cardBlog">
                 <a href={`blog/${x.id}`}>
-                  <div className="custom">
+                  <div className={common.custom}>
                     <img src="/image/Blogs/img-1.jpg" alt="" />
                   </div>
-                  <div className="blogPageContent">
+                  <div className={common.blogPageContent}>
                     <h3>{x.title}</h3>
                     <p>{x.description}</p>
-                    <div className="blogPageMeta">
-                      <span className="more">
+                    <div className={common.blogPageMeta}>
+                      <span className={common.more}>
                         <a href={`blog/${x.id}`}>Read More</a>
                       </span>
-                      <span className="date">{x.date}</span>
+                      <span className={common.date}>{x.date}</span>
                     </div>
                   </div>
                 </a>

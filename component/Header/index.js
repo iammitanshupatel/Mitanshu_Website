@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
+import styles from './header.module.scss';
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -22,13 +23,11 @@ const Header = () => {
     };
     const onScroll = () => {
       if (window.scrollY >= 60) {
-        navbarRef.current.classList.add('fixed-header');
-        menuRef.current.classList.add('nav-transparent');
-        headerRef.current.classList.add('bgBlack');
+        navbarRef.current.classList.add(styles.fixedHeader);
+        headerRef.current.classList.add(styles.bgBlack);
       } else {
-        navbarRef.current.classList.remove('fixed-header');
-        menuRef.current.classList.remove('nav-transparent');
-        headerRef.current.classList.remove('bgBlack');
+        navbarRef.current.classList.remove(styles.fixedHeader);
+        headerRef.current.classList.remove(styles.bgBlack);
       }
     };
     window.addEventListener('scroll', onScroll, false);
@@ -38,55 +37,61 @@ const Header = () => {
   }, []);
 
   const burgerClicked = () => {
-    burgerRef.current.classList.toggle('open');
-    menuRef.current.classList.toggle('right0');
+    burgerRef.current.classList.toggle(styles.open);
+    menuRef.current.classList.toggle(styles.right0);
   };
   return (
-    <header id="header" ref={headerRef}>
+    <header className={styles.header} ref={headerRef}>
       <nav ref={navbarRef}>
-        <div className="headerContainer">
-          <a href="http://localhost:3000" className="logo">
+        <div className={styles.headerContainer}>
+          <a href="http://localhost:3000" className={styles.logo}>
             Mitanshu
           </a>
           <button
             closeaftertransition="true"
             ref={burgerRef}
-            className="hamburger"
+            className={styles.hamburger}
             type="button"
             onClick={burgerClicked}>
-            <span id="span1" />
-            <span id="span2" />
+            <span className={styles.span1} />
+            <span className={styles.span2} />
           </button>
-          <aside className="menu" id="sidenav-open" ref={menuRef}>
+          <aside className={styles.menu} id="sidenav-open" ref={menuRef}>
             <a href="#!" onClick={burgerClicked} />
             <ul>
               <li>
-                <a ref={liRef} className={pathname === '/' ? 'active' : undefined} href="/">
+                <a ref={liRef} className={pathname === '/' ? styles.active : undefined} href="/">
                   Home
                 </a>
               </li>
               <li>
                 <a
                   ref={liRef}
-                  className={pathname === '/about' ? 'active' : undefined}
+                  className={pathname === '/about' ? styles.active : undefined}
                   href="/about">
                   About
                 </a>
               </li>
               <li>
-                <a ref={liRef} className={pathname === '/work' ? 'active' : undefined} href="/work">
+                <a
+                  ref={liRef}
+                  className={pathname === '/work' ? styles.active : undefined}
+                  href="/work">
                   Work
                 </a>
               </li>
               <li>
-                <a ref={liRef} className={pathname === '/blog' ? 'active' : undefined} href="/blog">
+                <a
+                  ref={liRef}
+                  className={pathname === '/blog' ? styles.active : undefined}
+                  href="/blog">
                   Blogs
                 </a>
               </li>
               <li>
                 <a
                   ref={liRef}
-                  className={pathname === '/contact' ? 'active' : undefined}
+                  className={pathname === '/contact' ? styles.active : undefined}
                   href="/contact">
                   Contact
                 </a>
@@ -95,8 +100,8 @@ const Header = () => {
           </aside>
         </div>
       </nav>
-      <div className="progress-container">
-        <div className="progress-bar" ref={myBarRef} />
+      <div className={styles.progressContainer}>
+        <div className={styles.progressBar} ref={myBarRef} />
       </div>
     </header>
   );

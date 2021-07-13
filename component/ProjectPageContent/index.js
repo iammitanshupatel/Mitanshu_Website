@@ -1,29 +1,31 @@
 import { useEffect, useRef, useState } from 'react';
 import Card from '../Card';
+import styles from './projectPageContent.module.scss';
+import common from '../../common-styles/common.module.scss';
 
 const ProjectPageContent = ({ data }) => (
   <>
-    <div className="fullImage hero me">
-      <div className="fullText">
-        <div className="outer">
-          <div className="inner">
+    <div className={`${common.fullImage} ${common.hero}`}>
+      <div className={common.fullText}>
+        <div className={common.outer}>
+          <div className={common.inner}>
             <h1>{data.projectPageHeader}</h1>
           </div>
-          <a href="#scrollHere" className="mouse-wrap justifyCenter">
-            <span className="mouse">
-              <span className="scroll" />
+          <a href="#scrollHere" className={common.mouseWrap}>
+            <span className={common.mouse}>
+              <span className={common.scroll} />
             </span>
-            <span className="mouse-label">Scroll</span>
+            <span className={common.mouseLabel}>Scroll</span>
           </a>
         </div>
       </div>
-      <div className="workImgOverlay" />
+      <div className={styles.workImgOverlay} />
     </div>
     <div id="scrollHere" />
-    <div className="seperatedWithoutImg">
-      <div className="srvContainer">
-        <div className="srvCol">
-          <div className="cardRow">
+    <div className={common.seperatedWithoutImg}>
+      <div className={common.srvContainer}>
+        <div className={common.srvCol}>
+          <div className={common.cardRow}>
             {data.projects.map(x => (
               <Card key={x.id} variant="projectCard">
                 <figure>
@@ -34,7 +36,6 @@ const ProjectPageContent = ({ data }) => (
                       <p>{x.typeOfPortfolio}</p>
                     </a>
                   </figcaption>
-                  <div className="shine" />
                 </figure>
               </Card>
             ))}
