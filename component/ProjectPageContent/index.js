@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Card from '../Card';
 import styles from './projectPageContent.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const ProjectPageContent = ({ data }) => (
   <>

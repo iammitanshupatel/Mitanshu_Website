@@ -1,5 +1,5 @@
 import styles from './contactPageHeader.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const ContactPageHeader = ({ data }) => (
   <>

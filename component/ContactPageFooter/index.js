@@ -2,7 +2,7 @@ import Mail from '../../public/icon/mail-outline.svg';
 import Call from '../../public/icon/call-outline.svg';
 import Location from '../../public/icon/location-outline.svg';
 import styles from './contactPageFooter.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const ContactPageFooter = ({ data }) => (
   <>

@@ -1,5 +1,5 @@
 import styles from './blogPageHeader.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const BlogPageHeader = ({ data }) => (
   <div className={`${common.fullImage} ${common.hero}`}>

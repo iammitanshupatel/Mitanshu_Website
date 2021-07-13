@@ -1,5 +1,5 @@
 import styles from './education.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const Education = ({ data }) => (
   <>

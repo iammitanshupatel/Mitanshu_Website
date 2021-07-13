@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import styles from './home.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 import ReactDOM from 'react-dom';
 import ReactRotatingText from 'react-rotating-text';
 import useMarkdown from '../../hooks/useMarkdown';

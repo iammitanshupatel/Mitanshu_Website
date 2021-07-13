@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import styles from './aboutPageContent.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const AboutPageContent = ({ data }) => (
   <>

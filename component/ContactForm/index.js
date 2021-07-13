@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import Button from '../Button';
 import styles from './contactForm.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const validate = values => {
   const errors = {};

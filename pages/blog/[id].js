@@ -4,7 +4,7 @@ import Button from '../../component/Button';
 import SingleBlogPageContent from '../../component/SingleBlogPageContent';
 import useBlogs from '../../hooks/useBlogs';
 import styles from '../../component/SingleBlogPageContent/singleBlogPageContent.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 import ContactForm from '../../component/ContactForm';
 
 const validate = values => {

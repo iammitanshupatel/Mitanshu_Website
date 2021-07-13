@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Card from '../../component/Card';
 import Button from '../../component/Button';
 import styles from './projects.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const Projects = ({ data }) => (
   <>

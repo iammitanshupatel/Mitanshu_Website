@@ -1,6 +1,6 @@
 import Card from '../../component/Card';
 import Web from '../../public/icon/desktop-outline.svg';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 import card from '../../component/Card/card.module.scss';
 
 const Services = ({ data }) => (

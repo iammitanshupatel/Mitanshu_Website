@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import useProjects from '../../hooks/useProjects';
 import SingleProjectContent from '../../component/SingleProjectContent';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const SinglePortfolio = () => {
   const router = useRouter();

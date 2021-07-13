@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import Button from '../../component/Button';
 import Card from '../../component/Card';
 import styles from './blogs.module.scss';
-import common from '../../common-styles/common.module.scss';
+import common from '../../styles/common.module.scss';
 
 const Blogs = ({ data }) => {
   const sliderRef = useRef();
