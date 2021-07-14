@@ -1,21 +1,19 @@
 .eduRow {
-  @apply flex flex-wrap mx-[-15px];
+  @apply flex flex-wrap -mx-4;
   & .eduLeft {
-    @apply w-full md:w-1/2 px-[15px];
+    @apply w-full md:w-1/2 px-4;
     & .eduText {
-      @apply px-2 md:p-0 mb-[30px] md:mb-0 md:pr-[40px] lg:pr-[80px];
+      @apply px-2 md:p-0 mb-8 md:mb-0 md:pr-10 lg:pr-20;
       & p {
-        color: rgb(185, 185, 185);
-        @apply mt-0 text-[18px] md:text-[20px] leading-8 mb-4;
+        @apply mt-0 text-gray text-lg md:text-xl leading-8 mb-4;
       }
       & a {
-        color: #2f89fc;
-        @apply text-[20px] leading-8 mb-4;
+        @apply text-brightBlue text-xl leading-8 mb-4;
       }
     }
   }
   & .eduRight {
-    @apply w-full md:w-1/2 px-[15px] h-[285px] overflow-hidden;
+    @apply w-full md:w-1/2 px-4 h-72 overflow-hidden;
     & .eduWrap {
       @apply w-full;
     }

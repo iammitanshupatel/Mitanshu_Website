@@ -1,14 +1,17 @@
 .top45 {
-  @apply mt-[45px];
+  @apply mt-11;
 }
 .errorMsg {
-  @apply text-center text-sm mb-[30px] text-red-600 font-bold;
+  @apply text-center text-sm mb-0 text-red-600 font-bold;
+  & p {
+    @apply m-0;
+  }
 }
 .rowInput {
   @apply flex flex-col lg:flex-row w-full lg:gap-8;
 }
 .inputWidth {
-  @apply flex w-full lg:w-[50%];
+  @apply flex w-full lg:w-1/2;
 }
 
 .inp {
@@ -16,18 +19,15 @@
 }
 .borderBottom {
   font-family: sofia-pro, sans-serif;
-  @apply text-red-600 border-red-600 bg-transparent p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+  @apply text-red-600 border-red-600 bg-transparent p-4 w-full mt-7 border-0 border-b border-solid text-base;
 }
 .inp:focus {
   border-bottom: #fff;
 }
 .contactForm .inp {
   font-family: sofia-pro, sans-serif;
-  @apply bg-transparent text-white p-[15px] w-full mt-[30px] border-0 border-b border-solid text-[100%];
+  @apply bg-transparent text-white p-4 w-full mt-7 border-0 border-b border-solid text-base;
 }
 .formMsg {
   @apply flex w-full;
-}
-.btn {
-  @apply h-[53px] w-[113.16px] text-black bg-white pt-[10px] pb-[13px] px-[28px] text-[18px] font-semibold leading-[30px] border-0 rounded-[4px];
 }

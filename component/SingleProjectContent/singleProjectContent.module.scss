@@ -2,23 +2,24 @@
   @apply text-center;
 }
 .projectDesc {
-  @apply flex flex-col md:flex-row gap-4 pb-[15vh];
+  @apply flex flex-col md:flex-row gap-4 pb-24;
   & img {
-    @apply h-[70vh] w-full md:w-2/5 object-cover mt-16;
+    height: 70vh;
+    @apply w-full md:w-2/5 object-cover mt-16;
   }
   & .desc {
     @apply mt-12;
     & .singleProjectTxt {
-      @apply px-[15px];
+      @apply px-4;
       & p {
         font-family: 'Poppins', sans-serif !important;
-        @apply text-gray text-[18px] m-0 mb-4 leading-normal font-normal;
+        @apply text-gray text-lg m-0 mb-4 leading-normal font-normal;
       }
       & a {
-        @apply text-[18px] text-brightBlue leading-8 mr-4 cursor-pointer;
+        @apply text-lg text-brightBlue leading-8 mr-4 cursor-pointer;
       }
       & h3 {
-        @apply text-white text-lg font-semibold lg:font-normal opacity-90 lg:opacity-50 leading-[30px] pt-2 mb-2 w-full;
+        @apply text-white text-lg font-semibold lg:font-normal opacity-90 lg:opacity-50 leading-8 pt-2 mb-2 w-full;
       }
     }
   }

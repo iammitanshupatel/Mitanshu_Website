@@ -1,38 +1,38 @@
 .footer {
-  @apply py-[90px] bg-lightBlack;
+  @apply py-20 bg-lightBlack;
 }
 .wrap {
   @apply flex flex-wrap flex-col xl:flex-row;
 }
 .footerInfo {
-  @apply font-medium text-xl leading-[35px] xl:max-w-[50%] px-[15px];
+  @apply font-medium text-xl leading-9 xl:w-1/2 px-4;
   & p {
-    color: rgb(185 185 185);
+    @apply text-gray;
   }
   & a {
     @apply text-white;
     &:hover,
     &:focus {
-      color: rgb(185 185 185);
+      @apply text-gray;
     }
   }
 }
 .footerInfo .copyright {
   @apply opacity-60 mt-6 font-normal;
   & p {
-    @apply text-[17px];
+    @apply text-lg;
   }
 }
 .rightText {
-  @apply px-[15px] xl:w-[50%] text-right;
+  @apply px-4 xl:w-1/2 text-right;
 }
 .uptotop {
-  @apply cursor-pointer opacity-50 mt-[35px] flex flex-row items-center font-black xl:justify-end;
+  @apply cursor-pointer opacity-50 mt-9 flex flex-row items-center font-black xl:justify-end;
   &:hover,
   &:focus {
     @apply opacity-100;
   }
   & svg {
-    @apply h-[38px] w-[16px] ml-[15px] animate-bounce;
+    @apply h-10 w-4 ml-4 animate-bounce;
   }
 }

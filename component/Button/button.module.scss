@@ -1,6 +1,7 @@
 .btnHover {
   border: 2px solid;
-  @apply border-darkGray relative block overflow-hidden w-full h-auto max-w-[250px] rounded-lg my-4 mx-auto text-center;
+  max-width: 250px;
+  @apply border-darkGray relative block overflow-hidden w-full h-auto rounded-lg my-4 mx-auto text-center;
   & button {
     font: normal 18px/60px 'proxima-nova', sans-serif;
     @apply text-darkGray w-full;
@@ -11,13 +12,14 @@
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  @apply absolute block w-0 h-0 rounded-[50%] bg-darkGray z-[-1];
+  @apply absolute block w-0 h-0 rounded-lg bg-darkGray -z-1;
 }
 .btnHover:hover button,
 .btnHover:focus button {
   @apply text-white;
   & span {
-    @apply w-[370%] h-[21000%];
+    width: 370%;
+    height: 21000%;
   }
 }
 .btnHover:active {

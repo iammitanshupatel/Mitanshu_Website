@@ -2,27 +2,27 @@
 .header {
   transition: all ease 0.3s;
   -webkit-transition: all ease 0.3s;
-  @apply z-[1000] fixed w-full block;
+  @apply z-40 fixed w-full block;
   & .logo {
     font-family: 'Montserrat', sans-serif;
     @apply font-black text-xl lg:text-3xl md:text-2xl uppercase;
   }
   & .hamburger {
-    @apply block lg:hidden float-right w-[26px] h-[26px] relative cursor-pointer;
+    @apply block lg:hidden float-right w-6 h-6 relative cursor-pointer;
     & span {
       transition: all ease 0.3s;
       -webkit-transition: all ease 0.3s;
-      @apply bg-white w-full h-[2.4px] absolute left-0;
+      @apply bg-white w-full h-0.5 absolute left-0;
     }
     & .span1 {
-      @apply bottom-[6px] w-[70%];
+      @apply bottom-1 w-2/3;
     }
   }
 }
 .open {
   & span {
     transform: matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 0);
-    @apply w-full bg-white h-[2.4px] absolute left-0;
+    @apply w-full bg-white h-0.5 absolute left-0;
   }
   & .span1 {
     transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, 0, -5);
@@ -37,11 +37,11 @@
 .fixedHeader {
   box-shadow: 0px 1px 27px -3px rgb(0 0 0 / 100%);
   & .headerContainer {
-    @apply px-[30px] md:px-[60px] xl:px-[75px] py-[35px] z-10;
+    @apply px-8 md:px-16 xl:px-20 py-8 z-10;
   }
 }
 .headerContainer {
-  @apply p-[30px] relative z-20;
+  @apply p-8 relative z-20;
 }
 
 .menu {
@@ -58,14 +58,14 @@
     -webkit-transition: all $time;
   }
   .menu {
-    transform: translate3d(-130px, 0, 0);
+    transform: translate3d(-128px, 0, 0);
     animation-timing-function: 1s ease-in;
     -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
     @include all-transition(0.3s);
-    @apply flex font-thin w-0 mt-4 h-full fixed z-[100] right-[-130px];
+    @apply flex font-thin w-0 mt-4 h-full fixed z-50 -right-32;
     & a {
-      @apply w-[55%] sm:w-3/5 bg-transparent text-transparent;
+      @apply w-1/2 sm:w-3/5 bg-transparent text-transparent;
     }
     & ul {
       @apply bg-black flex flex-col items-center w-full sm:w-2/5 mt-0 pl-9;
@@ -74,9 +74,9 @@
         @apply bg-veryDarkGray;
       }
       & li {
-        @apply ml-[30px];
+        @apply ml-8;
         & a {
-          @apply text-[30px] text-white my-4;
+          @apply text-3xl text-white my-4;
         }
       }
       & li:first-child {
@@ -86,16 +86,16 @@
   }
 }
 .menu ul {
-  @apply list-none my-[6px];
+  @apply list-none my-2;
   & li {
-    @apply float-left ml-[45px];
+    @apply float-left ml-11;
     & a {
       @apply relative inline-block font-medium w-full;
 
       &::after {
         content: '';
         transition: ease all 0.2s;
-        @apply absolute z-10 w-0 left-0 right-0 bottom-0 m-auto h-[1px] bg-white;
+        @apply absolute z-10 w-0 left-0 right-0 bottom-0 m-auto h-px bg-white;
       }
 
       &.active::after {
@@ -111,7 +111,7 @@
 }
 @media screen and (min-width: 1024px) {
   .menu ul li a {
-    @apply text-white text-[18px] pb-[10px];
+    @apply text-white text-lg pb-2;
   }
 }
 .progressContainer {

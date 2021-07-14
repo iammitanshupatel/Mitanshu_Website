@@ -3,7 +3,7 @@ import ContactForm from '../component/ContactForm';
 import ContactPageFooter from '../component/ContactPageFooter';
 import useContact from '../hooks/useContact';
 import common from '../styles/common.module.scss';
-import styles from '../component/SingleBlogPageContent/singleBlogPageContent.module.scss';
+import styles from '../component/ContactForm/contactForm.module.scss';
 
 const ContactPage = () => {
   const { data } = useContact();

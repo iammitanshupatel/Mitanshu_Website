@@ -5,7 +5,7 @@ import common from '../../styles/common.module.scss';
 const AboutPageContent = ({ data }) => (
   <>
     <div className={common.separated} />
-    <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedBottom}`}>
+    <div className={`${common.containerCtc} ${common.textWidget} `}>
       <div className={common.abtWrap}>
         <h3>Technologies known.</h3>
         <div className={styles.flexRow}>
@@ -47,7 +47,7 @@ const AboutPageContent = ({ data }) => (
       </div>
     </div>
     <div className={common.separated} />
-    <div className={`${common.containerCtc} ${common.textWidget}`}>
+    <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedBottom}`}>
       <div className={common.abtWrap}>
         <h3>Experience.</h3>
         <div className={styles.flexCol}>

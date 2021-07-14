@@ -1,33 +1,31 @@
-
-
 .singleBlogTxt {
-  @apply p-[30px] block;
+  @apply p-7 block;
   & p {
     font-family: 'Poppins', sans-serif !important;
-    @apply text-gray text-[18px] m-0 mb-4 leading-normal font-normal;
+    @apply text-gray text-lg m-0 mb-4 leading-normal font-normal;
   }
   & a {
-    @apply text-[18px] text-brightBlue leading-8 mr-4 cursor-pointer;
+    @apply text-lg text-brightBlue leading-8 mr-4 cursor-pointer;
   }
 }
 .nextContent {
-  @apply mt-[45px] inline-block px-[15px];
+  @apply mt-11 inline-block px-4;
   & .linkSubtitle {
-    @apply text-[16px] font-semibold inline-block m-0;
+    @apply text-base font-semibold inline-block m-0;
   }
   & .linkTitle {
     transition: all ease 0.3s;
     -webkit-transition: all ease 0.3s;
-    @apply text-[20px] md:text-[36px] opacity-60 font-semibold line-clamp-1 m-0 mt-3;
+    @apply text-xl md:text-4xl opacity-60 font-semibold line-clamp-1 m-0 mt-3;
   }
 }
 
 .blogArticle {
-  @apply py-[30px] pl-[15px] pr-[30px];
+  @apply py-8 pl-4 pr-8;
   & .articleCmt {
-    @apply m-0 mb-[90px];
+    @apply m-0 mb-20;
     & .commentReplyTitle {
-      @apply text-[26px] sm:text-[30px] leading-10 font-semibold mb-[5vh] mt-[60px];
+      @apply text-2xl sm:text-3xl leading-10 font-semibold;
     }
   }
 }

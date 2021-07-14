@@ -1,8 +1,7 @@
-
 .imgOverlay {
   background-image: url(/image/cover_bg_2.jpg);
   background-position: center center;
-  @apply h-[100vh] w-full bg-cover  bg-fixed;
+  @apply h-screen w-full bg-cover  bg-fixed;
   &::before {
     content: '';
     background: rgba(0, 0, 0, 0.5);
@@ -10,6 +9,5 @@
   }
 }
 .separatedTop {
-    @apply pt-10 md:pt-[60px];
-  }
-  
+  @apply pt-10 md:pt-16;
+}

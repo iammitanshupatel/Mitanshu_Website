@@ -1,20 +1,20 @@
 .top120 {
-  @apply mt-[120px];
+  @apply mt-28;
 }
 .contactInfos {
   @apply flex w-full flex-wrap lg:flex-nowrap;
 }
 .responsiveInfo {
-  @apply flex flex-wrap w-full md:w-1/2 lg:w-full justify-center mb-[60px] lg:mb-0;
+  @apply flex flex-wrap w-full md:w-1/2 lg:w-full justify-center mb-16 lg:mb-0;
 }
 .iconWidth {
   @apply flex flex-col items-center;
   & svg {
-    @apply w-[40px] mb-[30px];
+    @apply w-10 mb-7;
   }
 }
 .map {
-  @apply mt-[90px] h-[50vh] w-full z-10 relative;
+  @apply mt-20 h-1/4 w-full z-10 relative;
   & img {
     @apply h-full w-full;
   }

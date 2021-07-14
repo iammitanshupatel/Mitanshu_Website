@@ -2,10 +2,7 @@
   -webkit-transition: 0.1s all ease;
   -o-transition: 0.1s all ease;
   transition: 0.1s all ease;
-  -webkit-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-  @apply fixed bg-white z-[2000] h-full w-full;
+  @apply fixed bg-white z-50 delay-500 h-full w-full;
 }
 .preloader.loaded {
   visibility: hidden;
@@ -39,13 +36,13 @@
   transition: 0.2s all ease;
   -webkit-animation: 1s infinite ease-in-out;
   animation: 1s infinite ease-in-out;
-  @apply w-[50px] h-[50px] rounded-[50%] fixed top-1/2 left-1/2 z-10 bg-white;
+  @apply w-14 h-14 rounded-fiftyPercent fixed top-1/2 left-1/2 z-10 bg-white;
 }
 .preloader .loader:before,
 .preloader .loader:after {
   -webkit-animation: 0.8s infinite ease-in-out;
   animation: 0.8s infinite ease-in-out;
-  @apply w-full h-full rounded-[50%] absolute top-0 left-0;
+  @apply w-full h-full rounded-fiftyPercent absolute top-0 left-0;
 }
 .preloader .loader:before {
   content: '';
@@ -53,7 +50,10 @@
   box-sizing: content-box;
   -webkit-animation-name: anim-loader;
   animation-name: anim-loader;
-  @apply border-[10px] border-solid border-veryDarkGray top-[-10px] left-[-10px];
+  border-width: 10px;
+  top: -10px;
+  left: -10px;
+  @apply border-solid border-veryDarkGray;
 }
 
 .preloader.loaded .loader {

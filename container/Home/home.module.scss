@@ -1,7 +1,7 @@
 .imgCover {
   background-image: url(/image/1764222.jpg);
   background-position: center center;
-  @apply relative bg-cover w-full h-[100vh] bg-fixed;
+  @apply relative bg-cover w-full h-screen bg-fixed;
   &::before {
     content: '';
     background: rgba(0, 0, 0, 0.5);
@@ -9,24 +9,23 @@
   }
 }
 .homeContainer {
-  @apply h-[100vh] relative z-10 w-full px-[15px] mx-auto;
+  @apply h-screen relative z-10 w-full px-4 mx-auto;
 }
 .homeWrap {
-  @apply flex flex-wrap mx-[-15px] items-center h-[100vh] justify-center;
+  @apply flex flex-wrap -mx-4 items-center h-screen justify-center;
 }
 .homeTxt {
-  @apply text-center ml-auto w-full px-[15px];
+  @apply text-center ml-auto w-full px-4;
   & h1 {
-    @apply text-[2.5rem] md:text-[5rem] opacity-100 font-black m-0 mb-2;
+    @apply text-4xl md:text-7xl opacity-100 font-black m-0 mb-2;
   }
   & h2 {
-    @apply relative overflow-hidden text-[24px] md:text-[33px] leading-8 md:leading-9;
+    @apply relative overflow-hidden text-2xl md:text-3xl leading-8 md:leading-9;
   }
   & br {
     @apply hidden md:block;
   }
 }
-
 
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
@@ -68,4 +67,3 @@
     @apply opacity-100;
   }
 }
-

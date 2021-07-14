@@ -16,7 +16,22 @@ module.exports = {
       xs: '320px',
       ...defaultTheme.screens,
     },
+    fontSize: {
+      '10xl': ['160px', '1'],
+      ...defaultTheme.fontSize,
+    },
+    borderRadius: {
+      fiftyPercent: '50%',
+      ...defaultTheme.borderRadius,
+    },
     extend: {
+      zIndex: {
+        '-1': '-1',
+        '-2': '-2',
+      },
+      margin: {
+        tenPercent: '10%',
+      },
       fontFamily: {
         Raleway: ['Raleway'],
         opensans: ['Open Sans'],
@@ -31,7 +46,7 @@ module.exports = {
         brightBlue: '#2f89fc',
         veryDarkBlue: '#0b0b13',
         lightBlack: '#101010',
-        darkGrayishCyan:'#748182'
+        darkGrayishCyan: '#748182',
       },
     },
   },
