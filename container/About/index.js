@@ -1,5 +1,6 @@
 import styles from './about.module.scss';
 import common from '../../styles/common.module.scss';
+import Link from 'next/link';
 
 const About = ({ data }) => (
   <>
@@ -16,7 +17,9 @@ const About = ({ data }) => (
                 <h2>{data.header.caption}</h2>
                 <p>{data.biography}</p>
                 <p>
-                  <a href="/ContactPage">Contact me</a>
+                  <Link href="/contact">
+                    <a>Contact me</a>
+                  </Link>
                 </p>
               </div>
             </div>

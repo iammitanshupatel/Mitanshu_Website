@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 import styles from './header.module.scss';
+import Link from 'next/link';
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -44,9 +45,9 @@ const Header = () => {
     <header className={styles.header} ref={headerRef}>
       <nav ref={navbarRef}>
         <div className={styles.headerContainer}>
-          <a href="/" className={styles.logo}>
-            Mitanshu
-          </a>
+          <Link href="/">
+            <a className={styles.logo}>Mitanshu</a>
+          </Link>
           <button
             closeaftertransition="true"
             ref={burgerRef}
@@ -60,41 +61,39 @@ const Header = () => {
             <a href="#!" onClick={burgerClicked} />
             <ul>
               <li>
-                <a ref={liRef} className={pathname === '/' ? styles.active : undefined} href="/">
-                  Home
-                </a>
+                <Link href="/">
+                  <a ref={liRef} className={pathname === '/' ? styles.active : undefined}>
+                    Home
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  ref={liRef}
-                  className={pathname === '/about' ? styles.active : undefined}
-                  href="/about">
-                  About
-                </a>
+                <Link href="/about">
+                  <a ref={liRef} className={pathname === '/about' ? styles.active : undefined}>
+                    About
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  ref={liRef}
-                  className={pathname === '/work' ? styles.active : undefined}
-                  href="/work">
-                  Work
-                </a>
+                <Link href="/work">
+                  <a ref={liRef} className={pathname === '/work' ? styles.active : undefined}>
+                    Work
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  ref={liRef}
-                  className={pathname === '/blog' ? styles.active : undefined}
-                  href="/blog">
-                  Blogs
-                </a>
+                <Link href="/blog">
+                  <a ref={liRef} className={pathname === '/blog' ? styles.active : undefined}>
+                    Blogs
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  ref={liRef}
-                  className={pathname === '/contact' ? styles.active : undefined}
-                  href="/contact">
-                  Contact
-                </a>
+                <Link href="/contact">
+                  <a ref={liRef} className={pathname === '/contact' ? styles.active : undefined}>
+                    Contact
+                  </a>
+                </Link>
               </li>
             </ul>
           </aside>

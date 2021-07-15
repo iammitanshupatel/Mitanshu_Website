@@ -1,5 +1,6 @@
 import styles from './education.module.scss';
 import common from '../../styles/common.module.scss';
+import Link from 'next/link';
 
 const Education = ({ data }) => (
   <>
@@ -16,7 +17,9 @@ const Education = ({ data }) => (
             <div className={styles.eduText}>
               <p>{data.eduTextForHome}</p>
               <p>
-                <a href="/AboutPage">Checkout my resume</a>
+                <Link href="/about">
+                  <a>Checkout my resume</a>
+                </Link>
               </p>
             </div>
           </div>
