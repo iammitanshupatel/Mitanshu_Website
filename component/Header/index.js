@@ -44,7 +44,7 @@ const Header = () => {
     <header className={styles.header} ref={headerRef}>
       <nav ref={navbarRef}>
         <div className={styles.headerContainer}>
-          <a href="http://localhost:3000" className={styles.logo}>
+          <a href="/" className={styles.logo}>
             Mitanshu
           </a>
           <button
