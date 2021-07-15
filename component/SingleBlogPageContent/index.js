@@ -1,8 +1,12 @@
 import styles from './singleBlogPageContent.module.scss';
 import common from '../../styles/common.module.scss';
+import Head from 'next/head';
 
 const SingleBlogPageContent = ({ data }) => (
   <>
+    <Head>
+      <title>{data?.title}</title>
+    </Head>
     <section className={common.singleBlog}>
       <div className={common.blogInfo}>
         <div className={common.datenauthor}>

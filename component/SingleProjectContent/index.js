@@ -1,8 +1,12 @@
 import styles from './singleProjectContent.module.scss';
 import common from '../../styles/common.module.scss';
+import Head from 'next/head';
 
 const SingleProjectContent = ({ data }) => (
   <>
+    <Head>
+      <title>{data.title}</title>
+    </Head>
     <section className={common.singleBlog}>
       <div className={`${common.blogInfo} ${styles.textCenter}`}>
         <h2 className={common.blogTitle}>{data.title}</h2>

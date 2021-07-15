@@ -6,6 +6,7 @@ import useBlogs from '../../hooks/useBlogs';
 import styles from '../../component/SingleBlogPageContent/singleBlogPageContent.module.scss';
 import common from '../../styles/common.module.scss';
 import ContactForm from '../../component/ContactForm';
+import Head from 'next/head';
 
 const validate = values => {
   const errors = {};
@@ -41,6 +42,7 @@ const SingleBlogPage = () => {
     },
   });
   return (
+    
     <div className={common.srvContainer}>
       {blogData && <SingleBlogPageContent data={blogData} />}
       <section className={styles.blogArticle}>

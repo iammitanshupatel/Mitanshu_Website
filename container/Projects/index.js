@@ -15,9 +15,8 @@ const Projects = ({ data }) => (
               <h2>{data.header.caption}</h2>
             </div>
           </div>
-          {/* cardRow */}
           <div className={`${common.cardRow} ${styles.paddingB1}`}>
-            {data.projects.map(x => (
+            {data?.projects?.map(x => (
               <Card variant="projectCard" key={x.id}>
                 <figure>
                   <img src="/image/Project/img-2.jpg" alt="" />

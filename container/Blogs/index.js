@@ -3,8 +3,13 @@ import Button from '../../component/Button';
 import Card from '../../component/Card';
 import styles from './blogs.module.scss';
 import common from '../../styles/common.module.scss';
+import Image from 'next/image';
+import imgSource from '../../public/image/Blogs/img-1.jpg';
 
 const Blogs = ({ data }) => {
+  const myLoader = ({ src, width, quality }) => {
+    return `${imgSource}?/w=${width}&q=${quality || 75}`;
+  };
   const sliderRef = useRef();
   //   const mouseEvent = useCallback(() => {}, []);
   useEffect(() => {
@@ -37,12 +42,10 @@ const Blogs = ({ data }) => {
           </div>
           <div className={styles.items}>
             <div id="sliderModal" ref={sliderRef} className={styles.sliderShow}>
-              {data.blogs.map(x => (
+              {data?.blogs?.map(x => (
                 <Card key={x.id} variant="cardBlog">
                   <a href={`blog/${x.id}`}>
-                    <div className={common.custom}>
-                      <img src="/image/Blogs/img-1.jpg" alt="" />
-                    </div>
+                    <Image src="/image/Blogs/img-1.jpg" alt="" width={320} height={213} />
                     <div className={common.blogPageContent}>
                       <h3>{x.title}</h3>
                       <p>{x.description}</p>

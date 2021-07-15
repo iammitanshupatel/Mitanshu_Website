@@ -9,7 +9,7 @@ const AboutPageContent = ({ data }) => (
       <div className={common.abtWrap}>
         <h3>Technologies known.</h3>
         <div className={styles.flexRow}>
-          {data.skills.map(x => (
+          {data?.skills?.map(x => (
             <div className={common.progressWrap} key={x.id}>
               <h4>
                 <a href={x.link} target="_blank" rel="noreferrer">
@@ -31,7 +31,7 @@ const AboutPageContent = ({ data }) => (
       <div className={common.abtWrap}>
         <h3>Education.</h3>
         <div className={styles.flexCol}>
-          {data.educations.map(x => (
+          {data?.educations?.map(x => (
             <Fragment key={x.id}>
               <span className={styles.date}>{`${x.startDate} - ${x.endDate}`}</span>
               <div className={styles.expInfo}>
@@ -51,7 +51,7 @@ const AboutPageContent = ({ data }) => (
       <div className={common.abtWrap}>
         <h3>Experience.</h3>
         <div className={styles.flexCol}>
-          {data.experiences.map(x => (
+          {data?.experiences?.map(x => (
             <Fragment key={x.id}>
               <span className={styles.date}>{`${x.startDate} - ${x.endDate}`}</span>
               <div className={styles.expInfo}>

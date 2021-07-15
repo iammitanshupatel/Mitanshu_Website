@@ -13,6 +13,7 @@ import usePortfolio from '../hooks/usePortfolio';
 import useEducationSkills from '../hooks/useEducationSkills';
 import useBlog from '../hooks/useBlog';
 import useTestimonial from '../hooks/useTestimonial';
+import Head from 'next/head';
 
 const Main = () => {
   const { data: bannerData } = useBanner();
@@ -24,6 +25,9 @@ const Main = () => {
   const { data: testimonialData } = useTestimonial();
   return (
     <>
+      <Head>
+        <title>Home Page</title>
+      </Head>
       {bannerData && <Home data={bannerData} />}
       {aboutData && <About data={aboutData} />}
       {serviceData && <Services data={serviceData} />}

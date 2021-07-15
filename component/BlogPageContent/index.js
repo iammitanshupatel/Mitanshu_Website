@@ -2,6 +2,7 @@ import { data } from 'remark';
 import Card from '../Card';
 import styles from './blogPageContent.module.scss';
 import common from '../../styles/common.module.scss';
+import Image from 'next/image';
 
 const BlogPageContent = ({ blogs }) => (
   <>
@@ -10,11 +11,11 @@ const BlogPageContent = ({ blogs }) => (
       <div className={common.srvContainer}>
         <div className={common.srvCol}>
           <div className={`${common.cardRow} ${styles.gap1rem}`}>
-            {blogs.map(x => (
+            {blogs?.map(x => (
               <Card key={x.id} variant="cardBlog">
                 <a href={`blog/${x.id}`}>
                   <div className={common.custom}>
-                    <img src="/image/Blogs/img-1.jpg" alt="" />
+                    <Image src="/image/Blogs/img-1.jpg" width={320} height={213} alt="Blog Image" />
                   </div>
                   <div className={common.blogPageContent}>
                     <h3>{x.title}</h3>

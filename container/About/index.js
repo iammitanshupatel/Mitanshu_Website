@@ -1,6 +1,7 @@
 import styles from './about.module.scss';
 import common from '../../styles/common.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const About = ({ data }) => (
   <>
@@ -8,7 +9,7 @@ const About = ({ data }) => (
       <div className={styles.abtContainer}>
         <div className={styles.abtRow}>
           <div className={styles.abtImg}>
-            <img src="/image/cover_bg_2.jpg" alt="" />
+            <Image src="/image/cover_bg_2.jpg" width={700} height={475} alt="My Image" />
           </div>
           <div className={styles.abtTxt}>
             <div className={styles.abtDesc}>

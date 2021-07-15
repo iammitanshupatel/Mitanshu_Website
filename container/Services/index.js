@@ -15,7 +15,7 @@ const Services = ({ data }) => (
             </div>
           </div>
           <div className={common.cardRow}>
-            {data.services.map(x => (
+            {data?.services?.map(x => (
               <Card key={x.id} variant="srvCard">
                 <div className={card.featureBox}>
                   <Web />

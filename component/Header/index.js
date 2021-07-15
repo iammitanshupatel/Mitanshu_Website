@@ -62,35 +62,50 @@ const Header = () => {
             <ul>
               <li>
                 <Link href="/">
-                  <a ref={liRef} className={pathname === '/' ? styles.active : undefined}>
+                  <a
+                    ref={liRef}
+                    onClick={burgerClicked}
+                    className={pathname === '/' ? styles.active : undefined}>
                     Home
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a ref={liRef} className={pathname === '/about' ? styles.active : undefined}>
+                  <a
+                    ref={liRef}
+                    onClick={burgerClicked}
+                    className={pathname === '/about' ? styles.active : undefined}>
                     About
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/work">
-                  <a ref={liRef} className={pathname === '/work' ? styles.active : undefined}>
+                  <a
+                    ref={liRef}
+                    onClick={burgerClicked}
+                    className={pathname === '/work' ? styles.active : undefined}>
                     Work
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <a ref={liRef} className={pathname === '/blog' ? styles.active : undefined}>
+                  <a
+                    ref={liRef}
+                    onClick={burgerClicked}
+                    className={pathname === '/blog' ? styles.active : undefined}>
                     Blogs
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a ref={liRef} className={pathname === '/contact' ? styles.active : undefined}>
+                  <a
+                    ref={liRef}
+                    onClick={burgerClicked}
+                    className={pathname === '/contact' ? styles.active : undefined}>
                     Contact
                   </a>
                 </Link>

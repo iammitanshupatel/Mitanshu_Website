@@ -24,7 +24,7 @@ const Education = ({ data }) => (
             </div>
           </div>
           <div className={styles.eduRight}>
-            {data.skills.map(x => (
+            {data?.skills?.map(x => (
               // progressWrap
               <div key={x.id} className={`${styles.eduWrap} ${common.progressWrap}`}>
                 <h4>
