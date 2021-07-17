@@ -1,4 +1,3 @@
-import styles from './blogPageHeader.module.scss';
 import common from '../../styles/common.module.scss';
 
 const BlogPageHeader = ({ data }) => (
@@ -16,7 +15,10 @@ const BlogPageHeader = ({ data }) => (
         </a>
       </div>
     </div>
-    <div className={styles.blogImgOverlay} />
+    <div
+      style={{ backgroundImage: `url(${data.backgroundImage.url})` }}
+      className={common.imgOverlay}
+    />
   </div>
 );
 

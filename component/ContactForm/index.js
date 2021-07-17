@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { useFormik } from 'formik';
+import { ErrorMessage, useFormik } from 'formik';
 import Button from '../Button';
 import styles from './contactForm.module.scss';
 import common from '../../styles/common.module.scss';
+import { useRef, useState } from 'react';
 
 const validate = values => {
   const errors = {};
@@ -11,7 +12,6 @@ const validate = values => {
   } else if (values.name.length > 15) {
     errors.name = 'Must be 15 characters or less';
   }
-
   if (!values.email) {
     errors.email = 'Email Required';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -20,6 +20,8 @@ const validate = values => {
   return errors;
 };
 const ContactForm = () => {
+  const msgRef = useRef();
+  const [message, setMessage] = useState('');
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -28,10 +30,6 @@ const ContactForm = () => {
     },
     validate,
     onSubmit: (values, { resetForm }) => {
-      if (!values) {
-        formik.errors.msg = 'Both Fields Required';
-      }
-      resetForm({ values: '' });
       return axios({
         method: 'post',
         url: 'http://localhost:1337/contact-forms',
@@ -40,13 +38,26 @@ const ContactForm = () => {
           email: values.email,
           details: values.message,
         },
-      });
+      })
+        .then(res => {
+          if (res.status === 200) {
+            resetForm({ values: '' });
+            msgRef.current.classList.toggle(styles.successMsg);
+            setMessage('Message has been sent! Thanks!');
+            setTimeout(function () {
+              location.reload(true);
+            }, 2000);
+          }
+        })
+        .catch(err => {
+          setMessage(`${err}. Please try again later.`);
+        });
     },
   });
   return (
     <>
-      <div id="message" className={formik.errors ? styles.errorMsg : null}>
-        <p>{formik.errors.name || formik.errors.email || formik.errors.msg}</p>
+      <div id="message" ref={msgRef} className={formik.errors ? styles.errorMsg : null}>
+        <p>{formik.errors.name || formik.errors.email || formik.errors.msg || message}</p>
       </div>
       <form id="contactForm" className={styles.contactForm}>
         <div className={styles.rowInput}>

@@ -16,7 +16,9 @@ const Home = ({ data }) => {
 
   return (
     <>
-      <section className={styles.imgCover}>
+      <section
+        style={{ backgroundImage: `url(${data.backgroundImage.url})` }}
+        className={styles.imgCover}>
         <div className={styles.homeContainer}>
           <div className={styles.homeWrap}>
             {/* <div className="homeTxt" ref={homeTextRef}  /> */}

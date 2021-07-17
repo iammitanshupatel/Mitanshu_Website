@@ -1,11 +1,26 @@
 .singleBlogTxt {
-  @apply p-7 block;
+  @apply p-4 md:p-7 block;
   & p {
     font-family: 'Poppins', sans-serif !important;
-    @apply text-gray text-lg m-0 mb-4 leading-normal font-normal;
+    @apply text-gray text-lg m-0 mb-4 font-normal;
+    & strong {
+      @apply text-xl font-bold;
+    }
+  }
+  & ul {
+    font-family: 'Poppins', sans-serif !important;
+    list-style-type: disc !important;
+    @apply text-white list-disc text-lg m-0 mb-4 font-normal;
+    & li {
+      list-style-type: inherit !important;
+    }
+  }
+  & pre {
+    font-family: 'Poppins', sans-serif !important;
+    @apply overflow-auto my-4 py-2 bg-veryDarkGray text-white list-disc text-base font-extralight;
   }
   & a {
-    @apply text-lg text-brightBlue leading-8 mr-4 cursor-pointer;
+    @apply text-lg text-brightBlue leading-8 cursor-pointer;
   }
 }
 .nextContent {
@@ -19,7 +34,12 @@
     @apply text-xl md:text-4xl opacity-60 font-semibold line-clamp-1 m-0 mt-3;
   }
 }
-
+.tagLinks {
+  @apply px-4 md:px-7 text-lg text-brightBlue leading-8 cursor-pointer;
+  & a {
+    @apply mr-2;
+  }
+}
 .blogArticle {
   @apply py-8 pl-4 pr-8;
   & .articleCmt {

@@ -7,6 +7,12 @@
     @apply m-0;
   }
 }
+.successMsg {
+  @apply text-center text-sm mb-0 text-green-600 font-bold;
+  & p {
+    @apply m-0;
+  }
+}
 .rowInput {
   @apply flex flex-col lg:flex-row w-full lg:gap-8;
 }

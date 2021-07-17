@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import Card from '../Card';
-import styles from './projectPageContent.module.scss';
 import common from '../../styles/common.module.scss';
 
 const ProjectPageContent = ({ data }) => (
@@ -19,7 +18,10 @@ const ProjectPageContent = ({ data }) => (
           </a>
         </div>
       </div>
-      <div className={styles.workImgOverlay} />
+      <div
+        style={{ backgroundImage: `url(${data.backgroundImage.url})` }}
+        className={common.imgOverlay}
+      />
     </div>
     <div id="scrollHere" />
     <div className={common.seperatedWithoutImg}>

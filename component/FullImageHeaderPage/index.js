@@ -18,7 +18,10 @@ const FullImageHeaderPage = ({ data }) => (
           </a>
         </div>
       </div>
-      <div className={styles.imgOverlay} />
+      <div
+        style={{ backgroundImage: 'url(/image/cover_bg_2.jpg)' }}
+        className={common.imgOverlay}
+      />
     </div>
     <div id="scrollHere" />
     <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedTop}`}>

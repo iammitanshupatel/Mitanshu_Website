@@ -102,7 +102,7 @@
         @apply opacity-60 text-lg font-medium;
       }
       & h1 {
-        @apply md:my-3 lg:my-8 md:text-5xl lg:text-7xl font-semibold;
+        @apply m-0 md:my-2 lg:my-4 md:text-5xl lg:text-7xl font-semibold;
       }
     }
   }
@@ -206,5 +206,14 @@
   }
   & .blogImg {
     @apply relative block z-30 object-center object-cover max-w-full mx-auto my-8;
+  }
+}
+.imgOverlay {
+  background-position: center center;
+  @apply h-screen w-full bg-cover  bg-fixed;
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    @apply h-full w-full absolute z-10 left-0 top-0;
   }
 }
