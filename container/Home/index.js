@@ -25,9 +25,11 @@ const Home = ({ data }) => {
             {/* <div className="homeTxt" dangerouslySetInnerHTML={{ __html: HTML }} /> */}
             {/* {homeTextRef.current && <RenderHtml html={HTML} node={homeTextRef.current} />} */}
             <div className={styles.homeTxt}>
-              {/* <h1>{`${data.firstName} ${data.lastName}`}</h1> */}
-              <span dangerouslySetInnerHTML={{ __html: HTML }} />
-              <ReactRotatingText items={['x', 'y', 'z']} />
+              <h1>{`${data.firstName} ${data.lastName}`}</h1>
+              <h2>
+                {data.description}
+                <ReactRotatingText items={data.bannerSpan.map(x => x.text)} />
+              </h2>
             </div>
           </div>
         </div>
