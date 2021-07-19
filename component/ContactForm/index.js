@@ -32,7 +32,7 @@ const ContactForm = () => {
     onSubmit: (values, { resetForm }) => {
       return axios({
         method: 'post',
-        url: 'http://localhost:1337/contact-forms',
+        url: process.env.NEXT_PUBLIC_API_BASE_URL,
         data: {
           name: values.name,
           email: values.email,
