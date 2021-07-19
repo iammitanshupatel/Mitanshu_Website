@@ -1,19 +1,8 @@
-import { useRef, useEffect } from 'react';
 import styles from './home.module.scss';
 import common from '../../styles/common.module.scss';
-import ReactDOM from 'react-dom';
 import ReactRotatingText from 'react-rotating-text';
-import useMarkdown from '../../hooks/useMarkdown';
-
-const RenderHtml = ({ html, node }) => {
-  return ReactDOM.createPortal(<ReactRotatingText items={['x', 'y', 'z']} />, node);
-};
 
 const Home = ({ data }) => {
-  const homeTextRef = useRef();
-  const { HTML } = useMarkdown(data.description);
-  //   console.log(`${HTML}${()}`);
-
   return (
     <>
       <section
@@ -21,9 +10,6 @@ const Home = ({ data }) => {
         className={styles.imgCover}>
         <div className={styles.homeContainer}>
           <div className={styles.homeWrap}>
-            {/* <div className="homeTxt" ref={homeTextRef}  /> */}
-            {/* <div className="homeTxt" dangerouslySetInnerHTML={{ __html: HTML }} /> */}
-            {/* {homeTextRef.current && <RenderHtml html={HTML} node={homeTextRef.current} />} */}
             <div className={styles.homeTxt}>
               <h1>{`${data.firstName} ${data.lastName}`}</h1>
               <h2>
