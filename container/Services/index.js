@@ -1,7 +1,7 @@
 import Card from '../../component/Card';
-import Web from '../../public/icon/desktop-outline.svg';
 import common from '../../styles/common.module.scss';
 import card from '../../component/Card/card.module.scss';
+import Icon from '../../component/Icon';
 
 const Services = ({ data }) => (
   <>
@@ -18,7 +18,7 @@ const Services = ({ data }) => (
             {data?.services?.map(x => (
               <Card key={x.id} variant="srvCard">
                 <div className={card.featureBox}>
-                  <Web />
+                  <Icon key={x.id} socialLink={x} variant="servicesIcon" />
                   <div className={card.featureContent}>
                     <h5>{x.title}</h5>
                     <p>{x.description}</p>

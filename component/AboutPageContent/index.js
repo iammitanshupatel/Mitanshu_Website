@@ -35,7 +35,7 @@ const AboutPageContent = ({ data }) => (
             <Fragment key={x.id}>
               <span className={styles.date}>{`${x.startDate} - ${x.endDate}`}</span>
               <div className={styles.expInfo}>
-                <h2>{x.degree}</h2>
+                <h4>{x.degree}</h4>
                 <a href={x.instituteLink} target="_blank" rel="noreferrer">
                   {x.institute}
                 </a>
@@ -55,8 +55,10 @@ const AboutPageContent = ({ data }) => (
             <Fragment key={x.id}>
               <span className={styles.date}>{`${x.startDate} - ${x.endDate}`}</span>
               <div className={styles.expInfo}>
-                <h2>{x.role}</h2>
-                <a href={x.companyLink}>{x.companyName}</a>
+                <h4>{x.role}</h4>
+                <a href={x.companyLink} target="_blank" rel="noreferrer">
+                  {x.companyName}
+                </a>
                 <p>{x.description}</p>
               </div>
             </Fragment>

@@ -26,6 +26,12 @@
     &:focus::before {
       @apply -top-16 -left-10 rounded-fiftyPercent;
     }
+    &:hover,
+    :focus {
+      & svg {
+        filter: contrast(0);
+      }
+    }
     &:hover::after,
     &:focus::after {
       content: '';
@@ -35,9 +41,6 @@
       -webkit-transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s;
       @apply -left-10 -top-16 rounded-none;
     }
-  }
-  & svg {
-    @apply w-10 h-16;
   }
 }
 
