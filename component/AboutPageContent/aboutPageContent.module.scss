@@ -7,7 +7,7 @@
     @apply xl:w-10/12 px-4 xl:mt-2;
   }
   & h4 {
-    @apply text-white text-2xl font-semibold leading-7 mb-3;
+    @apply text-white text-2xl font-semibold leading-7 my-3 xl:mt-5;
   }
   & a {
     @apply text-white text-xl font-semibold leading-7 mb-3 opacity-70 italic;
@@ -22,7 +22,7 @@
 }
 
 .flexRow {
-  @apply flex flex-col md:flex-row flex-wrap w-full px-4 xl:w-10/12 xl:mt-2;
+  @apply flex flex-col md:flex-row flex-wrap w-full px-4 xl:w-10/12 xl:mt-7;
 }
 
 .separatedBottom {

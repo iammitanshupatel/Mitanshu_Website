@@ -14,13 +14,34 @@ const Footer = () => {
       <div className={`${styles.wrap} ${common.containerCtc}`}>
         <div className={styles.footerInfo}>
           <p>
-            You can follow me on <a href="https://github.com/iammitanshupatel">Github</a>,{' '}
-            <a href="fb://profile/fbID">Facebook</a>,{' '}
-            <a href="https://twitter.com/UMitanshu">Twitter</a>,{' '}
-            <a href="https://www.linkedin.com/in/mitanshu-patel/">Linkedin</a> &{' '}
-            <a href="http://instagram.com/username">Instagram</a>, or say “hello” at{' '}
-            <a href="https://wa.me/+919104552342?text=Hi%20there">Whatsapp</a> &{' '}
-            <a href="mailto:mitanshu.u.patel@gmail.com">Mail</a>
+            You can follow me on{' '}
+            <a target="_blank" rel="noreferrer" href="https://github.com/iammitanshupatel">
+              Github
+            </a>
+            ,{' '}
+            <a target="_blank" rel="noreferrer" href="fb://profile/fbID">
+              Facebook
+            </a>
+            ,{' '}
+            <a target="_blank" rel="noreferrer" href="https://twitter.com/UMitanshu">
+              Twitter
+            </a>
+            ,{' '}
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mitanshu-patel/">
+              Linkedin
+            </a>{' '}
+            &{' '}
+            <a target="_blank" rel="noreferrer" href="http://instagram.com/username">
+              Instagram
+            </a>
+            , or say “hello” at{' '}
+            <a target="_blank" rel="noreferrer" href="https://wa.me/+919104552342?text=Hi%20there">
+              Whatsapp
+            </a>{' '}
+            &{' '}
+            <a target="_blank" rel="noreferrer" href="mailto:mitanshu.u.patel@gmail.com">
+              Mail
+            </a>
           </p>
           <div className={styles.copyright}>
             <p>Mitanshu &copy; 2021. All Right Reserved, Designed By Mitanshu Patel. </p>

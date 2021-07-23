@@ -46,7 +46,7 @@ const ContactForm = () => {
             setMessage('Message has been sent! Thanks!');
             setTimeout(function () {
               location.reload(true);
-            }, 2000);
+            }, 500);
           }
         })
         .catch(err => {
