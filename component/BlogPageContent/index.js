@@ -15,7 +15,7 @@ const BlogPageContent = ({ blogs }) => (
               <Card key={x.id} variant="cardBlog">
                 <a href={`blog/${x.id}`}>
                   <div className={common.custom}>
-                    <Image src="/image/Blogs/img-1.jpg" width={320} height={213} alt="Blog Image" />
+                    <Image src={x.blogImage.url} alt="" width={320} height={213} />
                   </div>
                   <div className={common.blogPageContent}>
                     <h3>{x.title}</h3>

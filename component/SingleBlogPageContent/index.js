@@ -2,6 +2,7 @@ import styles from './singleBlogPageContent.module.scss';
 import common from '../../styles/common.module.scss';
 import Head from 'next/head';
 import useMarkdown from '../../hooks/useMarkdown';
+import Image from 'next/image';
 
 const SingleBlogPageContent = ({ data }) => {
   const { HTML } = useMarkdown(data.description);
@@ -28,7 +29,7 @@ const SingleBlogPageContent = ({ data }) => {
           </div>
           <h2 className={common.blogTitle}>{data.title}</h2>
         </div>
-        <img src="/image/Blogs/img-6.jpg" alt="" className={common.blogImg} />
+        <img src={data.blogImage.url} className={common.blogImg} alt="blog-image" />
       </section>
       <article
         className={styles.singleBlogTxt}
