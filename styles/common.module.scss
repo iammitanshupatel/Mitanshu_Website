@@ -66,12 +66,11 @@
   @apply px-4 py-5 bg-white h-auto;
   & h3 {
     line-height: 1.2;
-    @apply h-12 line-clamp-2 text-xl mt-0 text-veryDarkGray font-semibold mb-4;
+    @apply h-14 line-clamp-2 text-xl mt-0 text-veryDarkGray font-semibold mb-1;
   }
   & p {
     line-height: 1.65;
-    max-height: 4.7rem;
-    @apply text-darkerGray h-20 text-base pb-4 md:pb-9 mb-0 border-b border-0 border-gray border-solid line-clamp-3 md:line-clamp-4 font-thin;
+    @apply text-darkerGray max-h-[4.7rem] md:max-h-[6.3rem] text-base pb-4 md:pb-9 my-0 border-b border-0 border-gray border-solid line-clamp-3 md:line-clamp-4 font-thin;
   }
   & .blogPageMeta {
     @apply h-auto flex justify-between pt-4 md:pt-5 lg:pt-4;
