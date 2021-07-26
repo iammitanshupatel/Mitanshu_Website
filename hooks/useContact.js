@@ -1,8 +1,7 @@
 import useSWR from 'swr';
-import fetcher from '../lib/fetch';
 
 const useContact = () => {
-  const { data, error } = useSWR('/contact-section', fetcher);
+  const { data, error } = useSWR('/contact-section');
   return {
     data: data,
     isLoading: !error && !data,

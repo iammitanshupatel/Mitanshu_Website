@@ -14,15 +14,39 @@ import useEducationSkills from '../hooks/useEducationSkills';
 import useBlog from '../hooks/useBlog';
 import useTestimonial from '../hooks/useTestimonial';
 import Head from 'next/head';
+import PreLoader from '../component/PreLoader';
 
 const Main = () => {
-  const { data: bannerData } = useBanner();
-  const { data: aboutData } = useAbout();
-  const { data: serviceData } = useServices();
-  const { data: portfolioData } = usePortfolio();
-  const { data: educationSkillsData } = useEducationSkills();
-  const { data: blogData } = useBlog();
-  const { data: testimonialData } = useTestimonial();
+  const { data: bannerData, isLoading: bannerLoading, isError: bannerError } = useBanner();
+  const { data: aboutData, isLoading: aboutLoading, isError: aboutError } = useAbout();
+  const { data: serviceData, isLoading: serviceLoading, isError: serviceError } = useServices();
+  const {
+    data: portfolioData,
+    isLoading: portfolioLoading,
+    isError: portfolioError,
+  } = usePortfolio();
+  const {
+    data: educationSkillsData,
+    isLoading: educationSkillsLoading,
+    isError: educationSkillsError,
+  } = useEducationSkills();
+  const { data: blogData, isLoading: blogLoading, isError: blogError } = useBlog();
+  const {
+    data: testimonialData,
+    isLoading: testimonialLoading,
+    isError: testimonialError,
+  } = useTestimonial();
+  if (
+    (bannerLoading,
+    aboutLoading,
+    serviceLoading,
+    portfolioData,
+    educationSkillsData,
+    testimonialData)
+  )
+    return <PreLoader />;
+  if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError))
+    return <h1>Error</h1>;
   return (
     <>
       <Head>

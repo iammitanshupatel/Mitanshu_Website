@@ -1,8 +1,7 @@
 import useSWR from 'swr';
-import fetcher from '../lib/fetch';
 
 const useBlog = () => {
-  const { data, error } = useSWR('/blog-section', fetcher);
+  const { data, error } = useSWR('/blog-section');
   return {
     data: data,
     isLoading: !error && !data,

@@ -1,5 +1,12 @@
 import useSWR from 'swr';
 
-const useTestimonial = () => useSWR('/testimonial-section');
+const useTestimonial = () => {
+  const { data, error } = useSWR('/testimonial-section');
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+};
 
 export default useTestimonial;
