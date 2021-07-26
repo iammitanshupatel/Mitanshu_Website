@@ -33,7 +33,7 @@ const Icon = ({ socialLink, variant, className }) => {
 };
 
 Icon.propTypes = {
-  variant: PropTypes.oneOf(['servicesIcon']),
+  variant: PropTypes.oneOf(['servicesIcon','contactIcon']),
 };
 
 export default memo(Icon);

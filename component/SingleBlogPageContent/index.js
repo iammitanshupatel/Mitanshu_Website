@@ -44,7 +44,7 @@ const SingleBlogPageContent = ({ data }) => {
       <section className={styles.nextContent}>
         <p className={styles.linkSubtitle}>Next Content</p>
         <p className={styles.linkTitle}>
-          <a href={`${data.id + 1}`}> {data.title}</a>
+          <a href={`${data.id + 1}`}>{data.title}</a>
         </p>
       </section>
     </>

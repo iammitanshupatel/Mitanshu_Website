@@ -9,9 +9,6 @@
 }
 .iconWidth {
   @apply flex flex-col items-center;
-  & svg {
-    @apply w-10 mb-7;
-  }
 }
 .map {
   @apply mt-20 h-1/4 w-full z-10 relative;

@@ -3,6 +3,7 @@ import Call from '../../public/icon/call-outline.svg';
 import Location from '../../public/icon/location-outline.svg';
 import styles from './contactPageFooter.module.scss';
 import common from '../../styles/common.module.scss';
+import Icon from '../Icon';
 
 const ContactPageFooter = ({ data }) => (
   <>
@@ -11,7 +12,7 @@ const ContactPageFooter = ({ data }) => (
         {data?.socialMedia?.map(x => (
           <div key={x.id} className={styles.responsiveInfo}>
             <div className={styles.iconWidth}>
-              <Mail />
+              <Icon key={x.id} socialLink={x} variant="contactIcon" />
               <a href={x.url}>{x.displayName}</a>
               <span>{x.name}</span>
             </div>

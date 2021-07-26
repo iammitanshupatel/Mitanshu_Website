@@ -3,3 +3,8 @@
     @apply w-10 h-16;
   }
 }
+.contactIcon {
+  & svg {
+    @apply w-10 mb-7;
+  }
+}
