@@ -11,13 +11,10 @@
   @apply flex flex-col items-center;
 }
 .map {
-  @apply mt-20 h-1/4 w-full z-10 relative;
+  @apply md:mt-12 lg:mt-20 h-1/4 w-full z-10 relative;
   & img {
-    @apply h-full w-full;
+    @apply object-cover h-60 lg:h-full w-full;
   }
-}
-.wFull {
-  @apply w-full;
 }
 .contactInfos a {
   @apply font-semibold opacity-90 leading-6;
