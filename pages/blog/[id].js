@@ -28,6 +28,9 @@ const SingleBlogPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const { data: blogData } = useBlogs(id);
+  const { data, isLoading, isError } = useBlog();
+  if (isLoading) return <PreLoader />;
+  if (isError) return <h1>Error</h1>;
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -42,7 +45,6 @@ const SingleBlogPage = () => {
     },
   });
   return (
-    
     <div className={common.srvContainer}>
       {blogData && <SingleBlogPageContent data={blogData} />}
       <section className={styles.blogArticle}>

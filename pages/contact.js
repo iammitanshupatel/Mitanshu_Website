@@ -5,9 +5,12 @@ import useContact from '../hooks/useContact';
 import common from '../styles/common.module.scss';
 import styles from '../component/ContactForm/contactForm.module.scss';
 import Head from 'next/head';
+import PreLoader from '../component/PreLoader';
 
 const ContactPage = () => {
-  const { data } = useContact();
+  const { data, isLoading, isError } = useContact();
+  if (isLoading) return <PreLoader />;
+  if (isError) return <h1>Error</h1>;
   return (
     <>
       <Head>

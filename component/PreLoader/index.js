@@ -6,7 +6,7 @@ const PreLoader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       preLoaderRef.current.classList.add(styles.loaded);
-    }, 1000);
+    }, process.env.NEXT_PUBLIC_API_TIMEOUT);
     return () => {
       clearTimeout(timer);
     };
