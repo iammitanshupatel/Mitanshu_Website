@@ -29,7 +29,7 @@ const SingleBlogPageContent = ({ data }) => {
           </div>
           <h2 className={common.blogTitle}>{data.title}</h2>
         </div>
-        <img src={data.blogImage.url} className={common.blogImg} alt="blog-image" />
+        <img src={data.blogImage.url} className={common.blogImg} alt="blogImage" />
       </section>
       <article
         className={styles.singleBlogTxt}

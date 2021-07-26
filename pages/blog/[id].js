@@ -7,6 +7,7 @@ import styles from '../../component/SingleBlogPageContent/singleBlogPageContent.
 import common from '../../styles/common.module.scss';
 import ContactForm from '../../component/ContactForm';
 import Head from 'next/head';
+import PreLoader from '../../component/PreLoader';
 
 const validate = values => {
   const errors = {};
@@ -27,10 +28,6 @@ const validate = values => {
 const SingleBlogPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const { data: blogData } = useBlogs(id);
-  const { data, isLoading, isError } = useBlog();
-  if (isLoading) return <PreLoader />;
-  if (isError) return <h1>Error</h1>;
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -44,6 +41,9 @@ const SingleBlogPage = () => {
       return values;
     },
   });
+  const { data: blogData, isLoading, isError } = useBlogs(id);
+  if (isLoading) return <PreLoader />;
+  if (isError) return <h1>Error</h1>;
   return (
     <div className={common.srvContainer}>
       {blogData && <SingleBlogPageContent data={blogData} />}
