@@ -23,17 +23,16 @@ const Icon = ({ socialLink, variant, className }) => {
     <a
       href={socialLink.url}
       target="_blank"
-      role="button"
       className={`${styles[variant]} ${className}`}
       ref={iconRef}
       rel="noreferrer">
-      socialIcons
+      Icon
     </a>
   );
 };
 
 Icon.propTypes = {
-  variant: PropTypes.oneOf(['servicesIcon','contactIcon']),
+  variant: PropTypes.oneOf(['servicesIcon', 'contactIcon']),
 };
 
 export default memo(Icon);
