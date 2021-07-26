@@ -18,17 +18,20 @@ const Education = ({ data }) => (
               <p>{data.eduTextForHome}</p>
               <p>
                 <Link href="/about">
-                  <a>Checkout my resume</a>
+                  <a aria-label="Go to about page">Checkout my resume</a>
                 </Link>
               </p>
             </div>
           </div>
           <div className={styles.eduRight}>
             {data?.skills?.map(x => (
-              // progressWrap
               <div key={x.id} className={`${styles.eduWrap} ${common.progressWrap}`}>
                 <h4>
-                  <a href={x.link} target="_blank" rel="noreferrer">
+                  <a
+                    aria-label={`View more about ${x.title} technology`}
+                    href={x.link}
+                    target="_blank"
+                    rel="noreferrer">
                     {x.title}
                   </a>
                 </h4>

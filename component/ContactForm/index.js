@@ -97,7 +97,7 @@ const ContactForm = () => {
           />
         </div>
         <div className={`${styles.top45} ${common.txc}`}>
-          <Button btnText="Send It" onClick={formik.handleSubmit} />
+          <Button btnText="Send It" ariaLabel="Send the form" onClick={formik.handleSubmit} />
         </div>
       </form>
     </>

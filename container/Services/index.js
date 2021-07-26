@@ -18,9 +18,14 @@ const Services = ({ data }) => (
             {data?.services?.map(x => (
               <Card key={x.id} variant="srvCard">
                 <div className={card.featureBox}>
-                  <Icon key={x.id} socialLink={x} variant="servicesIcon" />
+                  <Icon
+                    ariaLabel={`${x.title} icon`}
+                    key={x.id}
+                    socialLink={x}
+                    variant="servicesIcon"
+                  />
                   <div className={card.featureContent}>
-                    <h5>{x.title}</h5>
+                    <h3>{x.title}</h3>
                     <p>{x.description}</p>
                   </div>
                 </div>

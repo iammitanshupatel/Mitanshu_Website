@@ -12,7 +12,7 @@ const AboutPageContent = ({ data }) => (
           {data?.skills?.map(x => (
             <div className={common.progressWrap} key={x.id}>
               <h4>
-                <a href={x.link} target="_blank" rel="noreferrer">
+                <a href={x.link} aria-label="Skill Name" target="_blank" rel="noreferrer">
                   {x.title}
                 </a>
               </h4>
@@ -36,7 +36,7 @@ const AboutPageContent = ({ data }) => (
               <span className={styles.date}>{`${x.startDate} - ${x.endDate}`}</span>
               <div className={styles.expInfo}>
                 <h4>{x.degree}</h4>
-                <a href={x.instituteLink} target="_blank" rel="noreferrer">
+                <a href={x.instituteLink} aria-label="Institute Name" target="_blank" rel="noreferrer">
                   {x.institute}
                 </a>
                 <p>{x.description}</p>
@@ -56,7 +56,7 @@ const AboutPageContent = ({ data }) => (
               <span className={styles.date}>{`${x.startDate} - ${x.endDate}`}</span>
               <div className={styles.expInfo}>
                 <h4>{x.role}</h4>
-                <a href={x.companyLink} target="_blank" rel="noreferrer">
+                <a href={x.companyLink} target="_blank" aria-label="Company Name" rel="noreferrer">
                   {x.companyName}
                 </a>
                 <p>{x.description}</p>

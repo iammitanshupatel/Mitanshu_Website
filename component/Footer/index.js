@@ -15,31 +15,59 @@ const Footer = () => {
         <div className={styles.footerInfo}>
           <p>
             You can follow me on{' '}
-            <a target="_blank" rel="noreferrer" href="https://github.com/iammitanshupatel">
+            <a
+              target="_blank"
+              aria-label="My github account"
+              rel="noreferrer"
+              href="https://github.com/iammitanshupatel">
               Github
             </a>
             ,{' '}
-            <a target="_blank" rel="noreferrer" href="fb://profile/fbID">
+            <a
+              target="_blank"
+              aria-label="My facebook account"
+              rel="noreferrer"
+              href="fb://profile/fbID">
               Facebook
             </a>
             ,{' '}
-            <a target="_blank" rel="noreferrer" href="https://twitter.com/UMitanshu">
+            <a
+              target="_blank"
+              aria-label="My twitter account"
+              rel="noreferrer"
+              href="https://twitter.com/UMitanshu">
               Twitter
             </a>
             ,{' '}
-            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mitanshu-patel/">
+            <a
+              target="_blank"
+              aria-label="My linkedin account"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/mitanshu-patel/">
               Linkedin
             </a>{' '}
             &{' '}
-            <a target="_blank" rel="noreferrer" href="http://instagram.com/username">
+            <a
+              target="_blank"
+              aria-label="My instagram account"
+              rel="noreferrer"
+              href="http://instagram.com/username">
               Instagram
             </a>
             , or say “hello” at{' '}
-            <a target="_blank" rel="noreferrer" href="https://wa.me/+919104552342?text=Hi%20there">
+            <a
+              target="_blank"
+              aria-label="My whatsapp number"
+              rel="noreferrer"
+              href="https://wa.me/+919104552342?text=Hi%20there">
               Whatsapp
             </a>{' '}
             &{' '}
-            <a target="_blank" rel="noreferrer" href="mailto:mitanshu.u.patel@gmail.com">
+            <a
+              target="_blank"
+              aria-label="My email account"
+              rel="noreferrer"
+              href="mailto:mitanshu.u.patel@gmail.com">
               Mail
             </a>
           </p>

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, memo } from 'react';
 import axios from '../../lib/axios';
 import styles from './icon.module.scss';
 
-const Icon = ({ socialLink, variant, className }) => {
+const Icon = ({ socialLink, variant, className, ariaLabel }) => {
   const iconRef = useRef();
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const Icon = ({ socialLink, variant, className }) => {
   }, []);
   return (
     <a
+      aria-label={ariaLabel}
       href={socialLink.url}
       target="_blank"
       className={`${styles[variant]} ${className}`}

@@ -10,7 +10,7 @@ const ProjectPageContent = ({ data }) => (
           <div className={common.inner}>
             <h1>{data.projectPageHeader}</h1>
           </div>
-          <a href="#scrollHere" className={common.mouseWrap}>
+          <a href="#scrollHere" aria-label="Scroll down" className={common.mouseWrap}>
             <span className={common.mouse}>
               <span className={common.scroll} />
             </span>
@@ -33,7 +33,7 @@ const ProjectPageContent = ({ data }) => (
                 <figure>
                   <img src="/image/Project/img-2.jpg" alt="" />
                   <figcaption>
-                    <a href={`work/${x.id}`}>
+                    <a href={`work/${x.id}`} aria-label="View more details about portfolio">
                       <h3>{x.title}</h3>
                       <p>{x.typeOfPortfolio}</p>
                     </a>

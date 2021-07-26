@@ -49,7 +49,9 @@ const Header = () => {
       <nav ref={navbarRef}>
         <div className={styles.headerContainer}>
           <Link href="/">
-            <a className={styles.logo}>Mitanshu</a>
+            <a className={styles.logo} aria-label="Go to home page">
+              Mitanshu
+            </a>
           </Link>
           <button
             closeaftertransition="true"
@@ -61,11 +63,12 @@ const Header = () => {
             <span className={styles.span2} />
           </button>
           <aside className={styles.menu} id="sidenav-open" ref={menuRef}>
-            <a href="#!" onClick={burgerClicked} />
+            <a href="#!" aria-label="Click to close the navigation" onClick={burgerClicked} />
             <ul>
               <li>
                 <Link href="/">
                   <a
+                    aria-label="Go to home page"
                     ref={liRef}
                     onClick={burgerClicked}
                     className={pathname === '/' ? styles.active : undefined}>
@@ -76,6 +79,7 @@ const Header = () => {
               <li>
                 <Link href="/about">
                   <a
+                    aria-label="Go to about page"
                     ref={liRef}
                     onClick={burgerClicked}
                     className={pathname === '/about' ? styles.active : undefined}>
@@ -86,6 +90,7 @@ const Header = () => {
               <li>
                 <Link href="/work">
                   <a
+                    aria-label="Go to work page"
                     ref={liRef}
                     onClick={burgerClicked}
                     className={pathname === '/work' ? styles.active : undefined}>
@@ -96,6 +101,7 @@ const Header = () => {
               <li>
                 <Link href="/blog">
                   <a
+                    aria-label="Go to blog page"
                     ref={liRef}
                     onClick={burgerClicked}
                     className={pathname === '/blog' ? styles.active : undefined}>
@@ -106,6 +112,7 @@ const Header = () => {
               <li>
                 <Link href="/contact">
                   <a
+                    aria-label="Go to contact page"
                     ref={liRef}
                     onClick={burgerClicked}
                     className={pathname === '/contact' ? styles.active : undefined}>

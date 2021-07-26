@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { useFormik } from 'formik';
-import Button from '../../component/Button';
 import SingleBlogPageContent from '../../component/SingleBlogPageContent';
 import useBlogs from '../../hooks/useBlogs';
 import styles from '../../component/SingleBlogPageContent/singleBlogPageContent.module.scss';

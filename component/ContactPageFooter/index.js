@@ -13,8 +13,15 @@ const ContactPageFooter = ({ data }) => {
           {data?.socialMedia?.map(x => (
             <div key={x.id} className={styles.responsiveInfo}>
               <div className={styles.iconWidth}>
-                <Icon key={x.id} socialLink={x} variant="contactIcon" />
-                <a href={x.url}>{x.displayName}</a>
+                <Icon
+                  ariaLabel={`${x.name} icon`}
+                  key={x.id}
+                  socialLink={x}
+                  variant="contactIcon"
+                />
+                <a href={x.url} aria-label={x.name}>
+                  {x.displayName}
+                </a>
                 <span>{x.name}</span>
               </div>
             </div>

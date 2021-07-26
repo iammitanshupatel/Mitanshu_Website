@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
-import styles from './button.module.scss'
+import styles from './button.module.scss';
 
-const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick }) => {
+const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick, ariaLabel }) => {
   const btnRef = useRef(null);
   const spanRef = useRef(null);
   const mouseEvent = useCallback(e => {
@@ -23,7 +23,7 @@ const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick }) => {
   //   }, [mouseEvent]);
 
   return (
-    <a className={styles.btnHover} ref={btnRef} href={locationPage}>
+    <a className={styles.btnHover} ref={btnRef} aria-label={ariaLabel} href={locationPage}>
       <button type="button" onClick={isDisabled || isLoading ? () => {} : onClick}>
         {btnText}
         <span ref={spanRef} />

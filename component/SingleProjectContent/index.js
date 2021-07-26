@@ -30,7 +30,12 @@ const SingleProjectContent = ({ data }) => (
         <div className={styles.singleProjectTxt}>
           <h3>Technology Used</h3>
           {data?.technologyUsed?.map(x => (
-            <a key={x.id} href={x.url} target="_blank" rel="noreferrer">
+            <a
+              aria-label={`{View more about ${x.title} technology}`}
+              key={x.id}
+              href={x.url}
+              target="_blank"
+              rel="noreferrer">
               {x.title}
             </a>
           ))}

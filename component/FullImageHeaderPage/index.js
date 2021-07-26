@@ -10,7 +10,7 @@ const FullImageHeaderPage = ({ data }) => (
             <span>{data.roleOfAdmin}</span>
             <h1>{data.adminName}</h1>
           </div>
-          <a href="#scrollHere" className={common.mouseWrap}>
+          <a href="#scrollHere" aria-label="Scroll down" className={common.mouseWrap}>
             <span className={common.mouse}>
               <span className={common.scroll} />
             </span>

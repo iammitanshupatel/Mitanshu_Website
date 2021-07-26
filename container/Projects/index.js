@@ -21,7 +21,7 @@ const Projects = ({ data }) => (
                 <figure>
                   <img src="/image/Project/img-2.jpg" alt="" />
                   <figcaption>
-                    <a href={`work/${x.id}`}>
+                    <a aria-label={`View more about ${x.title}`} href={`work/${x.id}`}>
                       <h3>{x.title}</h3>
                       <p>{x.typeOfPortfolio}</p>
                     </a>
@@ -30,7 +30,7 @@ const Projects = ({ data }) => (
               </Card>
             ))}
           </div>
-          <Button btnText="Load More" locationPage="/work" />
+          <Button btnText="Load More" ariaLabel="More projects" locationPage="/work" />
         </div>
       </div>
     </section>

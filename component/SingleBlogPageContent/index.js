@@ -24,7 +24,9 @@ const SingleBlogPageContent = ({ data }) => {
           <div className={common.datenauthor}>
             <p>{data.date}</p>
             <span>
-              <a href="#!">admin</a>
+              <a href="#!" aria-label="admin">
+                admin
+              </a>
             </span>
           </div>
           <h2 className={common.blogTitle}>{data.title}</h2>
@@ -36,7 +38,12 @@ const SingleBlogPageContent = ({ data }) => {
         dangerouslySetInnerHTML={{ __html: HTML }}></article>
       <div className={styles.tagLinks}>
         {data?.tags?.map(tag => (
-          <a key={tag.id} href={tag.url} target="_blank" rel="noreferrer">
+          <a
+            aria-label="View more about tag"
+            key={tag.id}
+            href={tag.url}
+            target="_blank"
+            rel="noreferrer">
             {tag.title}
           </a>
         ))}
@@ -44,7 +51,9 @@ const SingleBlogPageContent = ({ data }) => {
       <section className={styles.nextContent}>
         <p className={styles.linkSubtitle}>Next Content</p>
         <p className={styles.linkTitle}>
-          <a href={`${data.id + 1}`}>{data.title}</a>
+          <a aria-label="Go to next blog" href={`${data.id + 1}`}>
+            {data.title}
+          </a>
         </p>
       </section>
     </>

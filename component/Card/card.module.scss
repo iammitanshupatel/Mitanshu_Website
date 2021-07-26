@@ -11,7 +11,7 @@
     }
     & .featureContent {
       @apply pt-6;
-      & h5 {
+      & h3 {
         @apply text-xl mb-7 mt-5 font-bold leading-6 line-clamp-1;
       }
       & p {

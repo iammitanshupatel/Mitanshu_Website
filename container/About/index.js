@@ -19,7 +19,7 @@ const About = ({ data }) => (
                 <p>{data.biography}</p>
                 <p>
                   <Link href="/contact">
-                    <a>Contact me</a>
+                    <a aria-label="Go to contact page">Contact me</a>
                   </Link>
                 </p>
               </div>

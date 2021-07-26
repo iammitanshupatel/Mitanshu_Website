@@ -44,14 +44,16 @@ const Blogs = ({ data }) => {
             <div id="sliderModal" ref={sliderRef} className={styles.sliderShow}>
               {data?.blogs?.map(x => (
                 <Card key={x.id} variant="cardBlog">
-                  <a href={`blog/${x.id}`}>
+                  <a aria-label="View more about the blog" href={`blog/${x.id}`}>
                     <Image src={x.blogImage.url} alt="" width={320} height={213} />
                     <div className={common.blogPageContent}>
                       <h3>{x.title}</h3>
                       <p>{x.description}</p>
                       <div className={common.blogPageMeta}>
                         <span className={common.more}>
-                          <a href={`blog/${x.id}`}>Read More</a>
+                          <a aria-label="View more blogs" href={`blog/${x.id}`}>
+                            Read More
+                          </a>
                         </span>
                         <span className={common.date}>{x.date}</span>
                       </div>
@@ -60,7 +62,7 @@ const Blogs = ({ data }) => {
                 </Card>
               ))}
             </div>
-            <Button btnText="Load More" locationPage="/blog" />
+            <Button btnText="Load More" ariaLabel="More blogs" locationPage="/blog" />
           </div>
         </div>
       </section>

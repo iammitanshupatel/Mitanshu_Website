@@ -7,7 +7,7 @@ const BlogPageHeader = ({ data }) => (
         <div className={common.inner}>
           <h1>{data.blogPageHeader}</h1>
         </div>
-        <a href="#scrollHere" className={common.mouseWrap}>
+        <a href="#scrollHere" aria-label="Scroll Down" className={common.mouseWrap}>
           <span className={common.mouse}>
             <span className={common.scroll} />
           </span>

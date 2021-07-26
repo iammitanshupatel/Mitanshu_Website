@@ -19,7 +19,7 @@ const Home = ({ data }) => {
             </div>
           </div>
         </div>
-        <a href="#About" className={common.mouseWrap}>
+        <a aria-label="Scroll to about section" href="#About" className={common.mouseWrap}>
           <span className={common.mouse}>
             <span className={common.scroll} />
           </span>
