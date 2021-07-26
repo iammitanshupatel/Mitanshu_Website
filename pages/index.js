@@ -18,33 +18,13 @@ import PreLoader from '../component/PreLoader';
 
 const Main = () => {
   const { data: bannerData, isLoading: bannerLoading, isError: bannerError } = useBanner();
-  const { data: aboutData, isLoading: aboutLoading, isError: aboutError } = useAbout();
-  const { data: serviceData, isLoading: serviceLoading, isError: serviceError } = useServices();
-  const {
-    data: portfolioData,
-    isLoading: portfolioLoading,
-    isError: portfolioError,
-  } = usePortfolio();
-  const {
-    data: educationSkillsData,
-    isLoading: educationSkillsLoading,
-    isError: educationSkillsError,
-  } = useEducationSkills();
-  const { data: blogData, isLoading: blogLoading, isError: blogError } = useBlog();
-  const {
-    data: testimonialData,
-    isLoading: testimonialLoading,
-    isError: testimonialError,
-  } = useTestimonial();
-  if (
-    (bannerLoading,
-    aboutLoading,
-    serviceLoading,
-    portfolioData,
-    educationSkillsData,
-    testimonialData)
-  )
-    return <PreLoader />;
+  const { data: aboutData, isError: aboutError } = useAbout();
+  const { data: serviceData, isError: serviceError } = useServices();
+  const { data: portfolioData, isError: portfolioError } = usePortfolio();
+  const { data: educationSkillsData, isError: educationSkillsError } = useEducationSkills();
+  const { data: blogData, isError: blogError } = useBlog();
+  const { data: testimonialData, isError: testimonialError } = useTestimonial();
+  if (bannerLoading) return <PreLoader />;
   if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError))
     return <h1>Error</h1>;
   return (
