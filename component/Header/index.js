@@ -54,7 +54,6 @@ const Header = () => {
             </a>
           </Link>
           <button
-            closeaftertransition="true"
             ref={burgerRef}
             className={styles.hamburger}
             type="button"

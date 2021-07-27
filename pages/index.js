@@ -25,8 +25,8 @@ const Main = () => {
   const { data: blogData, isError: blogError } = useBlog();
   const { data: testimonialData, isError: testimonialError } = useTestimonial();
   if (bannerLoading) return <PreLoader />;
-  if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError))
-    return <h1>Error</h1>;
+  //   if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError))
+  //     return <h1>Error</h1>;
   return (
     <>
       <Head>

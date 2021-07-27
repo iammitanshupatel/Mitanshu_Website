@@ -6,7 +6,7 @@ import PreLoader from '../component/PreLoader';
 const WorkPage = () => {
   const { data, isLoading, isError } = usePortfolio();
   if (isLoading) return <PreLoader />;
-  if (isError) return <h1>Error</h1>;
+//   if (isError) return <h1>Error</h1>;
   return (
     <>
       <Head>

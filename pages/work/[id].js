@@ -9,7 +9,7 @@ const SinglePortfolio = () => {
   const { id } = router.query;
   const { data, isLoading, isError } = useProjects(id);
   if (isLoading) return <PreLoader />;
-  if (isError) return <h1>Error</h1>;
+  //   if (isError) return <h1>Error</h1>;
   return <div className={common.srvContainer}>{data && <SingleProjectContent data={data} />}</div>;
 };
 

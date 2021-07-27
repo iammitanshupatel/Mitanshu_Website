@@ -9,7 +9,7 @@ const BlogPage = () => {
   const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs();
   const { data, isLoading, isError } = useBlog();
   if ((blogsLoading, isLoading)) return <PreLoader />;
-  if ((blogsError, isError)) return <h1>Error</h1>;
+//   if ((blogsError, isError)) return <h1>Error</h1>;
   return (
     <>
       <Head>

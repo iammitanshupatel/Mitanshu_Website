@@ -13,7 +13,7 @@ const AboutPage = () => {
     isError: educationSkillsError,
   } = useEducationSkills();
   if ((aboutLoading, educationSkillsLoading)) return <PreLoader />;
-  if ((aboutError, educationSkillsError)) return <h1>Error</h1>;
+//   if ((aboutError, educationSkillsError)) return <h1>Error</h1>;
   return (
     <>
       <Head>

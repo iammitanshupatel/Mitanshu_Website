@@ -10,7 +10,7 @@ import PreLoader from '../component/PreLoader';
 const ContactPage = () => {
   const { data, isLoading, isError } = useContact();
   if (isLoading) return <PreLoader />;
-  if (isError) return <h1>Error</h1>;
+//   if (isError) return <h1>Error</h1>;
   return (
     <>
       <Head>

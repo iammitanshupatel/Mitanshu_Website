@@ -19,7 +19,7 @@ const Projects = ({ data }) => (
             {data?.projects?.map(x => (
               <Card variant="projectCard" key={x.id}>
                 <figure>
-                  <img src="/image/Project/img-2.jpg" alt="" />
+                  <img src={x.displayImage.url} alt="" />
                   <figcaption>
                     <a aria-label={`View more about ${x.title}`} href={`work/${x.id}`}>
                       <h3>{x.title}</h3>
