@@ -203,8 +203,11 @@
       @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-3 m-0 inline-block;
     }
   }
-  & .blogImg {
-    @apply relative block z-30 object-center object-cover max-w-full mx-auto my-8;
+  & .blogImgDiv {
+    @apply w-full h-full min-h-[11rem] md:min-h-[30rem] xl:min-h-[55rem] m-auto;
+    & .blogImg {
+      @apply relative block z-30 object-center object-cover max-w-full mx-auto my-12;
+    }
   }
 }
 .imgOverlay {

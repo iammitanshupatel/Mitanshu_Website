@@ -31,7 +31,7 @@ const ProjectPageContent = ({ data }) => (
             {data?.projects?.map(x => (
               <Card key={x.id} variant="projectCard">
                 <figure>
-                  <img src="/image/Project/img-2.jpg" alt="" />
+                  <img src={x.displayImage.url} alt="Project Image" />
                   <figcaption>
                     <a href={`work/${x.id}`} aria-label="View more details about portfolio">
                       <h3>{x.title}</h3>

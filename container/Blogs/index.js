@@ -45,7 +45,7 @@ const Blogs = ({ data }) => {
               {data?.blogs?.map(x => (
                 <Card key={x.id} variant="cardBlog">
                   <a aria-label="View more about the blog" href={`blog/${x.id}`}>
-                    <Image src={x.blogImage.url} alt="" width={320} height={213} />
+                    <Image src={x.blogImage.url} alt="Blog Image" width={320} height={213} />
                     <div className={common.blogPageContent}>
                       <h3>{x.title}</h3>
                       <p>{x.description}</p>

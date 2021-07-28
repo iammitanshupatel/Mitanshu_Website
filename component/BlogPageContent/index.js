@@ -22,7 +22,9 @@ const BlogPageContent = ({ blogs }) => (
                     <p>{x.description}</p>
                     <div className={common.blogPageMeta}>
                       <span className={common.more}>
-                        <a href={`blog/${x.id}`} aria-label="More blogs">Read More</a>
+                        <a href={`blog/${x.id}`} aria-label="More blogs">
+                          Read More
+                        </a>
                       </span>
                       <span className={common.date}>{x.date}</span>
                     </div>
