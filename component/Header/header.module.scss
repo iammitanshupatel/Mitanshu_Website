@@ -4,8 +4,7 @@
   -webkit-transition: all ease 0.3s;
   @apply z-40 fixed w-full block;
   & .logo {
-    font-family: 'Montserrat', sans-serif;
-    @apply font-black text-xl lg:text-3xl md:text-2xl uppercase;
+    @apply font-Montserrat font-black text-xl lg:text-3xl md:text-2xl uppercase;
   }
   & .hamburger {
     @apply block lg:hidden float-right w-6 h-6 relative cursor-pointer;

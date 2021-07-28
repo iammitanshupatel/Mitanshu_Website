@@ -12,10 +12,6 @@ module.exports = {
   ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
-    screens: {
-      xs: '320px',
-      ...defaultTheme.screens,
-    },
     fontSize: {
       '10xl': ['160px', '1'],
       ...defaultTheme.fontSize,
@@ -33,8 +29,9 @@ module.exports = {
         tenPercent: '10%',
       },
       fontFamily: {
-        Raleway: ['Raleway'],
-        opensans: ['Open Sans'],
+        Montserrat: ['Montserrat', 'sans-serif'],
+        Sofiapro: ['sofia-pro', 'sans-serif'],
+        Poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         gray: '#b9b9b9',

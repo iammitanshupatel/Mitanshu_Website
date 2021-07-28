@@ -12,8 +12,7 @@
     & .singleProjectTxt {
       @apply px-4;
       & p {
-        font-family: 'Poppins', sans-serif !important;
-        @apply text-gray text-lg m-0 mb-4 leading-normal font-normal;
+        @apply font-Poppins text-gray text-lg m-0 mb-4 leading-normal font-normal;
       }
       & a {
         @apply text-lg text-brightBlue leading-8 mr-4 cursor-pointer;

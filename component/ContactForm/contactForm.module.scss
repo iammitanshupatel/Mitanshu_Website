@@ -24,15 +24,13 @@
   border-bottom: rgb(112, 112, 112);
 }
 .borderBottom {
-  font-family: sofia-pro, sans-serif;
-  @apply text-red-600 border-red-600 bg-transparent p-4 w-full mt-7 border-0 border-b border-solid text-base;
+  @apply font-Sofiapro text-red-600 border-red-600 bg-transparent p-4 w-full mt-7 border-0 border-b border-solid text-base;
 }
 .inp:focus {
   border-bottom: #fff;
 }
 .contactForm .inp {
-  font-family: sofia-pro, sans-serif;
-  @apply bg-transparent text-white p-4 w-full mt-7 border-0 border-b border-solid text-base;
+  @apply font-Sofiapro bg-transparent text-white p-4 w-full mt-7 border-0 border-b border-solid text-base;
 }
 .formMsg {
   @apply flex w-full;
