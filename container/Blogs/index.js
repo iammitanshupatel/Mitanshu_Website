@@ -46,19 +46,19 @@ const Blogs = ({ data }) => {
                 <Card key={x.id} variant="cardBlog">
                   <a aria-label="View more about the blog" href={`blog/${x.id}`}>
                     <Image src={x.blogImage.url} alt="Blog Image" width={320} height={213} />
-                    <div className={common.blogPageContent}>
-                      <h3>{x.title}</h3>
-                      <p>{x.description}</p>
-                      <div className={common.blogPageMeta}>
-                        <span className={common.more}>
-                          <a aria-label="View more blogs" href={`blog/${x.id}`}>
-                            Read More
-                          </a>
-                        </span>
-                        <span className={common.date}>{x.date}</span>
-                      </div>
-                    </div>
                   </a>
+                  <div className={common.blogPageContent}>
+                    <h3>{x.title}</h3>
+                    <p>{x.description}</p>
+                    <div className={common.blogPageMeta}>
+                      <span className={common.more}>
+                        <a aria-label="View more blogs" href={`blog/${x.id}`}>
+                          Read More
+                        </a>
+                      </span>
+                      <span className={common.date}>{x.date}</span>
+                    </div>
+                  </div>
                 </Card>
               ))}
             </div>
