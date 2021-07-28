@@ -5,43 +5,69 @@ export default function Meta() {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Mitanshu Patel" />
-      <meta name="description" content="Mitanshu Patel Personal Portfolio" />
+      <meta name="description" content="Mitanshu Patel Personal Website" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
+      <meta name="msapplication-TileColor" content="#fff" />
       <meta name="msapplication-tap-highlight" content="no" />
-      {/* <meta name="theme-color" content="#000000" /> */}
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      {/* <meta
-        name="viewport"
-        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
-      /> */}
+      <meta name="theme-color" content="#000000" />
 
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      {/* <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png" />
-      <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> */}
-      {/* <link rel="manifest" href="/site.webmanifest" /> */}
-      {/* <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" /> */}
-      {/* <meta name="msapplication-TileColor" content="#00aba9" /> */}
-      {/* <meta name="msapplication-TileImage" content="/mstile-144x144.png" /> */}
-      {/* <meta name="theme-color" content="#ffffff" /> */}
+      <link rel="apple-touch-icon" href="/touch-icon-iphone.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/touch-icon-iphone-retina.png" />
+      <link rel="apple-touch-icon" sizes="167x167" href="/touch-icon-ipad-retina.png" />
 
-      {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
+      <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#5bbad5" />
+      <link rel="shortcut icon" href="/manifest-icon-192.png" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:url" content="https://mitanshu-website.vercel.app/" />
       <meta name="twitter:title" content="Mitanshu Patel" />
-      <meta name="twitter:description" content="Mitanshu Patel personal portfolio" />
-      {/* <meta name="twitter:image" content="https://yagneshmodh.com/android-chrome-192x192.png" /> */}
+      <meta name="twitter:description" content="Mitanshu Patel Personal Website" />
+      <meta
+        name="twitter:image"
+        content="https://mitanshu-website.vercel.app/manifest-icon-192.png"
+      />
       <meta name="twitter:creator" content="@MitanshuPatel_" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Mitanshu Patel" />
-      <meta property="og:description" content="Mitanshu Patel personal portfolio" />
+      <meta property="og:description" content="Mitanshu Patel Personal Website" />
       <meta property="og:site_name" content="Mitanshu Patel" />
       <meta property="og:url" content="https://mitanshu-website.vercel.app/" />
-      {/* <meta property="og:image" content="https://yagneshmodh.com/apple-touch-icon.png" /> */}
+      <meta
+        property="og:image"
+        content="https://mitanshu-website.vercel.app/manifest-icon-192.png"
+      />
+
+      {/* apple splash screen images  */}
+
+      <link rel="apple-touch-startup-image" href="/apple-splash-2048-2732.png" sizes="2048x2732" />
+      <link rel="apple-touch-startup-image" href="/apple-splash-1668-2224.png" sizes="1668x2224" />
+      <link rel="apple-touch-startup-image" href="/apple-splash-1536-2048.png" sizes="1536x2048" />
+      <link
+        rel="apple-touch-startup-image"
+        href="/static/images/apple-splash-1125-2436.png"
+        sizes="1125x2436"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        href="/static/images/apple-splash-1242-2208.png"
+        sizes="1242x2208"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        href="/static/images/apple-splash-750-1334.png"
+        sizes="750x1334"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        href="/static/images/apple-splash-640-1336.png"
+        sizes="640x1136"
+      />
     </>
   );
 }

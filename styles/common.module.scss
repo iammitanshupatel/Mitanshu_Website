@@ -204,7 +204,7 @@
     }
   }
   & .blogImgDiv {
-    @apply w-full h-full min-h-[11rem] md:min-h-[30rem] xl:min-h-[55rem] m-auto;
+    @apply w-full h-full min-h-[11rem] md:min-h-[18rem] xl:min-h-[35rem] m-auto;
     & .blogImg {
       @apply relative block z-30 object-center object-cover max-w-full mx-auto my-12;
     }

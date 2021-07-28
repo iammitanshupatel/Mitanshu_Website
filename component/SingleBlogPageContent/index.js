@@ -67,7 +67,9 @@ const SingleBlogPageContent = ({ data }) => {
       </section>
       <article
         className={styles.singleBlogTxt}
-        dangerouslySetInnerHTML={{ __html: HTML }}></article>
+        dangerouslySetInnerHTML={{
+          __html: HTML.replace(/href/g, "target='_blank' href"),
+        }}></article>
       <div className={styles.tagLinks}>
         {data?.tags?.map(tag => (
           <a
