@@ -50,7 +50,7 @@ const SingleBlogPageContent = ({ data }) => {
           {/* <Image src={data.blogImage.url} className={common.blogImg} alt="blogImage" layout="fill"> */}
           <CloudImage
             cloudName="mitanshucloud"
-            publicId={data.blogImage.provider_metadata.public_id}
+            publicId={data.blogImage?.provider_metadata?.public_id}
             dpr="auto"
             responsive
             className={common.blogImg}
