@@ -15,7 +15,7 @@ const Services = ({ data }) => (
             </div>
           </div>
           <div className={common.cardRow}>
-            {data?.services?.map(x => (
+            {data?.socialMedia?.map(x => (
               <Card key={x.id} variant="srvCard">
                 <div className={card.featureBox}>
                   <Icon
@@ -25,8 +25,8 @@ const Services = ({ data }) => (
                     variant="servicesIcon"
                   />
                   <div className={card.featureContent}>
-                    <h3>{x.title}</h3>
-                    <p>{x.description}</p>
+                    <h3>{x.name}</h3>
+                    <p>{x.displayName}</p>
                   </div>
                 </div>
               </Card>
