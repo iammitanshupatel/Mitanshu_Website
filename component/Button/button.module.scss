@@ -1,7 +1,6 @@
 .btnHover {
   border: 2px solid;
-  max-width: 250px;
-  @apply border-darkGray relative block overflow-hidden w-full h-auto rounded-lg my-4 mx-auto text-center;
+  @apply max-w-[250px] border-darkGray relative block overflow-hidden w-full h-auto rounded-lg my-4 mx-auto text-center;
   & button {
     font: normal 18px/60px 'proxima-nova', sans-serif;
     @apply text-darkGray w-full;

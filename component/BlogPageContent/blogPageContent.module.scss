@@ -1,7 +1,7 @@
 .gap1rem {
   @apply gap-4;
   & img {
-    @apply w-full duration-300 transition-all ease-in-out;
+    @apply w-full duration-300 object-contain transition-all ease-in-out;
     &:hover,
     &:focus {
       transform: scale(1.1);
