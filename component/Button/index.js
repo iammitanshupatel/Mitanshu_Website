@@ -24,7 +24,10 @@ const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick, ariaLab
 
   return (
     <a className={styles.btnHover} ref={btnRef} aria-label={ariaLabel} href={locationPage}>
-      <button type="button" onClick={isDisabled || isLoading ? () => {} : onClick}>
+      <button
+        aria-label={btnText}
+        type="button"
+        onClick={isDisabled || isLoading ? () => {} : onClick}>
         {btnText}
         <span ref={spanRef} />
       </button>

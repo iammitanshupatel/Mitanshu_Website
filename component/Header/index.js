@@ -55,6 +55,7 @@ const Header = () => {
           </Link>
           <button
             ref={burgerRef}
+            aria-label="Navigation-button"
             className={styles.hamburger}
             type="button"
             onClick={burgerClicked}>
