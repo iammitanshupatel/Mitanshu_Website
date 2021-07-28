@@ -26,7 +26,7 @@ const Education = ({ data }) => (
           <div className={styles.eduRight}>
             {data?.skills?.map(x => (
               <div key={x.id} className={`${styles.eduWrap} ${common.progressWrap}`}>
-                <h4>
+                <h2>
                   <a
                     aria-label={`View more about ${x.title} technology`}
                     href={x.link}
@@ -34,7 +34,7 @@ const Education = ({ data }) => (
                     rel="noreferrer">
                     {x.title}
                   </a>
-                </h4>
+                </h2>
                 <div className={`${common.progress} ${styles.eduWrap}`}>
                   <div className={common.progressBar} style={{ width: `${x.rating}%` }}>
                     <span>{`${x.rating}%`}</span>

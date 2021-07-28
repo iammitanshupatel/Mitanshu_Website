@@ -35,7 +35,7 @@
 }
 .progressWrap {
   @apply mb-8 w-full md:w-1/2;
-  & h4 {
+  & h2 {
     @apply text-white opacity-90 text-xl mb-3 mt-1 leading-6 font-semibold;
     & a:hover,
     :focus {
