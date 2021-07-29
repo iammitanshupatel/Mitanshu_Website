@@ -1,12 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import Card from '../Card';
 import common from '../../styles/common.module.scss';
+import useProgressiveImage from '../../hooks/useProgressiveImage';
 
 const ProjectPageContent = ({ data }) => {
   const urlBanner = data.backgroundImage.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
   );
+  const urlPlaceholder = data.backgroundImage.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
+  );
+  const loaded = useProgressiveImage(urlBanner, urlPlaceholder);
   return (
     <>
       <div className={`${common.fullImage} ${common.hero}`}>
@@ -23,7 +29,10 @@ const ProjectPageContent = ({ data }) => {
             </a>
           </div>
         </div>
-        <div style={{ backgroundImage: `url(${urlBanner})` }} className={common.imgOverlay} />
+        <div
+          style={{ backgroundImage: `url(${loaded || urlPlaceholder})` }}
+          className={common.imgOverlay}
+        />
       </div>
       <div id="scrollHere" />
       <div className={common.seperatedWithoutImg}>

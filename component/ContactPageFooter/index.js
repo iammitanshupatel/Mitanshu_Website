@@ -4,6 +4,7 @@ import Location from '../../public/icon/location-outline.svg';
 import styles from './contactPageFooter.module.scss';
 import common from '../../styles/common.module.scss';
 import Icon from '../Icon';
+import Image from 'next/image';
 
 const ContactPageFooter = ({ data }) => {
   return (

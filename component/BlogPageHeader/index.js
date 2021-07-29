@@ -1,3 +1,4 @@
+import useProgressiveImage from '../../hooks/useProgressiveImage';
 import common from '../../styles/common.module.scss';
 
 const BlogPageHeader = ({ data }) => {
@@ -5,6 +6,11 @@ const BlogPageHeader = ({ data }) => {
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
   );
+  const urlPlaceholder = data.backgroundImage.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
+  );
+  const loaded = useProgressiveImage(url, urlPlaceholder);
   return (
     <div className={`${common.fullImage} ${common.hero}`}>
       <div className={common.fullText}>
@@ -20,7 +26,10 @@ const BlogPageHeader = ({ data }) => {
           </a>
         </div>
       </div>
-      <div style={{ backgroundImage: `url(${url})` }} className={common.imgOverlay} />
+      <div
+        style={{ backgroundImage: `url(${loaded || urlPlaceholder})` }}
+        className={common.imgOverlay}
+      />
     </div>
   );
 };

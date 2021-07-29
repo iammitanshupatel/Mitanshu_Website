@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import useProgressiveImage from '../../hooks/useProgressiveImage';
 import styles from './testimonial.module.scss';
 
 const Testimonial = ({ data }) => {
@@ -6,8 +7,15 @@ const Testimonial = ({ data }) => {
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
   );
+  const urlPlaceholder = data.backgroundImage.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
+  );
+  const loaded = useProgressiveImage(urlBanner, urlPlaceholder);
   return (
-    <section style={{ backgroundImage: `url(${urlBanner})` }} className={styles.testimonial}>
+    <section
+      style={{ backgroundImage: `url(${loaded || urlPlaceholder})` }}
+      className={styles.testimonial}>
       <div className={styles.testimonialContainer}>
         <figure className={styles.slider}>
           {data?.testimonials?.map(x => (
