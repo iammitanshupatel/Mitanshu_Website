@@ -53,7 +53,7 @@ const Blogs = ({ data }) => {
                     <div className={common.blogPageMeta}>
                       <span className={common.more}>
                         <a aria-label="View more blogs" href={`blog/${x.id}`}>
-                          Read More
+                          Read this blog
                         </a>
                       </span>
                       <span className={common.date}>{x.date}</span>
