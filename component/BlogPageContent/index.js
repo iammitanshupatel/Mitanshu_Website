@@ -15,7 +15,15 @@ const BlogPageContent = ({ blogs }) => (
               <Card key={x.id} variant="cardBlog">
                 <a href={`blog/${x.id}`} aria-label="View more details about blog">
                   <div className={common.custom}>
-                    <Image src={x.blogImage.url} alt="" width={320} height={213} />
+                    <Image
+                      src={x.blogImage.url.replace(
+                        'upload',
+                        'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+                      )}
+                      alt=""
+                      width={320}
+                      height={213}
+                    />
                   </div>
                 </a>
                 <div className={common.blogPageContent}>

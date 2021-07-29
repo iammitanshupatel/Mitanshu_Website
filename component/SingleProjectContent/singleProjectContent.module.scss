@@ -3,9 +3,15 @@
 }
 .projectDesc {
   @apply flex flex-col md:flex-row gap-4 pb-24;
-  & img {
-    height: 70vh;
-    @apply w-full md:w-2/5 object-cover mt-16;
+  & .imgDiv {
+    scroll-behavior: smooth;
+    scroll-snap-type: inline mandatory;
+    inline-size: auto;
+    @apply flex gap-4 overflow-x-scroll w-full;
+    & img {
+      scroll-snap-align: start !important;
+      @apply h-[60vh] w-full object-cover mt-16;
+    }
   }
   & .desc {
     @apply mt-12;

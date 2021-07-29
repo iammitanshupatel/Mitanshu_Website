@@ -14,21 +14,7 @@ import { useEffect, useLayoutEffect } from 'react';
 
 const SingleBlogPageContent = ({ data }) => {
   const { HTML } = useMarkdown(data.description);
-  //   (function () {
-  //     var links = document.getElementsByTagName('a');
-  //     for (var i = 0; i < links.length; i++) {
-  //       if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-  //         links[i].target = '_blank';
-  //       }
-  //     }
-  //   })();
-  let links = document.getElementsByTagName('a');
-  for (let i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-
+  const url = data.blogImage.url.replace('upload', 'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto');
   return (
     <>
       <Head>
@@ -47,7 +33,6 @@ const SingleBlogPageContent = ({ data }) => {
           <h2 className={common.blogTitle}>{data.title}</h2>
         </div>
         <div className={common.blogImgDiv}>
-          {/* <Image src={data.blogImage.url} className={common.blogImg} alt="blogImage" layout="fill"> */}
           <CloudImage
             cloudName="mitanshucloud"
             publicId={data.blogImage?.provider_metadata?.public_id}
@@ -62,7 +47,6 @@ const SingleBlogPageContent = ({ data }) => {
             fetchFormat="auto">
             <Placeholder type="vectorize" />
           </CloudImage>
-          {/* </Image> */}
         </div>
       </section>
       <article

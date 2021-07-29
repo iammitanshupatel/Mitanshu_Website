@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Card from '../Card';
 import common from '../../styles/common.module.scss';
 import useProgressiveImage from '../../hooks/useProgressiveImage';
+import Image from 'next/image';
 
 const ProjectPageContent = ({ data }) => {
   const urlBanner = data.backgroundImage.url.replace(
@@ -42,7 +43,14 @@ const ProjectPageContent = ({ data }) => {
               {data?.projects?.map(x => (
                 <Card key={x.id} variant="projectCard">
                   <figure>
-                    <img src={x.displayImage.url} alt="Project Image" />
+                    <Image
+                      layout="fill"
+                      src={x.displayImage.url.replace(
+                        'upload',
+                        'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+                      )}
+                      alt="Project Image"
+                    />
                     <figcaption>
                       <a href={`work/${x.id}`} aria-label="View more details about portfolio">
                         <h3>{x.title}</h3>

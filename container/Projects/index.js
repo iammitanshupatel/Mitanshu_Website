@@ -3,6 +3,7 @@ import Card from '../../component/Card';
 import Button from '../../component/Button';
 import styles from './projects.module.scss';
 import common from '../../styles/common.module.scss';
+import Image from 'next/image';
 
 const Projects = ({ data }) => (
   <>
@@ -19,7 +20,14 @@ const Projects = ({ data }) => (
             {data?.projects?.map(x => (
               <Card variant="projectCard" key={x.id}>
                 <figure>
-                  <img src={x.displayImage.url} alt="" />
+                  <Image
+                    layout="fill"
+                    src={x.displayImage.url.replace(
+                      'upload',
+                      'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+                    )}
+                    alt=""
+                  />
                   <figcaption>
                     <a aria-label={`View more about ${x.title}`} href={`work/${x.id}`}>
                       <h3>{x.title}</h3>
