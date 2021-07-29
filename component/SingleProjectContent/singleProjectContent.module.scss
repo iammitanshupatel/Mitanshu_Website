@@ -2,19 +2,22 @@
   @apply text-center;
 }
 .projectDesc {
-  @apply flex flex-col md:flex-row gap-4 pb-24;
+  @apply flex flex-col md:flex-row gap-8 pb-24;
   & .imgDiv {
     scroll-behavior: smooth;
     scroll-snap-type: inline mandatory;
     inline-size: auto;
-    @apply flex gap-4 overflow-x-scroll w-full;
+    @apply h-[60vh] flex gap-2 overflow-x-scroll flex-1 mt-16;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     & img {
       scroll-snap-align: start !important;
-      @apply h-[60vh] w-full object-cover mt-16;
+      @apply h-full w-full object-cover;
     }
   }
   & .desc {
-    @apply mt-12;
+    @apply flex-[2] mt-12;
     & .singleProjectTxt {
       @apply px-4;
       & p {

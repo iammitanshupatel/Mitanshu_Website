@@ -3,6 +3,7 @@ import common from '../../styles/common.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
 import useProgressiveImage from '../../hooks/useProgressiveImage';
+import { useCallback, useEffect, useRef } from 'react';
 
 const SingleProjectContent = ({ data }) => {
   const url = data.displayImage.url.replace(
@@ -10,6 +11,35 @@ const SingleProjectContent = ({ data }) => {
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
   );
 
+  const parentDivRef = useRef(null);
+  const intervalRef = useRef();
+  const cardRef = useRef([]);
+
+  const startScroll = useCallback(() => {
+    intervalRef.current = setInterval(() => {
+      const cardWidth = cardRef.current[0].offsetWidth;
+      const total = parentDivRef.current.scrollLeft + parentDivRef.current.offsetWidth;
+      if (Math.round(total) === parentDivRef.current.scrollWidth) {
+        parentDivRef.current.scrollLeft = 0;
+      } else {
+        parentDivRef.current.scrollLeft += cardWidth;
+      }
+    }, 2000);
+  }, []);
+
+  const stopScroll = useCallback(() => {
+    clearInterval(intervalRef.current);
+  }, []);
+
+  useEffect(() => {
+    startScroll();
+    parentDivRef.current.addEventListener('mouseover', stopScroll);
+    parentDivRef.current.addEventListener('mouseout', startScroll);
+    return () => {
+      parentDivRef.current.removeEventListener('mouseover', stopScroll);
+      parentDivRef.current.removeEventListener('mouseout', startScroll);
+    };
+  }, [startScroll, stopScroll]);
   return (
     <>
       <Head>
@@ -21,9 +51,18 @@ const SingleProjectContent = ({ data }) => {
         </div>
       </section>
       <section className={styles.projectDesc}>
-        <div className={styles.imgDiv}>
-          {data.projectImage.map(y => {
-            return <img key={y.id} src={y.image.url} alt="Project Image" />;
+        <div ref={parentDivRef} className={styles.imgDiv}>
+          {data.projectImage.map((y, i) => {
+            return (
+              <img
+                ref={el => {
+                  cardRef.current[i] = el;
+                }}
+                key={y.id}
+                src={y.image.url}
+                alt="Project Image"
+              />
+            );
           })}
         </div>
         <div className={styles.desc}>
