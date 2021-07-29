@@ -1,11 +1,4 @@
 import Cursor from '../component/Cursor';
-import About from '../container/About';
-import Education from '../container/Education';
-import Home from '../container/Home';
-import Services from '../container/Services';
-import Projects from '../container/Projects';
-import Blogs from '../container/Blogs';
-import Testimonial from '../container/Testimonial';
 import useBanner from '../hooks/useBanner';
 import useAbout from '../hooks/useAbout';
 import useServices from '../hooks/useServices';
@@ -14,7 +7,21 @@ import useEducationSkills from '../hooks/useEducationSkills';
 import useBlog from '../hooks/useBlog';
 import useTestimonial from '../hooks/useTestimonial';
 import Head from 'next/head';
-import PreLoader from '../component/PreLoader';
+import dynamic from 'next/dynamic';
+const PreLoader = dynamic(() => import('../component/PreLoader'));
+const Home = dynamic(() => import('../container/Home'), {
+  loading: () => <PreLoader />,
+});
+const About = dynamic(() => import('../container/About'), {
+  loading: () => <PreLoader />,
+});
+const Services = dynamic(() => import('../container/Services'), {
+  loading: () => <PreLoader />,
+});
+const Projects = dynamic(() => import('../container/Projects'));
+const Education = dynamic(() => import('../container/Education'));
+const Blogs = dynamic(() => import('../container/Blogs'));
+const Testimonial = dynamic(() => import('../container/Testimonial'));
 
 const Main = () => {
   const { data: bannerData, isLoading: bannerLoading, isError: bannerError } = useBanner();
