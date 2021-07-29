@@ -13,7 +13,7 @@ const SingleProjectContent = ({ data }) => (
       </div>
     </section>
     <section className={styles.projectDesc}>
-      <img src="/image/Blogs/img-6.jpg" alt="" />
+      <img src={data.displayImage.url} alt="" />
       <div className={styles.desc}>
         <div className={styles.singleProjectTxt}>
           <h3>Description</h3>

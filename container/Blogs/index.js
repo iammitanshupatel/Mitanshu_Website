@@ -4,12 +4,8 @@ import Card from '../../component/Card';
 import styles from './blogs.module.scss';
 import common from '../../styles/common.module.scss';
 import Image from 'next/image';
-import imgSource from '../../public/image/Blogs/img-1.jpg';
 
 const Blogs = ({ data }) => {
-  const myLoader = ({ src, width, quality }) => {
-    return `${imgSource}?/w=${width}&q=${quality || 75}`;
-  };
   const sliderRef = useRef();
   //   const mouseEvent = useCallback(() => {}, []);
   useEffect(() => {
