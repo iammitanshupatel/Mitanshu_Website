@@ -1,15 +1,21 @@
-import BlogPageHeader from '../component/BlogPageHeader';
-import BlogPageContent from '../component/BlogPageContent';
+/* eslint-disable react/display-name */
+import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import useBlog from '../hooks/useBlog';
 import useBlogs from '../hooks/useBlogs';
-import Head from 'next/head';
-import PreLoader from '../component/PreLoader';
+const PreLoader = dynamic(() => import('../component/PreLoader'));
+const BlogPageHeader = dynamic(() => import('../component/BlogPageHeader'), {
+  loading: () => <PreLoader />,
+});
+const BlogPageContent = dynamic(() => import('../component/BlogPageContent'), {
+  loading: () => <PreLoader />,
+});
 
 const BlogPage = () => {
   const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs();
   const { data, isLoading, isError } = useBlog();
   if ((blogsLoading, isLoading)) return <PreLoader />;
-//   if ((blogsError, isError)) return <h1>Error</h1>;
+  //   if ((blogsError, isError)) return <h1>Error</h1>;
   return (
     <>
       <Head>

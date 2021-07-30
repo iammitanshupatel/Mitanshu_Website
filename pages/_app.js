@@ -1,7 +1,8 @@
+import dynamic from 'next/dynamic';
 import { SWRConfig } from 'swr';
-import Layout from '../container/Layout';
 import '../styles/globals.scss';
 import fetcher from '../lib/fetch';
+const Layout = dynamic(() => import('../container/Layout'));
 
 function MyApp({ Component, pageProps }) {
   return (

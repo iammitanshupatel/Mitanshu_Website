@@ -1,12 +1,16 @@
-import usePortfolio from '../hooks/usePortfolio';
-import ProjectPageContent from '../component/ProjectPageContent';
+/* eslint-disable react/display-name */
 import Head from 'next/head';
-import PreLoader from '../component/PreLoader';
+import dynamic from 'next/dynamic';
+import usePortfolio from '../hooks/usePortfolio';
+const PreLoader = dynamic(() => import('../component/PreLoader'));
+const ProjectPageContent = dynamic(() => import('../component/ProjectPageContent'), {
+  loading: () => <PreLoader />,
+});
 
 const WorkPage = () => {
   const { data, isLoading, isError } = usePortfolio();
   if (isLoading) return <PreLoader />;
-//   if (isError) return <h1>Error</h1>;
+  //   if (isError) return <h1>Error</h1>;
   return (
     <>
       <Head>

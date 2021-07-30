@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import dynamic from 'next/dynamic';
 import styles from './home.module.scss';
 import common from '../../styles/common.module.scss';

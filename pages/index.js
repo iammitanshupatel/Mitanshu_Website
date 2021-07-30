@@ -1,5 +1,7 @@
 /* eslint-disable react/display-name */
-import Cursor from '../component/Cursor';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+// import Cursor from '../component/Cursor';
 import useBanner from '../hooks/useBanner';
 import useAbout from '../hooks/useAbout';
 import useServices from '../hooks/useServices';
@@ -7,8 +9,6 @@ import usePortfolio from '../hooks/usePortfolio';
 import useEducationSkills from '../hooks/useEducationSkills';
 import useBlog from '../hooks/useBlog';
 import useTestimonial from '../hooks/useTestimonial';
-import Head from 'next/head';
-import dynamic from 'next/dynamic';
 const PreLoader = dynamic(() => import('../component/PreLoader'));
 const Home = dynamic(() => import('../container/Home'), {
   loading: () => <PreLoader />,
