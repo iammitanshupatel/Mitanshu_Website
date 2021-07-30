@@ -36,6 +36,7 @@ const SingleProjectContent = ({ data }) => {
     parentDivRef.current.addEventListener('mouseover', stopScroll);
     parentDivRef.current.addEventListener('mouseout', startScroll);
     return () => {
+      stopScroll();
       parentDivRef.current.removeEventListener('mouseover', stopScroll);
       parentDivRef.current.removeEventListener('mouseout', startScroll);
     };
