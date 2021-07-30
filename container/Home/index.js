@@ -19,6 +19,7 @@ const Home = ({ data }) => {
     'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
   );
   const loaded = useProgressiveImage(url, urlPlaceholder);
+  if (!data) return <PreLoader />;
   return (
     <>
       <section

@@ -42,7 +42,7 @@ const SingleBlogPage = () => {
   });
   const { data: blogData, isLoading, isError } = useBlogs(id);
   if (isLoading) return <PreLoader />;
-//   if (isError) return <h1>Error</h1>;
+  //   if (isError) return <h1>Error</h1>;
   return (
     <div className={common.srvContainer}>
       {blogData && <SingleBlogPageContent data={blogData} />}

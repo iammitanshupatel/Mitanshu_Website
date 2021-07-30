@@ -32,13 +32,14 @@ const SingleProjectContent = ({ data }) => {
   }, []);
 
   useEffect(() => {
+    const instance = parentDivRef.current;
     startScroll();
-    parentDivRef.current.addEventListener('mouseover', stopScroll);
-    parentDivRef.current.addEventListener('mouseout', startScroll);
+    instance.addEventListener('mouseover', stopScroll);
+    instance.addEventListener('mouseout', startScroll);
     return () => {
       stopScroll();
-      parentDivRef.current.removeEventListener('mouseover', stopScroll);
-      parentDivRef.current.removeEventListener('mouseout', startScroll);
+      instance.removeEventListener('mouseover', stopScroll);
+      instance.removeEventListener('mouseout', startScroll);
     };
   }, [startScroll, stopScroll]);
   return (
