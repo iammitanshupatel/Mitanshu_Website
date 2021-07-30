@@ -27,7 +27,7 @@ const BlogPageContent = ({ blogs }) => (
                   </div>
                 </a>
                 <div className={common.blogPageContent}>
-                  <h3>{x.title}</h3>
+                  <h2>{x.title}</h2>
                   <p>{x.description}</p>
                   <div className={common.blogPageMeta}>
                     <span className={common.more}>

@@ -30,7 +30,7 @@ const Projects = ({ data }) => (
                   />
                   <figcaption>
                     <a aria-label={`View more about ${x.title}`} href={`work/${x.id}`}>
-                      <h3>{x.title}</h3>
+                      <h2>{x.title}</h2>
                       <p>{x.typeOfPortfolio}</p>
                     </a>
                   </figcaption>

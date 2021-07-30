@@ -37,7 +37,7 @@ const FullImageHeaderPage = ({ data }) => {
       <div id="scrollHere" />
       <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedTop}`}>
         <div className={common.abtWrap}>
-          <h3>Bio.</h3>
+          <h2>Bio.</h2>
           <p>{data.biography}</p>
         </div>
       </div>

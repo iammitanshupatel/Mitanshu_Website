@@ -61,7 +61,7 @@
       & img {
         @apply opacity-40;
       }
-      & figcaption a h3 {
+      & figcaption a h2 {
         -webkit-transform: translate(0px, 0px);
         transform: translate(0px, 0px);
         @apply opacity-100;
@@ -80,7 +80,7 @@
       & a {
         @apply flex flex-col justify-center gap-2 h-full w-full;
       }
-      & h3 {
+      & h2 {
         -webkit-transform: translateY(-40px);
         transform: translateY(-40px);
         -webkit-box-sizing: border-box;

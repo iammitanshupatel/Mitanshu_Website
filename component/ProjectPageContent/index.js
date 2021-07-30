@@ -53,7 +53,7 @@ const ProjectPageContent = ({ data }) => {
                     />
                     <figcaption>
                       <a href={`work/${x.id}`} aria-label="View more details about portfolio">
-                        <h3>{x.title}</h3>
+                        <h2>{x.title}</h2>
                         <p>{x.typeOfPortfolio}</p>
                       </a>
                     </figcaption>
