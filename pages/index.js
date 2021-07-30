@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import Cursor from '../component/Cursor';
 import useBanner from '../hooks/useBanner';
 import useAbout from '../hooks/useAbout';
