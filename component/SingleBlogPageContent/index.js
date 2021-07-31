@@ -10,15 +10,16 @@ import {
   Placeholder,
 } from 'cloudinary-react';
 import Image from 'next/image';
-import { useEffect, useLayoutEffect } from 'react';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
-const SingleBlogPageContent = ({ data }) => {
+const SingleBlogPageContent = ({ data }, { title }) => {
+  console.log(title);
   const { HTML } = useMarkdown(data.description);
   const url = data.blogImage.url.replace('upload', 'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto');
   return (
     <>
       <Head>
-        <title>{data?.title}</title>
+        <title>{`${data.title} - Mitanshu Patel`}</title>
       </Head>
       <section className={common.singleBlog}>
         <div className={common.blogInfo}>
@@ -77,5 +78,27 @@ const SingleBlogPageContent = ({ data }) => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: `${process.env.NEXT_PUBLIC_API_BASE_URL}graphql`,
+    cache: new InMemoryCache(),
+  });
+  const { data } = await client.query({
+    query: gql`
+      query getTitle {
+        blogs(where: { id: 2 }) {
+          id
+          title
+        }
+      }
+    `,
+  });
+  return {
+    props: {
+      title: data.blogs.title,
+    },
+  };
+}
 
 export default SingleBlogPageContent;

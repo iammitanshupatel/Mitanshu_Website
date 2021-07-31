@@ -19,7 +19,7 @@ const BlogPage = () => {
   return (
     <>
       <Head>
-        <title>Blog Page</title>
+        <title>Blog Page - Mitanshu Patel</title>
       </Head>
       {data && <BlogPageHeader data={data} />}
       {blogs && <BlogPageContent blogs={blogs} />}

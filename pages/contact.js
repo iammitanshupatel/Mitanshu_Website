@@ -18,7 +18,7 @@ const ContactPage = () => {
   return (
     <>
       <Head>
-        <title>Contact Page</title>
+        <title>Contact Page - Mitanshu Patel</title>
       </Head>
       {data && <ContactPageHeader data={data} />}
       <div className={`${common.containerCtc} ${styles.top45}`}>

@@ -38,7 +38,7 @@ const Main = () => {
   return (
     <>
       <Head>
-        <title>Home Page</title>
+        <title>Mitanshu Patel</title>
       </Head>
       {bannerData && <Home data={bannerData} />}
       {aboutData && <About data={aboutData} />}

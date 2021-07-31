@@ -23,7 +23,7 @@ const AboutPage = () => {
   return (
     <>
       <Head>
-        <title>About Page</title>
+        <title>About Page - Mitanshu Patel</title>
       </Head>
       {aboutData && <FullImageHeaderPage data={aboutData} />}
       {educationSkillsData && <AboutPageContent data={educationSkillsData} />}
