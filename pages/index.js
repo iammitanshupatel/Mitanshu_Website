@@ -9,7 +9,7 @@ import usePortfolio from '../hooks/usePortfolio';
 import useEducationSkills from '../hooks/useEducationSkills';
 import useBlog from '../hooks/useBlog';
 import useTestimonial from '../hooks/useTestimonial';
-const PreLoader = dynamic(() => import('../component/PreLoader'));
+import PreLoader from '../component/PreLoader';
 const Home = dynamic(() => import('../container/Home'), {
   loading: () => <PreLoader />,
 });
@@ -31,7 +31,7 @@ const Main = () => {
   const { data: portfolioData, isError: portfolioError } = usePortfolio();
   const { data: educationSkillsData, isError: educationSkillsError } = useEducationSkills();
   const { data: blogData, isError: blogError } = useBlog();
-  const { data: testimonialData, isError: testimonialError } = useTestimonial();
+  //   const { data: testimonialData, isError: testimonialError } = useTestimonial();
   if (bannerLoading) return <PreLoader />;
   //   if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError))
   //     return <h1>Error</h1>;
@@ -46,7 +46,7 @@ const Main = () => {
       {portfolioData && <Projects data={portfolioData} />}
       {educationSkillsData && <Education data={educationSkillsData} />}
       {blogData && <Blogs data={blogData} />}
-      {testimonialData && <Testimonial data={testimonialData} />}
+      {/* {testimonialData && <Testimonial data={testimonialData} />} */}
     </>
   );
 };
