@@ -1,8 +1,8 @@
 import styles from './singleProjectContent.module.scss';
-import common from '../../styles/common.module.scss';
+import common from 'styles/common.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
-import useProgressiveImage from '../../hooks/useProgressiveImage';
+import useProgressiveImage from 'hooks/useProgressiveImage';
 import { useCallback, useEffect, useRef } from 'react';
 
 const SingleProjectContent = ({ data }) => {

@@ -1,7 +1,7 @@
 import styles from './singleBlogPageContent.module.scss';
-import common from '../../styles/common.module.scss';
+import common from 'styles/common.module.scss';
 import Head from 'next/head';
-import useMarkdown from '../../hooks/useMarkdown';
+import useMarkdown from 'hooks/useMarkdown';
 import {
   Image as CloudImage,
   Video,

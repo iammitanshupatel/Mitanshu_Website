@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import Meta from '../component/meta';
+import Meta from 'component/meta';
 
 export default class MyDocument extends Document {
   render() {

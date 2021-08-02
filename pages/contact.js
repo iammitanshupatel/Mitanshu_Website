@@ -1,15 +1,15 @@
 /* eslint-disable react/display-name */
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import useContact from '../hooks/useContact';
-import common from '../styles/common.module.scss';
-import styles from '../component/ContactForm/contactForm.module.scss';
-const PreLoader = dynamic(() => import('../component/PreLoader'));
-const ContactPageHeader = dynamic(() => import('../component/ContactPageHeader'), {
+import useContact from 'hooks/useContact';
+import common from 'styles/common.module.scss';
+import styles from 'component/ContactForm/contactForm.module.scss';
+const PreLoader = dynamic(() => import('component/PreLoader'));
+const ContactPageHeader = dynamic(() => import('component/ContactPageHeader'), {
   loading: () => <PreLoader />,
 });
-const ContactForm = dynamic(() => import('../component/ContactForm'));
-const ContactPageFooter = dynamic(() => import('../component/ContactPageFooter'));
+const ContactForm = dynamic(() => import('component/ContactForm'));
+const ContactPageFooter = dynamic(() => import('component/ContactPageFooter'));
 
 const ContactPage = () => {
   const { data, isLoading, isError } = useContact();

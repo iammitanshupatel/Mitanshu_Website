@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef, memo } from 'react';
-import axios from '../../lib/axios';
+import axios from 'lib/axios';
 import styles from './icon.module.scss';
 
 const Icon = ({ socialLink, variant, className, ariaLabel }) => {

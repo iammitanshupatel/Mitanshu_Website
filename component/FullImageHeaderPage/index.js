@@ -1,6 +1,6 @@
 import styles from './fullImageHeaderPage.module.scss';
-import common from '../../styles/common.module.scss';
-import useProgressiveImage from '../../hooks/useProgressiveImage';
+import common from 'styles/common.module.scss';
+import useProgressiveImage from 'hooks/useProgressiveImage';
 
 const FullImageHeaderPage = ({ data }) => {
   //   const url = data.backgroundImage.url.replace(

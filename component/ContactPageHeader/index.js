@@ -1,6 +1,6 @@
 import styles from './contactPageHeader.module.scss';
-import common from '../../styles/common.module.scss';
-import useMarkdown from '../../hooks/useMarkdown';
+import common from 'styles/common.module.scss';
+import useMarkdown from 'hooks/useMarkdown';
 
 const ContactPageHeader = ({ data }) => {
   const { HTML } = useMarkdown(data.description);

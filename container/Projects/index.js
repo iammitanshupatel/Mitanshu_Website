@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-const Card = dynamic(() => import('../../component/Card'));
-const Button = dynamic(() => import('../../component/Button'));
+const Card = dynamic(() => import('component/Card'));
+const Button = dynamic(() => import('component/Button'));
 import styles from './projects.module.scss';
-import common from '../../styles/common.module.scss';
+import common from 'styles/common.module.scss';
 
 const Projects = ({ data }) => (
   <>

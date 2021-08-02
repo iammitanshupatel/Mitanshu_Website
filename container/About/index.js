@@ -1,8 +1,8 @@
 import styles from './about.module.scss';
-import common from '../../styles/common.module.scss';
+import common from 'styles/common.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import PreLoader from '../../component/PreLoader';
+import PreLoader from 'component/PreLoader';
 
 const About = ({ data }) => {
   if (!data) return <PreLoader />;

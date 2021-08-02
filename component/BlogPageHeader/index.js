@@ -1,5 +1,5 @@
-import useProgressiveImage from '../../hooks/useProgressiveImage';
-import common from '../../styles/common.module.scss';
+import useProgressiveImage from 'hooks/useProgressiveImage';
+import common from 'styles/common.module.scss';
 
 const BlogPageHeader = ({ data }) => {
   const url = data.backgroundImage.url.replace(

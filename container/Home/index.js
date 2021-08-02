@@ -1,13 +1,13 @@
 /* eslint-disable react/display-name */
 import dynamic from 'next/dynamic';
 import styles from './home.module.scss';
-import common from '../../styles/common.module.scss';
-const PreLoader = dynamic(() => import('../../component/PreLoader'));
+import common from 'styles/common.module.scss';
+const PreLoader = dynamic(() => import('component/PreLoader'));
 const ReactRotatingText = dynamic(() => import('react-rotating-text'), {
   loading: () => <PreLoader />,
 });
 const { useEffect, useState } = dynamic(() => import('react'));
-import useProgressiveImage from '../../hooks/useProgressiveImage';
+import useProgressiveImage from 'hooks/useProgressiveImage';
 
 const Home = ({ data }) => {
   const url = data.backgroundImage.url.replace(

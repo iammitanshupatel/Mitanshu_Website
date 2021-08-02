@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import usePortfolio from '../hooks/usePortfolio';
-import PreLoader from '../component/PreLoader';
-const ProjectPageContent = dynamic(() => import('../component/ProjectPageContent'), {
+import usePortfolio from 'hooks/usePortfolio';
+import PreLoader from 'component/PreLoader';
+const ProjectPageContent = dynamic(() => import('component/ProjectPageContent'), {
   loading: () => <PreLoader />,
 });
 

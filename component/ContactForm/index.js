@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { ErrorMessage, useFormik } from 'formik';
 const Button = dynamic(() => import('../Button'));
 import styles from './contactForm.module.scss';
-import common from '../../styles/common.module.scss';
+import common from 'styles/common.module.scss';
 import { useRef, useState } from 'react';
 
 const validate = values => {

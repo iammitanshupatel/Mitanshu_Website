@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
-const Card = dynamic(() => import('../../component/Card'));
-const Icon = dynamic(() => import('../../component/Icon'));
-import common from '../../styles/common.module.scss';
-import card from '../../component/Card/card.module.scss';
+const Card = dynamic(() => import('component/Card'));
+const Icon = dynamic(() => import('component/Icon'));
+import common from 'styles/common.module.scss';
+import card from 'component/Card/card.module.scss';
 
 const Services = ({ data }) => (
   <>

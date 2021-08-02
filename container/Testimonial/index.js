@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import useProgressiveImage from '../../hooks/useProgressiveImage';
+import useProgressiveImage from 'hooks/useProgressiveImage';
 import styles from './testimonial.module.scss';
 
 const Testimonial = ({ data }) => {
