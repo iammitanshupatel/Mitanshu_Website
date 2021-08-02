@@ -14,7 +14,7 @@ const WorkPage = () => {
   return (
     <>
       <Head>
-        <title>Work Page</title>
+        <title>Work Page - Mitanshu Patel</title>
       </Head>
       {data && <ProjectPageContent data={data} />}
     </>
