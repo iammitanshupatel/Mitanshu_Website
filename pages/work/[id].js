@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import useProjects from '../../hooks/useProjects';
-const SingleBlogPageContent = dynamic(() => import('../component/SingleBlogPageContent'));
+const SingleProjectContent = dynamic(() => import('../../component/SingleProjectContent'));
 import common from '../../styles/common.module.scss';
 import PreLoader from '../../component/PreLoader';
 
