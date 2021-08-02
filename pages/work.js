@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import usePortfolio from '../hooks/usePortfolio';
-const PreLoader = dynamic(() => import('../component/PreLoader'));
+import PreLoader from '../component/PreLoader';
 const ProjectPageContent = dynamic(() => import('../component/ProjectPageContent'), {
   loading: () => <PreLoader />,
 });

@@ -1,12 +1,13 @@
 import { useRouter } from 'next/router';
 import { useFormik } from 'formik';
-import SingleBlogPageContent from '../../component/SingleBlogPageContent';
 import useBlogs from '../../hooks/useBlogs';
 import styles from '../../component/SingleBlogPageContent/singleBlogPageContent.module.scss';
 import common from '../../styles/common.module.scss';
 import ContactForm from '../../component/ContactForm';
 import Head from 'next/head';
 import PreLoader from '../../component/PreLoader';
+import dynamic from 'next/dynamic';
+const SingleBlogPageContent = dynamic(() => import('../component/SingleBlogPageContent'));
 
 const validate = values => {
   const errors = {};

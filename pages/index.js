@@ -1,7 +1,6 @@
 /* eslint-disable react/display-name */
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-// import Cursor from '../component/Cursor';
 import useBanner from '../hooks/useBanner';
 import useAbout from '../hooks/useAbout';
 import useServices from '../hooks/useServices';
