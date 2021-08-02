@@ -1,6 +1,7 @@
 import axios from 'axios';
+import dynamic from 'next/dynamic';
 import { ErrorMessage, useFormik } from 'formik';
-import Button from '../Button';
+const Button = dynamic(() => import('../Button'));
 import styles from './contactForm.module.scss';
 import common from '../../styles/common.module.scss';
 import { useRef, useState } from 'react';

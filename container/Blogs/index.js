@@ -1,9 +1,10 @@
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { useCallback, useEffect, useRef } from 'react';
-import Button from '../../component/Button';
-import Card from '../../component/Card';
+const Button = dynamic(() => import('../../component/Button'));
+const Card = dynamic(() => import('../../component/Card'));
 import styles from './blogs.module.scss';
 import common from '../../styles/common.module.scss';
-import Image from 'next/image';
 
 const Blogs = ({ data }) => {
   const sliderRef = useRef();

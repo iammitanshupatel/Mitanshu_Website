@@ -1,7 +1,8 @@
+import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
-import Cursor from '../../component/Cursor';
-import Footer from '../../component/Footer';
-import Header from '../../component/Header';
+const Header = dynamic(() => import('../../component/Header'));
+const Footer = dynamic(() => import('../../component/Footer'));
+const Cursor = dynamic(() => import('../../component/Cursor'));
 
 const Layout = ({ children }) => (
   <>

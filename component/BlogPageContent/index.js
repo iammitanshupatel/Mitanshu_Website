@@ -1,8 +1,9 @@
 import { data } from 'remark';
-import Card from '../Card';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
+const Card = dynamic(() => import('../Card'));
 import styles from './blogPageContent.module.scss';
 import common from '../../styles/common.module.scss';
-import Image from 'next/image';
 
 const BlogPageContent = ({ blogs }) => (
   <>
