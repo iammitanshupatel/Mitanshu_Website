@@ -1,4 +1,3 @@
-import React from 'react';
 import UpArrow from '../../public/icon/chevron-up-outline.svg';
 import styles from './footer.module.scss';
 import common from 'styles/common.module.scss';

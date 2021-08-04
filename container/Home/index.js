@@ -6,7 +6,6 @@ const PreLoader = dynamic(() => import('component/PreLoader'));
 const ReactRotatingText = dynamic(() => import('react-rotating-text'), {
   loading: () => <PreLoader />,
 });
-const { useEffect, useState } = dynamic(() => import('react'));
 import useProgressiveImage from 'hooks/useProgressiveImage';
 
 const Home = ({ data }) => {

@@ -5,22 +5,21 @@ const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick, ariaLab
   const btnRef = useRef(null);
   const spanRef = useRef(null);
   const mouseEvent = useCallback(e => {
-    // const parentOffset = btnRef.current.getBoundingClientRect();
-    // const relX = e.pageX - parentOffset.left;
-    // const relY = e.pageY - parentOffset.top;
-    // spanRef.current.style.top = `${relY}px`;
-    // spanRef.current.style.left = `${relX}px`;
-    // spanRef.current.style.setProperty('left', `${relX}px`);
-    // spanRef.current.style.setProperty('top', `${relY}px`);
+    const parentOffset = btnRef.current.getBoundingClientRect();
+    const relX = e.pageX - parentOffset.left;
+    const relY = e.pageY - parentOffset.top;
+    spanRef.current.style.top = `${relY}px`;
+    spanRef.current.style.left = `${relX}px`;
   }, []);
-  //   useEffect(() => {
-  //     btnRef.current.addEventListener('mouseenter', mouseEvent());
-  //     btnRef.current.addEventListener('mouseout', mouseEvent());
-  //     return () => {
-  //       btnRef.current.removeEventListener('mouseenter', mouseEvent());
-  //       btnRef.current.removeEventListener('mouseout', mouseEvent());
-  //     };
-  //   }, [mouseEvent]);
+  useEffect(() => {
+    const btnCurrent = btnRef.current;
+    btnCurrent.addEventListener('mouseenter', mouseEvent);
+    btnCurrent.addEventListener('mouseout', mouseEvent);
+    return () => {
+      btnCurrent.removeEventListener('mouseenter', mouseEvent);
+      btnCurrent.removeEventListener('mouseout', mouseEvent);
+    };
+  }, [mouseEvent]);
 
   return (
     <a className={styles.btnHover} ref={btnRef} aria-label={ariaLabel} href={locationPage}>
