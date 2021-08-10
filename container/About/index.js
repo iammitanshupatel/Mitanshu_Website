@@ -12,7 +12,15 @@ const About = ({ data }) => {
         <div className={styles.abtContainer}>
           <div className={styles.abtRow}>
             <div className={styles.abtImg}>
-              <Image src="/image/cover_bg_2.jpg" width={700} height={475} alt="My Image" />
+              <Image
+                src={data?.myImage?.url.replace(
+                  'upload',
+                  'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+                )}
+                width={700}
+                height={475}
+                alt="My Image"
+              />
             </div>
             <div className={styles.abtTxt}>
               <div className={styles.abtDesc}>

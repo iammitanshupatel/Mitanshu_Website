@@ -3,15 +3,15 @@ import common from 'styles/common.module.scss';
 import useProgressiveImage from 'hooks/useProgressiveImage';
 
 const FullImageHeaderPage = ({ data }) => {
-  //   const url = data.backgroundImage.url.replace(
-  //     'upload',
-  //     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
-  //   );
-  //   const urlPlaceholder = data.backgroundImage.url.replace(
-  //     'upload',
-  //     'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
-  //   );
-  //   const loaded = useProgressiveImage(url, urlPlaceholder);
+  const url = data.backgroundImage.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+  );
+  const urlPlaceholder = data.backgroundImage.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
+  );
+  const loaded = useProgressiveImage(url, urlPlaceholder);
   return (
     <>
       <div className={`${common.fullImage} ${common.hero}`}>
@@ -30,7 +30,7 @@ const FullImageHeaderPage = ({ data }) => {
           </div>
         </div>
         <div
-          style={{ backgroundImage: 'url(/image/cover_bg_2.jpg)' }}
+          style={{ backgroundImage: `url(${loaded || urlPlaceholder})`, opacity: '0.5' }}
           className={common.imgOverlay}
         />
       </div>
