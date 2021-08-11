@@ -30,7 +30,7 @@ const FullImageHeaderPage = ({ data }) => {
           </div>
         </div>
         <div
-          style={{ backgroundImage: `url(${loaded || urlPlaceholder})`, opacity: '0.5' }}
+          style={{ backgroundImage: `url(${loaded || urlPlaceholder})`, opacity: '0.9' }}
           className={common.imgOverlay}
         />
       </div>
