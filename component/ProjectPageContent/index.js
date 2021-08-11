@@ -5,11 +5,11 @@ import common from 'styles/common.module.scss';
 import useProgressiveImage from 'hooks/useProgressiveImage';
 
 const ProjectPageContent = ({ data }) => {
-  const urlBanner = data.backgroundImage.url.replace(
+  const urlBanner = data?.backgroundImage?.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
   );
-  const urlPlaceholder = data.backgroundImage.url.replace(
+  const urlPlaceholder = data?.backgroundImage?.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
   );
@@ -20,7 +20,7 @@ const ProjectPageContent = ({ data }) => {
         <div className={common.fullText}>
           <div className={common.outer}>
             <div className={common.inner}>
-              <h1>{data.projectPageHeader}</h1>
+              <h1>{data?.projectPageHeader}</h1>
             </div>
             <a href="#scrollHere" aria-label="Scroll down" className={common.mouseWrap}>
               <span className={common.mouse}>
@@ -41,20 +41,20 @@ const ProjectPageContent = ({ data }) => {
           <div className={common.srvCol}>
             <div className={common.cardRow}>
               {data?.projects?.map(x => (
-                <Card key={x.id} variant="projectCard">
+                <Card key={x?.id} variant="projectCard">
                   <figure>
                     <Image
                       layout="fill"
-                      src={x.displayImage.url.replace(
+                      src={x?.displayImage.url.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}
                       alt="Project Image"
                     />
                     <figcaption>
-                      <a href={`work/${x.id}`} aria-label="View more details about portfolio">
-                        <h2>{x.title}</h2>
-                        <p>{x.typeOfPortfolio}</p>
+                      <a href={`work/${x?.id}`} aria-label="View more details about portfolio">
+                        <h2>{x?.title}</h2>
+                        <p>{x?.typeOfPortfolio}</p>
                       </a>
                     </figcaption>
                   </figure>

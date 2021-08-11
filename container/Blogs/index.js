@@ -31,19 +31,19 @@ const Blogs = ({ data }) => {
         <div className={common.srvContainer}>
           <div className={common.srvCol}>
             <div className={common.secDesc}>
-              <h1>{data.Header.title}</h1>
+              <h1>{data?.Header.title}</h1>
               <div className={common.p2}>
-                <h2>{data.Header.caption}</h2>
+                <h2>{data?.Header.caption}</h2>
               </div>
             </div>
           </div>
           <div className={styles.items}>
             <div id="sliderModal" ref={sliderRef} className={styles.sliderShow}>
               {data?.blogs?.map(x => (
-                <Card key={x.id} variant="cardBlog">
-                  <a aria-label="View more about the blog" href={`blog/${x.id}`}>
+                <Card key={x?.id} variant="cardBlog">
+                  <a aria-label="View more about the blog" href={`blog/${x?.id}`}>
                     <Image
-                      src={x.blogImage.url.replace(
+                      src={x?.blogImage.url.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}
@@ -53,15 +53,15 @@ const Blogs = ({ data }) => {
                     />
                   </a>
                   <div className={common.blogPageContent}>
-                    <h2>{x.title}</h2>
-                    <p>{x.description}</p>
+                    <h2>{x?.title}</h2>
+                    <p>{x?.description}</p>
                     <div className={common.blogPageMeta}>
                       <span className={common.more}>
-                        <a aria-label="View more blogs" href={`blog/${x.id}`}>
+                        <a aria-label="View more blogs" href={`blog/${x?.id}`}>
                           Read this blog
                         </a>
                       </span>
-                      <span className={common.date}>{x.date}</span>
+                      <span className={common.date}>{x?.date}</span>
                     </div>
                   </div>
                 </Card>

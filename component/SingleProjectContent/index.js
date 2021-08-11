@@ -6,7 +6,7 @@ import useProgressiveImage from 'hooks/useProgressiveImage';
 import { useCallback, useEffect, useRef } from 'react';
 
 const SingleProjectContent = ({ data }) => {
-  const url = data.displayImage.url.replace(
+  const url = data?.displayImage?.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
   );
@@ -45,16 +45,16 @@ const SingleProjectContent = ({ data }) => {
   return (
     <>
       <Head>
-        <title>{`${data.title} - Mitanshu Patel`}</title>
+        <title>{`${data?.title} - Mitanshu Patel`}</title>
       </Head>
       <section className={common.singleBlog}>
         <div className={`${common.blogInfo} ${styles.textCenter}`}>
-          <h2 className={common.blogTitle}>{data.title}</h2>
+          <h2 className={common.blogTitle}>{data?.title}</h2>
         </div>
       </section>
       <section className={styles.projectDesc}>
         <div ref={parentDivRef} className={styles.imgDiv}>
-          {data.projectImage.map((y, i) => {
+          {data?.projectImage.map((y, i) => {
             return (
               <img
                 ref={el => {
@@ -70,26 +70,26 @@ const SingleProjectContent = ({ data }) => {
         <div className={styles.desc}>
           <div className={styles.singleProjectTxt}>
             <h3>Description</h3>
-            <p>{data.description}</p>
+            <p>{data?.description}</p>
           </div>
           <div className={styles.singleProjectTxt}>
             <h3>Type</h3>
-            <p>{data.typeOfPortfolio}</p>
+            <p>{data?.typeOfPortfolio}</p>
           </div>
           <div className={styles.singleProjectTxt}>
             <h3>Role</h3>
-            <p>{data.role}</p>
+            <p>{data?.role}</p>
           </div>
           <div className={styles.singleProjectTxt}>
             <h3>Technology Used</h3>
             {data?.technologyUsed?.map(x => (
               <a
-                aria-label={`{View more about ${x.title} technology}`}
-                key={x.id}
-                href={x.url}
+                aria-label={`{View more about ${x?.title} technology}`}
+                key={x?.id}
+                href={x?.url}
                 target="_blank"
                 rel="noreferrer">
-                {x.title}
+                {x?.title}
               </a>
             ))}
           </div>

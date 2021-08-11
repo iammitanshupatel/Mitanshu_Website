@@ -9,11 +9,11 @@ const ReactRotatingText = dynamic(() => import('react-rotating-text'), {
 import useProgressiveImage from 'hooks/useProgressiveImage';
 
 const Home = ({ data }) => {
-  const url = data.backgroundImage.url.replace(
+  const url = data?.backgroundImage.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
   );
-  const urlPlaceholder = data.backgroundImage.url.replace(
+  const urlPlaceholder = data?.backgroundImage.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
   );
@@ -27,10 +27,10 @@ const Home = ({ data }) => {
         <div className={styles.homeContainer}>
           <div className={styles.homeWrap}>
             <div className={styles.homeTxt}>
-              <h1>{`${data.firstName} ${data.lastName}`}</h1>
+              <h1>{`${data?.firstName} ${data?.lastName}`}</h1>
               <h2>
-                {data.description}
-                <ReactRotatingText items={data.bannerSpan.map(x => x.text)} />
+                {data?.description}
+                <ReactRotatingText items={data?.bannerSpan.map(x => x?.text)} />
               </h2>
             </div>
           </div>

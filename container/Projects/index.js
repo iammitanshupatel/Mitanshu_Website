@@ -11,27 +11,27 @@ const Projects = ({ data }) => (
       <div className={common.srvContainer}>
         <div className={common.srvCol}>
           <div className={common.secDesc}>
-            <h1>{data.header.title}</h1>
+            <h1>{data?.header.title}</h1>
             <div className={common.p2}>
-              <h2>{data.header.caption}</h2>
+              <h2>{data?.header.caption}</h2>
             </div>
           </div>
           <div className={`${common.cardRow} ${styles.paddingB1}`}>
             {data?.projects?.map(x => (
-              <Card variant="projectCard" key={x.id}>
+              <Card variant="projectCard" key={x?.id}>
                 <figure>
                   <Image
                     layout="fill"
-                    src={x.displayImage.url.replace(
+                    src={x?.displayImage.url.replace(
                       'upload',
                       'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                     )}
                     alt=""
                   />
                   <figcaption>
-                    <a aria-label={`View more about ${x.title}`} href={`work/${x.id}`}>
-                      <h2>{x.title}</h2>
-                      <p>{x.typeOfPortfolio}</p>
+                    <a aria-label={`View more about ${x?.title}`} href={`work/${x?.id}`}>
+                      <h2>{x?.title}</h2>
+                      <p>{x?.typeOfPortfolio}</p>
                     </a>
                   </figcaption>
                 </figure>
