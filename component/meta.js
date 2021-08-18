@@ -25,17 +25,17 @@ export default function Meta() {
       <link rel="shortcut icon" href="/manifest-icon-192.png" />
 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:url" content="https://www.mitanshupatel.com/" />
+      <meta name="twitter:url" content="https://mitanshupatel.com/" />
       <meta name="twitter:title" content="Mitanshu Patel" />
       <meta name="twitter:description" content="Mitanshu Patel Personal Website" />
-      <meta name="twitter:image" content="https://www.mitanshupatel.com/manifest-icon-192.png" />
+      <meta name="twitter:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
       <meta name="twitter:creator" content="@MitanshuPatel_" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Mitanshu Patel" />
       <meta property="og:description" content="Mitanshu Patel Personal Website" />
       <meta property="og:site_name" content="Mitanshu Patel" />
-      <meta property="og:url" content="https://www.mitanshupatel.com/" />
-      <meta property="og:image" content="https://www.mitanshupatel.com/manifest-icon-192.png" />
+      <meta property="og:url" content="https://mitanshupatel.com/" />
+      <meta property="og:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
 
       {/* apple splash screen images  */}
 
