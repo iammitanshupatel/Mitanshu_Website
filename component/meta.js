@@ -1,6 +1,7 @@
 export default function Meta() {
   return (
     <>
+      <link rel="canonical" href="https://mitanshupatel.com/" />
       <meta name="application-name" content="Mitanshu Patel" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -23,7 +24,7 @@ export default function Meta() {
       <link rel="manifest" href="/manifest.json" />
       <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#5bbad5" />
       <link rel="shortcut icon" href="/manifest-icon-192.png" />
-
+      <meta name="Description" content="Mitanshu Patel Personal Website" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:url" content="https://mitanshupatel.com/" />
       <meta name="twitter:title" content="Mitanshu Patel" />
