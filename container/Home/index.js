@@ -27,7 +27,9 @@ const Home = ({ data }) => {
         <div className={styles.homeContainer}>
           <div className={styles.homeWrap}>
             <div className={styles.homeTxt}>
-              <h1>{`${data?.firstName} ${data?.lastName}`}</h1>
+              <h1>
+                <strong> {`${data?.firstName} ${data?.lastName}`}</strong>
+              </h1>
               <h2>
                 {data?.description}
                 <ReactRotatingText items={data?.bannerSpan.map(x => x?.text)} />
