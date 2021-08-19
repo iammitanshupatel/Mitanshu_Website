@@ -26,7 +26,7 @@ const Footer = () => {
               target="_blank"
               aria-label="My facebook account"
               rel="noreferrer"
-              href="fb://profile/fbID">
+              href="fb://profile/mitanshu.patel23">
               Facebook
             </a>
             ,{' '}
@@ -34,7 +34,7 @@ const Footer = () => {
               target="_blank"
               aria-label="My twitter account"
               rel="noreferrer"
-              href="https://twitter.com/UMitanshu">
+              href="https://twitter.com/MitanshuPatel_">
               Twitter
             </a>
             ,{' '}
@@ -42,7 +42,7 @@ const Footer = () => {
               target="_blank"
               aria-label="My linkedin account"
               rel="noreferrer"
-              href="https://www.linkedin.com/in/mitanshu-patel/">
+              href="https://www.linkedin.com/in/mitanshu-patel-">
               Linkedin
             </a>{' '}
             &{' '}
@@ -50,7 +50,7 @@ const Footer = () => {
               target="_blank"
               aria-label="My instagram account"
               rel="noreferrer"
-              href="http://instagram.com/username">
+              href="http://instagram.com/mitanshu.patel23">
               Instagram
             </a>
             , or say “hello” at{' '}
