@@ -1,0 +1,24 @@
+.notFound {
+  @apply h-screen text-center;
+  & .outer {
+    @apply h-full table w-full text-center;
+    & .inner {
+      @apply table-cell align-middle h-full w-full;
+      & .errorOutside {
+        @apply relative;
+        & span {
+          @apply font-Poppins text-[140px] sm:text-[200px] lg:text-[260px] left-0 right-0 -top-28 lg:-top-48 font-bold absolute z-0 opacity-20;
+        }
+        & h1 {
+          @apply absolute left-0 right-0 text-3xl mt-0 leading-[30px] font-semibold sm:text-4xl lg:text-5xl -top-16 sm:-top-8 lg:-top-20;
+        }
+        & p {
+          @apply text-gray text-base absolute left-0 right-0 lg:-top-8;
+        }
+      }
+      & a {
+        @apply relative top-20 md:top-24;
+      }
+    }
+  }
+}
