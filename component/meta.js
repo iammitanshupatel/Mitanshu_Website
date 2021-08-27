@@ -37,7 +37,7 @@ export default function Meta() {
       <meta property="og:site_name" content="Mitanshu Patel" />
       <meta property="og:url" content="https://mitanshupatel.com/" />
       <meta property="og:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
-
+      <meta name="robot" content="nonoindex,follow" />
       {/* apple splash screen images  */}
 
       <link rel="apple-touch-startup-image" href="/apple-splash-2048-2732.png" sizes="2048x2732" />

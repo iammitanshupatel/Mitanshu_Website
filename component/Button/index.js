@@ -2,8 +2,8 @@ import { useCallback, useEffect, useRef } from 'react';
 import styles from './button.module.scss';
 
 const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick, ariaLabel }) => {
-  const btnRef = useRef(null);
-  const spanRef = useRef(null);
+  const btnRef = useRef();
+  const spanRef = useRef();
   const mouseEvent = useCallback(e => {
     const parentOffset = btnRef.current.getBoundingClientRect();
     const relX = e.pageX - parentOffset.left;
@@ -22,8 +22,9 @@ const Button = ({ btnText, locationPage, isDisabled, isLoading, onClick, ariaLab
   }, [mouseEvent]);
 
   return (
-    <a className={styles.btnHover} ref={btnRef} aria-label={ariaLabel} href={locationPage}>
+    <a className={styles.btnHover} aria-label={ariaLabel} href={locationPage}>
       <button
+        ref={btnRef}
         aria-label={btnText}
         type="button"
         onClick={isDisabled || isLoading ? () => {} : onClick}>
