@@ -54,9 +54,10 @@ const SingleProjectContent = ({ data }) => {
       </section>
       <section className={styles.projectDesc}>
         <div ref={parentDivRef} className={styles.imgDiv}>
-          {data?.projectImage.map((y, i) => {
+          {data?.projectImage?.map((y, i) => {
             return (
               <img
+                loading="lazy"
                 ref={el => {
                   cardRef.current[i] = el;
                 }}
