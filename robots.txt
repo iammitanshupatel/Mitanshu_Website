@@ -1,12 +1,3 @@
-# Notice: The use of robots or other automated means to access LinkedIn without
-# the express permission of LinkedIn is strictly prohibited.
-# See https://www.linkedin.com/legal/user-agreement.
-# LinkedIn may, in its discretion, permit certain automated access to certain LinkedIn pages,
-# for the limited purpose of including content in approved publicly available search engines.
-# If you would like to apply for permission to crawl LinkedIn, please email whitelist-crawl@linkedin.com.
-# Any and all permitted crawling of LinkedIn is subject to LinkedIn's Crawling Terms and Conditions.
-# See http://www.linkedin.com/legal/crawling-terms.
-
 User-agent: Googlebot
 Disallow: /addContacts*
 Disallow: /addressBookExport*
