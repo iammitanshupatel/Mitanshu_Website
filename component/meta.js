@@ -3,13 +3,13 @@ export default function Meta() {
     <>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"  />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover" />
       <link rel="canonical" href="https://mitanshupatel.com/" />
       <link rel="alternate" href="https://www.mitanshupatel.com/" hreflang="en-US" />
       <meta name="application-name" content="Mitanshu Patel" />
       <meta name="description" content="Mitanshu Patel Personal Website" />
-      <meta name="google" content="notranslate">
-      <meta name="is-http2" content="true">
+      <meta name="google" content="notranslate" />
+      <meta name="is-http2" content="true" />
       <meta name="theme-color" content="#000000" />
       <meta name="Description" content="Mitanshu Patel Personal Website" />
       <meta property="og:type" content="website" />
