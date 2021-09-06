@@ -40,7 +40,10 @@ const ProjectPageContent = ({ data }) => {
             </div>
           </div>
           <div
-            style={{ backgroundImage: `url(${loaded || urlPlaceholder})` }}
+            style={{
+              backgroundImage: `url(${loaded || urlPlaceholder})`,
+              backgroundAttachment: 'unset',
+            }}
             className={common.imgOverlay}
           />
         </div>

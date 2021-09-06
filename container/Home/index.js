@@ -27,7 +27,10 @@ const Home = ({ data }) => {
     const loaded = useProgressiveImage(url, urlPlaceholder);
     return (
       <section
-        style={{ backgroundImage: `url(${loaded || urlPlaceholder})` }}
+        style={{
+          backgroundImage: `url(${loaded || urlPlaceholder})`,
+          backgroundAttachment: 'unset',
+        }}
         className={styles.imgCover}>
         <div className={styles.homeContainer}>
           <div className={styles.homeWrap}>
