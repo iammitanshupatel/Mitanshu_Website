@@ -14,7 +14,7 @@ export default function Meta() {
       <meta name="Description" content="Mitanshu Patel Personal Website" />
       <meta
         name="keywords"
-        content="Mitanshu, Patel, Personal Website, Portfolio, Full-Stack Developer, Corporate Trainer, Blog, Work, Projects, Education, Skills"
+        content="Mitanshu Patel, Personal Website, Portfolio, Full-Stack Developer, Corporate Trainer, Blog, Work, Projects, Education, Skills"
       />
       <meta name="author" content="Mitanshu Patel">
       <meta property="og:type" content="website" />
@@ -46,7 +46,6 @@ export default function Meta() {
       <meta name="twitter:description" content="Mitanshu Patel Personal Website" />
       <meta name="twitter:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
       <meta name="twitter:creator" content="@MitanshuPatel_" />
-      <meta name="robot" content="nofollow" />
       {/* apple splash screen images  */}
       <link rel="apple-touch-startup-image" href="/apple-splash-2048-2732.png" sizes="2048x2732" />
       <link rel="apple-touch-startup-image" href="/apple-splash-1668-2224.png" sizes="1668x2224" />
