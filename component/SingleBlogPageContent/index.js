@@ -15,11 +15,15 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 const SingleBlogPageContent = ({ data }, { title }) => {
   console.log(title);
   const { HTML } = useMarkdown(data?.description);
-  const url = data?.blogImage?.url.replace('upload', 'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto');
+  const url = data?.blogImage?.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+  );
   return (
     <>
       <Head>
         <title>{`${data?.title} - Mitanshu Patel`}</title>
+        <meta name="keywords" content={`${data?.title} - Mitanshu Patel`} />
       </Head>
       <section className={common.singleBlog}>
         <div className={common.blogInfo}>

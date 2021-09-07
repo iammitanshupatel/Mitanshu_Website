@@ -46,6 +46,7 @@ const SingleProjectContent = ({ data }) => {
     <>
       <Head>
         <title>{`${data?.title} - Mitanshu Patel`}</title>
+        <meta name="keywords" content={`${data?.title} - Mitanshu Patel`} />
       </Head>
       <section className={common.singleBlog}>
         <div className={`${common.blogInfo} ${styles.textCenter}`}>
