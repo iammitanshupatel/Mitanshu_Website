@@ -16,7 +16,7 @@ export default function Meta() {
         name="keywords"
         content="Mitanshu Patel, Personal Website, Portfolio, Full-Stack Developer, Corporate Trainer, Blog, Work, Projects, Education, Skills"
       />
-      <meta name="author" content="Mitanshu Patel">
+      <meta name="author" content="Mitanshu Patel" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Mitanshu Patel" />
       <meta property="og:description" content="Mitanshu Patel Personal Website" />
