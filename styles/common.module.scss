@@ -12,9 +12,8 @@
 .secDesc {
   @apply md:relative flex justify-center md:mb-12;
   & h1 {
-    color: rgba(255, 255, 255, 0.08);
     bottom: -1.4rem;
-    @apply text-9xl lg:text-10xl hidden md:block md:absolute lg:-bottom-2/3 font-bold uppercase leading-6;
+    @apply text-9xl text-white opacity-[0.08] lg:text-10xl hidden md:block md:absolute lg:-bottom-2/3 font-bold uppercase leading-6;
   }
 }
 .srvCol {
