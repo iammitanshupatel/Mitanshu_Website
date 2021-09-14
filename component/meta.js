@@ -4,6 +4,7 @@ export default function Meta() {
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover" />
+      <meta name="language" content="EN" />
       <link rel="canonical" href="https://mitanshupatel.com/" />
       <link rel="alternate" href="https://www.mitanshupatel.com/" hreflang="en-US" />
       <meta name="application-name" content="Mitanshu Patel" />
@@ -16,14 +17,23 @@ export default function Meta() {
         name="keywords"
         content="Mitanshu Patel, Personal Website, Portfolio, Full-Stack Developer, Corporate Trainer, Blog, Work, Projects, Education, Skills"
       />
-      <meta name="author" content="Mitanshu Patel" />
-      <meta property="og:type" content="website" />
+      <meta name="author" content="Mitanshu Patel, mitanshu.u.patel@gmail.com" />
+      <meta name="reply-to" content="mitanshu.u.patel@gmail.com" />
+      <meta name="url" content="https://mitanshupatel.com/" />
+      <meta name="identifier-URL" content="https://mitanshupatel.com/" />
+      <meta name="url" content="https://www.mitanshupatel.com/" />
+      <meta name="identifier-URL" content="https://www.mitanshupatel.com/" />
       <meta property="og:title" content="Mitanshu Patel" />
-      <meta property="og:description" content="Mitanshu Patel Personal Website" />
-      <meta property="og:site_name" content="Mitanshu Patel" />
+      <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mitanshupatel.com/" />
+      <meta property="og:url" content="https://www.mitanshupatel.com/" />
+      <meta property="og:site_name" content="Mitanshu Patel" />
+      <meta property="og:description" content="Mitanshu Patel Personal Website" />
       <meta property="og:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
+      <meta name="og:email" content="mitanshu.u.patel@gmail.com" />
+      <meta name="og:phone_number" content="+91 91045 52342" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta content="yes" name="apple-touch-fullscreen" />  
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Mitanshu Patel" />
       <meta name="format-detection" content="telephone=no" />
