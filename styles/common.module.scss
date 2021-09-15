@@ -7,7 +7,7 @@
   @apply py-10 md:py-16 lg:py-20;
 }
 .srvContainer {
-  @apply w-full sm:w-9/12 md:w-11/12 mx-auto px-4;
+  @apply w-full sm:w-9/12 md:w-11/12 mx-auto px-4 sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl;
 }
 .secDesc {
   @apply md:relative flex justify-center md:mb-12;
@@ -82,7 +82,7 @@
   @apply float-right text-xs text-darkGrayishCyan;
 }
 .containerCtc {
-  @apply w-4/5 ml-tenPercent;
+  @apply w-4/5 mx-auto sm:max-w-xl md:max-w-3xl lg:w-10/12 lg:max-w-5xl xl:w-full xl:max-w-7xl;
 }
 .fullImage {
   @apply w-full relative z-0;
@@ -161,6 +161,7 @@
   }
 }
 .textWidget {
+  @apply px-4;
   & h2 {
     @apply text-white text-lg font-semibold lg:font-normal opacity-90 lg:opacity-50 leading-8 pt-2 mb-2 xl:w-1/6 px-4;
   }

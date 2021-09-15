@@ -71,14 +71,14 @@ const SingleBlogPageContent = ({ data }, { title }) => {
           </a>
         ))}
       </div>
-      <section className={styles.nextContent}>
+      {/* <section className={styles.nextContent}>
         <p className={styles.linkSubtitle}>Next Content</p>
         <p className={styles.linkTitle}>
           <a aria-label="Go to next blog" href={`${data?.id + 1}`}>
             {data?.title}
           </a>
         </p>
-      </section>
+      </section> */}
     </>
   );
 };

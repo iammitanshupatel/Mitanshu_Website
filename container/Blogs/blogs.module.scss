@@ -9,7 +9,7 @@
   scroll-snap-type: inline mandatory;
   inline-size: auto;
   gap: 2%;
-  @apply w-11/12 sm:w-4/5 md:w-5/6 grid overflow-x-scroll grid-flow-col pb-8;
+  @apply w-11/12 sm:w-4/5 grid overflow-x-scroll grid-flow-col pb-8;
 }
 
 .sliderShow::-webkit-scrollbar {
