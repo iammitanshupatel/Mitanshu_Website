@@ -20,12 +20,9 @@ export default function Meta() {
       <meta name="reply-to" content="mitanshu.u.patel@gmail.com" />
       <meta name="url" content="https://mitanshupatel.com/" />
       <meta name="identifier-URL" content="https://mitanshupatel.com/" />
-      <meta name="url" content="https://www.mitanshupatel.com/" />
-      <meta name="identifier-URL" content="https://www.mitanshupatel.com/" />
       <meta property="og:title" content="Mitanshu Patel" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mitanshupatel.com/" />
-      <meta property="og:url" content="https://www.mitanshupatel.com/" />
       <meta property="og:site_name" content="Mitanshu Patel" />
       <meta property="og:description" content="Mitanshu Patel Personal Website" />
       <meta property="og:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
