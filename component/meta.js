@@ -8,6 +8,7 @@ export default function Meta() {
       <link rel="canonical" href="https://mitanshupatel.com/" />
       <link rel="alternate" href="https://www.mitanshupatel.com/" hreflang="en-US" />
       <meta name="application-name" content="Mitanshu Patel" />
+      <meta name="title" content="Mitanshu Patel" />
       <meta name="description" content="Mitanshu Patel Personal Website" />
       <meta name="google" content="notranslate" />
       <meta name="is-http2" content="true" />
