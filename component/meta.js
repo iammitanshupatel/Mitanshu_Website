@@ -12,7 +12,6 @@ export default function Meta() {
       <meta name="google" content="notranslate" />
       <meta name="is-http2" content="true" />
       <meta name="theme-color" content="#000000" />
-      <meta name="Description" content="Mitanshu Patel Personal Website" />
       <meta
         name="keywords"
         content="Mitanshu Patel, Personal Website, Portfolio, Full-Stack Developer, Corporate Trainer, Blog, Work, Projects, Education, Skills"
@@ -33,7 +32,7 @@ export default function Meta() {
       <meta name="og:email" content="mitanshu.u.patel@gmail.com" />
       <meta name="og:phone_number" content="+91 91045 52342" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta content="yes" name="apple-touch-fullscreen" />  
+      <meta content="yes" name="apple-touch-fullscreen" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Mitanshu Patel" />
       <meta name="format-detection" content="telephone=no" />
