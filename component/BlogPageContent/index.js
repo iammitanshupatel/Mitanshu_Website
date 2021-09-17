@@ -21,7 +21,7 @@ const BlogPageContent = ({ blogs }) => (
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}
-                      alt=""
+                      alt={x?.blogImage?.name}
                       width={320}
                       height={213}
                     />

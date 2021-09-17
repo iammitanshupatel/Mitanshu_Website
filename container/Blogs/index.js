@@ -43,11 +43,11 @@ const Blogs = ({ data }) => {
                 <Card key={x?.id} variant="cardBlog">
                   <a aria-label="View more about the blog" href={`blog/${x?.id}`}>
                     <Image
-                      src={x?.blogImage.url.replace(
+                      src={x?.blogImage?.url.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}
-                      alt="Blog Image"
+                      alt={x?.blogImage?.name}
                       width={320}
                       height={213}
                     />

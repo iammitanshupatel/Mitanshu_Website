@@ -27,7 +27,12 @@ const About = ({ data }) => {
           <div className={styles.abtContainer}>
             <div className={styles.abtRow}>
               <div className={styles.abtImg}>
-                <Image src={loaded || urlPlaceholder} width={700} height={475} alt="My Image" />
+                <Image
+                  src={loaded || urlPlaceholder}
+                  width={700}
+                  height={475}
+                  alt={data?.myImage?.name}
+                />
               </div>
               <div className={styles.abtTxt}>
                 <div className={styles.abtDesc}>
@@ -57,7 +62,12 @@ const About = ({ data }) => {
         <div className={styles.abtContainer}>
           <div className={styles.abtRow}>
             <div className={styles.abtImg}>
-              <Image src={loaded || urlPlaceholder} width={700} height={475} alt="My Image" />
+              <Image
+                src={loaded || urlPlaceholder}
+                width={700}
+                height={475}
+                alt={data?.myImage?.name}
+              />
             </div>
             <div className={styles.abtTxt}>
               <div className={styles.abtDesc}>

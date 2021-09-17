@@ -22,11 +22,11 @@ const Projects = ({ data }) => (
                 <figure>
                   <Image
                     layout="fill"
-                    src={x?.displayImage.url.replace(
+                    src={x?.displayImage?.url.replace(
                       'upload',
                       'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                     )}
-                    alt=""
+                    alt={x?.displayImage?.name}
                   />
                   <figcaption>
                     <a aria-label={`View more about ${x?.title}`} href={`work/${x?.id}`}>

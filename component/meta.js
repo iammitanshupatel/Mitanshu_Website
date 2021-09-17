@@ -6,7 +6,6 @@ export default function Meta() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover" />
       <meta name="language" content="EN" />
       <link rel="canonical" href="https://mitanshupatel.com/" />
-      <link rel="alternate" href="https://www.mitanshupatel.com/" hreflang="en-US" />
       <meta name="application-name" content="Mitanshu Patel" />
       <meta name="title" content="Mitanshu Patel" />
       <meta name="description" content="Mitanshu Patel Personal Website" />
@@ -15,7 +14,7 @@ export default function Meta() {
       <meta name="theme-color" content="#000000" />
       <meta
         name="keywords"
-        content="Mitanshu Patel, Personal Website, Portfolio, Full-Stack Developer, Corporate Trainer, Blog, Work, Projects, Education, Skills"
+        content="mitanshu patel, personal website, portfolio, full-stack developer, corporate trainer, blog, work, projects, education, skills, next js, react js, postgres, tailwind css, strapi"
       />
       <meta name="author" content="Mitanshu Patel, mitanshu.u.patel@gmail.com" />
       <meta name="reply-to" content="mitanshu.u.patel@gmail.com" />

@@ -64,7 +64,7 @@ const SingleProjectContent = ({ data }) => {
                 }}
                 key={y.id}
                 src={y.image.url}
-                alt="Project"
+                alt={y.image.name}
               />
             );
           })}

@@ -61,7 +61,7 @@ const ProjectPageContent = ({ data }) => {
                           'upload',
                           'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                         )}
-                        alt="Project Image"
+                        alt={x?.displayImage?.name}
                       />
                       <figcaption>
                         <a href={`work/${x?.id}`} aria-label="View more details about portfolio">
@@ -114,7 +114,7 @@ const ProjectPageContent = ({ data }) => {
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}
-                      alt="Project Image"
+                      alt={x?.displayImage?.name}
                     />
                     <figcaption>
                       <a href={`work/${x?.id}`} aria-label="View more details about portfolio">
