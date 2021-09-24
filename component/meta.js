@@ -37,13 +37,13 @@ export default function Meta() {
       <meta name="msapplication-config" content="/browserconfig.xml" />
       <meta name="msapplication-TileColor" content="#fff" />
       <meta name="msapplication-tap-highlight" content="no" />
-      <link rel="apple-touch-icon" href="/touch-icon-iphone.png" />
+      <link rel="apple-touch-icon" target="_blank" href="/touch-icon-iphone.png" />
       <link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/touch-icon-iphone-retina.png" />
       <link rel="apple-touch-icon" sizes="167x167" href="/touch-icon-ipad-retina.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
-      <link rel="manifest" href="/manifest.json" />
+      <link rel="manifest" target="_blank" href="/manifest.json" />
       <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#5bbad5" />
       <link rel="shortcut icon" href="/manifest-icon-192.png" />
       <meta name="twitter:card" content="summary" />
