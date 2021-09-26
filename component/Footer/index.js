@@ -34,7 +34,7 @@ const Footer = () => {
               target="_blank"
               aria-label="My twitter account"
               rel="noreferrer"
-              href="https://twitter.com/MitanshuPatel_">
+              href="https://twitter.com/mitanshu_patel_">
               Twitter
             </a>
             ,{' '}
