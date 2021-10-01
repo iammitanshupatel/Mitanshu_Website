@@ -55,18 +55,25 @@ const AboutPageContent = ({ data }) => (
       <div className={common.abtWrap}>
         <h2>Experience.</h2>
         <div className={styles.flexCol}>
-          {data?.experiences?.map(x => (
-            <Fragment key={x?.id}>
-              <span className={styles.date}>{`${x?.startDate} - ${x?.endDate}`}</span>
-              <div className={styles.expInfo}>
-                <h3>{x?.role}</h3>
-                <a href={x?.companyLink} target="_blank" aria-label="Company Name" rel="noreferrer">
-                  {x?.companyName}
-                </a>
-                <p>{x?.description}</p>
-              </div>
-            </Fragment>
-          ))}
+          {data?.experiences
+            ?.slice(0)
+            .reverse()
+            .map(x => (
+              <Fragment key={x?.id}>
+                <span className={styles.date}>{`${x?.startDate} - ${x?.endDate}`}</span>
+                <div className={styles.expInfo}>
+                  <h3>{x?.role}</h3>
+                  <a
+                    href={x?.companyLink}
+                    target="_blank"
+                    aria-label="Company Name"
+                    rel="noreferrer">
+                    {x?.companyName}
+                  </a>
+                  <p>{x?.description}</p>
+                </div>
+              </Fragment>
+            ))}
         </div>
       </div>
     </div>
