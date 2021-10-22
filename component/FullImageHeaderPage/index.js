@@ -83,7 +83,7 @@ const FullImageHeaderPage = ({ data }) => {
       <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedTop}`}>
         <div className={common.abtWrap}>
           <h2>Bio.</h2>
-          <p>{data?.biography}</p>
+          <p style={{ paddingLeft: '1rem' }}>{data?.biography}</p>
         </div>
       </div>
     </>
