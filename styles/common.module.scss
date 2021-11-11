@@ -38,7 +38,7 @@
     @apply text-white opacity-90 text-xl mb-3 mt-1 leading-6 font-semibold;
     & a:hover,
     :focus {
-      text-decoration: underline !important;
+      @apply underline;
     }
   }
   & .progress {
@@ -177,7 +177,7 @@
 }
 @media only screen and (max-width: 768px) {
   .txc h2 br {
-    display: none;
+    @apply hidden;
   }
 }
 .singleBlog {
