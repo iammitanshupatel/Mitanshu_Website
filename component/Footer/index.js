@@ -42,7 +42,7 @@ const Footer = () => {
               target="_blank"
               aria-label="My linkedin account"
               rel="noreferrer"
-              href="https://www.linkedin.com/in/mitanshu-patel-">
+              href="https://www.linkedin.com/in/mitanshupatel">
               Linkedin
             </a>{' '}
             &{' '}
