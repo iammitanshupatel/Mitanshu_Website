@@ -1,3 +1,3 @@
 ﻿# Mitanshu Website
  
- This is Mitanshu Patel personal website.
+ This is Mitanshu Patel's personal website.
