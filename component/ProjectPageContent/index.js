@@ -6,6 +6,11 @@ import useProgressiveImage from 'hooks/useProgressiveImage';
 import { isIOS } from 'react-device-detect';
 
 const ProjectPageContent = ({ data }) => {
+  data?.projects?.sort((a, b) => {
+    var dateA = new Date(a.published_at),
+      dateB = new Date(b.published_at);
+    return dateB - dateA;
+  });
   const urlBanner = data?.backgroundImage?.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',

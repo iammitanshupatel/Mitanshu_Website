@@ -24,7 +24,11 @@ const Blogs = ({ data }) => {
     //   setInterval(changeScroll, 2000);
     // });
   }, []);
-
+  data?.blogs?.sort((a, b) => {
+    var dateA = new Date(a.date),
+      dateB = new Date(b.date);
+    return dateB - dateA;
+  });
   return (
     <>
       <section id="Blogs" className={styles.blogsSection}>
