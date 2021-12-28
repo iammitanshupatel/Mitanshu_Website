@@ -82,6 +82,30 @@ const SingleProjectContent = ({ data }) => {
             <h3>Role</h3>
             <p>{data?.role}</p>
           </div>
+          {data?.link && (
+            <div className={styles.singleProjectTxt}>
+              <h3>Link</h3>
+              <a href={data?.link} target="_blank" rel="noreferrer">
+                {data?.link}
+              </a>
+            </div>
+          )}
+          {data?.playStoreLink && (
+            <div className={styles.singleProjectTxt}>
+              <h3>Play Store Link</h3>
+              <a href={data?.playStoreLink} target="_blank" rel="noreferrer">
+                {data?.playStoreLink}
+              </a>
+            </div>
+          )}
+          {data?.appStoreLink && (
+            <div className={styles.singleProjectTxt}>
+              <h3>App Store Link</h3>
+              <a href={data?.appStoreLink} target="_blank" rel="noreferrer">
+                {data?.appStoreLink}
+              </a>
+            </div>
+          )}
           <div className={styles.singleProjectTxt}>
             <h3>Technology Used</h3>
             {data?.technologyUsed?.map(x => (
