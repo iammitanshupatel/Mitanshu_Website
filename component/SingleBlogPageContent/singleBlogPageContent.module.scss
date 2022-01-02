@@ -8,7 +8,7 @@
   }
   & ul {
     list-style-type: disc !important;
-    @apply font-Poppins text-white list-disc text-lg m-0 mb-4 font-normal;
+    @apply font-Poppins text-white text-lg m-0 mb-4 font-normal;
     & li {
       list-style-type: inherit !important;
     }

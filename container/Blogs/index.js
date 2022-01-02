@@ -71,8 +71,8 @@ const Blogs = ({ data }) => {
                 </Card>
               ))}
             </div>
-            <Button btnText="Load More" ariaLabel="More blogs" locationPage="/blog" />
           </div>
+          <Button btnText="Load More" ariaLabel="More blogs" locationPage="/blog" />
         </div>
       </section>
     </>

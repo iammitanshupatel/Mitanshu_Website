@@ -1,6 +1,5 @@
 .btnHover {
-  border: 2px solid;
-  @apply max-w-[250px] relative border-darkGray  block overflow-hidden w-full h-auto rounded-lg my-4 mx-auto text-center;
+  @apply border-2 border-solid max-w-[250px] relative border-darkGray block overflow-hidden w-full h-auto rounded-lg my-4 mx-auto text-center;
   & button {
     font: normal 18px/60px 'proxima-nova', sans-serif;
     @apply text-darkGray w-full;
@@ -17,8 +16,7 @@
 .btnHover:focus button {
   @apply text-white;
   & span {
-    width: 225%;
-    height: 2000rem;
+    @apply w-[225%] h-[2000rem];
   }
 }
 .btnHover:active {

@@ -5,7 +5,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   mode: 'jit',
   important: true,
-  purge: [
+  content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './container/**/*.{js,ts,jsx,tsx}',
@@ -24,6 +24,21 @@ module.exports = {
       zIndex: {
         '-1': '-1',
         '-2': '-2',
+      },
+      animation: {
+        finger: 'finger 2s infinite',
+        blinkingCursor: 'blinkingCursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite',
+      },
+      keyframes: {
+        finger: {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0, transform: 'translateY(20px)' },
+        },
+        blinkingCursor: {
+          '0%': { opacity: 0 },
+          '50%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
       },
       margin: {
         tenPercent: '10%',

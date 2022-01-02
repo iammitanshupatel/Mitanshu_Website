@@ -1,13 +1,7 @@
 .imgCover {
   background-position: center center;
-  @apply relative bg-cover w-full h-screen bg-fixed;
-  &::before {
-    content: '';
-    background: rgba(0, 0, 0, 0.5);
-    @apply h-full w-full absolute z-10 left-0 top-0;
-  }
+  @apply relative bg-cover w-full h-screen bg-fixed before:content-[''] before:bg-[#000] before:opacity-50 before:h-full before:w-full before:absolute before:z-10 before:left-0 before:top-0;
 }
-
 .homeContainer {
   @apply h-screen relative z-10 w-full px-4 mx-auto sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl;
 }

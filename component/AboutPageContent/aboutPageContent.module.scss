@@ -14,22 +14,14 @@
     @apply text-lg text-gray leading-6 opacity-60 my-4 p-0;
   }
   & a {
-    @apply text-white text-xl font-semibold leading-7 mb-3 opacity-70 italic;
-    &:hover,
-    :focus {
-      @apply underline;
-    }
+    @apply text-white text-xl font-semibold leading-7 mb-3 opacity-70 italic hover:underline focus:underline;
   }
 }
 
 .flexRow {
   @apply flex flex-col md:flex-row flex-wrap w-full px-4 xl:w-10/12 xl:mt-3;
   & a {
-    @apply text-white text-xl font-semibold leading-7 mb-3 opacity-70 italic;
-    &:hover,
-    :focus {
-      @apply underline;
-    }
+    @apply text-white text-xl font-semibold leading-7 mb-3 opacity-70 italic hover:underline focus:underline;
   }
 }
 

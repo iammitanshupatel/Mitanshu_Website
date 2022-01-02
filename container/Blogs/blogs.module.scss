@@ -5,15 +5,13 @@
   @apply flex flex-wrap h-full w-full justify-center;
 }
 .sliderShow {
-  scroll-behavior: smooth;
   scroll-snap-type: inline mandatory;
   inline-size: auto;
-  gap: 2%;
-  @apply w-11/12 sm:w-4/5 grid overflow-x-scroll grid-flow-col pb-8;
+  @apply gap-[2%] scroll-smooth w-11/12 sm:w-4/5 grid overflow-x-scroll grid-flow-col pb-8;
 }
 
 .sliderShow::-webkit-scrollbar {
-  display: none;
+  @apply hidden;
 }
 
 .items img {

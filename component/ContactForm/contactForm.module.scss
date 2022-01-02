@@ -21,13 +21,10 @@
 }
 
 .inp {
-  border-bottom: rgb(112, 112, 112);
+  @apply border-b-[#707070] focus:border-b-white;
 }
 .borderBottom {
   @apply font-Sofiapro text-red-600 border-red-600 bg-transparent p-4 w-full mt-7 border-0 border-b border-solid text-base;
-}
-.inp:focus {
-  border-bottom: #fff;
 }
 .contactForm .inp {
   @apply font-Sofiapro bg-transparent text-white p-4 w-full mt-7 border-0 border-b border-solid text-base;
