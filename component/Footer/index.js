@@ -71,7 +71,7 @@ const Footer = () => {
             </a>
           </p>
           <div className={styles.copyright}>
-            <p>Mitanshu &copy; 2021. All Right Reserved, Designed By Mitanshu Patel. </p>
+            <p>Mitanshu &copy; 2022. All Right Reserved, Designed By Mitanshu Patel. </p>
           </div>
         </div>
         <div className={styles.rightText}>
