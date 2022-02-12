@@ -33,5 +33,5 @@
   }
 }
 .link {
-  @apply line-clamp-1;
+  @apply line-clamp-1 md:line-clamp-none;
 }
