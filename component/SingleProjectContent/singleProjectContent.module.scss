@@ -19,7 +19,6 @@
   & .desc {
     @apply flex-[2] mt-12;
     & .singleProjectTxt {
-      @apply px-4;
       & p {
         @apply font-Poppins text-gray text-lg m-0 mb-4 leading-normal font-normal;
       }
