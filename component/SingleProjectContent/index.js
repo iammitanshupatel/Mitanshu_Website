@@ -85,7 +85,7 @@ const SingleProjectContent = ({ data }) => {
           {data?.link && (
             <div className={styles.singleProjectTxt}>
               <h3>Link</h3>
-              <a href={data?.link} target="_blank" rel="noreferrer">
+              <a className={styles.link} href={data?.link} target="_blank" rel="noreferrer">
                 {data?.link}
               </a>
             </div>
@@ -93,7 +93,11 @@ const SingleProjectContent = ({ data }) => {
           {data?.playStoreLink && (
             <div className={styles.singleProjectTxt}>
               <h3>Play Store Link</h3>
-              <a href={data?.playStoreLink} target="_blank" rel="noreferrer">
+              <a
+                className={styles.link}
+                href={data?.playStoreLink}
+                target="_blank"
+                rel="noreferrer">
                 {data?.playStoreLink}
               </a>
             </div>
@@ -101,7 +105,7 @@ const SingleProjectContent = ({ data }) => {
           {data?.appStoreLink && (
             <div className={styles.singleProjectTxt}>
               <h3>App Store Link</h3>
-              <a href={data?.appStoreLink} target="_blank" rel="noreferrer">
+              <a className={styles.link} href={data?.appStoreLink} target="_blank" rel="noreferrer">
                 {data?.appStoreLink}
               </a>
             </div>
