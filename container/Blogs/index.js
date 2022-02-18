@@ -47,6 +47,7 @@ const Blogs = ({ data }) => {
                 <Card key={x?.id} variant="cardBlog">
                   <a aria-label="View more about the blog" href={`blog/${x?.id}`}>
                     <Image
+                      priority
                       src={x?.blogImage?.url.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',

@@ -21,7 +21,13 @@ const Testimonial = ({ data }) => {
           {data?.testimonials?.map(x => (
             <div key={x?.id} className={styles.containerTest}>
               <div className={styles.authorImg}>
-                <Image src="/image/testimonial/img-1.jpg" width={112} height={112} alt="" />
+                <Image
+                  priority
+                  src="/image/testimonial/img-1.jpg"
+                  width={112}
+                  height={112}
+                  alt=""
+                />
               </div>
               <h1>{x?.personName}</h1>
               <h5>{x?.jobTitle}</h5>

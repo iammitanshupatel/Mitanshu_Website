@@ -62,6 +62,7 @@ const ProjectPageContent = ({ data }) => {
                     <figure>
                       <Image
                         layout="fill"
+                        priority
                         src={x?.displayImage.url.replace(
                           'upload',
                           'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
@@ -115,6 +116,7 @@ const ProjectPageContent = ({ data }) => {
                   <figure>
                     <Image
                       layout="fill"
+                      priority
                       src={x?.displayImage.url.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',

@@ -28,6 +28,7 @@ const About = ({ data }) => {
             <div className={styles.abtRow}>
               <div className={styles.abtImg}>
                 <Image
+                  priority
                   src={loaded || urlPlaceholder}
                   width={700}
                   height={475}
@@ -63,6 +64,7 @@ const About = ({ data }) => {
           <div className={styles.abtRow}>
             <div className={styles.abtImg}>
               <Image
+                priority
                 src={loaded || urlPlaceholder}
                 width={700}
                 height={475}

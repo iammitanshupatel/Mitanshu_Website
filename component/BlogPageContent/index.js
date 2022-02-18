@@ -23,6 +23,7 @@ const BlogPageContent = ({ blogs }) => {
                   <a href={`blog/${x?.id}`} aria-label="View more details about blog">
                     <div className={common.custom}>
                       <Image
+                        priority
                         src={x?.blogImage.url.replace(
                           'upload',
                           'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
