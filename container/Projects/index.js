@@ -28,6 +28,7 @@ const Projects = ({ data }) => {
                   <figure>
                     <Image
                       layout="fill"
+                      objectFit="contain"
                       src={x?.displayImage?.url.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
