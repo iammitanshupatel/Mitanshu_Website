@@ -1,4 +1,3 @@
-import { data } from 'remark';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 const Card = dynamic(() => import('../Card'));
@@ -14,7 +13,7 @@ const BlogPageContent = ({ blogs }) => {
   return (
     <>
       <div id="scrollHere" />
-      <div className={common.seperatedWithoutImg}>
+      <div className={common.separatedWithoutImg}>
         <div className={common.srvContainer}>
           <div className={common.srvCol}>
             <div className={`${common.cardRow} ${styles.gap1rem}`}>

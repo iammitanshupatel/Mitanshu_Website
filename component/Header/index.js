@@ -20,11 +20,9 @@ const Header = () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
-      myBarRef.current.style.width = `${scrolled}%`;
+      myBarRef.current.style.width = scrolled ? `${scrolled}%` : '0%';
     };
-    window.onscroll = function () {
-      myFunction();
-    };
+    window.onscroll = () => myFunction();
     const onScroll = () => {
       if (window.scrollY >= 60) {
         navbarRef.current.classList.add(styles.fixedHeader);

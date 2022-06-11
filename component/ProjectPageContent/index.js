@@ -53,7 +53,7 @@ const ProjectPageContent = ({ data }) => {
           />
         </div>
         <div id="scrollHere" />
-        <div className={common.seperatedWithoutImg}>
+        <div className={common.separatedWithoutImg}>
           <div className={common.srvContainer}>
             <div className={common.srvCol}>
               <div className={common.cardRow}>
@@ -108,7 +108,7 @@ const ProjectPageContent = ({ data }) => {
         />
       </div>
       <div id="scrollHere" />
-      <div className={common.seperatedWithoutImg}>
+      <div className={common.separatedWithoutImg}>
         <div className={common.srvContainer}>
           <div className={common.srvCol}>
             <div className={common.cardRow}>

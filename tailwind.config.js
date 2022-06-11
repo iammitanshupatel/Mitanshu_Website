@@ -3,7 +3,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  mode: 'jit',
   important: true,
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
