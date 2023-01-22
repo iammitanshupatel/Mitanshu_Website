@@ -6,6 +6,7 @@ import useBlogs from 'hooks/useBlogs';
 import styles from 'component/SingleBlogPageContent/singleBlogPageContent.module.scss';
 import common from 'styles/common.module.scss';
 import PreLoader from 'component/PreLoader';
+import Error500 from 'pages/500';
 const SingleBlogPageContent = dynamic(() => import('component/SingleBlogPageContent'));
 const ContactForm = dynamic(() => import('component/ContactForm'));
 
@@ -43,7 +44,7 @@ const SingleBlogPage = () => {
   });
   const { data: blogData, isLoading, isError } = useBlogs(id);
   if (isLoading) return <PreLoader />;
-  //   if (isError) return <h1>Error</h1>;
+  if (isError) return <Error500 />;
   return (
     <div className={common.srvContainer}>
       {blogData && <SingleBlogPageContent data={blogData} />}

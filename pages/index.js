@@ -9,6 +9,7 @@ import useEducationSkills from 'hooks/useEducationSkills';
 import useBlog from 'hooks/useBlog';
 import useTestimonial from 'hooks/useTestimonial';
 import PreLoader from 'component/PreLoader';
+import Error500 from './500';
 const Home = dynamic(() => import('container/Home'), {
   loading: () => <PreLoader />,
 });
@@ -32,8 +33,8 @@ const Main = () => {
   const { data: blogData, isError: blogError } = useBlog();
   //   const { data: testimonialData, isError: testimonialError } = useTestimonial();
   if ((bannerLoading, aboutLoading)) return <PreLoader />;
-  //   if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError))
-  //     return <h1>Error</h1>;
+  if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError, blogError))
+    return <Error500 />;
   return (
     <>
       <Head>

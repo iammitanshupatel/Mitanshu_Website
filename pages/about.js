@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import useAbout from 'hooks/useAbout';
 import useEducationSkills from 'hooks/useEducationSkills';
 import Head from 'next/head';
+import Error500 from './500';
 const PreLoader = dynamic(() => import('component/PreLoader'));
 const FullImageHeaderPage = dynamic(() => import('component/FullImageHeaderPage'), {
   loading: () => <PreLoader />,
@@ -19,7 +20,7 @@ const AboutPage = () => {
     isError: educationSkillsError,
   } = useEducationSkills();
   if ((aboutLoading, educationSkillsLoading)) return <PreLoader />;
-  //   if ((aboutError, educationSkillsError)) return <h1>Error</h1>;
+  if ((aboutError, educationSkillsError)) return <Error500 />;
   return (
     <>
       <Head>
