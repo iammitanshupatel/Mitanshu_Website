@@ -12,7 +12,9 @@ const SinglePortfolio = () => {
   const { data, isLoading, isError } = useProjects(id);
   if (isLoading) return <PreLoader />;
   if (isError) return <Error500 />;
-  return <div className={common.srvContainer}>{data && <SingleProjectContent data={data} />}</div>;
+  return (
+    <div className={common.srvContainer}>{data && <SingleProjectContent data={data?.data} />}</div>
+  );
 };
 
 export default SinglePortfolio;

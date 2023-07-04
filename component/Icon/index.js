@@ -8,7 +8,7 @@ const Icon = ({ socialLink, variant, className, ariaLabel }) => {
 
   useEffect(() => {
     const loadSvg = async () => {
-      const res = await axios.get(socialLink.icon.url, {
+      const res = await axios.get(socialLink?.icon?.url, {
         responseType: 'text',
       });
       while (iconRef.current.hasChildNodes()) {
@@ -22,8 +22,8 @@ const Icon = ({ socialLink, variant, className, ariaLabel }) => {
   return (
     <a
       aria-label={ariaLabel}
-      href={socialLink.url}
-      target="_blank"
+      href={socialLink?.url}
+      target={socialLink?.name !== 'address' && '_blank'}
       className={`${styles[variant]} ${className}`}
       ref={iconRef}
       rel="noreferrer">

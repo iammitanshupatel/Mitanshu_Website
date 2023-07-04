@@ -4,8 +4,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import useProgressiveImage from 'hooks/useProgressiveImage';
 import { useCallback, useEffect, useRef } from 'react';
+import useMarkdown from 'hooks/useMarkdown';
 
 const SingleProjectContent = ({ data }) => {
+  const { HTML } = useMarkdown(data?.description);
   const url = data?.displayImage?.url.replace(
     'upload',
     'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
@@ -17,9 +19,9 @@ const SingleProjectContent = ({ data }) => {
 
   const startScroll = useCallback(() => {
     intervalRef.current = setInterval(() => {
-      const cardWidth = cardRef.current[0].offsetWidth;
-      const total = parentDivRef.current.scrollLeft + parentDivRef.current.offsetWidth;
-      if (Math.round(total) === parentDivRef.current.scrollWidth) {
+      const cardWidth = cardRef?.current?.[0]?.offsetWidth;
+      const total = parentDivRef?.current?.scrollLeft + parentDivRef?.current?.offsetWidth;
+      if (Math.round(total) === parentDivRef?.current?.scrollWidth) {
         parentDivRef.current.scrollLeft = 0;
       } else {
         parentDivRef.current.scrollLeft += cardWidth;
@@ -28,18 +30,18 @@ const SingleProjectContent = ({ data }) => {
   }, []);
 
   const stopScroll = useCallback(() => {
-    clearInterval(intervalRef.current);
+    clearInterval(intervalRef?.current);
   }, []);
 
   useEffect(() => {
-    const instance = parentDivRef.current;
+    const instance = parentDivRef?.current;
     startScroll();
-    instance.addEventListener('mouseover', stopScroll);
-    instance.addEventListener('mouseout', startScroll);
+    instance?.addEventListener('mouseover', stopScroll);
+    instance?.addEventListener('mouseout', startScroll);
     return () => {
       stopScroll();
-      instance.removeEventListener('mouseover', stopScroll);
-      instance.removeEventListener('mouseout', startScroll);
+      instance?.removeEventListener('mouseover', stopScroll);
+      instance?.removeEventListener('mouseout', startScroll);
     };
   }, [startScroll, stopScroll]);
   return (
@@ -62,9 +64,9 @@ const SingleProjectContent = ({ data }) => {
                 ref={el => {
                   cardRef.current[i] = el;
                 }}
-                key={y.id}
-                src={y.image.url}
-                alt={y.image.name}
+                key={y?.id}
+                src={y?.image?.url}
+                alt={y?.image?.name}
               />
             );
           })}
@@ -72,7 +74,10 @@ const SingleProjectContent = ({ data }) => {
         <div className={styles.desc}>
           <div className={styles.singleProjectTxt}>
             <h3>Description</h3>
-            <p>{data?.description}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: HTML,
+              }}></div>
           </div>
           <div className={styles.singleProjectTxt}>
             <h3>Type</h3>

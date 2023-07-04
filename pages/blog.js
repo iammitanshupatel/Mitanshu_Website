@@ -22,8 +22,8 @@ const BlogPage = () => {
       <Head>
         <title>Blog Page - Mitanshu Patel</title>
       </Head>
-      {data && <BlogPageHeader data={data} />}
-      {blogs && <BlogPageContent blogs={blogs} />}
+      {data && <BlogPageHeader data={data?.data} />}
+      {blogs && <BlogPageContent blogs={blogs?.data} />}
     </>
   );
 };

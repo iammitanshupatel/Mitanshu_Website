@@ -21,11 +21,11 @@ const ContactPage = () => {
       <Head>
         <title>Contact Page - Mitanshu Patel</title>
       </Head>
-      {data && <ContactPageHeader data={data} />}
+      {data && <ContactPageHeader data={data?.data} />}
       <div className={`${common.containerCtc} ${styles.top45}`}>
         <ContactForm />
       </div>
-      {data && <ContactPageFooter data={data} />}
+      {data && <ContactPageFooter data={data?.data} />}
     </>
   );
 };

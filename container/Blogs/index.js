@@ -13,7 +13,6 @@ const Blogs = ({ data }) => {
     const changeScroll = () => {
       if (sliderRef.current.scrollLeft < 1500) {
         sliderRef.current.scrollLeft += 300;
-        console.log(sliderRef.current.scrollLeft);
       }
     };
     // const int = setInterval(changeScroll, 2000);
@@ -35,9 +34,9 @@ const Blogs = ({ data }) => {
         <div className={common.srvContainer}>
           <div className={common.srvCol}>
             <div className={common.secDesc}>
-              <h1>{data?.Header.title}</h1>
+              <h1>{data?.header.title}</h1>
               <div className={common.p2}>
-                <h2>{data?.Header.caption}</h2>
+                <h2>{data?.header?.caption}</h2>
               </div>
             </div>
           </div>

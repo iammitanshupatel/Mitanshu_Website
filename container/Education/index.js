@@ -7,9 +7,9 @@ const Education = ({ data }) => (
     <section id="Education">
       <div className={common.srvContainer}>
         <div className={common.secDesc}>
-          <h1>{data?.Header.title}</h1>
+          <h1>{data?.header?.title}</h1>
           <div className={common.p2}>
-            <h2>{data?.Header.caption}</h2>
+            <h2>{data?.header?.caption}</h2>
           </div>
         </div>
         <div className={styles.eduRow}>

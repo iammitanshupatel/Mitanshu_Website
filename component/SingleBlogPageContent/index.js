@@ -13,7 +13,6 @@ import Image from 'next/image';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const SingleBlogPageContent = ({ data }, { title }) => {
-  console.log(title);
   const { HTML } = useMarkdown(data?.description);
   const url = data?.blogImage?.url.replace(
     'upload',

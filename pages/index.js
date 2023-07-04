@@ -40,12 +40,12 @@ const Main = () => {
       <Head>
         <title>Mitanshu Patel</title>
       </Head>
-      {bannerData && <Home data={bannerData} />}
-      {aboutData && <About data={aboutData} />}
-      {serviceData && <Services data={serviceData} />}
-      {portfolioData && <Projects data={portfolioData} />}
-      {educationSkillsData && <Education data={educationSkillsData} />}
-      {blogData && <Blogs data={blogData} />}
+      {bannerData && <Home data={bannerData?.data} />}
+      {aboutData && <About data={aboutData?.data} />}
+      {serviceData && <Services data={serviceData?.data} />}
+      {portfolioData && <Projects data={portfolioData?.data} />}
+      {educationSkillsData && <Education data={educationSkillsData?.data} />}
+      {blogData && <Blogs data={blogData?.data} />}
       {/* {testimonialData && <Testimonial data={testimonialData} />} */}
     </>
   );

@@ -26,8 +26,8 @@ const AboutPage = () => {
       <Head>
         <title>About Page - Mitanshu Patel</title>
       </Head>
-      {aboutData && <FullImageHeaderPage data={aboutData} />}
-      {educationSkillsData && <AboutPageContent data={educationSkillsData} />}
+      {aboutData && <FullImageHeaderPage data={aboutData?.data} />}
+      {educationSkillsData && <AboutPageContent data={educationSkillsData?.data} />}
     </>
   );
 };

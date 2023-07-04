@@ -10,13 +10,13 @@ const Services = ({ data }) => (
       <div className={common.srvContainer}>
         <div className={common.srvCol}>
           <div className={common.secDesc}>
-            <h1>{data?.header.title}</h1>
+            <h1>{data?.header?.title}</h1>
             <div className={common.p2}>
-              <h2>{data?.header.caption}</h2>
+              <h2>{data?.header?.caption}</h2>
             </div>
           </div>
           <div className={common.cardRow}>
-            {data?.socialMedia?.map(x => (
+            {data?.services?.map(x => (
               <Card key={x?.id} variant="srvCard">
                 <div className={card.featureBox}>
                   <Icon
@@ -27,7 +27,7 @@ const Services = ({ data }) => (
                   />
                   <div className={card.featureContent}>
                     <h3>{x?.name}</h3>
-                    <p>{x?.displayName}</p>
+                    <p>{x?.description}</p>
                   </div>
                 </div>
               </Card>

@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 
 const useBlogs = id => {
-  const { data, error } = useSWR(id ? `/blogs/${id}` : '/blogs');
+  const { data, error } = useSWR(id ? `/blogs/${id}?populate=*` : '/blogs?populate=*');
   return {
     data: data,
     isLoading: !error && !data,

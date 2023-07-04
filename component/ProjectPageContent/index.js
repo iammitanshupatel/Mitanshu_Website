@@ -64,7 +64,7 @@ const ProjectPageContent = ({ data }) => {
                         layout="fill"
                         objectFit="contain"
                         priority
-                        src={x?.displayImage.url.replace(
+                        src={x?.displayImage?.url.replace(
                           'upload',
                           'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                         )}

@@ -17,7 +17,7 @@ const WorkPage = () => {
       <Head>
         <title>Work Page - Mitanshu Patel</title>
       </Head>
-      {data && <ProjectPageContent data={data} />}
+      {data && <ProjectPageContent data={data?.data} />}
     </>
   );
 };

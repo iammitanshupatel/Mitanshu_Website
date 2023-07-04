@@ -10,8 +10,8 @@ const validate = values => {
   const errors = {};
   if (!values.name) {
     errors.name = 'Name Required';
-  } else if (values.name.length > 15) {
-    errors.name = 'Must be 15 characters or less';
+  } else if (values.name.length > 100) {
+    errors.name = 'Must be 100 characters or less';
   }
   if (!values.email) {
     errors.email = 'Email Required';
@@ -35,9 +35,7 @@ const ContactForm = () => {
         method: 'post',
         url: `${process.env.NEXT_PUBLIC_API_BASE_URL}contact-forms`,
         data: {
-          name: values.name,
-          email: values.email,
-          details: values.message,
+          data: { name: values.name, email: values.email, details: values.message },
         },
       })
         .then(res => {

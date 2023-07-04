@@ -6,7 +6,7 @@ import styles from './projects.module.scss';
 import common from 'styles/common.module.scss';
 
 const Projects = ({ data }) => {
-  data?.projects?.sort((a, b) => {
+  data?.projects?.data?.sort((a, b) => {
     var dateA = new Date(a.published_at),
       dateB = new Date(b.published_at);
     return dateB - dateA;
@@ -17,9 +17,9 @@ const Projects = ({ data }) => {
         <div className={common.srvContainer}>
           <div className={common.srvCol}>
             <div className={common.secDesc}>
-              <h1>{data?.header.title}</h1>
+              <h1>{data?.header?.title}</h1>
               <div className={common.p2}>
-                <h2>{data?.header.caption}</h2>
+                <h2>{data?.header?.caption}</h2>
               </div>
             </div>
             <div className={`${common.cardRow} ${styles.paddingB1}`}>
@@ -29,7 +29,7 @@ const Projects = ({ data }) => {
                     <Image
                       layout="fill"
                       objectFit="contain"
-                      src={x?.displayImage?.url.replace(
+                      src={x?.displayImage?.url?.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}

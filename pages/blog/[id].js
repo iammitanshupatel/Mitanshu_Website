@@ -14,8 +14,8 @@ const validate = values => {
   const errors = {};
   if (!values.name) {
     errors.name = 'Name Required';
-  } else if (values.name.length > 15) {
-    errors.name = 'Must be 15 characters or less';
+  } else if (values.name.length > 100) {
+    errors.name = 'Must be 100 characters or less';
   }
 
   if (!values.email) {
@@ -47,7 +47,7 @@ const SingleBlogPage = () => {
   if (isError) return <Error500 />;
   return (
     <div className={common.srvContainer}>
-      {blogData && <SingleBlogPageContent data={blogData} />}
+      {blogData && <SingleBlogPageContent data={blogData?.data} />}
       <section className={styles.blogArticle}>
         <div className={styles.articleCmt}>
           <h3 className={styles.commentReplyTitle}>Write a comment</h3>

@@ -10,8 +10,8 @@ import useProgressiveImage from 'hooks/useProgressiveImage';
 import { isIOS } from 'react-device-detect';
 const Home = ({ data }) => {
   const newUrl = 'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto';
-  const url = data?.backgroundImage.url.replace('upload', newUrl);
-  const urlPlaceholder = data?.backgroundImage.url.replace(
+  const url = data?.backgroundImage?.url?.replace('upload', newUrl);
+  const urlPlaceholder = data?.backgroundImage?.url?.replace(
     'upload',
     'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
   );
@@ -19,8 +19,8 @@ const Home = ({ data }) => {
   if (!data) return <PreLoader />;
   if (isIOS) {
     const newUrl = 'upload/c_scale,dpr_auto,f_jpg,q_auto,w_auto';
-    const url = data?.backgroundImage.url.replace('upload', newUrl);
-    const urlPlaceholder = data?.backgroundImage.url.replace(
+    const url = data?.backgroundImage?.url?.replace('upload', newUrl);
+    const urlPlaceholder = data?.backgroundImage?.url?.replace(
       'upload',
       'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_jpg/e_grayscale',
     );
@@ -40,7 +40,7 @@ const Home = ({ data }) => {
               </h1>
               <h2>
                 {data?.description}
-                <ReactRotatingText items={data?.bannerSpan.map(x => x?.text)} />
+                <ReactRotatingText items={data?.bannerSpan?.map(x => x?.text)} />
               </h2>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Home = ({ data }) => {
               </h1>
               <h2>
                 {data?.description}
-                <ReactRotatingText items={data?.bannerSpan.map(x => x?.text)} />
+                <ReactRotatingText items={data?.bannerSpan?.map(x => x?.text)} />
               </h2>
             </div>
           </div>
