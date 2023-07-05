@@ -1,14 +1,16 @@
 import useSWR from 'swr';
 
 const useContact = () => {
-  const { data, error } = useSWR('/contact-section?populate=*');
-  const { data: socialMedia, error: socialMediaError } = useSWR(
-    '/contact-section?populate[socialMedia][populate]=*',
-  );
+  const { data, isLoading, error } = useSWR('/contact-section?populate=*');
+  const {
+    data: socialMedia,
+    isLoading: socialMediaLoading,
+    error: socialMediaError,
+  } = useSWR('/contact-section?populate[socialMedia][populate]=*');
   if (data) data['data']['socialMedia'] = socialMedia && socialMedia?.data?.socialMedia;
   return {
     data: data,
-    isLoading: (!error || !socialMediaError) && (!data || !socialMedia),
+    isLoading: isLoading || socialMediaLoading,
     isError: error || socialMediaError,
   };
 };

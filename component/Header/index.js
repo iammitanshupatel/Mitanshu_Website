@@ -46,10 +46,8 @@ const Header = () => {
     <header className={styles.header} ref={headerRef}>
       <nav ref={navbarRef}>
         <div className={styles.headerContainer}>
-          <Link href="/">
-            <a className={styles.logo} aria-label="Go to home page">
-              Mitanshu
-            </a>
+          <Link href="/" className={styles.logo} aria-label="Go to home page">
+            Mitanshu
           </Link>
           <button
             ref={burgerRef}
@@ -64,58 +62,53 @@ const Header = () => {
             <a href="#!" aria-label="Click to close the navigation" onClick={burgerClicked} />
             <ul>
               <li>
-                <Link href="/">
-                  <a
-                    aria-label="Go to home page"
-                    ref={liRef}
-                    onClick={burgerClicked}
-                    className={pathname === '/' ? styles.active : undefined}>
-                    Home
-                  </a>
+                <Link
+                  href="/"
+                  aria-label="Go to home page"
+                  ref={liRef}
+                  onClick={burgerClicked}
+                  className={pathname === '/' ? styles.active : undefined}>
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a
-                    aria-label="Go to about page"
-                    ref={liRef}
-                    onClick={burgerClicked}
-                    className={pathname === '/about' ? styles.active : undefined}>
-                    About
-                  </a>
+                <Link
+                  href="/about"
+                  aria-label="Go to about page"
+                  ref={liRef}
+                  onClick={burgerClicked}
+                  className={pathname === '/about' ? styles.active : undefined}>
+                  About
                 </Link>
               </li>
               <li>
-                <Link href="/work">
-                  <a
-                    aria-label="Go to work page"
-                    ref={liRef}
-                    onClick={burgerClicked}
-                    className={pathname === '/work' ? styles.active : undefined}>
-                    Work
-                  </a>
+                <Link
+                  href="/work"
+                  aria-label="Go to work page"
+                  ref={liRef}
+                  onClick={burgerClicked}
+                  className={pathname === '/work' ? styles.active : undefined}>
+                  Work
                 </Link>
               </li>
               <li>
-                <Link href="/blog">
-                  <a
-                    aria-label="Go to blog page"
-                    ref={liRef}
-                    onClick={burgerClicked}
-                    className={pathname === '/blog' ? styles.active : undefined}>
-                    Blogs
-                  </a>
+                <Link
+                  href="/blog"
+                  aria-label="Go to blog page"
+                  ref={liRef}
+                  onClick={burgerClicked}
+                  className={pathname === '/blog' ? styles.active : undefined}>
+                  Blogs
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a
-                    aria-label="Go to contact page"
-                    ref={liRef}
-                    onClick={burgerClicked}
-                    className={pathname === '/contact' ? styles.active : undefined}>
-                    Contact
-                  </a>
+                <Link
+                  href="/contact"
+                  aria-label="Go to contact page"
+                  ref={liRef}
+                  onClick={burgerClicked}
+                  className={pathname === '/contact' ? styles.active : undefined}>
+                  Contact
                 </Link>
               </li>
             </ul>

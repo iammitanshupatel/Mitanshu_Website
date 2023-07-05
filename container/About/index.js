@@ -33,6 +33,10 @@ const About = ({ data }) => {
                   width={700}
                   height={475}
                   alt={data?.myImage?.name}
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
                 />
               </div>
               <div className={styles.abtTxt}>
@@ -42,8 +46,8 @@ const About = ({ data }) => {
                     <h2>{data?.header?.[0]?.caption}</h2>
                     <p>{data?.shortDescription}</p>
                     <p>
-                      <Link href="/contact">
-                        <a aria-label="Go to contact page">Contact me</a>
+                      <Link href="/contact" aria-label="Go to contact page">
+                        Contact me
                       </Link>
                     </p>
                   </div>
@@ -69,6 +73,10 @@ const About = ({ data }) => {
                 width={700}
                 height={475}
                 alt={data?.myImage?.name}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
               />
             </div>
             <div className={styles.abtTxt}>
@@ -78,8 +86,8 @@ const About = ({ data }) => {
                   <h2>{data?.header?.[0]?.caption}</h2>
                   <p>{data?.shortDescription}</p>
                   <p>
-                    <Link href="/contact">
-                      <a aria-label="Go to contact page">Contact me</a>
+                    <Link href="/contact" aria-label="Go to contact page">
+                      Contact me
                     </Link>
                   </p>
                 </div>

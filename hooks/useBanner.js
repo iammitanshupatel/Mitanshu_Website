@@ -1,10 +1,10 @@
 import useSWR from 'swr';
 
 const useBanner = () => {
-  const { data, error } = useSWR('/banner-section?populate=*');
+  const { data, isLoading, error } = useSWR('/banner-section?populate=*');
   return {
     data: data,
-    isLoading: !error && !data,
+    isLoading: isLoading,
     isError: error,
   };
 };

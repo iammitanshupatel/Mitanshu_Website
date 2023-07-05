@@ -54,6 +54,10 @@ const Blogs = ({ data }) => {
                       alt={x?.blogImage?.name}
                       width={320}
                       height={213}
+                      style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                      }}
                     />
                   </a>
                   <div className={common.blogPageContent}>

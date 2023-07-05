@@ -1,8 +1,14 @@
 import useSWR from 'swr';
 
 const useProjects = id => {
-  const { data, error } = useSWR(id ? `/projects/${id}?populate=*` : '/projects?populate=*');
-  const { data: projectImage, error: projectImageError } = useSWR(
+  const { data, isLoading, error } = useSWR(
+    id ? `/projects/${id}?populate=*` : '/projects?populate=*',
+  );
+  const {
+    data: projectImage,
+    isLoading: projectImageLoading,
+    error: projectImageError,
+  } = useSWR(
     id
       ? `/projects/${id}?populate[projectImage][populate]=*`
       : '/projects?populate[projectImage][populate]=*',
@@ -11,7 +17,7 @@ const useProjects = id => {
 
   return {
     data: data,
-    isLoading: (!error || !projectImageError) && (!data || !projectImage),
+    isLoading: isLoading || projectImageLoading,
     isError: error || projectImageError,
   };
 };

@@ -61,14 +61,17 @@ const ProjectPageContent = ({ data }) => {
                   <Card key={x?.id} variant="projectCard">
                     <figure>
                       <Image
-                        layout="fill"
-                        objectFit="contain"
                         priority
                         src={x?.displayImage?.url.replace(
                           'upload',
                           'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                         )}
                         alt={x?.displayImage?.name}
+                        fill
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'contain',
+                        }}
                       />
                       <figcaption>
                         <a href={`work/${x?.id}`} aria-label="View more details about portfolio">
@@ -116,14 +119,17 @@ const ProjectPageContent = ({ data }) => {
                 <Card key={x?.id} variant="projectCard">
                   <figure>
                     <Image
-                      layout="fill"
-                      objectFit="contain"
                       priority
                       src={x?.displayImage.url.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}
                       alt={x?.displayImage?.name}
+                      fill
+                      sizes="100vw"
+                      style={{
+                        objectFit: 'contain',
+                      }}
                     />
                     <figcaption>
                       <a href={`work/${x?.id}`} aria-label="View more details about portfolio">

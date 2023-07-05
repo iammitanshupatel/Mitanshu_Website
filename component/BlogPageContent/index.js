@@ -30,6 +30,10 @@ const BlogPageContent = ({ blogs }) => {
                         alt={x?.blogImage?.name}
                         width={320}
                         height={213}
+                        style={{
+                          maxWidth: '100%',
+                          height: 'auto',
+                        }}
                       />
                     </div>
                   </a>

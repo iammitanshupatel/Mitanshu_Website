@@ -27,13 +27,16 @@ const Projects = ({ data }) => {
                 <Card variant="projectCard" key={x?.id}>
                   <figure>
                     <Image
-                      layout="fill"
-                      objectFit="contain"
                       src={x?.displayImage?.url?.replace(
                         'upload',
                         'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
                       )}
                       alt={x?.displayImage?.name}
+                      fill
+                      sizes="100vw"
+                      style={{
+                        objectFit: 'contain',
+                      }}
                     />
                     <figcaption>
                       <a aria-label={`View more about ${x?.title}`} href={`work/${x?.id}`}>

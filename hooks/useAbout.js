@@ -1,10 +1,10 @@
 import useSWR from 'swr';
 
 const useAbout = () => {
-  const { data, error } = useSWR('/about-me?populate=*');
+  const { data, isLoading, error } = useSWR('/about-me?populate=*');
   return {
     data: data,
-    isLoading: !error && !data,
+    isLoading: isLoading,
     isError: error,
   };
 };

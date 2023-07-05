@@ -23,7 +23,7 @@ const Icon = ({ socialLink, variant, className, ariaLabel }) => {
     <a
       aria-label={ariaLabel}
       href={socialLink?.url}
-      target={socialLink?.name !== 'address' && '_blank'}
+      target={socialLink?.name !== 'address' ? '_blank' : undefined}
       className={`${styles[variant]} ${className}`}
       ref={iconRef}
       rel="noreferrer">

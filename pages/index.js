@@ -27,12 +27,12 @@ const Testimonial = dynamic(() => import('container/Testimonial'));
 const Main = () => {
   const { data: bannerData, isLoading: bannerLoading, isError: bannerError } = useBanner();
   const { data: aboutData, isLoading: aboutLoading, isError: aboutError } = useAbout();
-  const { data: serviceData, isError: serviceError } = useServices();
+  const { data: serviceData, isLoading: serviceLoading, isError: serviceError } = useServices();
   const { data: portfolioData, isError: portfolioError } = usePortfolio();
   const { data: educationSkillsData, isError: educationSkillsError } = useEducationSkills();
   const { data: blogData, isError: blogError } = useBlog();
   //   const { data: testimonialData, isError: testimonialError } = useTestimonial();
-  if ((bannerLoading, aboutLoading)) return <PreLoader />;
+  if ((bannerLoading, aboutLoading, serviceLoading)) return <PreLoader />;
   if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError, blogError))
     return <Error500 />;
   return (

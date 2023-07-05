@@ -1,10 +1,10 @@
 import useSWR from 'swr';
 
 const useEducationSkills = () => {
-  const { data, error } = useSWR('/education-and-skills-section?populate=*');
+  const { data, isLoading, error } = useSWR('/education-and-skills-section?populate=*');
   return {
     data: data,
-    isLoading: !error && !data,
+    isLoading: isLoading,
     isError: error,
   };
 };

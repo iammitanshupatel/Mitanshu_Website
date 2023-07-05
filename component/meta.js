@@ -1,8 +1,8 @@
 export default function Meta() {
   return (
     <>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta charSet="UTF-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover" />
       <meta name="language" content="EN" />
       <link rel="canonical" href="https://mitanshupatel.com/" />
@@ -14,7 +14,7 @@ export default function Meta() {
       <meta name="theme-color" content="#000000" />
       <meta
         name="keywords"
-        content="mitanshu patel, personal website, portfolio, full-stack developer, corporate trainer, blog, work, projects, education, skills, next js, react js, postgres, tailwind css, strapi"
+        content="mitanshu patel, personal website, portfolio, full-stack developer, front-end developer, mobile-app developer, blog, work, projects, education, skills, React.js, React Native, Redux.js, Next.js, Babel.js, Node.js, MySQL, Strapi.js, Advanced ES6 JavaScript, TypeScript, HTML5, CSS3, SASS, Tailwind CSS, Git, Github, Gitlab, BitBucket,  Agile Development, Attention to Detail, Responsive Web Design, Cross-browser Compatibility"
       />
       <meta name="author" content="Mitanshu Patel, mitanshu.u.patel@gmail.com" />
       <meta name="reply-to" content="mitanshu.u.patel@gmail.com" />

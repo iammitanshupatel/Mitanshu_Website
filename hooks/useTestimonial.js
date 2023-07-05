@@ -1,10 +1,10 @@
 import useSWR from 'swr';
 
 const useTestimonial = () => {
-  const { data, error } = useSWR('/testimonial-section');
+  const { data, isLoading, error } = useSWR('/testimonial-section');
   return {
     data: data,
-    isLoading: !error && !data,
+    isLoading: isLoading,
     isError: error,
   };
 };

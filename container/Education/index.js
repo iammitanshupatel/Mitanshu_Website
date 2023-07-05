@@ -17,8 +17,8 @@ const Education = ({ data }) => (
             <div className={styles.eduText}>
               <p>{data?.eduTextForHome}</p>
               <p>
-                <Link href="/about">
-                  <a aria-label="Go to about page">Checkout my resume</a>
+                <Link href="/about" aria-label="Go to about page">
+                  Checkout my resume
                 </Link>
               </p>
             </div>
