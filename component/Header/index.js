@@ -87,7 +87,7 @@ const Header = () => {
                   aria-label="Go to work page"
                   ref={liRef}
                   onClick={burgerClicked}
-                  className={pathname === '/work' ? styles.active : undefined}>
+                  className={pathname?.startsWith('/work') ? styles.active : undefined}>
                   Work
                 </Link>
               </li>
@@ -97,7 +97,7 @@ const Header = () => {
                   aria-label="Go to blog page"
                   ref={liRef}
                   onClick={burgerClicked}
-                  className={pathname === '/blog' ? styles.active : undefined}>
+                  className={pathname?.startsWith('/blog') ? styles.active : undefined}>
                   Blogs
                 </Link>
               </li>
