@@ -83,15 +83,13 @@ const AboutPageContent = ({ data }) => (
         <h2>Certificates.</h2>
         <div className={styles.flexCol}>
           {data?.certificates?.map(x => (
-            <Fragment key={x?.id}>
-              <div className={styles.expInfo}>
-                <h3>{x?.name}</h3>
-                <a href={x?.link} target="_blank" aria-label="Company Name" rel="noreferrer">
-                  {x?.companyName}
-                </a>
-                <p>{x?.description}</p>
-              </div>
-            </Fragment>
+            <div className={styles.expInfo} key={x?.id}>
+              <h3>{x?.name}</h3>
+              <a href={x?.link} target="_blank" aria-label="Company Name" rel="noreferrer">
+                {x?.companyName}
+              </a>
+              <p>{x?.description}</p>
+            </div>
           ))}
         </div>
       </div>
