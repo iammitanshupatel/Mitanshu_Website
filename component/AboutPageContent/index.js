@@ -90,6 +90,7 @@ const AboutPageContent = ({ data }) => (
                 <a href={x?.link} target="_blank" aria-label="Company Name" rel="noreferrer">
                   {x?.companyName}
                 </a>
+                <p>{x?.description}</p>
               </div>
             </Fragment>
           ))}
