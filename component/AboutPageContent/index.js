@@ -77,6 +77,25 @@ const AboutPageContent = ({ data }) => (
         </div>
       </div>
     </div>
+    <div className={common.separated} />
+    <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedBottom}`}>
+      <div className={common.abtWrap}>
+        <h2>Certificates.</h2>
+        <div className={styles.flexCol}>
+          {data?.certificates?.map(x => (
+            <Fragment key={x?.id}>
+              <span className={styles.date}>{x?.date}</span>
+              <div className={styles.expInfo}>
+                <h3>{x?.name}</h3>
+                <a href={x?.link} target="_blank" aria-label="Company Name" rel="noreferrer">
+                  {x?.companyName}
+                </a>
+              </div>
+            </Fragment>
+          ))}
+        </div>
+      </div>
+    </div>
   </>
 );
 export default AboutPageContent;
