@@ -8,13 +8,16 @@ export default function Meta() {
       <link rel="canonical" href="https://mitanshupatel.com/" />
       <meta name="application-name" content="Mitanshu Patel" />
       <meta name="title" content="Mitanshu Patel" />
-      <meta name="description" content="Mitanshu Patel Personal Website" />
+      <meta
+        name="description"
+        content="Passionate Software Engineer | React.js | React Native | Node.js | JavaScript | Agile Methodologies | Problem Solver | CMMI Level 3 Experience"
+      />
       <meta name="google" content="notranslate" />
       <meta name="is-http2" content="true" />
       <meta name="theme-color" content="#000000" />
       <meta
         name="keywords"
-        content="mitanshu patel, personal website, portfolio, full-stack developer, front-end developer, mobile-app developer, blog, work, projects, education, skills, React.js, React Native, Redux.js, Next.js, Babel.js, Node.js, MySQL, Strapi.js, Advanced ES6 JavaScript, TypeScript, HTML5, CSS3, SASS, Tailwind CSS, Git, Github, Gitlab, BitBucket,  Agile Development, Attention to Detail, Responsive Web Design, Cross-browser Compatibility"
+        content="mitanshu patel, personal website, portfolio, full-stack developer, front-end developer, mobile-app developer, blog, work, projects, education, skills, React.js, React Native, Redux.js, Next.js, Babel.js, Node.js, MySQL, Strapi.js, Advanced ES6 JavaScript, TypeScript, HTML5, CSS3, SASS, Tailwind CSS, Git, Github, Gitlab, BitBucket,  Agile Development, Attention to Detail, Responsive Web Design, Cross-browser Compatibility, Passionate Software Engineer, React.js, React Native, Node.js, JavaScript, Agile Methodologies, Problem Solver, CMMI Level 3 Experience"
       />
       <meta name="author" content="Mitanshu Patel, mitanshu.u.patel@gmail.com" />
       <meta name="reply-to" content="mitanshu.u.patel@gmail.com" />

@@ -19,12 +19,13 @@ const AboutPage = () => {
     isLoading: educationSkillsLoading,
     isError: educationSkillsError,
   } = useEducationSkills();
-  if ((aboutLoading, educationSkillsLoading)) return <PreLoader />;
-  if ((aboutError, educationSkillsError)) return <Error500 />;
+  if (aboutLoading || educationSkillsLoading) return <PreLoader />;
+  if (aboutError || educationSkillsError) return <Error500 />;
   return (
     <>
       <Head>
         <title>About Page - Mitanshu Patel</title>
+        <meta name="description" content="So, Who Am I?" key="desc" />
       </Head>
       {aboutData && <FullImageHeaderPage data={aboutData?.data} />}
       {educationSkillsData && <AboutPageContent data={educationSkillsData?.data} />}

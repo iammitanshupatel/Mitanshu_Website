@@ -22,7 +22,7 @@ const Services = dynamic(() => import('container/Services'), {
 const Projects = dynamic(() => import('container/Projects'));
 const Education = dynamic(() => import('container/Education'));
 const Blogs = dynamic(() => import('container/Blogs'));
-const Testimonial = dynamic(() => import('container/Testimonial'));
+// const Testimonial = dynamic(() => import('container/Testimonial'));
 
 const Main = () => {
   const { data: bannerData, isLoading: bannerLoading, isError: bannerError } = useBanner();
@@ -32,8 +32,15 @@ const Main = () => {
   const { data: educationSkillsData, isError: educationSkillsError } = useEducationSkills();
   const { data: blogData, isError: blogError } = useBlog();
   //   const { data: testimonialData, isError: testimonialError } = useTestimonial();
-  if ((bannerLoading, aboutLoading, serviceLoading)) return <PreLoader />;
-  if ((bannerError, aboutError, serviceError, portfolioError, educationSkillsError, blogError))
+  if (bannerLoading || aboutLoading || serviceLoading) return <PreLoader />;
+  if (
+    bannerError ||
+    aboutError ||
+    serviceError ||
+    portfolioError ||
+    educationSkillsError ||
+    blogError
+  )
     return <Error500 />;
   return (
     <>

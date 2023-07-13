@@ -20,6 +20,7 @@ const ContactPage = () => {
     <>
       <Head>
         <title>Contact Page - Mitanshu Patel</title>
+        <meta name="description" content="Let's talk" key="desc" />
       </Head>
       {data && <ContactPageHeader data={data?.data} />}
       <div className={`${common.containerCtc} ${styles.top45}`}>
