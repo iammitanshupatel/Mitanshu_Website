@@ -14,17 +14,25 @@ const BlogPageContent = dynamic(() => import('component/BlogPageContent'), {
 
 const BlogPage = () => {
   const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs();
+
   const { data, isLoading, isError } = useBlog();
-  if (blogsLoading || isLoading) return <PreLoader />;
-  if (blogsError || isError) return <Error500 />;
+
+  if (blogsLoading || isLoading) {
+    return <PreLoader />;
+  }
+
+  if (blogsError || isError) {
+    return <Error500 />;
+  }
+
   return (
     <>
       <Head>
         <title>Blog Page - Mitanshu Patel</title>
         <meta name="description" content="Blogs I Write" key="desc" />
       </Head>
-      {data && <BlogPageHeader data={data?.data} />}
-      {blogs && <BlogPageContent blogs={blogs?.data} />}
+      {data && <BlogPageHeader data={data.data} />}
+      {blogs && <BlogPageContent blogs={blogs.data} />}
     </>
   );
 };

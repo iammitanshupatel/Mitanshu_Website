@@ -7,22 +7,18 @@ import useServices from 'hooks/useServices';
 import usePortfolio from 'hooks/usePortfolio';
 import useEducationSkills from 'hooks/useEducationSkills';
 import useBlog from 'hooks/useBlog';
-import useTestimonial from 'hooks/useTestimonial';
 import PreLoader from 'component/PreLoader';
 import Error500 from './500';
-const Home = dynamic(() => import('container/Home'), {
-  loading: () => <PreLoader />,
-});
-const About = dynamic(() => import('container/About'), {
-  loading: () => <PreLoader />,
-});
-const Services = dynamic(() => import('container/Services'), {
-  loading: () => <PreLoader />,
-});
-const Projects = dynamic(() => import('container/Projects'));
-const Education = dynamic(() => import('container/Education'));
-const Blogs = dynamic(() => import('container/Blogs'));
-// const Testimonial = dynamic(() => import('container/Testimonial'));
+
+const dynamicImport = importFunc => dynamic(importFunc, { loading: () => <PreLoader /> });
+
+const Home = dynamicImport(() => import('container/Home'));
+const About = dynamicImport(() => import('container/About'));
+const Services = dynamicImport(() => import('container/Services'));
+const Projects = dynamicImport(() => import('container/Projects'));
+const Education = dynamicImport(() => import('container/Education'));
+const Blogs = dynamicImport(() => import('container/Blogs'));
+// const Testimonial = dynamicImport(() => import('container/Testimonial'));
 
 const Main = () => {
   const { data: bannerData, isLoading: bannerLoading, isError: bannerError } = useBanner();
@@ -32,6 +28,7 @@ const Main = () => {
   const { data: educationSkillsData, isError: educationSkillsError } = useEducationSkills();
   const { data: blogData, isError: blogError } = useBlog();
   //   const { data: testimonialData, isError: testimonialError } = useTestimonial();
+
   if (bannerLoading || aboutLoading || serviceLoading) return <PreLoader />;
   if (
     bannerError ||
@@ -42,6 +39,7 @@ const Main = () => {
     blogError
   )
     return <Error500 />;
+
   return (
     <>
       <Head>

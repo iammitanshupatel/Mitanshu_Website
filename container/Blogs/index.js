@@ -1,85 +1,62 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { useCallback, useEffect, useRef } from 'react';
 const Button = dynamic(() => import('component/Button'));
 const Card = dynamic(() => import('component/Card'));
 import styles from './blogs.module.scss';
 import common from 'styles/common.module.scss';
 
 const Blogs = ({ data }) => {
-  const sliderRef = useRef();
-  //   const mouseEvent = useCallback(() => {}, []);
-  useEffect(() => {
-    const changeScroll = () => {
-      if (sliderRef.current.scrollLeft < 1500) {
-        sliderRef.current.scrollLeft += 300;
-      }
-    };
-    // const int = setInterval(changeScroll, 2000);
-    // sliderRef.current.addEventListener('mouseover', () => {
-    //   clearInterval(int);
-    // });
-    // sliderRef.current.removeEventListener('mouseover', () => {
-    //   setInterval(changeScroll, 2000);
-    // });
-  }, []);
-  data?.blogs?.sort((a, b) => {
-    var dateA = new Date(a.date),
-      dateB = new Date(b.date);
-    return dateB - dateA;
-  });
+  data?.blogs?.sort((a, b) => new Date(b.date) - new Date(a.date));
   return (
-    <>
-      <section id="Blogs" className={styles.blogsSection}>
-        <div className={common.srvContainer}>
-          <div className={common.srvCol}>
-            <div className={common.secDesc}>
-              <h1>{data?.header.title}</h1>
-              <div className={common.p2}>
-                <h2>{data?.header?.caption}</h2>
-              </div>
+    <section id="Blogs" className={styles.blogsSection}>
+      <div className={common.srvContainer}>
+        <div className={common.srvCol}>
+          <div className={common.secDesc}>
+            <h1>{data?.header.title}</h1>
+            <div className={common.p2}>
+              <h2>{data?.header?.caption}</h2>
             </div>
           </div>
-          <div className={styles.items}>
-            <div id="sliderModal" ref={sliderRef} className={styles.sliderShow}>
-              {data?.blogs?.map(x => (
-                <Card key={x?.id} variant="cardBlog">
-                  <a aria-label="View more about the blog" href={`blog/${x?.id}`}>
-                    <Image
-                      priority
-                      src={x?.blogImage?.url.replace(
-                        'upload',
-                        'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
-                      )}
-                      alt={x?.blogImage?.name}
-                      width={320}
-                      height={213}
-                      style={{
-                        maxWidth: '100%',
-                        height: 'auto',
-                      }}
-                    />
-                  </a>
-                  <div className={common.blogPageContent}>
-                    <h2>{x?.title}</h2>
-                    <p>{x?.description}</p>
-                    <div className={common.blogPageMeta}>
-                      <span className={common.more}>
-                        <a aria-label="View more blogs" href={`blog/${x?.id}`}>
-                          Read this blog
-                        </a>
-                      </span>
-                      <span className={common.date}>{x?.date}</span>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-          <Button btnText="Load More" ariaLabel="More blogs" locationPage="/blog" />
         </div>
-      </section>
-    </>
+        <div className={styles.items}>
+          <div id="sliderModal" className={styles.sliderShow}>
+            {data?.blogs?.map(x => (
+              <Card key={x?.id} variant="cardBlog">
+                <a aria-label="View more about the blog" href={`blog/${x?.id}`}>
+                  <Image
+                    priority
+                    src={x?.blogImage?.url.replace(
+                      'upload',
+                      'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+                    )}
+                    alt={x?.blogImage?.name}
+                    width={320}
+                    height={213}
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
+                </a>
+                <div className={common.blogPageContent}>
+                  <h2>{x?.title}</h2>
+                  <p>{x?.description}</p>
+                  <div className={common.blogPageMeta}>
+                    <span className={common.more}>
+                      <a aria-label="View more blogs" href={`blog/${x?.id}`}>
+                        Read this blog
+                      </a>
+                    </span>
+                    <span className={common.date}>{x?.date}</span>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+        <Button btnText="Load More" ariaLabel="More blogs" locationPage="/blog" />
+      </div>
+    </section>
   );
 };
 

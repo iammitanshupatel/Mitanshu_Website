@@ -2,16 +2,17 @@ import ErrorPage from 'container/ErrorPage';
 import Head from 'next/head';
 
 const Error500 = () => {
+  const pageTitle = 'Server-side Error - Mitanshu Patel';
+  const errorCode = 500;
+  const errorTitle = 'Looks like something is wrong with the server';
+  const errorDescription = 'Please try again after sometime...';
+
   return (
     <>
       <Head>
-        <title> Server-side Error - Mitanshu Patel</title>
+        <title>{pageTitle}</title>
       </Head>
-      <ErrorPage
-        code={500}
-        title="Looks like something is wrong with the server"
-        description="Please try again after sometime..."
-      />
+      <ErrorPage code={errorCode} title={errorTitle} description={errorDescription} />
     </>
   );
 };
