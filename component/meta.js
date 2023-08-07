@@ -35,7 +35,7 @@ export default function Meta() {
       <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/manifest-icon-192.png" />
-    {/* apple splash screen images  */}
+      {/* apple splash screen images  */}
       <link rel="apple-touch-startup-image" href="/apple-splash-2048-2732.png" sizes="2048x2732" />
       <link rel="apple-touch-startup-image" href="/apple-splash-1668-2224.png" sizes="1668x2224" />
       <link rel="apple-touch-startup-image" href="/apple-splash-1536-2048.png" sizes="1536x2048" />
@@ -59,5 +59,6 @@ export default function Meta() {
         href="/static/images/apple-splash-640-1336.png"
         sizes="640x1136"
       />
+    </>
   );
 }
