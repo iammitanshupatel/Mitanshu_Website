@@ -31,6 +31,7 @@ export default function Meta() {
         content="Passionate Software Engineer specializing in full-stack development using React, Node, and React Native. Certified in CSS, JavaScript, React, and Rest API."
       />
       <meta name="twitter:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
+      <link rel="shortcut icon" href="/manifest-icon-192.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
       <link rel="manifest" href="/manifest.json" />
