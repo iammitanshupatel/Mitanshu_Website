@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useMemo } from 'react';
 import { useFormik } from 'formik';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -29,25 +30,36 @@ const validate = values => {
 const SingleBlogPage = () => {
   const router = useRouter();
   const { id } = router.query;
+
   const formik = useFormik({
     initialValues: {
       name: '',
       email: '',
     },
     validate,
-    handleSubmit: values => {
+    onSubmit: values => {
       if (!values) {
         formik.errors.msg = 'Both Fields Required';
       }
       return values;
     },
   });
+
   const { data: blogData, isLoading, isError } = useBlogs(id);
+
+  const singleBlogPageContent = useMemo(() => {
+    if (blogData) {
+      return <SingleBlogPageContent data={blogData.data} />;
+    }
+    return null;
+  }, [blogData]);
+
   if (isLoading) return <PreLoader />;
   if (isError) return <Error500 />;
+
   return (
     <div className={common.srvContainer}>
-      {blogData && <SingleBlogPageContent data={blogData?.data} />}
+      {singleBlogPageContent}
       <section className={styles.blogArticle}>
         <div className={styles.articleCmt}>
           <h3 className={styles.commentReplyTitle}>Write a comment</h3>

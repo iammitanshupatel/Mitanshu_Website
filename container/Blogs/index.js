@@ -1,12 +1,14 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-const Button = dynamic(() => import('component/Button'));
-const Card = dynamic(() => import('component/Card'));
 import styles from './blogs.module.scss';
 import common from 'styles/common.module.scss';
 
+const Button = dynamic(() => import('component/Button'));
+const Card = dynamic(() => import('component/Card'));
+
 const Blogs = ({ data }) => {
-  data?.blogs?.sort((a, b) => new Date(b.date) - new Date(a.date));
+  const sortedBlogs = data?.blogs?.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <section id="Blogs" className={styles.blogsSection}>
       <div className={common.srvContainer}>
@@ -20,7 +22,7 @@ const Blogs = ({ data }) => {
         </div>
         <div className={styles.items}>
           <div id="sliderModal" className={styles.sliderShow}>
-            {data?.blogs?.map(x => (
+            {sortedBlogs?.map(x => (
               <Card key={x?.id} variant="cardBlog">
                 <a aria-label="View more about the blog" href={`blog/${x?.id}`}>
                   <Image
