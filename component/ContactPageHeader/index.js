@@ -13,7 +13,8 @@ const ContactPageHeader = ({ data }) => {
       </div>
       <div
         className={`${styles.top60} ${common.txc}`}
-        dangerouslySetInnerHTML={{ __html: data.description || HTML }}></div>
+        dangerouslySetInnerHTML={{ __html: data.description || HTML }}
+      />
     </>
   );
 };

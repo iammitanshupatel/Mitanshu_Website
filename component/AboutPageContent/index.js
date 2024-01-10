@@ -27,6 +27,43 @@ const AboutPageContent = ({ data }) => (
       </div>
     </div>
     <div className={common.separated} />
+    <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedBottom}`}>
+      <div className={common.abtWrap}>
+        <h2>Experience.</h2>
+        <div className={styles.flexCol}>
+          {data?.experiences
+            ?.slice(0)
+            .reverse()
+            .map(x => (
+              <Fragment key={x?.id}>
+                <span className={styles.date}>{`${x?.startDate} - ${x?.endDate}`}</span>
+                <div className={styles.expInfo}>
+                  <h3>{x?.role}</h3>
+                  <a
+                    href={x?.companyLink}
+                    target="_blank"
+                    aria-label="Company Name"
+                    rel="noreferrer">
+                    {x?.companyName}
+                  </a>
+                  <p>
+                    {x?.description
+                      ?.split('- ')
+                      .filter(Boolean)
+                      ?.map(y => (
+                        <>
+                          - {y}
+                          <br />
+                        </>
+                      ))}
+                  </p>
+                </div>
+              </Fragment>
+            ))}
+        </div>
+      </div>
+    </div>
+    <div className={common.separated} />
     <div className={`${common.containerCtc} ${common.textWidget}`}>
       <div className={common.abtWrap}>
         <h2>Education.</h2>
@@ -47,33 +84,6 @@ const AboutPageContent = ({ data }) => (
               </div>
             </Fragment>
           ))}
-        </div>
-      </div>
-    </div>
-    <div className={common.separated} />
-    <div className={`${common.containerCtc} ${common.textWidget} ${styles.separatedBottom}`}>
-      <div className={common.abtWrap}>
-        <h2>Experience.</h2>
-        <div className={styles.flexCol}>
-          {data?.experiences
-            ?.slice(0)
-            .reverse()
-            .map(x => (
-              <Fragment key={x?.id}>
-                <span className={styles.date}>{`${x?.startDate} - ${x?.endDate}`}</span>
-                <div className={styles.expInfo}>
-                  <h3>{x?.role}</h3>
-                  <a
-                    href={x?.companyLink}
-                    target="_blank"
-                    aria-label="Company Name"
-                    rel="noreferrer">
-                    {x?.companyName}
-                  </a>
-                  <p>{x?.description}</p>
-                </div>
-              </Fragment>
-            ))}
         </div>
       </div>
     </div>

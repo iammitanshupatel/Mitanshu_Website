@@ -5,7 +5,7 @@ import fetcher from 'lib/fetch';
 
 const Layout = dynamic(() => import('container/Layout'));
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   const swrConfig = {
     fetcher,
   };
@@ -24,6 +24,6 @@ function MyApp({ Component, pageProps }) {
       </Layout>
     </SWRConfig>
   );
-}
+};
 
 export default MyApp;
