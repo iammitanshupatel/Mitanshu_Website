@@ -9,6 +9,7 @@ import useEducationSkills from 'hooks/useEducationSkills';
 import useBlog from 'hooks/useBlog';
 import PreLoader from 'component/PreLoader';
 import Error500 from './500';
+import fetchMeta from 'component/meta';
 
 const dynamicImport = importFunc => dynamic(importFunc, { loading: () => <PreLoader /> });
 
@@ -43,7 +44,13 @@ const Main = () => {
   return (
     <>
       <Head>
-        <title>Mitanshu Patel</title>
+        {fetchMeta({
+          title: 'Mitanshu Patel',
+          keywords:
+            'mitanshu patel, personal portfolio, full-stack developer, React, Node, React Native, Agile Development, Blockchain Solutions',
+          description:
+            'Passionate Software Engineer specializing in full-stack development using React, Node, and React Native. Certified in CSS, JavaScript, React, and Rest API.',
+        })}
       </Head>
       {bannerData && <Home data={bannerData?.data} />}
       {aboutData && <About data={aboutData?.data} />}

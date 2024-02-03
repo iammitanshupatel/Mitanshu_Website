@@ -5,6 +5,7 @@ import Image from 'next/image';
 import useProgressiveImage from 'hooks/useProgressiveImage';
 import { useCallback, useEffect, useRef } from 'react';
 import useMarkdown from 'hooks/useMarkdown';
+import fetchMeta from 'component/meta';
 
 const SingleProjectContent = ({ data }) => {
   const { HTML } = useMarkdown(data?.description);
@@ -47,8 +48,13 @@ const SingleProjectContent = ({ data }) => {
   return (
     <>
       <Head>
-        <title>{`${data?.title} - Mitanshu Patel`}</title>
-        <meta name="keywords" content={`${data?.title} - Mitanshu Patel`} />
+        {fetchMeta({
+          title: `${data?.title} - Mitanshu Patel`,
+          keywords: `${data?.title}, ${data?.typeOfPortfolio}, ${data?.technologyUsed
+            ?.map(tech => tech?.title)
+            ?.join(', ')}`,
+          description: `${data?.title} developed by Mitanshu Patel`,
+        })}
       </Head>
       <section className={common.singleBlog}>
         <div className={`${common.blogInfo} ${styles.textCenter}`}>

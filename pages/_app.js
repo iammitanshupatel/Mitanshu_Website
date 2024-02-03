@@ -10,15 +10,8 @@ const MyApp = ({ Component, pageProps }) => {
     fetcher,
   };
 
-  const viewportMeta = {
-    name: 'viewport',
-    content:
-      'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover',
-  };
-
   return (
     <SWRConfig value={swrConfig}>
-      <meta {...viewportMeta} />
       <Layout>
         <Component {...pageProps} />
       </Layout>

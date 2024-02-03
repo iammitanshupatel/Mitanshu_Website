@@ -11,6 +11,7 @@ import {
 } from 'cloudinary-react';
 import Image from 'next/image';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import fetchMeta from 'component/meta';
 
 const SingleBlogPageContent = ({ data }, { title }) => {
   const { HTML } = useMarkdown(data?.description);
@@ -21,8 +22,11 @@ const SingleBlogPageContent = ({ data }, { title }) => {
   return (
     <>
       <Head>
-        <title>{`${data?.title} - Mitanshu Patel`}</title>
-        <meta name="keywords" content={`${data?.title} - Mitanshu Patel`} />
+        {fetchMeta({
+          title: `${data?.title} - Mitanshu Patel`,
+          keywords: `${data?.title}, ${data?.tags?.map(tag => tag?.title)?.join(', ')}`,
+          description: data?.title,
+        })}
       </Head>
       <section className={common.singleBlog}>
         <div className={common.blogInfo}>

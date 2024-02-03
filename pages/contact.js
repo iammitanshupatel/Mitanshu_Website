@@ -6,6 +6,7 @@ import useContact from 'hooks/useContact';
 import common from 'styles/common.module.scss';
 import styles from 'component/ContactForm/contactForm.module.scss';
 import Error500 from './500';
+import fetchMeta from 'component/meta';
 
 const PreLoader = dynamic(() => import('component/PreLoader'));
 const ContactPageHeader = dynamic(() => import('component/ContactPageHeader'), {
@@ -22,12 +23,14 @@ const ContactPage = () => {
 
   const contactPageHeader = data && <ContactPageHeader data={data?.data} />;
   const contactPageFooter = data && <ContactPageFooter data={data?.data} />;
-
+  
   return (
     <>
       <Head>
-        <title>Contact Page - Mitanshu Patel</title>
-        <meta name="description" content="Let's talk" key="desc" />
+        {fetchMeta({
+          title: 'Contact Page - Mitanshu Patel',
+          description: data?.data?.description,
+        })}
       </Head>
       {contactPageHeader}
       <div className={`${common.containerCtc} ${styles.top45}`}>

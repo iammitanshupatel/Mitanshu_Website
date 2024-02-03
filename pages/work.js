@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic';
 import usePortfolio from 'hooks/usePortfolio';
 import PreLoader from 'component/PreLoader';
 import Error500 from './500';
+import fetchMeta from 'component/meta';
+
 const ProjectPageContent = dynamic(() => import('component/ProjectPageContent'), {
   loading: () => <PreLoader />,
 });
@@ -15,8 +17,11 @@ const WorkPage = () => {
   return (
     <>
       <Head>
-        <title>Work Page - Mitanshu Patel</title>
-        <meta name="description" content="Projects I Have Worked On" key="desc" />
+        {fetchMeta({
+          title: 'Work Page - Mitanshu Patel',
+          keywords: data?.data?.projects?.map(skill => skill?.title)?.join(', '),
+          description: data?.data?.projectPageHeader,
+        })}
       </Head>
       {data && <ProjectPageContent data={data?.data} />}
     </>

@@ -1,39 +1,39 @@
-export default function Meta() {
+const fetchMeta = ({ title, description, keywords, image }) => {
   return (
     <>
+      {/* Essential meta tags */}
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="viewport"
+        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+      />
       <meta name="language" content="EN" />
-      <meta
-        name="description"
-        content="Passionate Software Engineer specializing in full-stack development using React, Node, and React Native. Certified in CSS, JavaScript, React, and Rest API."
-      />
-      <meta
-        name="keywords"
-        content="mitanshu patel, personal portfolio, full-stack developer, React, Node, React Native, Agile Development, Blockchain Solutions"
-      />
+      {/* SEO-specific meta tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content="Mitanshu Patel" />
       <link rel="canonical" href="https://mitanshupatel.com/" />
-      <meta property="og:title" content="Mitanshu Patel" />
+
+      {/* Social sharing meta tags */}
+      <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mitanshupatel.com/" />
-      <meta
-        property="og:description"
-        content="Passionate Software Engineer specializing in full-stack development using React, Node, and React Native. Certified in CSS, JavaScript, React, and Rest API."
-      />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@MitanshuPatel_" />
-      <meta name="twitter:title" content="Mitanshu Patel" />
-      <meta
-        name="twitter:description"
-        content="Passionate Software Engineer specializing in full-stack development using React, Node, and React Native. Certified in CSS, JavaScript, React, and Rest API."
-      />
+      <meta name="twitter:site" content="@mitanshu_patel_" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
+
+      {/* Favicons and icons */}
       <link rel="shortcut icon" href="/manifest-icon-192.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
+
+      {/* Progressive Web App support */}
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/manifest-icon-192.png" />
       {/* apple splash screen images  */}
@@ -62,4 +62,5 @@ export default function Meta() {
       />
     </>
   );
-}
+};
+export default fetchMeta;
