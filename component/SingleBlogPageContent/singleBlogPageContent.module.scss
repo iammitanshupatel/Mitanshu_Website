@@ -14,7 +14,7 @@
     }
   }
   & pre {
-    @apply font-Poppins overflow-auto my-4 py-2 bg-veryDarkGray text-white list-disc text-base font-extralight;
+    @apply font-Poppins overflow-auto my-4 py-4 px-4 bg-veryDarkGray text-white list-disc text-base font-extralight;
   }
   & a {
     @apply text-lg text-brightBlue leading-8 cursor-pointer;

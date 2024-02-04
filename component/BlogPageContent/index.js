@@ -19,7 +19,7 @@ const BlogPageContent = ({ blogs }) => {
             <div className={`${common.cardRow} ${styles.gap1rem}`}>
               {blogs?.map(x => (
                 <Card key={x?.id} variant="cardBlog">
-                  <a href={`blog/${x?.id}`} aria-label="View more details about blog">
+                  <a href={`blogs/${x?.id}`} aria-label="View more details about blog">
                     <div className={common.custom}>
                       <Image
                         priority
@@ -42,7 +42,7 @@ const BlogPageContent = ({ blogs }) => {
                     <p>{x?.description}</p>
                     <div className={common.blogPageMeta}>
                       <span className={common.more}>
-                        <a href={`blog/${x?.id}`} aria-label="More blogs">
+                        <a href={`blogs/${x?.id}`} aria-label="More blogs">
                           Read this blog
                         </a>
                       </span>

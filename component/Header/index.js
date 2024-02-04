@@ -93,11 +93,11 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href="/blogs"
                   aria-label="Go to blog page"
                   ref={liRef}
                   onClick={burgerClicked}
-                  className={pathname?.startsWith('/blog') ? styles.active : undefined}>
+                  className={pathname?.startsWith('/blogs') ? styles.active : undefined}>
                   Blogs
                 </Link>
               </li>
