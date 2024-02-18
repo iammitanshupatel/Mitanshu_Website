@@ -6,8 +6,7 @@ body {
 }
 
 a {
-  color: inherit;
-  @apply no-underline;
+  @apply text-inherit no-underline;
 }
 button {
   @apply border-0 bg-transparent;

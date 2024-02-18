@@ -4,16 +4,14 @@
 .projectDesc {
   @apply flex flex-col md:flex-row gap-8 pb-24;
   & .imgDiv {
-    scroll-behavior: smooth;
     scroll-snap-type: inline mandatory;
     inline-size: auto;
-    @apply h-[60vh] flex gap-2 overflow-x-scroll flex-1 md:flex-[1.2] lg:flex-1 mt-16;
+    @apply scroll-smooth h-[60vh] flex gap-2 overflow-x-scroll flex-1 md:flex-[1.2] lg:flex-1 mt-16;
     &::-webkit-scrollbar {
-      display: none;
+      @apply hidden;
     }
     & img {
-      scroll-snap-align: start !important;
-      @apply h-full w-full object-cover;
+      @apply snap-start	h-full w-full object-cover;
     }
   }
   & .desc {

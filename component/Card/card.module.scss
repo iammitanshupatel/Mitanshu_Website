@@ -101,12 +101,11 @@
 
 // Blog card
 .cardBlog {
-  scroll-snap-align: center;
   box-shadow: 0px 0px 30px -4px rgb(0 0 0 / 20%);
-  @apply w-52 md:w-72 lg:w-80;
+  @apply snap-center w-52 md:w-72 lg:w-80;
 }
 @media screen and (min-width: 540px) {
   .cardBlog {
-    scroll-snap-align: start !important;
+    @apply snap-start;
   }
 }
