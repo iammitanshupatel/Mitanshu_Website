@@ -60,10 +60,10 @@ const AboutPageContent = ({ data }) => (
                       ?.split('- ')
                       .filter(Boolean)
                       ?.map(y => (
-                        <>
+                        <Fragment key={y}>
                           - {y}
                           <br />
-                        </>
+                        </Fragment>
                       ))}
                   </p>
                 </div>

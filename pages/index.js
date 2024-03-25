@@ -9,7 +9,7 @@ import useEducationSkills from 'hooks/useEducationSkills';
 import useBlog from 'hooks/useBlog';
 import PreLoader from 'component/PreLoader';
 import Error500 from './500';
-import fetchMeta from 'component/meta';
+import fetchMeta from 'component/Meta';
 
 const dynamicImport = importFunc => dynamic(importFunc, { loading: () => <PreLoader /> });
 

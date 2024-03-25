@@ -5,7 +5,7 @@ import Image from 'next/image';
 import useProgressiveImage from 'hooks/useProgressiveImage';
 import { useCallback, useEffect, useRef } from 'react';
 import useMarkdown from 'hooks/useMarkdown';
-import fetchMeta from 'component/meta';
+import fetchMeta from 'component/Meta';
 
 const SingleProjectContent = ({ data }) => {
   const { HTML } = useMarkdown(data?.description);

@@ -11,7 +11,7 @@ import {
 } from 'cloudinary-react';
 import Image from 'next/image';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import fetchMeta from 'component/meta';
+import fetchMeta from 'component/Meta';
 
 const SingleBlogPageContent = ({ data }, { title }) => {
   const { HTML } = useMarkdown(data?.description);
