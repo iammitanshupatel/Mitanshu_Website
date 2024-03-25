@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import styles from './aboutPageContent.module.scss';
 import common from 'styles/common.module.scss';
-import fetchMeta from 'component/Meta';
+import fetchMeta from 'component/MetaTags';
 
 const AboutPageContent = ({ data }) => (
   <>

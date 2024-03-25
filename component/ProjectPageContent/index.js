@@ -5,7 +5,7 @@ import { isIOS } from 'react-device-detect';
 const Card = dynamic(() => import('../Card'));
 import common from 'styles/common.module.scss';
 import useProgressiveImage from 'hooks/useProgressiveImage';
-import fetchMeta from 'component/Meta';
+import fetchMeta from 'component/MetaTags';
 
 const ProjectPageContent = ({ data }) => {
   data?.projects?.sort((a, b) => {

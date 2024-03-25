@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from './contactPageHeader.module.scss';
 import common from 'styles/common.module.scss';
 import useMarkdown from 'hooks/useMarkdown';
-import fetchMeta from 'component/Meta';
+import fetchMeta from 'component/MetaTags';
 
 const ContactPageHeader = ({ data }) => {
   const { HTML } = useMarkdown(data?.description);
