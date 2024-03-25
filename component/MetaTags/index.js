@@ -1,4 +1,4 @@
-const fetchMeta = ({ title, description, keywords }) => {
+const fetchStaticMeta = () => {
   return (
     <>
       {/* Essential meta tags */}
@@ -10,22 +10,15 @@ const fetchMeta = ({ title, description, keywords }) => {
       />
       <meta name="language" content="EN" />
       {/* SEO-specific meta tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
       <meta name="author" content="Mitanshu Patel" />
       <link rel="canonical" href="https://mitanshupatel.com/" />
 
       {/* Social sharing meta tags */}
-      <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mitanshupatel.com/" />
-      <meta property="og:description" content={description} />
       <meta property="og:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@mitanshu_patel_" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="https://mitanshupatel.com/manifest-icon-192.png" />
 
       {/* Favicons and icons */}
@@ -63,4 +56,18 @@ const fetchMeta = ({ title, description, keywords }) => {
     </>
   );
 };
-export default fetchMeta;
+
+const fetchDynamicMeta = ({ title, description, keywords }) => {
+  return (
+    <>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+    </>
+  );
+};
+export { fetchStaticMeta, fetchDynamicMeta };

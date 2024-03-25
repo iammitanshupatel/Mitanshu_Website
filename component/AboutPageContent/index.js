@@ -2,12 +2,12 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import styles from './aboutPageContent.module.scss';
 import common from 'styles/common.module.scss';
-import fetchMeta from 'component/MetaTags';
+import { fetchDynamicMeta } from 'component/MetaTags';
 
 const AboutPageContent = ({ data }) => (
   <>
     <Head>
-      {fetchMeta({
+      {fetchDynamicMeta({
         title: 'About Page - Mitanshu Patel',
         keywords: data?.skills?.map(skill => skill?.title)?.join(', '),
         description: 'So, Who Am I?',

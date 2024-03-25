@@ -5,7 +5,7 @@ import { isIOS } from 'react-device-detect';
 const Card = dynamic(() => import('../Card'));
 import common from 'styles/common.module.scss';
 import useProgressiveImage from 'hooks/useProgressiveImage';
-import fetchMeta from 'component/MetaTags';
+import { fetchDynamicMeta } from 'component/MetaTags';
 
 const ProjectPageContent = ({ data }) => {
   data?.projects?.sort((a, b) => {
@@ -33,7 +33,7 @@ const ProjectPageContent = ({ data }) => {
     return (
       <>
         <Head>
-          {fetchMeta({
+          {fetchDynamicMeta({
             title: 'Work Page - Mitanshu Patel',
             keywords: data?.projects?.map(skill => skill?.title)?.join(', '),
             description: data?.projectPageHeader,
@@ -101,7 +101,7 @@ const ProjectPageContent = ({ data }) => {
   return (
     <>
       <Head>
-        {fetchMeta({
+        {fetchDynamicMeta({
           title: 'Work Page - Mitanshu Patel',
           keywords: data?.projects?.map(skill => skill?.title)?.join(', '),
           description: data?.projectPageHeader,

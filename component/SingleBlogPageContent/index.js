@@ -11,7 +11,7 @@ import {
 } from 'cloudinary-react';
 import Image from 'next/image';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import fetchMeta from 'component/MetaTags';
+import { fetchDynamicMeta } from 'component/MetaTags';
 
 const SingleBlogPageContent = ({ data }, { title }) => {
   const { HTML } = useMarkdown(data?.description);
@@ -22,7 +22,7 @@ const SingleBlogPageContent = ({ data }, { title }) => {
   return (
     <>
       <Head>
-        {fetchMeta({
+        {fetchDynamicMeta({
           title: `${data?.title} - Mitanshu Patel`,
           keywords: `${data?.title}, ${data?.tags?.map(tag => tag?.title)?.join(', ')}`,
           description: data?.title,
