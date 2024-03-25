@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 const Card = dynamic(() => import('../Card'));
 import styles from './blogPageContent.module.scss';
 import common from 'styles/common.module.scss';
+import fetchMeta from 'component/Meta';
 
 const BlogPageContent = ({ blogs }) => {
   blogs?.sort((a, b) => {
@@ -12,6 +14,13 @@ const BlogPageContent = ({ blogs }) => {
   });
   return (
     <>
+      <Head>
+        {fetchMeta({
+          title: 'Blog Page - Mitanshu Patel',
+          keywords: blogs?.map(skill => skill?.title)?.join(', '),
+          description: 'Blogs I Write',
+        })}
+      </Head>
       <div id="scrollHere" />
       <div className={common.separatedWithoutImg}>
         <div className={common.srvContainer}>

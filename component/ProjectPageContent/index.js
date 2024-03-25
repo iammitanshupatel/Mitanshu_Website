@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import { isIOS } from 'react-device-detect';
 const Card = dynamic(() => import('../Card'));
 import common from 'styles/common.module.scss';
 import useProgressiveImage from 'hooks/useProgressiveImage';
-import { isIOS } from 'react-device-detect';
+import fetchMeta from 'component/Meta';
 
 const ProjectPageContent = ({ data }) => {
   data?.projects?.sort((a, b) => {
@@ -30,6 +32,13 @@ const ProjectPageContent = ({ data }) => {
     const loaded = useProgressiveImage(url, urlPlaceholder);
     return (
       <>
+        <Head>
+          {fetchMeta({
+            title: 'Work Page - Mitanshu Patel',
+            keywords: data?.projects?.map(skill => skill?.title)?.join(', '),
+            description: data?.projectPageHeader,
+          })}
+        </Head>
         <div className={`${common.fullImage} ${common.hero}`}>
           <div className={common.fullText}>
             <div className={common.outer}>
@@ -91,6 +100,13 @@ const ProjectPageContent = ({ data }) => {
   }
   return (
     <>
+      <Head>
+        {fetchMeta({
+          title: 'Work Page - Mitanshu Patel',
+          keywords: data?.projects?.map(skill => skill?.title)?.join(', '),
+          description: data?.projectPageHeader,
+        })}
+      </Head>
       <div className={`${common.fullImage} ${common.hero}`}>
         <div className={common.fullText}>
           <div className={common.outer}>

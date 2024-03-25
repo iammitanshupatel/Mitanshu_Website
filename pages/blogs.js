@@ -1,10 +1,8 @@
 /* eslint-disable react/display-name */
-import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import useBlog from 'hooks/useBlog';
 import useBlogs from 'hooks/useBlogs';
 import Error500 from './500';
-import fetchMeta from 'component/meta';
 const PreLoader = dynamic(() => import('component/PreLoader'));
 const BlogPageHeader = dynamic(() => import('component/BlogPageHeader'), {
   loading: () => <PreLoader />,
@@ -25,16 +23,8 @@ const BlogPage = () => {
   if (blogsError || isError) {
     return <Error500 />;
   }
-
   return (
     <>
-      <Head>
-        {fetchMeta({
-          title: 'Blog Page - Mitanshu Patel',
-          keywords: blogs?.data?.map(skill => skill?.title)?.join(', '),
-          description: data?.data?.blogPageHeader,
-        })}
-      </Head>
       {data && <BlogPageHeader data={data.data} />}
       {blogs && <BlogPageContent blogs={blogs.data} />}
     </>
