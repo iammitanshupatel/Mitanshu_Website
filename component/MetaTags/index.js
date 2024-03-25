@@ -1,4 +1,4 @@
-const fetchMeta = ({ title, description, keywords, image }) => {
+const fetchMeta = ({ title, description, keywords }) => {
   return (
     <>
       {/* Essential meta tags */}
