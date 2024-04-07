@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 import React from 'react';
 import dynamic from 'next/dynamic';
+import { NextSeo } from 'next-seo';
 import useContact from 'hooks/useContact';
 import common from 'styles/common.module.scss';
 import styles from 'component/ContactForm/contactForm.module.scss';
@@ -23,6 +24,16 @@ const ContactPage = () => {
   const contactPageFooter = data && <ContactPageFooter data={data?.data} />;
   return (
     <>
+      <NextSeo
+        title="Contact Mitanshu Patel"
+        description="Get in touch with Mitanshu Patel, a skilled full-stack developer. Discuss your project, inquire about services, or simply connect!"
+        openGraph={{
+          url: 'https://mitanshupatel.com/contact',
+          title: 'Contact Mitanshu Patel',
+          description:
+            'Get in touch with Mitanshu Patel, a skilled full-stack developer. Discuss your project, inquire about services, or simply connect!',
+        }}
+      />
       {contactPageHeader}
       <div className={`${common.containerCtc} ${styles.top45}`}>
         <ContactForm />

@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import useBanner from 'hooks/useBanner';
 import useAbout from 'hooks/useAbout';
 import useServices from 'hooks/useServices';
@@ -42,6 +42,17 @@ const Main = () => {
 
   return (
     <>
+      <NextSeo
+        title="Mitanshu Patel | Full-Stack Developer"
+        description="Passionate Software Engineer with over 3 years in building modern web and mobile applications using React, Node.js, and React Native. Certified in CSS, JavaScript, React, and REST APIs."
+        openGraph={{
+          url: 'https://mitanshupatel.com/',
+          type: 'website',
+          title: 'Mitanshu Patel | Full-Stack Developer',
+          description:
+            'Passionate Software Engineer with over 3 years in building modern web and mobile applications using React, Node.js, and React Native. Certified in CSS, JavaScript, React, and REST APIs.',
+        }}
+      />
       {bannerData && <Home data={bannerData?.data} />}
       {aboutData && <About data={aboutData?.data} />}
       {serviceData && <Services data={serviceData?.data} />}

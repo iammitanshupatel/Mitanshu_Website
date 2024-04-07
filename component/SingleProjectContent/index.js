@@ -1,11 +1,10 @@
 import styles from './singleProjectContent.module.scss';
 import common from 'styles/common.module.scss';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import useProgressiveImage from 'hooks/useProgressiveImage';
 import { useCallback, useEffect, useRef } from 'react';
 import useMarkdown from 'hooks/useMarkdown';
-import { fetchDynamicMeta } from 'component/MetaTags';
 
 const SingleProjectContent = ({ data }) => {
   const { HTML } = useMarkdown(data?.description);
@@ -47,15 +46,10 @@ const SingleProjectContent = ({ data }) => {
   }, [startScroll, stopScroll]);
   return (
     <>
-      <Head>
-        {fetchDynamicMeta({
-          title: `${data?.title} - Mitanshu Patel`,
-          keywords: `${data?.title}, ${data?.typeOfPortfolio}, ${data?.technologyUsed
-            ?.map(tech => tech?.title)
-            ?.join(', ')}`,
-          description: `${data?.title} developed by Mitanshu Patel`,
-        })}
-      </Head>
+      <NextSeo
+        title={`${data?.title} | Mitanshu Patel`}
+        description={`${data?.title} developed by Mitanshu Patel`}
+      />
       <section className={common.singleBlog}>
         <div className={`${common.blogInfo} ${styles.textCenter}`}>
           <h2 className={common.blogTitle}>{data?.title}</h2>

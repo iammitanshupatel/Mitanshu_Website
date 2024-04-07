@@ -1,18 +1,9 @@
 import { Fragment } from 'react';
-import Head from 'next/head';
 import styles from './aboutPageContent.module.scss';
 import common from 'styles/common.module.scss';
-import { fetchDynamicMeta } from 'component/MetaTags';
 
 const AboutPageContent = ({ data }) => (
   <>
-    <Head>
-      {fetchDynamicMeta({
-        title: 'About Page - Mitanshu Patel',
-        keywords: data?.skills?.map(skill => skill?.title)?.join(', '),
-        description: 'So, Who Am I?',
-      })}
-    </Head>
     <div className={common.separated} />
     <div className={`${common.containerCtc} ${common.textWidget} `}>
       <div className={common.abtWrap}>

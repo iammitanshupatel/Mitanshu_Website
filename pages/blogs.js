@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
 import dynamic from 'next/dynamic';
+import { NextSeo } from 'next-seo';
 import useBlog from 'hooks/useBlog';
 import useBlogs from 'hooks/useBlogs';
 import Error500 from './500';
@@ -25,6 +26,15 @@ const BlogPage = () => {
   }
   return (
     <>
+      <NextSeo
+        title="Mitanshu Patel's Blog"
+        description="Read informative blog posts on various topics by Mitanshu Patel."
+        openGraph={{
+          url: 'https://mitanshupatel.com/blogs',
+          title: "Mitanshu Patel's Blog",
+          description: 'Read informative blog posts on various topics by Mitanshu Patel.',
+        }}
+      />
       {data && <BlogPageHeader data={data.data} />}
       {blogs && <BlogPageContent blogs={blogs.data} />}
     </>

@@ -1,6 +1,6 @@
+import { NextSeo } from 'next-seo';
 import styles from './singleBlogPageContent.module.scss';
 import common from 'styles/common.module.scss';
-import Head from 'next/head';
 import useMarkdown from 'hooks/useMarkdown';
 import {
   Image as CloudImage,
@@ -11,7 +11,6 @@ import {
 } from 'cloudinary-react';
 import Image from 'next/image';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import { fetchDynamicMeta } from 'component/MetaTags';
 
 const SingleBlogPageContent = ({ data }, { title }) => {
   const { HTML } = useMarkdown(data?.description);
@@ -21,13 +20,7 @@ const SingleBlogPageContent = ({ data }, { title }) => {
   );
   return (
     <>
-      <Head>
-        {fetchDynamicMeta({
-          title: `${data?.title} - Mitanshu Patel`,
-          keywords: `${data?.title}, ${data?.tags?.map(tag => tag?.title)?.join(', ')}`,
-          description: data?.title,
-        })}
-      </Head>
+      <NextSeo title={`${data?.title} | Mitanshu Patel`} />
       <section className={common.singleBlog}>
         <div className={common.blogInfo}>
           <div className={common.datenauthor}>
