@@ -12,7 +12,7 @@ const ContactPageFooter = ({ data }) => {
             <div key={x?.id} className={styles.responsiveInfo}>
               <div className={styles.iconWidth}>
                 <Icon
-                  ariaLabel={`${x?.name} icon`}
+                  ariaLabel={x?.name ? `${x.name} icon` : 'Icon'}
                   key={x?.id}
                   socialLink={x}
                   variant="contactIcon"

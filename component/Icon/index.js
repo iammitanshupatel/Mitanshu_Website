@@ -20,17 +20,15 @@ const Icon = ({ socialLink, variant, ariaLabel }) => {
     loadSvg();
   }, []);
   return (
-    ariaLabel && (
-      <a
-        aria-label={ariaLabel}
-        href={socialLink?.url}
-        target={socialLink?.name !== 'address' ? '_blank' : undefined}
-        className={`${styles[variant]}`}
-        ref={iconRef}
-        rel="noreferrer">
-        Icon
-      </a>
-    )
+    <a
+      aria-label={ariaLabel}
+      href={socialLink?.url}
+      target={socialLink?.name !== 'address' ? '_blank' : undefined}
+      className={`${styles[variant]}`}
+      ref={iconRef}
+      rel="noreferrer">
+      Icon
+    </a>
   );
 };
 

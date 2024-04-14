@@ -20,7 +20,7 @@ const Services = ({ data }) => (
               <Card key={x?.id} variant="srvCard">
                 <div className={card.featureBox}>
                   <Icon
-                    ariaLabel={`${x?.title} icon`}
+                    ariaLabel={x?.name ? `${x.name} icon` : 'Icon'}
                     key={x?.id}
                     socialLink={x}
                     variant="servicesIcon"
