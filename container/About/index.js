@@ -48,9 +48,9 @@ const About = ({ data }) => {
             </div>
             <div className={styles.abtTxt}>
               <div className={styles.abtDesc}>
-                <h1>{data?.header?.[0]?.title}</h1>
+                <h2>{data?.header?.[0]?.title}</h2>
                 <div className={styles.p3}>
-                  <h2>{data?.header?.[0]?.caption}</h2>
+                  <h3>{data?.header?.[0]?.caption}</h3>
                   <p>{data?.shortDescription}</p>
                   <p>
                     <Link href="/contact" aria-label="Go to contact page">

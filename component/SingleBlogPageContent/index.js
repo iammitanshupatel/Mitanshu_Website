@@ -31,7 +31,7 @@ const SingleBlogPageContent = ({ data }, { title }) => {
               </a>
             </span>
           </div>
-          <h2 className={common.blogTitle}>{data?.title}</h2>
+          <h1 className={common.blogTitle}>{data?.title}</h1>
         </div>
         <div className={common.blogImgDiv}>
           <CloudImage

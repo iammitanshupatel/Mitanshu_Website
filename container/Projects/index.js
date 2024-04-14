@@ -17,9 +17,9 @@ const Projects = ({ data }) => {
         <div className={common.srvContainer}>
           <div className={common.srvCol}>
             <div className={common.secDesc}>
-              <h1>{data?.header?.title}</h1>
+              <h2>{data?.header?.title}</h2>
               <div className={common.p2}>
-                <h2>{data?.header?.caption}</h2>
+                <h3>{data?.header?.caption}</h3>
               </div>
             </div>
             <div className={`${common.cardRow} ${styles.paddingB1}`}>

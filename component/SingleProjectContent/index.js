@@ -52,7 +52,7 @@ const SingleProjectContent = ({ data }) => {
       />
       <section className={common.singleBlog}>
         <div className={`${common.blogInfo} ${styles.textCenter}`}>
-          <h2 className={common.blogTitle}>{data?.title}</h2>
+          <h1 className={common.blogTitle}>{data?.title}</h1>
         </div>
       </section>
       <section className={styles.projectDesc}>
@@ -73,23 +73,23 @@ const SingleProjectContent = ({ data }) => {
         </div>
         <div className={styles.desc}>
           <div className={styles.singleProjectTxt}>
-            <h3>Description</h3>
+            <h2>Description</h2>
             <div
               dangerouslySetInnerHTML={{
                 __html: HTML,
               }}></div>
           </div>
           <div className={styles.singleProjectTxt}>
-            <h3>Type</h3>
+            <h2>Type</h2>
             <p>{data?.typeOfPortfolio}</p>
           </div>
           <div className={styles.singleProjectTxt}>
-            <h3>Role</h3>
+            <h2>Role</h2>
             <p>{data?.role}</p>
           </div>
           {data?.link && (
             <div className={styles.singleProjectTxt}>
-              <h3>Link</h3>
+              <h2>Link</h2>
               <a className={styles.link} href={data?.link} target="_blank" rel="noreferrer">
                 {data?.link}
               </a>
@@ -97,7 +97,7 @@ const SingleProjectContent = ({ data }) => {
           )}
           {data?.playStoreLink && (
             <div className={styles.singleProjectTxt}>
-              <h3>Play Store Link</h3>
+              <h2>Play Store Link</h2>
               <a
                 className={styles.link}
                 href={data?.playStoreLink}
@@ -109,14 +109,14 @@ const SingleProjectContent = ({ data }) => {
           )}
           {data?.appStoreLink && (
             <div className={styles.singleProjectTxt}>
-              <h3>App Store Link</h3>
+              <h2>App Store Link</h2>
               <a className={styles.link} href={data?.appStoreLink} target="_blank" rel="noreferrer">
                 {data?.appStoreLink}
               </a>
             </div>
           )}
           <div className={styles.singleProjectTxt}>
-            <h3>Technology Used</h3>
+            <h2>Technology Used</h2>
             {data?.technologyUsed?.map(x => (
               <a
                 aria-label={`{View more about ${x?.title} technology}`}

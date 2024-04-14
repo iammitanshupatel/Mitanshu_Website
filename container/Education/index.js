@@ -13,7 +13,7 @@ const Education = ({ data }) => {
     () =>
       skills.map(x => (
         <div key={x?.id} className={`${styles.eduWrap} ${commonStyles.progressWrap}`}>
-          <h2>
+          <h4>
             <a
               aria-label={`View more about ${x?.title} technology`}
               href={x?.link}
@@ -21,7 +21,7 @@ const Education = ({ data }) => {
               rel="noreferrer">
               {x?.title}
             </a>
-          </h2>
+          </h4>
           <div className={`${commonStyles.progress} ${styles.eduWrap}`}>
             <div className={commonStyles.progressBar} style={{ width: `${x?.rating}%` }}>
               <span>{`${x?.rating}%`}</span>
@@ -37,9 +37,9 @@ const Education = ({ data }) => {
       <section id="Education">
         <div className={commonStyles.srvContainer}>
           <div className={commonStyles.secDesc}>
-            <h1>{headerTitle}</h1>
+            <h2>{headerTitle}</h2>
             <div className={commonStyles.p2}>
-              <h2>{headerCaption}</h2>
+              <h3>{headerCaption}</h3>
             </div>
           </div>
           <div className={styles.eduRow}>

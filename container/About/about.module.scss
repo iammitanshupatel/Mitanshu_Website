@@ -18,14 +18,14 @@
 }
 .abtDesc {
   @apply md:relative md:ml-20;
-  & h1 {
+  & h2 {
     @apply text-white opacity-[0.08] text-9xl lg:text-10xl hidden md:block md:absolute -top-10 lg:-top-28 -left-12 right-0 bottom-0 font-bold uppercase leading-6;
   }
 }
 
 .p3 {
   @apply p-6 lg:p-12;
-  & h2 {
+  & h3 {
     letter-spacing: 1px;
     @apply text-4xl font-light md:mb-12;
   }

@@ -62,7 +62,7 @@ const SingleBlogPage = () => {
       {singleBlogPageContent}
       <section className={styles.blogArticle}>
         <div className={styles.articleCmt}>
-          <h3 className={styles.commentReplyTitle}>Write a comment</h3>
+          <h2 className={styles.commentReplyTitle}>Write a comment</h2>
           <ContactForm />
         </div>
       </section>
