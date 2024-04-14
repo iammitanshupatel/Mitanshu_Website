@@ -1,6 +1,5 @@
 /* eslint-disable react/display-name */
 import dynamic from 'next/dynamic';
-import { NextSeo } from 'next-seo';
 import useBanner from 'hooks/useBanner';
 import useAbout from 'hooks/useAbout';
 import useServices from 'hooks/useServices';
@@ -21,41 +20,22 @@ const Blogs = dynamicImport(() => import('container/Blogs'));
 // const Testimonial = dynamicImport(() => import('container/Testimonial'));
 
 const Main = () => {
-  const { data: bannerData, isLoading: bannerLoading, isError: bannerError } = useBanner();
-  const { data: aboutData, isLoading: aboutLoading, isError: aboutError } = useAbout();
-  const { data: serviceData, isLoading: serviceLoading, isError: serviceError } = useServices();
-  const { data: portfolioData, isError: portfolioError } = usePortfolio();
-  const { data: educationSkillsData, isError: educationSkillsError } = useEducationSkills();
-  const { data: blogData, isError: blogError } = useBlog();
+  const { data: bannerData, isLoading, isError } = useBanner();
+  const { data: aboutData } = useAbout();
+  const { data: serviceData } = useServices();
+  const { data: portfolioData } = usePortfolio();
+  const { data: educationSkillsData } = useEducationSkills();
+  const { data: blogData } = useBlog();
   //   const { data: testimonialData, isError: testimonialError } = useTestimonial();
 
-  if (bannerLoading || aboutLoading || serviceLoading) return <PreLoader />;
-  if (
-    bannerError ||
-    aboutError ||
-    serviceError ||
-    portfolioError ||
-    educationSkillsError ||
-    blogError
-  )
-    return <Error500 />;
+  if (isLoading) return <PreLoader />;
+  if (isError) return <Error500 />;
 
   return (
     <>
-      <NextSeo
-        title="Mitanshu Patel | Full-Stack Developer"
-        description="Passionate Software Engineer with over 3 years in building modern web and mobile applications using React, Node.js, and React Native. Certified in CSS, JavaScript, React, and REST APIs."
-        openGraph={{
-          url: 'https://mitanshupatel.com/',
-          type: 'website',
-          title: 'Mitanshu Patel | Full-Stack Developer',
-          description:
-            'Passionate Software Engineer with over 3 years in building modern web and mobile applications using React, Node.js, and React Native. Certified in CSS, JavaScript, React, and REST APIs.',
-        }}
-      />
-      {bannerData && <Home data={bannerData?.data} />}
-      {aboutData && <About data={aboutData?.data} />}
-      {serviceData && <Services data={serviceData?.data} />}
+      <Home data={bannerData?.data} />
+      <About data={aboutData?.data} />
+      <Services data={serviceData?.data} />
       {portfolioData && <Projects data={portfolioData?.data} />}
       {educationSkillsData && <Education data={educationSkillsData?.data} />}
       {blogData && <Blogs data={blogData?.data} />}

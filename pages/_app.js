@@ -15,12 +15,21 @@ const MyApp = ({ Component, pageProps }) => {
     <SWRConfig value={swrConfig}>
       <Layout>
         <DefaultSeo
+          themeColor="#000000"
           defaultTitle="Mitanshu Patel | Full-Stack Developer"
+          description="Passionate Software Engineer with over 3 years in building modern web and mobile applications using React, Node.js, and React Native. Certified in CSS, JavaScript, React, and REST APIs."
+          openGraph={{
+            url: 'https://mitanshupatel.com/',
+            type: 'website',
+            title: 'Mitanshu Patel | Full-Stack Developer',
+            description:
+              'Passionate Software Engineer with over 3 years in building modern web and mobile applications using React, Node.js, and React Native. Certified in CSS, JavaScript, React, and REST APIs.',
+          }}
           additionalMetaTags={[
             {
               name: 'viewport',
               content:
-                'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover',
+                'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
             },
             {
               charSet: 'UTF-8',
