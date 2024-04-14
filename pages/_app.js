@@ -24,6 +24,7 @@ const MyApp = ({ Component, pageProps }) => {
             title: 'Mitanshu Patel | Full-Stack Developer',
             description:
               'Passionate Software Engineer with over 3 years in building modern web and mobile applications using React, Node.js, and React Native. Certified in CSS, JavaScript, React, and REST APIs.',
+            images: [{ url: 'https://mitanshupatel.com/manifest-icon-192.png' }],
           }}
           additionalMetaTags={[
             {
@@ -39,11 +40,6 @@ const MyApp = ({ Component, pageProps }) => {
             { name: 'author', content: 'Mitanshu Patel' },
           ]}
           canonical="https://mitanshupatel.com/"
-          openGraph={{
-            type: 'website',
-            url: 'https://mitanshupatel.com/',
-            images: [{ url: 'https://mitanshupatel.com/manifest-icon-192.png' }],
-          }}
           twitter={{
             cardType: 'summary_large_image',
             site: '@mitanshu_patel_',

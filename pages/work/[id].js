@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
-import { memo } from 'react';
 import useProjects from 'hooks/useProjects';
 import common from 'styles/common.module.scss';
 import PreLoader from 'component/PreLoader';
@@ -20,12 +19,8 @@ const SinglePortfolio = () => {
   if (isError) return <Error500 />;
 
   return (
-    <div className={common.srvContainer}>
-      {data && <SingleProjectContentMemoized data={data.data} />}
-    </div>
+    <div className={common.srvContainer}>{data && <SingleProjectContent data={data.data} />}</div>
   );
 };
-
-const SingleProjectContentMemoized = memo(({ data }) => <SingleProjectContent data={data} />);
 
 export default SinglePortfolio;
