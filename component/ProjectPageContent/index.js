@@ -11,15 +11,6 @@ const ProjectPageContent = ({ data }) => {
       dateB = new Date(b.published_at);
     return dateB - dateA;
   });
-  const urlBanner = data?.backgroundImage?.url.replace(
-    'upload',
-    'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
-  );
-  const urlPlaceholder = data?.backgroundImage?.url.replace(
-    'upload',
-    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
-  );
-  const loaded = useProgressiveImage(urlBanner, urlPlaceholder);
   if (isIOS) {
     const urlBanner = 'upload/c_scale,dpr_auto,f_jpg,q_auto,w_auto';
     const url = data?.backgroundImage?.url.replace('upload', urlBanner);
@@ -89,6 +80,15 @@ const ProjectPageContent = ({ data }) => {
       </>
     );
   }
+  const urlBanner = data?.backgroundImage?.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+  );
+  const urlPlaceholder = data?.backgroundImage?.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
+  );
+  const loaded = useProgressiveImage(urlBanner, urlPlaceholder);
   return (
     <>
       <div className={`${common.fullImage} ${common.hero}`}>

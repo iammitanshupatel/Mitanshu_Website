@@ -4,15 +4,6 @@ import useProgressiveImage from 'hooks/useProgressiveImage';
 import { isIOS } from 'react-device-detect';
 
 const FullImageHeaderPage = ({ data }) => {
-  const url = data?.backgroundImage?.url.replace(
-    'upload',
-    'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
-  );
-  const urlPlaceholder = data?.backgroundImage?.url.replace(
-    'upload',
-    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
-  );
-  const loaded = useProgressiveImage(url, urlPlaceholder);
   if (isIOS) {
     const newUrl = 'upload/c_scale,dpr_auto,f_jpg,q_auto,w_auto';
     const url = data?.backgroundImage.url.replace('upload', newUrl);
@@ -57,6 +48,15 @@ const FullImageHeaderPage = ({ data }) => {
       </>
     );
   }
+  const url = data?.backgroundImage?.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,f_auto,q_auto,w_auto',
+  );
+  const urlPlaceholder = data?.backgroundImage?.url.replace(
+    'upload',
+    'upload/c_scale,dpr_auto,w_auto,e_blur:1000,q_1,f_auto/e_grayscale',
+  );
+  const loaded = useProgressiveImage(url, urlPlaceholder);
   return (
     <>
       <div className={`${common.fullImage} ${common.hero}`}>

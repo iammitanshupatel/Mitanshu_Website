@@ -2,7 +2,6 @@ import styles from './singleProjectContent.module.scss';
 import common from 'styles/common.module.scss';
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
-import useProgressiveImage from 'hooks/useProgressiveImage';
 import { useCallback, useEffect, useRef } from 'react';
 import useMarkdown from 'hooks/useMarkdown';
 
