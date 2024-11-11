@@ -32,10 +32,10 @@ const Footer = () => {
             ,{' '}
             <a
               target="_blank"
-              aria-label="My twitter account"
+              aria-label="My X account"
               rel="noreferrer"
-              href="https://twitter.com/mitanshu_patel_">
-              Twitter
+              href="https://x.com/mitanshu_patel_">
+              X
             </a>
             ,{' '}
             <a
