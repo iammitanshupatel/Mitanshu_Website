@@ -29,7 +29,7 @@ const ContactPageFooter = ({ data }) => {
       <div id="map" className={styles.map}>
         <img
           loading="lazy"
-          src="https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/pin-s+dc2626(72.5203,23.0509)/72.5196,23.0513,14.08,0/1200x300?before_layer=admin-1-boundary-bg&logo=false&access_token=pk.eyJ1IjoibWl0YW5zaHUtcGF0ZWwiLCJhIjoiY2tyazlveW41MGFibDJvbDczOHo2Nm41ZSJ9.2kzuysnz2J1jgwBjk7axRg"
+          src="https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/77.7733,12.9786,12,0/1200x300?before_layer=admin-1-boundary-bg&logo=false&access_token=pk.eyJ1IjoibWl0YW5zaHUtcGF0ZWwiLCJhIjoiY2tyazlveW41MGFibDJvbDczOHo2Nm41ZSJ9.2kzuysnz2J1jgwBjk7axRg"
           alt="My location"
         />
       </div>
